@@ -1,0 +1,37 @@
+.container {
+  left: auto;
+  right: auto;
+  margin: 0 auto;
+
+  max-width: 980px;
+  height: 100%;
+}
+
+.sp {
+  width: 100%;
+}
+
+.pc {
+  width: 980px;
+  padding: 0;
+}
+
+.content {
+  padding: 0;
+  margin: 0;
+
+  width: 100%;
+  max-width: 980px;
+
+  position: absolute;
+
+  z-index: 5;
+}
+
+.pcContent {
+  top: calc(110px + 30px);
+}
+
+.spContent {
+  top: calc(70px + 30px);
+}

@@ -1,0 +1,32 @@
+.container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  vertical-align:bottom;
+  margin: 0;
+  padding: 0;
+  filter: saturate(0%);
+  box-sizing: border-box;
+  border: solid 0px #ffffff;
+  /* enabled 3d rendering for firefox, its bad solution */
+  transform: rotate3d(0, 0, 0, 0.0001deg);
+  outline: 1px solid transparent;
+  transition: all 200ms ease-in-out;
+  will-change: filter, border;
+}
+
+.pc {
+  &:hover {
+    filter: saturate(100%);
+    border-bottom: solid 15px #8a33fe;
+    border-left: solid 15px #8a33fe;
+  }
+}
+
+.sp {
+  &:active {
+    filter: saturate(100%);
+    border-bottom: solid 15px #8a33fe;
+    border-left: solid 15px #8a33fe;
+  }
+}

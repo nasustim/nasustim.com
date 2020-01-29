@@ -104,7 +104,7 @@ module.exports = {
         short_name: TITLE,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#00000`,
+        theme_color: `#000000`,
         display: `minimal-ui`,
         icon: `content/assets/logo.png`,
       },

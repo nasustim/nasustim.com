@@ -8,7 +8,7 @@ category: profile
 
 # Mitsuhiro Hibino / 日比野光紘
 
-![江ノ島にて - 2018年11月](./2018-11.jpg "江ノ島にて - 2018年11月")
+![著者近影]](./2018-11.jpg "著者近影")
 
 1994年11月 岐阜県岐阜市生まれ、ソフトウェアエンジニア。情報科学芸術大学院大学(IAMAS) 修士2年。
 
@@ -30,7 +30,7 @@ category: profile
 - SDK
     - Electron, React Native
 
-## Development
+## Development Tools
 
 - Docker, AWS
 
@@ -42,9 +42,10 @@ category: profile
 
 - Adobe (Illustrator, Premiere), Ableton Live, プロトタイピングの実践, 手先が器用
 
-## My Accounts
+## My Social Accounts
 - [Keybase](https://keybase.io/nasustim)
-- [GitHub - main account](https://github.com/nasustim)
-- [GitHub - experiments](https://github.com/playground-nasustim)
+- GitHub
+    - [Main Account](https://github.com/nasustim)
+    - [Experimental Space](https://github.com/playground-nasustim)
 - [Mastodon](https://connect.nasustim.com)
 - [Amazon Wish List](http://amzn.asia/hHtLxGV)

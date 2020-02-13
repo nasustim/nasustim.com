@@ -1,6 +1,6 @@
 const TITLE = `Mitsuhiro Hibino`
 const AUTHOR = `Mitsuhiro Hibino`
-const DESCRIPTION = `Mitsuhiro Hibino's Portfolio Site`
+const DESCRIPTION = `Mitsuhiro Hibino(日比野光紘) - software developer & creator`
 const SITE_URL = `https://nasustim.com`
 const SOCIAL = {
   twitter: `nasustim`
@@ -118,5 +118,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: SITE_URL,
+      },
+    },
   ],
 }

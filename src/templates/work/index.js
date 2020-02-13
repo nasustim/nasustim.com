@@ -4,6 +4,8 @@ import { graphql } from 'gatsby'
 import Layout from '../../layout'
 import {container} from '../../pages/style.module.scss'
 
+import Article from '../../organisms/article'
+
 import {detectDevice} from '../../resolver'
 import {defaultWindowWidth} from '../../constant'
 
@@ -33,9 +35,10 @@ const WorkTemplete = ({data}) => {
   return (
     <div className={container}>
       <Layout {...toLayout}>
-      <article
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+        <Article
+          device={device}
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
       </Layout>
     </div>
   )

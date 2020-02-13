@@ -1,7 +1,7 @@
 ---
 title: ＊ as Code (Aster as Code)
 date: "2018-11-28T15:00:00.000Z"
-description: 細々と活動している
+description: "《＊ as Code》 - Mitsuhiro Hibino"
 pageid: aster-as-code
 category: works
 headimg: ./aster-as-code-iamas-01.jpg
@@ -13,7 +13,7 @@ headimg: ./aster-as-code-iamas-01.jpg
 
 JavaScriptで記述したソースコードを和紙に印刷して、学内応接室に配置した作品。
 
-およそ100行のソースコードを縦の巻物として仕上げることで、モニタと同じ縦スクロールのような視線の誘導ができるのではないかと考えた。
+およそ100行のソースコードを縦の巻物として仕上げることで、モニタと同じ縦スクロールのような視線の誘導を試みた。
 
 
 ![＊ as Code - 全体像](./aster-as-code-iamas-00.jpg "＊ as Code - 全体像")

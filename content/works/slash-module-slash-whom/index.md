@@ -1,7 +1,7 @@
 ---
 title: "/module/Whom"
 date: "2019-09-27T00:00:00.000Z"
-description: "/module/Whom"
+description: "《/module/Whom》 - Mitsuhiro Hibino。JavaScriptを用いて自身の体験を記述し、ソースコードを通じて顕になる筆者自身の思考を伝えることを目的とした。また、音や映像の持つメディア・スペシフィックを意識することで、多くの鑑賞者にとって馴染みのない文字列だと考えられるソースコードに目を惹くことを試みた。"
 category: works
 pageid: slash-module-slash-whom
 headimg: ./module-whom-exam-iamas.jpg

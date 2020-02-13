@@ -124,5 +124,16 @@ module.exports = {
         siteUrl: SITE_URL,
       },
     },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        createLinkInHead: true,
+
+      }
+    },
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {},
+    }
   ],
 }

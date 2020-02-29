@@ -118,5 +118,22 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: SITE_URL,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        createLinkInHead: true,
+
+      }
+    },
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {},
+    }
   ],
 }

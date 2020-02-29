@@ -14,6 +14,7 @@ category: profile
 
 幼い頃からものづくりに興味を持ち、小中学生時代はロボット競技に熱中する。大学では電気電子と情報技術を学ぶ。
 プログラムを記述する行為そのものに喜びを感じ、大学院ではプログラミング言語の形式で現れる思考の表現を研究。
+
 現在はWeb制作会社にソフトウェアエンジニアとして勤務。
 
 ## プログラミング
@@ -51,4 +52,5 @@ category: profile
     - [実験的なリポジトリたち](https://github.com/playground-nasustim)
 - [Twitter](https://twitter.com/nasustim)
 - [Mastodon](https://connect.nasustim.com)
-- [Amazon Wish List](http://amzn.asia/hHtLxGV)
+- [Keybase](https://keybase.io/nasustim)
+- [Wish List](http://amzn.asia/hHtLxGV)

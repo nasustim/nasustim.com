@@ -7,7 +7,7 @@ pageid: iamasonic2019
 headimg: ./iamasonic2019-00.png
 ---
 
-# IAMASONIC(2019年夏) - webページ
+# IAMASONIC(2019年夏) - Webページ
 
 !["IAMASONIC 2019 - ページのヘッダ部分"](./iamasonic2019-00.png "IAMASONIC 2019 - ページのヘッダ部分")
 
@@ -16,10 +16,10 @@ IAMAS学内のライブイベント、IAMASONICの告知用webページ。
 
 !["IAMASONIC 2019 - ページのフッター部分"](./iamasonic2019-01.png "IAMASONIC 2019 - ページのフッター部分")
 
-## Public URL
+## 公開URL
 - https://www.iamas.ac.jp/iamasonic/
 
-## Direction & Outline Design
+## 企画
 
 - Ryo Morita
   - https://morita-ryo.com/

@@ -21,7 +21,7 @@ PICマイコンによるPWM制御でモータ一つ一つに流れる電圧の�
 
 <!--![イメージ](./mock.png "イメージ")-->
 
-## Components
+## 技術要素
 
 - マイコン
   - Microchip PIC 16F84A

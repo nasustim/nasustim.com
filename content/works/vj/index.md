@@ -13,7 +13,7 @@ headimg: ./vj-zdr-ps.png
 
 少しだけ嗜んでいる。
 
-## Components
+## 使用
 
 - ライブラリ
   - Canvas

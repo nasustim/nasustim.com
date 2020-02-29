@@ -7,16 +7,19 @@ pageid: nxpc-32
 headimg: ./nxpc-32.png
 ---
 
-# NxPC.Live vol.32 webページ
+# NxPC.Live vol.32 - webページ
 
 ![NxPC.Live vol.32 - ヘッダー部分](./nxpc-32.png "NxPC.Live vol.32 - ヘッダー部分")
 
 NxPC.Live vol.32のイベントwebページ。
 メインビジュアルの画像をSVG化し、D3.jsで演出を加えました。
 
-## Public URL
+## 公開URL
 - http://nxpclab.info/vol.32/
 
-## Using Frameworks
+## 技術要素
 
-- D3.js
+- ライブラリ
+    - D3.js
+- ビルド
+    - Gulp

@@ -7,6 +7,8 @@ pageid: from-gifu-to-words
 headimg: ./from-gifu-to-words.png
 ---
 
+# from Gifu to words
+
 ![from Gifu to words](./from-gifu-to-words.png "from Gifu to words")
 
 この作品は、人の話す言葉同士の関係に興味を持ち、それらを距離として顕にすることを試みた作品です。
@@ -24,15 +26,18 @@ IAMASオープンハウス2017で展示を行いました。
 - コーパス
     - [word2vecの学習済み日本語モデルを公開します | カメリオ開発者ブログ](http://aial.shiroyagi.co.jp/2017/02/japanese-word2vec-model-builder)[^1]
 
-## Using Frameworks
+## 技術要素
 
-- Front-End
-    - jQuery
+### フロントエンド
+- データバインド
     - D3.js
-    - Web Speech API
-- Back-End
-    - Node.js
-        - Express
-        - kuromoji.js
-    - Python3
-        - word2vec
+- 音声認識
+    - Web Speech API(Google Chrome)
+
+### バックエンド
+- Webアプリケーションフレームワーク
+    - Express(Node.js)
+- 形態素解析
+    - kuromoji.js
+- 各単語の意味解析
+    - word2vec(Gensim)

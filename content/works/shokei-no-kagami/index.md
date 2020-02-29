@@ -18,12 +18,12 @@ headimg: ./shokei-no-kagami.png
 
 !["展示の様子 @ E&Cギャラリー(福井県福井市)"](./shokei-no-kagami-exhibit.jpg "展示の様子 @ E&Cギャラリー(福井県福井市)")
 
-## Exhibition
+## 展示
 
 - 憧憬の鏡
   - http://www.iamas.ac.jp/activity/shokei-no-kagami
 
-## Co-Create
+## 企画 / 制作
 
 - Koki Nishimoto
   - https://nishimoto-koki.tumblr.com

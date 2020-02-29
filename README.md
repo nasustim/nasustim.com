@@ -5,7 +5,7 @@ My Portfolio Site.
 ## Author  
 - [Mitsuhiro HIBINO](https://nasustim.com)
 
-以下、[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のREADME
+↓ README about [gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)
 
 ---------
 

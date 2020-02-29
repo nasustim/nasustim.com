@@ -1,6 +1,6 @@
-const TITLE = `Mitsuhiro Hibino`
+const TITLE = `Mitsuhiro Hibino / 日比野光紘`
 const AUTHOR = `Mitsuhiro Hibino`
-const DESCRIPTION = `Mitsuhiro Hibino's Portfolio Site`
+const DESCRIPTION = `Mitsuhiro Hibino: Software Developer / Standalone Creator.`
 const SITE_URL = `https://nasustim.com`
 const SOCIAL = {
   twitter: `nasustim`

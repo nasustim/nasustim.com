@@ -17,26 +17,31 @@ headimg: ./morning-square01.png
 東海地方では専ら高齢者に広く使われているサービスとなった喫茶店のモーニングをスマホの特性を生かした操作で探すことができる。
 
 
-## Co-Create
+## 共同制作
 
-- UI/UX and Concept Design
-    - Hiromu Ehara
-    - https://hehara17.myportfolio.com
+- UI/UX & コンセプトデザイン
+    - [Hiromu Ehara](https://hehara17.myportfolio.com)
 
-## Public URL
+## 公開URL
 - https://morning-sq.v.nasustim.com
 
 
-## Using
+## 技術要素
 
-- Back-End
+### バックエンド
+- サーバ内でのプロキシ
     - Nginx
+- Webアプリケーションフレームワーク
     - Express(Node.js)
-- Front-End
+### フロントエンド
+- DOMの操作
     - jQuery
+- 画像表示機能
     - Lightbox
-- Infrastructure
+### インフラ
+- 仮想環境
     - Docker Compose
+- データベース
     - SQLite3
 
 ----------

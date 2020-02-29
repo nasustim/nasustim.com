@@ -19,14 +19,14 @@ headimg: ./module-whom-exam-iamas.jpg
 
 !["IAMAS2020での展示の様子"](./module-whom-exhibit-iamas2020.jpg "IAMAS2020での展示の様子")
 
-## Systems to Exhibit
+## 展示システム
 
-- Client
+- クライアント
     - https://github.com/nasustim/code-player-module-whom
-- Server
+- サーバ
     - https://github.com/nasustim/code-server-module-whom
 
-## Exhibition
+## 展示
 
 - IAMAS2020 Graduation and Project Research Exhibition
     - https://www.iamas.ac.jp/exhibit20/

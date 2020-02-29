@@ -1,7 +1,7 @@
 ---
 title: ＊ as Code (Aster as Code)
 date: "2018-11-28T15:00:00.000Z"
-description: 細々と活動している
+description: JavaScriptで記述したソースコードを和紙に印刷した作品。
 pageid: aster-as-code
 category: works
 headimg: ./aster-as-code-iamas-01.jpg
@@ -20,13 +20,13 @@ JavaScriptで記述したソースコードを和紙に印刷して、学内応�
 
 ![『「あしたをプロトタイピングする」展』での展示の様子](./aster-as-code-nu-00.jpg "『「あしたをプロトタイピングする」展』での展示の様子")
 
-## Materials
+## 材料
 
 - [アワガミ インクジェットペーパー](http://www.awagami.jp/products/aijp/index.html#kozo02)
 - [和紙糊 - ヤマト](https://www.yamato.co.jp/products/I00000008/)
 - ECMAScript 2015
 
-## Exhibits
+## 展示
 
 - 「あしたをプロトタイピングする」展
     - http://www.ilas.nagoya-u.ac.jp/clas/programs/375.php

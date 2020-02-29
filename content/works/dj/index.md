@@ -20,7 +20,7 @@ headimg: ./nxpc35.jpg
 <!--Interim Report vol. 1 - Photo by 稲垣謙一さん-->
 <!--踊るかフェス Proto Party-->
 
-## Equipments
+## 使用機材
 
 - Pioneer Rekordbox
   - Pioneer CDJ

@@ -1,0 +1,28 @@
+---
+title: NxPC.Live vol.32 webページ
+date: "2020-03-20T00:00:00.000Z"
+description: NxPC.Live vol.32のイベントwebページ。メインビジュアルの画像をSVG化し、D3.jsで演出を加えました。
+category: works
+pageid: nxpc-43
+headimg: ./nxpc-43-0.png
+---
+
+# NxPC.Live vol.43 - webページ
+
+![NxPC.Live vol.43 - ヘッダー部分(Visual by Ayumu Nagamatsu)](./nxpc-43-0.png "NxPC.Live vol.43 - ヘッダー部分(Visual by Ayumu Nagamatsu)")
+
+NxPC.Live vol.43のイベントwebページ。
+メインビジュアルをトップ画面で再生するための調整や、セマンティック要素を意識して制作しました。
+
+![](./nxpc-43-1.png)
+![](./nxpc-43-2.png)
+![](./nxpc-43-3.png)
+
+## 公開URL
+- http://nxpclab.info/vol.43/
+
+## 技術要素
+
+- 開発環境
+    - Webpack
+    - TypeScript

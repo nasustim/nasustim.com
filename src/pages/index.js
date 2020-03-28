@@ -34,6 +34,7 @@ const Index = (props) => {
 
   
   const works = data.allMarkdownRemark.edges.map(({node}) => ({
+    title: node.frontmatter.title,
     linkUri: path.join('/works/', node.frontmatter.pageid),
     imgSrc: node.frontmatter.headimg.childImageSharp.resolutions.src,
     imgHeight: node.frontmatter.headimg.childImageSharp.resolutions.height
@@ -56,6 +57,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             pageid
+            title
             headimg {
               childImageSharp {
                 resolutions(jpegQuality: 85, width: 490) {

@@ -2,31 +2,77 @@
   top: 0;
   left: 0;
   width: 100%;
-  vertical-align:bottom;
-  margin: 0;
-  padding: 0;
-  filter: saturate(0%);
-  box-sizing: border-box;
-  border: solid 0px #ffffff;
+
+  &, & * {
+    vertical-align: bottom;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  filter: grayscale(100);
   /* enabled 3d rendering for firefox, its bad solution */
   transform: rotate3d(0, 0, 0, 0.0001deg);
   outline: 1px solid transparent;
-  transition: all 200ms ease-in-out;
+  transition: all 250ms ease-out;
   will-change: filter, border;
-}
 
-.pc {
-  &:hover {
-    filter: saturate(100%);
-    border-bottom: solid 15px #8a33fe;
-    border-left: solid 15px #8a33fe;
+  .highlight {
+    position: absolute;
+    top: 0;
+    height: 100%;
+
+    background-color: red;
   }
 }
 
-.sp {
+.topFigImg {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.topFigCaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+
+  transition: all 250ms ease-in-out;
+  will-change: opacity;
+
+  div {
+    h3 {
+      text-align: center;
+      font-weight: bold;
+      color: #3d3d3d;
+      -webkit-text-stroke: 1px #ffffff;
+      text-stroke: 1px #ffffff;
+    }
+  }
+}
+
+.pcContainer {
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+.spContainer {
   &:active {
-    filter: saturate(100%);
-    border-bottom: solid 15px #8a33fe;
-    border-left: solid 15px #8a33fe;
+    filter: grayscale(0);
+  }
+}
+.pcCaption {
+  &:hover {
+    opacity: 100;
+  }
+}
+.spCaption {
+  &:active {
+    opacity: 100;
   }
 }

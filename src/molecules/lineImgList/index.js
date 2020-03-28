@@ -10,7 +10,7 @@ const LineImgList = (props) => {
     props.works.map(work => (
       <section key={`line-sec--${work.linkUri}`} className={`${cardContainer}`}>
         <Link className={anchor} to={work.linkUri} key={`link--${work.linkUri}`}>
-          <TopImg imgSrc={work.imgSrc} device={props.device} key={`top-img--${work.linkUri}`} />
+          <TopImg imgSrc={work.imgSrc} device={props.device} key={`top-img--${work.linkUri}`} title={work.title} />
         </Link>
       </section>
     ))

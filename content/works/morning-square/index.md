@@ -19,7 +19,7 @@ headimg: ./morning-square01.png
 ## 共同制作
 
 - UI/UX & コンセプトデザイン
-    - [Hiromu Ehara](https://hehara17.myportfolio.com)
+    - Hiromu Ehara
 
 ## 公開URL
 - https://morning-sq.v.nasustim.com

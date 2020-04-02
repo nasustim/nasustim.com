@@ -7,7 +7,7 @@ pageid: nxpc-32
 headimg: ./nxpc-32.png
 ---
 
-# NxPC.Live vol.32 - webページ
+# NxPC.Live vol.32 webページ
 
 ![NxPC.Live vol.32 - ヘッダー部分](./nxpc-32.png "NxPC.Live vol.32 - ヘッダー部分")
 

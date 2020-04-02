@@ -1,5 +1,5 @@
 ---
-title: OTON GLASS - インターン
+title: OTON GLASS インターン
 date: "2017-12-18T00:00:00.000Z"
 description: インターン
 category: works
@@ -7,7 +7,7 @@ pageid: oton-glass
 headimg: ./oton-glass.png
 ---
 
-# OTON GLASS - インターン
+# OTON GLASS インターン
 
 ![BS-TBSにて放送された業務従事中の様子](./oton-glass.png "BS-TBSにて放送された業務従事中の様子")
 

@@ -7,12 +7,11 @@ pageid: nxpc-43
 headimg: ./nxpc-43-0.png
 ---
 
-# NxPC.Live vol.43 - webページ
+# NxPC.Live vol.43 webページ
 
 ![NxPC.Live vol.43 - ヘッダー部分(Visual by Ayumu Nagamatsu)](./nxpc-43-0.png "NxPC.Live vol.43 - ヘッダー部分(Visual by Ayumu Nagamatsu)")
 
-NxPC.Live vol.43のイベントwebページ。
-メインビジュアルをトップ画面で再生するための調整や、セマンティック要素を意識して制作しました。
+NxPC.Live vol.43のイベントwebページを制作しました。
 
 ![](./nxpc-43-1.png)
 ![](./nxpc-43-2.png)

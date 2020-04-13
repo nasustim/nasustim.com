@@ -1,3 +1,5 @@
+const path = require('path')
+
 const TITLE = `Mitsuhiro Hibino / 日比野光紘`
 const AUTHOR = `Mitsuhiro Hibino`
 const DESCRIPTION = `Mitsuhiro Hibino: Software Developer / Standalone Creator.`
@@ -127,12 +129,32 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         createLinkInHead: true,
-
       }
     },
     {
       resolve: `gatsby-plugin-netlify`,
       options: {},
-    }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: SITE_URL,
+        sitemap: path.join(SITE_URL, '/sitemap.xml'),
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-webpack-bundle-analyzer`,
+      options: {
+        openAnalyzer: false
+      }
+    },
+    /*{
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#000000`,
+        showSpinner: false,
+      },
+    },*/
   ],
 }

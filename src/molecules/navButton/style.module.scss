@@ -17,8 +17,9 @@
 }
 
 .pc {
-//  font-size: 18px;
-
+  h3{
+    font-size: 24px;
+  }
   &:hover {
     color: #474747;
     background-color: #cccccc;
@@ -26,8 +27,9 @@
 }
 
 .sp {
-//  font-size: 10px;
-
+  h3{
+    font-size: 14px;
+  }
   &:active {
     color: #474747;
     background-color: #cccccc;

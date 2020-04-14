@@ -2,8 +2,6 @@ import React from 'react'
 import {Link} from 'gatsby'
 import {anchor, list, navBar, pc, sp, selected} from './style.module.scss'
 
-import Typography from '../../utils/typography'
-
 const NavButton = ({isTop, device}) => {
   const deviceStyle = device === 'desktop' ? pc : sp
 

@@ -10,36 +10,36 @@ category: profile
 
 ![著者近影](./2018-11.jpg "著者近影")
 
-1994年11月 岐阜県出身のソフトウェア開発者。  
-幼い頃からものづくりに興味を持ち、小中学生時代はロボット競技に熱中する。大学では電気電子と情報技術を学ぶ。プログラムを記述する行為そのものに喜びを感じ、大学院ではプログラミング言語の形式で現れる思考の表現を研究。  
-現在はソフトウェアエンジニアとして勤務。  
+1994年11月生まれ、岐阜県出身のソフトウェア開発者。
 
-## プログラミング
+幼い頃からものづくりに興味を持ち、小中学生時代はロボット競技に熱中する。その延長で大学では電気電子と情報技術を学ぶ。  
+プログラムを記述する行為そのものに喜びを感じ、大学院ではプログラミング言語の形式で現れる思考の表現を研究。
+
+現在は都内でソフトウェアエンジニアとして勤務。  
+
+## よく使う
 
 - 言語
-    - JavaScript, TypeScript, PHP, Python, C++
-- Webフロントエンド
-    - React, jQuery, D3.js
-- Webバックエンド
-    - Express(Node.js), Flask(Python), Code Igniter(PHP)
-- CG / CV
-    - Processing, Three.js, openFrameworks, OpenCV
-- 組み込みシステム
-    - PIC, Raspberry Pi, ESP32
+  - JavaScript, TypeScript, PHP
+- ライブラリ
+  - React, jQuery, Express, Processing
+- ハードウェア
+  - Raspberry Pi, ESP32
 - SDK
-    - Electron, React Native
+  - Electron, React Native
+- インフラ
+  - Docker
+- その他
+  - Adobe (Illustrator, Premiere), Ableton Live
 
-## 開発ツール
+## 趣味程度
 
-- Docker, AWS
-
-## 電子回路制作
-
-- Fritzing, CR-8000, アナログ/デジタル回路の設計, はんだ付け
-
-## その他
-
-- Adobe (Illustrator, Premiere), Ableton Live, プロトタイピングの実践, 手先が器用
+- 言語
+  - Python, C++
+- ライブラリ
+  - D3.js, Flask, Code Igniter, Three.js, oF, OpenCV
+- ハードウェア
+  - PIC
 
 ## SNSアカウント
 

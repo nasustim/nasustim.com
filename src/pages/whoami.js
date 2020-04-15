@@ -48,7 +48,7 @@ const Whoami = (props) => {
 export default Whoami
 
 export const pageQuery = graphql`
-  query {
+  query WhoamiPageQuery {
     markdownRemark(frontmatter: {pageid: {eq: "whoami"}}) {
       html
     }

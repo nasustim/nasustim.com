@@ -51,7 +51,7 @@ const Index = (props) => {
 export default Index
 
 export const pageQuery = graphql`
-  query {
+  query IndexPageQuery {
     allMarkdownRemark(filter: {frontmatter: {category: {eq: "works"}}}, sort: {fields: frontmatter___date, order: DESC}) {
       edges {
         node {

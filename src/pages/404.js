@@ -45,7 +45,7 @@ const NotFound = (props) => {
 export default NotFound
 
 export const pageQuery = graphql`
-  query {
+  query NotFoundPageQuery {
     site {
       siteMetadata {
         author

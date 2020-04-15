@@ -156,5 +156,12 @@ module.exports = {
         showSpinner: false,
       },
     },*/
+    `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-plugin-graphql-codegen`,
+      options: {
+        fileName: `src/types/graphql-types.d.ts`,
+      },
+    },
   ],
 }

@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import { Link } from "gatsby"
+//import { NotFoundPageQuery } from '../../types/graphql-types'
 
 import Layout from '../layout'
 
@@ -7,6 +8,10 @@ import {container, center, fullWidth, right } from './style.module.scss'
 
 import {detectDevice} from '../resolver'
 import {defaultWindowWidth} from '../constant'
+
+//type Props = {
+//  data: NotFoundPageQuery
+//}
 
 const NotFound = (props) => {
   const { data } = props
@@ -45,7 +50,7 @@ const NotFound = (props) => {
 export default NotFound
 
 export const pageQuery = graphql`
-  query NotFoundPageQuery {
+  query NotFoundPage {
     site {
       siteMetadata {
         author

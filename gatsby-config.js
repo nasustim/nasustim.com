@@ -156,11 +156,18 @@ module.exports = {
         showSpinner: false,
       },
     },*/
-    `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true,
+        jsxPragma: `React`,
+        allExtensions: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-graphql-codegen`,
       options: {
-        fileName: `src/types/graphql-types.d.ts`,
+        fileName: `types/graphql-types.d.ts`,
       },
     },
   ],

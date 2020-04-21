@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import { graphql } from "gatsby"
+//import { WhoamiPageQuery } from '../../types/graphql-types'
 
 import Layout from '../layout'
 
@@ -8,6 +9,10 @@ import Article from '../organisms/article'
 
 import {detectDevice} from '../resolver'
 import {defaultWindowWidth} from '../constant'
+
+//type Props = {
+//  data: WhoamiPageQuery
+//}
 
 const Whoami = (props) => {
   const { data } = props
@@ -48,7 +53,7 @@ const Whoami = (props) => {
 export default Whoami
 
 export const pageQuery = graphql`
-  query WhoamiPageQuery {
+  query WhoamiPage {
     markdownRemark(frontmatter: {pageid: {eq: "whoami"}}) {
       html
     }

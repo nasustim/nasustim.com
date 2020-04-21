@@ -48,7 +48,7 @@ export default WorkTemplete
 
 export const query = graphql`
   query WorkByPageId ($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark (frontmatter: {pageid: {eq: $slug}}) {
       html
       frontmatter {
         date(formatString: "YYYY-MM-DD")

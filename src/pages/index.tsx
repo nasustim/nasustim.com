@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { graphql } from 'gatsby'
+//import {  } from '../../types/graphql-types'
 
 import Layout from '../layout'
 import {container} from './style.module.scss'
@@ -8,6 +9,10 @@ import {defaultWindowWidth} from '../constant'
 import PortfolioList from '../organisms/portfolioList'
 
 import path from 'path'
+
+//type Props = {
+//  data: IndexPageQuery
+//}
 
 const Index = (props) => {
   const { data } = props
@@ -51,7 +56,7 @@ const Index = (props) => {
 export default Index
 
 export const pageQuery = graphql`
-  query IndexPageQuery {
+  query IndexPage {
     allMarkdownRemark(filter: {frontmatter: {category: {eq: "works"}}}, sort: {fields: frontmatter___date, order: DESC}) {
       edges {
         node {

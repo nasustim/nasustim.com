@@ -7,10 +7,11 @@ const TopImg = ({imgSrc, device, title}) =>
     <img 
       className={topFigImg}
       src={imgSrc}
+      alt={title}
       key={`img--${imgSrc}`}
     />
     <figcaption className={`${topFigCaption} ${device === 'desktop' ? pcCaption : spCaption}`} >
-      <div><h3>{title}</h3></div>
+      <div><h1>{title}</h1></div>
     </figcaption>
     <div className={`${highlight}`}></div>
   </figure>

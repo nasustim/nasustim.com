@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from '../layout'
 

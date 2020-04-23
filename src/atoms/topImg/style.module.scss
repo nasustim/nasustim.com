@@ -46,7 +46,7 @@
   will-change: opacity;
 
   div {
-    h3 {
+    h1 {
       text-align: center;
       font-weight: bold;
       color: #3d3d3d;
@@ -75,4 +75,12 @@
   &:active {
     opacity: 100;
   }
+}
+
+.pcH1 {
+  font-size: 20px;  
+}
+
+.spH1 {
+  font-size: 15px;
 }

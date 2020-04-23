@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../layout'
 import {container} from './style.module.scss'
 import {detectDevice} from '../resolver'
-import {defaultWindowWidth} from '../constant'
+import {defaultWindowWidth} from '../constants'
 import PortfolioList from '../organisms/portfolioList'
 
 import path from 'path'

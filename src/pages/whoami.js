@@ -7,7 +7,7 @@ import {container} from './style.module.scss'
 import Article from '../organisms/article'
 
 import {detectDevice} from '../resolver'
-import {defaultWindowWidth} from '../constant'
+import {defaultWindowWidth} from '../constants'
 
 const Whoami = (props) => {
   const { data } = props

@@ -7,7 +7,7 @@ import {container} from '../../pages/style.module.scss'
 import Article from '../../organisms/article'
 
 import {detectDevice} from '../../resolver'
-import {defaultWindowWidth} from '../../constant'
+import {defaultWindowWidth} from '../../constants'
 
 const WorkTemplete = ({data}) => {
   const {html, frontmatter} = data.markdownRemark

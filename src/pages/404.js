@@ -6,7 +6,7 @@ import Layout from '../layout'
 import {container, center, fullWidth, right } from './style.module.scss'
 
 import {detectDevice} from '../resolver'
-import {defaultWindowWidth} from '../constant'
+import {defaultWindowWidth} from '../constants'
 
 const NotFound = (props) => {
   const { data } = props

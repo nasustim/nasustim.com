@@ -1,4 +1,4 @@
-import {deviceBreakPoint} from '../constant'
+import {deviceBreakPoint} from '../constants'
 
 export function detectDevice (size) {
   if (size < deviceBreakPoint.mobile)

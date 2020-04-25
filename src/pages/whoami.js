@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from '../layout'
 
-import { Container } from './style'
+import { Container } from '../style'
 import Article from '../organisms/article'
 
 import {detectDevice} from '../resolver'

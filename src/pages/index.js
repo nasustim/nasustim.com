@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../layout'
-import { Container } from './style'
+import { Container } from '../style'
 import {detectDevice} from '../resolver'
 import {defaultWindowWidth} from '../constants'
 import PortfolioList from '../organisms/portfolioList'

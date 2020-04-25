@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../../layout'
-import { Container } from '../../pages/style'
+import { Container } from '../../style'
 
 import Article from '../../organisms/article'
 

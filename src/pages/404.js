@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from '../layout'
 
-import { Container, CenteredHeading, FullWidthContainer, RightAlignedText } from './style'
+import { Container, CenteredHeading, FullWidthContainer, RightAlignedText } from '../style'
 
 import {detectDevice} from '../resolver'
 import {defaultWindowWidth} from '../constants'

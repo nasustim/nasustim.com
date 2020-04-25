@@ -1,12 +1,10 @@
 import React from 'react'
 
-import { spContainer, pcContainer } from './style.module.scss'
+import { Container } from './style.js'
 
-const Article = ({device, dangerouslySetInnerHTML}) => {
-  
-  const container = device === `desktop` ? pcContainer : spContainer
-
-  return <article dangerouslySetInnerHTML={dangerouslySetInnerHTML} className={container}></article>
-}
+const Article = ({device, dangerouslySetInnerHTML}) => <Container 
+    device={device}
+    dangerouslySetInnerHTML={dangerouslySetInnerHTML}
+  />
 
 export default Article

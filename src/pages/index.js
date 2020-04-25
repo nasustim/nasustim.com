@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../layout'
-import {container} from './style.module.scss'
+import { Container } from '../style'
 import {detectDevice} from '../resolver'
-import {defaultWindowWidth} from '../constant'
+import {defaultWindowWidth} from '../constants'
 import PortfolioList from '../organisms/portfolioList'
 
 import path from 'path'
@@ -40,11 +40,11 @@ const Index = (props) => {
     imgHeight: node.frontmatter.headimg.childImageSharp.resolutions.height
   }))
 
-  return <div className={container}>
+  return <Container>
     <Layout {...toLayout}>
       <PortfolioList device={device} works={works} />
     </Layout>
-  </div>
+  </Container>
 }
 
 

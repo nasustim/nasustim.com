@@ -2,12 +2,12 @@ import React, {useState} from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../../layout'
-import {container} from '../../pages/style.module.scss'
+import { Container } from '../../style'
 
 import Article from '../../organisms/article'
 
 import {detectDevice} from '../../resolver'
-import {defaultWindowWidth} from '../../constant'
+import {defaultWindowWidth} from '../../constants'
 
 const WorkTemplete = ({data}) => {
   const {html, frontmatter} = data.markdownRemark
@@ -33,14 +33,14 @@ const WorkTemplete = ({data}) => {
     })
 
   return (
-    <div className={container}>
+    <Container>
       <Layout {...toLayout}>
         <Article
           device={device}
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </Layout>
-    </div>
+    </Container>
   )
 }
 

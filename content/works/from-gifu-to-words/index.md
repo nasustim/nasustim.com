@@ -4,7 +4,7 @@ date: "2017-07-30T00:00:00.000Z"
 description: コンピュータの側にあるマイクに話しかけるとWeb Speech APIを介してその音声が文字情報化され、バックエンドのHTTPサーバの中で形態素解析され、word2vecライブラリを用いて"岐阜"と一つ一つの単語との意味的な距離をビジュアライズする。IAMASオープンハウス2017で展示を行った。
 category: works
 pageid: from-gifu-to-words
-headimg: ./from-gifu-to-words.png
+headimg: ./thumbnail.png
 ---
 
 # from Gifu to words

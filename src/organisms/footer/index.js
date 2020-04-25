@@ -1,12 +1,12 @@
 import React from 'react'
 
-import { container, footer } from './style.module.scss'
+import { Container, FooterSection } from './style'
 
 const Footer = ({author, establishYear}) =>
-  <section className={container}>
-    <footer className={footer}>
+  <Container>
+    <FooterSection>
       <small>© {author}, {establishYear} -</small>
-    </footer>
-  </section>
+    </FooterSection>
+  </Container>
 
 export default Footer

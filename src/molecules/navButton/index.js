@@ -1,21 +1,13 @@
 import React from 'react'
-import {Link} from 'gatsby'
-import {anchor, list, navBar, pc, sp, selected} from './style.module.scss'
+import { NavBar, Link, List } from './style'
 
-const NavButton = ({isTop, device}) => {
-  const deviceStyle = device === 'desktop' ? pc : sp
-
-  const portfolio = !isTop ? selected : ''
-  const whoami = !!isTop ? selected : ''
-
-  return <ul className={navBar}>
-    <li className={`${list} ${deviceStyle} ${portfolio}`}>
-      <Link data-selected={!isTop} className={`${anchor}`} to="/"><h3>Portfolio</h3></Link>
-    </li>
-    <li className={`${list} ${deviceStyle} ${whoami}`}>
-      <Link data-selected={!!isTop} className={`${anchor}`} to="/whoami"><h3>Whoami</h3></Link>
-    </li>
-  </ul>
-}
+const NavButton = ({isTop, device}) => <NavBar>
+    <List data-selected={!isTop} device={device}>
+      <Link data-selected={!isTop} to="/"><h3>Portfolio</h3></Link>
+    </List>
+    <List data-selected={!!isTop} device={device}>
+      <Link data-selected={!!isTop} to="/whoami"><h3>Whoami</h3></Link>
+    </List>
+  </NavBar>
 
 export default NavButton

@@ -149,6 +149,7 @@ module.exports = {
         openAnalyzer: false
       }
     },
+    `gatsby-plugin-styled-components`,
     /*{
       resolve: `gatsby-plugin-nprogress`,
       options: {

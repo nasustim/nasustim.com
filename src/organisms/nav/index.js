@@ -6,7 +6,6 @@ import NavButton from '../../molecules/navButton'
 
 const Nav = ({currentPath, device}) => {
   const isTop = currentPath.match(/whoami/)
-
   const deviceStyle = device === 'desktop' ? pc : sp
 
   return <header className={`${container} ${deviceStyle}`}>

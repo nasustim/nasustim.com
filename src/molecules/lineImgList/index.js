@@ -1,20 +1,17 @@
 import React from 'react'
-import {Link} from 'gatsby'
 
 import TopImg from '../../atoms/topImg'
 
-import {line, cardContainer, anchor} from './style.module.scss'
+import { Line, CardContainer, Link } from './style.js'
 
-const LineImgList = (props) => {
-  return <div className={`${line}`}>{
+const LineImgList = (props) => <Line>{
     props.works.map(work => (
-      <section key={`line-sec--${work.linkUri}`} className={`${cardContainer}`}>
-        <Link className={anchor} to={work.linkUri} key={`link--${work.linkUri}`}>
+      <CardContainer key={`line-sec--${work.linkUri}`}>
+        <Link to={work.linkUri} key={`link--${work.linkUri}`}>
           <TopImg imgSrc={work.imgSrc} device={props.device} key={`top-img--${work.linkUri}`} title={work.title} />
         </Link>
-      </section>
+      </CardContainer>
     ))
-  } </div>
-}
+  }</Line>
 
 export default LineImgList

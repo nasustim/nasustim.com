@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from '../layout'
 
-import {container, center, fullWidth, right } from './style.module.scss'
+import { Container, CenteredHeading, FullWidthContainer, RightAlignedText } from './style'
 
 import {detectDevice} from '../resolver'
 import {defaultWindowWidth} from '../constants'
@@ -31,14 +31,14 @@ const NotFound = (props) => {
       device
     })
 
-  return <div className={container}>
+  return <Container>
     <Layout {...toLayout}>
-      <div className={fullWidth}>
-        <h1 className={`${fullWidth} ${center}`}>404 Not Found</h1>
-        <p className={`${fullWidth} ${right}`}><Link to={'/'}>Top Page →</Link></p>
-      </div>
+      <FullWidthContainer>
+        <CenteredHeading>404 Not Found</CenteredHeading>
+        <RightAlignedText><Link to={'/'}>Top Page →</Link></RightAlignedText>
+      </FullWidthContainer>
     </Layout>
-  </div>
+  </Container>
 }
 
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import {container, sp, pc, content, pcContent, spContent} from './style.module.scss'
+import { Container, Content } from './style.js'
 
 import SEO from '../utils/seo'
 import Nav from '../organisms/nav'
@@ -12,17 +12,14 @@ const Layout = (props) => {
   const title = props.title
   const device = props.device
 
-  const deviceStyle = device === 'desktop' ? pc : sp
-  const contentStyle = device === 'desktop' ? `${content} ${pcContent}` : `${content} ${spContent}`
-
-  return <div data-device={device} className={`${container} ${deviceStyle}`}>
+  return <Container device={device}>
     <SEO title={title} />
     <Nav currentPath={currentPath} device={device}/>
-    <section className={`${contentStyle}`}>
+    <Content device={device}>
       {props.children}
       <Footer author={author} establishYear={establishYear} />
-    </section>
-  </div>
+    </Content>
+  </Container>
 }
 
 export default Layout 

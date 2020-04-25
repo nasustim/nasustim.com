@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../../layout'
-import {container} from '../../pages/style.module.scss'
+import { Container } from '../../pages/style'
 
 import Article from '../../organisms/article'
 
@@ -33,14 +33,14 @@ const WorkTemplete = ({data}) => {
     })
 
   return (
-    <div className={container}>
+    <Container>
       <Layout {...toLayout}>
         <Article
           device={device}
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </Layout>
-    </div>
+    </Container>
   )
 }
 

@@ -1,20 +1,17 @@
 import React from 'react'
 
-import {container, topFigImg, topFigCaption, pcContainer, spContainer, pcCaption, spCaption, pcH1, spH1, highlight} from './style.module.scss'
+import { Container, Img, Figcaption } from './style.js'
 
 const TopImg = ({imgSrc, device, title}) =>  
-  <figure className={`${container} ${device === 'desktop' ? pcContainer : spContainer}`} >
-    <img 
-      className={topFigImg}
+  <Container device={device}>
+    <Img
       src={imgSrc}
       alt={title}
-      key={`img--${imgSrc}`}
+      key={`img--${title}`}
     />
-    <figcaption className={`${topFigCaption} ${device === 'desktop' ? pcCaption : spCaption}`} >
-      <div><h1 className={device === 'desktop' ? pcH1 : spH1}>{title}</h1></div>
-    </figcaption>
-    <div className={`${highlight}`}></div>
-  </figure>
-
+    <Figcaption device={device}>
+      <div><h1>{title}</h1></div>
+    </Figcaption>
+  </Container>
 
 export default TopImg

@@ -1,17 +1,16 @@
 import React from 'react'
 
-import {container, sp, pc} from './style.module.scss'
+import { Container } from './style'
 import NavTitle from '../../molecules/navTitle'
 import NavButton from '../../molecules/navButton'
 
 const Nav = ({currentPath, device}) => {
   const isTop = currentPath.match(/whoami/)
-  const deviceStyle = device === 'desktop' ? pc : sp
 
-  return <header className={`${container} ${deviceStyle}`}>
+  return <Container device={device}>
     <NavTitle device={device} />
     <NavButton isTop={isTop} device={device} />
-  </header>
+  </Container>
 }
 
 export default Nav

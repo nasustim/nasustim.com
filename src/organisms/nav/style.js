@@ -1,4 +1,6 @@
-.container {
+import styled from 'styled-components'
+
+export const Container = styled.header`
   * {
     box-shadow: none;
   }
@@ -25,12 +27,6 @@
   position: fixed;
 
   background-color: rgba($color: #ffffff, $alpha: 0.6);
-}
 
-.sp {
-  height: 60px;
-}
-
-.pc {
-  height: 110px;
-}
+  height: ${({device}) => device === 'desktop' ? 110 : 60}px;
+`

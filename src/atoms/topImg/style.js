@@ -29,19 +29,20 @@ export const Figcaption = styled.figcaption`
   bottom: 0;
 
   display: flex;
-
+  background-color: rgba(0, 0, 0, 0.36);
   opacity: 0;
-  transition: all 250ms ease-in-out;
+  transition: all 200ms ease-in-out;
   will-change: opacity;
 
   div {
     width: 100%;
+    transform: translate3d(0, 47px, 0);
+    transition: all 187ms ease-out;
+    will-change: transform;
     h1 {
       text-align: center;
       font-weight: bold;
-      color: #3d3d3d;
-      -webkit-text-stroke: 1px #ffffff;
-      text-stroke: 1px #ffffff;
+      color: #d4d4d9;
       font-size: ${({device}) => device === 'desktop' ? 20 : 15}px;
     }
   }
@@ -68,6 +69,9 @@ export const Container = styled.figure`
     }
     & > figcaption {
       opacity: 100;
+      div{
+        transform: translate3d(0, 0, 0);
+      }
     }
   }
 `

@@ -11,8 +11,7 @@ headimg: ./nxpc35.jpg
 
 ![NxPC.Live vol.35 - Photo by 植松頌太さん](./nxpc35.jpg "NxPC.Live vol.35 - Photo by 植松頌太さん")
 
-細々と活動しています。  
-ベースミュージックやポップスをかけるのが好きです。
+細々と活動している。
 
 <!--NxPC.Live vol. 31-->
 <!--Interim Report vol. 3 - Photo by 川村将貴さん-->

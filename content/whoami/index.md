@@ -29,24 +29,24 @@ category: profile
   - Electron, React Native
 - インフラ
   - Docker
-- その他
-  - Adobe (Illustrator, Premiere), Ableton Live
 
 ## 趣味程度
 
 - 言語
-  - Python, C++
+  - Python, C++, Go
 - ライブラリ
-  - D3.js, Flask, Code Igniter, Three.js, oF, OpenCV
+  - D3.js, Flask, Code Igniter, Three.js, openFrameworks, OpenCV
 - ハードウェア
   - PIC
+- その他
+  - Adobe (Illustrator, Premiere), Ableton Live
 
 ## SNSアカウント
 
 - [Keybase](https://keybase.io/nasustim)
 - GitHub
     - [メインアカウント](https://github.com/nasustim)
-    - [実験的なリポジトリたち](https://github.com/playground-nasustim)
+    - [サンドボックス](https://github.com/playground-nasustim)
 - [Twitter](https://twitter.com/nasustim)
 - [Mastodon](https://connect.nasustim.com)
 - [Keybase](https://keybase.io/nasustim)

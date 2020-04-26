@@ -2,8 +2,7 @@ import React from 'react'
 
 import { Container, Img, Figcaption } from './style.js'
 
-const TopImg = ({imgSrc, device, title}) =>  
-  <Container device={device}>
+const TopImg = ({imgSrc, device, title}) => <Container device={device}>
     <Img
       src={imgSrc}
       alt={title}

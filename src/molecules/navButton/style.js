@@ -1,6 +1,8 @@
 import { Link as GatsbyLink} from 'gatsby'
 import styled from 'styled-components'
 
+import { color } from '../../constants'
+
 export const NavBar = styled.ul`
   height: 100%;
   margin: 0;
@@ -12,11 +14,9 @@ export const NavBar = styled.ul`
 
 export const Link = styled(GatsbyLink)`
   text-decoration: none;
+  color: ${color.BLACK};
   &[data-selected="true"] {
-    color: #ffffff;
-  }
-  &[data-selected="false"] {
-    color: #141414;
+    color: ${color.WHITE};
   }
 `
 export const List = styled.li`
@@ -26,11 +26,11 @@ export const List = styled.li`
   transition: all 200ms ease-in-out;
 
   &[data-selected="true"] {
-    background-color: #141414;
+    background-color: ${color.BLACK};
   }
   &:hover {
-    color: #474747;
-    background-color: #cccccc;
+    background-color: ${color.TRANSLUCENT_BLACK};
+    color: ${color.PRIMARY};
   }
 
   /* multi device */

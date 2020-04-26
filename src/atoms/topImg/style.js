@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import { color } from '../../constants'
 
 export const Img = styled.img`
 
@@ -29,20 +30,20 @@ export const Figcaption = styled.figcaption`
   bottom: 0;
 
   display: flex;
-  background-color: rgba(0, 0, 0, 0.36);
-  opacity: 0;
-  transition: all 200ms ease-in-out;
-  will-change: opacity;
+
+  overflow: hidden;
 
   div {
     width: 100%;
-    transform: translate3d(0, 47px, 0);
-    transition: all 187ms ease-out;
+
+    background-color: rgba(0, 0, 0, 0.36);
+    transform: translate3d(0, 200px, 0);
+    transition: all 240ms ease-in-out;
     will-change: transform;
+
     h1 {
       text-align: center;
-      font-weight: bold;
-      color: #d4d4d9;
+      color: ${color.WHITE};
       font-size: ${({device}) => device === 'desktop' ? 20 : 15}px;
     }
   }
@@ -67,11 +68,8 @@ export const Container = styled.figure`
     & > img {
       filter: grayscale(0);
     }
-    & > figcaption {
-      opacity: 100;
-      div{
-        transform: translate3d(0, 0, 0);
-      }
+    & > figcaption > div {
+      transform: translate3d(0, 0, 0);  
     }
   }
 `

@@ -57,6 +57,7 @@ export const pageQuery = graphql`
         author
         description
         title
+        establishYear
         social {
           twitter
         }

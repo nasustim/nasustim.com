@@ -43,7 +43,6 @@ category: profile
 
 ## SNSアカウント
 
-- [Keybase](https://keybase.io/nasustim)
 - GitHub
     - [メインアカウント](https://github.com/nasustim)
     - [サンドボックス](https://github.com/playground-nasustim)

@@ -45,6 +45,8 @@ export const Figcaption = styled.figcaption`
       text-align: center;
       color: ${color.WHITE};
       font-size: ${({device}) => device === 'desktop' ? 20 : 15}px;
+      line-height: 1.2;
+      margin: 10px;
     }
   }
 `

@@ -1,52 +1,44 @@
 ---
 title: $ whoami
 date: "2020-01-26T15:41:19.000Z"
-description: "Mitsuhiro Hibino: Software Developer / Standalone Creator."
+description: "Mitsuhiro Hibino: Born and raise in Gifu, Nov 1994. I formerly studied Electronic and Information Engineering, and Media Creation. Currently, based in Tokyo, and work in a SaaS Provider as software engineer."
 pageid: whoami
 category: profile
 ---
 
-# Mitsuhiro Hibino / 日比野光紘
+# Mitsuhiro Hibino
 
-![著者近影](./2018-11.jpg "著者近影")
+![](./2018-11.jpg)
 
-1994年11月生まれ、岐阜県出身のソフトウェア開発者。
+Born and raise in Gifu, Nov 1994.  
+I formerly studied Electronic and Information Engineering, and Media Creation.  
+Currently, based in Tokyo, and work in a SaaS Provider as software engineer.
 
-幼い頃からものづくりに興味を持ち、小中学生時代はロボット競技に熱中する。その延長で大学では電気電子と情報技術を学ぶ。  
-プログラムを記述する行為そのものに喜びを感じ、大学院ではプログラミング言語の形式で現れる思考の表現を研究。
+## Use in work, or usually use
 
-現在は都内でソフトウェアエンジニアとして勤務。  
+| Category | Libraries, Fields, Technical Skills,,, |
+| --- | --- |
+| Languages | JavaScript, Perl, TypeScript, PHP |
+| Libraries and Frameworks | React, jQuery, Express.js, Processing, Electron, React Native |
+| Hardware | Raspberry Pi(Raspbian), ESP32 |
+| Development Tools and Infrastructure | Git, curl, Docker, MySQL |
 
-## よく使う
+## Hobby Use
 
-- 言語
-  - JavaScript, TypeScript, PHP
-- ライブラリ
-  - React, jQuery, Express, Processing
-- ハードウェア
-  - Raspberry Pi, ESP32
-- SDK
-  - Electron, React Native
-- インフラ
-  - Docker
+| Category | Libraries, Fields, Technical Skills,,, |
+| --- | --- |
+| Languages | Python, C++, Golang |
+| Libraries and Frameworks | D3.js, Three.js, Flask, Code Igniter, openFrameworks, OpenCV |
+| Hardware | PIC, Atmel AVR |
+| Electronics | Circuit Design(Analog/Digital), Soldering, Fritzing, ZUKEN CR-8000  |
+| Misc | Adobe (Illustrator, Premiere), Ableton Live |
 
-## 趣味程度
+## My Accounts
 
-- 言語
-  - Python, C++, Go
-- ライブラリ
-  - D3.js, Flask, Code Igniter, Three.js, openFrameworks, OpenCV
-- ハードウェア
-  - PIC
-- その他
-  - Adobe (Illustrator, Premiere), Ableton Live
-
-## SNSアカウント
-
-- GitHub
-    - [メインアカウント](https://github.com/nasustim)
-    - [サンドボックス](https://github.com/playground-nasustim)
-- [Twitter](https://twitter.com/nasustim)
-- [Mastodon](https://connect.nasustim.com)
-- [Keybase](https://keybase.io/nasustim)
-- [Wish List](http://amzn.asia/hHtLxGV)
+| Service | Link to my account |
+| --- | --- |
+| GitHub | https://github.com/nasustim<br>https://github.com/playground-nasustim |
+| Twitter | https://twitter.com/nasustim |
+| Facebook | https://www.facebook.com/mitsuhibino/ |
+| Mastodon | https://connect.nasustim.com |
+| Keybase | https://keybase.io/nasustim |

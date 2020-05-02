@@ -1,8 +1,8 @@
 const path = require('path')
 
-const TITLE = `Mitsuhiro Hibino / 日比野光紘`
+const TITLE = `nasustim.com`
 const AUTHOR = `Mitsuhiro Hibino`
-const DESCRIPTION = `Mitsuhiro Hibino: Software Developer / Standalone Creator.`
+const DESCRIPTION = `Mitsuhiro Hibino: Software Developer / Creator.`
 const SITE_URL = `https://nasustim.com`
 const SOCIAL = {
   twitter: `nasustim`

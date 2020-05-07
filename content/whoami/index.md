@@ -1,6 +1,6 @@
 ---
 title: $ whoami
-date: "2020-01-26T15:41:19.000Z"
+date: "2020-05-07T09:00:00.000Z"
 description: "Mitsuhiro Hibino: Born and raise in Gifu, Nov 1994. I formerly studied Electronic and Information Engineering, and Media Creation. Currently, based in Tokyo, and work in a SaaS Provider as software engineer."
 pageid: whoami
 category: profile

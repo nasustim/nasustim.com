@@ -1,7 +1,7 @@
 ---
 title: NxPC.Live vol.32 webページ
 date: "2020-03-20T00:00:00.000Z"
-description: NxPC.Live vol.32のイベントwebページ。メインビジュアルの画像をSVG化し、D3.jsで演出を加えました。
+description: NxPC.Live vol.43のイベントwebページを制作しました。
 category: works
 pageid: nxpc-43
 headimg: ./thumbnail.png

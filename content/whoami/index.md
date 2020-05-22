@@ -1,7 +1,7 @@
 ---
 title: $ whoami
 date: "2020-05-07T09:00:00.000Z"
-description: "Mitsuhiro Hibino: Born and raise in Gifu, Nov 1994. I formerly studied Electronic and Information Engineering, and Media Creation. Currently, based in Tokyo, and work in a SaaS Provider as software engineer."
+description: "Mitsuhiro Hibino: Born and raised in Gifu, Nov 1994. I formerly studied Electronic and Information Engineering, and Media Creation. Currently, based in Tokyo, and work as a software engineer at web service provider."
 pageid: whoami
 category: profile
 ---
@@ -10,9 +10,9 @@ category: profile
 
 ![](./2018-11.jpg)
 
-Born and raise in Gifu, Nov 1994.  
+Born and raised in Gifu, Nov 1994.  
 I formerly studied Electronic and Information Engineering, and Media Creation.  
-Currently, based in Tokyo, and work in a SaaS Provider as software engineer.
+Currently, I based in Tokyo, and work as a software engineer at web service provider.
 
 ## Use in work, or usually use
 
@@ -28,7 +28,7 @@ Currently, based in Tokyo, and work in a SaaS Provider as software engineer.
 | Category | Libraries, Fields, Technical Skills,,, |
 | --- | --- |
 | Languages | Python, C++, Golang |
-| Libraries and Frameworks | D3.js, Three.js, Flask, Code Igniter, openFrameworks, OpenCV |
+| Libraries and Frameworks | Vue.js, D3.js, Three.js, Flask, Code Igniter, openFrameworks, OpenCV |
 | Hardware | PIC, Atmel AVR |
 | Electronics | Circuit Design(Analog/Digital), Soldering, Fritzing, ZUKEN CR-8000  |
 | Misc | Adobe (Illustrator, Premiere), Ableton Live |
@@ -40,5 +40,5 @@ Currently, based in Tokyo, and work in a SaaS Provider as software engineer.
 | GitHub | https://github.com/nasustim<br>https://github.com/playground-nasustim |
 | Twitter | https://twitter.com/nasustim |
 | Facebook | https://www.facebook.com/mitsuhibino/ |
-| Mastodon | https://connect.nasustim.com |
+| Mastodon | https://mstdn.nasustim.com |
 | Keybase | https://keybase.io/nasustim |

@@ -18,7 +18,7 @@ Currently, I based in Tokyo, and work as a software engineer at web service prov
 
 | Category | Libraries, Fields, Technical Skills,,, |
 | --- | --- |
-| Languages | JavaScript, Perl, TypeScript, PHP |
+| Languages | JavaScript, TypeScript, PHP |
 | Libraries and Frameworks | React, jQuery, Express.js, Processing, Electron, React Native |
 | Hardware | Raspberry Pi(Raspbian), ESP32 |
 | Development Tools and Infrastructure | Git, curl, Docker, MySQL |
@@ -27,7 +27,7 @@ Currently, I based in Tokyo, and work as a software engineer at web service prov
 
 | Category | Libraries, Fields, Technical Skills,,, |
 | --- | --- |
-| Languages | Python, C++, Golang |
+| Languages | Python, Perl, C++, Golang |
 | Libraries and Frameworks | Vue.js, D3.js, Three.js, Flask, Code Igniter, openFrameworks, OpenCV |
 | Hardware | PIC, Atmel AVR |
 | Electronics | Circuit Design(Analog/Digital), Soldering, Fritzing, ZUKEN CR-8000  |

@@ -24,6 +24,18 @@ iframe {
   margin-bottom: 45px;
 }
 
+th, td {
+  &:first-child {
+    width: 37%;
+    max-width: 300px;
+  }
+  a {
+    // 応急処置
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+}
+
 @mixin base-font-size($font: 1) {
   font-size: calc(17px * #{$font});
   line-height: calc(27px * #{$font});

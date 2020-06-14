@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const Container = styled.header`
   * {
@@ -16,10 +16,10 @@ export const Container = styled.header`
   margin: 0 0 5px 0;
   animation: gone 130ms ease-out 0s 1 normal forwards running;
   @keyframes gone {
-    0%{
+    0% {
       opacity: 0;
     }
-    100%{
+    100% {
       opacity: 100;
     }
   }
@@ -28,5 +28,5 @@ export const Container = styled.header`
 
   background-color: rgba($color: #ffffff, $alpha: 0.6);
 
-  height: ${({device}) => device === 'desktop' ? 110 : 60}px;
+  height: ${({ device }) => (device === "desktop" ? 110 : 60)}px;
 `

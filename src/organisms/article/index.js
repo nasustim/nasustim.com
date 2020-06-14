@@ -1,10 +1,12 @@
-import React from 'react'
+import React from "react"
 
-import { Container } from './style.js'
+import { Container } from "./style.js"
 
-const Article = ({device, dangerouslySetInnerHTML}) => <Container 
+const Article = ({ device, dangerouslySetInnerHTML }) => (
+  <Container
     device={device}
     dangerouslySetInnerHTML={dangerouslySetInnerHTML}
   />
+)
 
 export default Article

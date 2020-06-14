@@ -1,9 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { color } from '../../constants'
+import { color } from "../../constants"
 
 export const Img = styled.img`
-
   z-index: 1;
 
   width: 100%;
@@ -22,7 +21,6 @@ export const Img = styled.img`
 `
 
 export const Figcaption = styled.figcaption`
-
   width: 100%;
 
   z-index: 2;
@@ -44,7 +42,7 @@ export const Figcaption = styled.figcaption`
     h1 {
       text-align: center;
       color: ${color.WHITE};
-      font-size: ${({device}) => device === 'desktop' ? 20 : 15}px;
+      font-size: ${({ device }) => (device === "desktop" ? 20 : 15)}px;
       line-height: 1.2;
       margin: 10px;
     }
@@ -58,7 +56,8 @@ export const Container = styled.figure`
 
   display: relative;
 
-  &, & * {
+  &,
+  & * {
     vertical-align: bottom;
     box-sizing: border-box;
     margin: 0;
@@ -66,12 +65,11 @@ export const Container = styled.figure`
   }
 
   &:hover {
-
     & > img {
       filter: grayscale(0);
     }
     & > figcaption > div {
-      transform: translate3d(0, 0, 0);  
+      transform: translate3d(0, 0, 0);
     }
   }
 `

@@ -1,13 +1,14 @@
-# nasustim.com [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com) [![Netlify Status](https://api.netlify.com/api/v1/badges/2d9672f0-3c8e-4da1-a26c-a7288f5787ae/deploy-status)](https://app.netlify.com/sites/nasustim/deploys)  
+# nasustim.com [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com) [![Netlify Status](https://api.netlify.com/api/v1/badges/2d9672f0-3c8e-4da1-a26c-a7288f5787ae/deploy-status)](https://app.netlify.com/sites/nasustim/deploys)
 
-My Portfolio Site.  
+My Portfolio Site.
 
-## Author  
+## Author
+
 - [Mitsuhiro HIBINO](https://nasustim.com)
 
 ↓ README about [gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)
 
----------
+---
 
 <p align="center">
   <a href="https://www.gatsbyjs.org">

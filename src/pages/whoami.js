@@ -1,55 +1,52 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 
-import Layout from '../layout'
+import Layout from "../layout"
 
-import { Container } from '../style'
-import Article from '../organisms/article'
+import { Container } from "../style"
+import Article from "../organisms/article"
 
-import {detectDevice} from '../resolver'
-import {defaultWindowWidth} from '../constants'
+import { detectDevice } from "../resolver"
+import { defaultWindowWidth } from "../constants"
 
-const Whoami = (props) => {
+const Whoami = props => {
   const { data } = props
 
   const { html } = data.markdownRemark
 
-  const size = typeof window === 'undefined' ? defaultWindowWidth : window.innerWidth
+  const size =
+    typeof window === "undefined" ? defaultWindowWidth : window.innerWidth
   const [device, changeDevice] = useState(detectDevice(size))
 
-  if(typeof window !== 'undefined'){
-    window.onresize = () => { // @ToDo 時間待ちを実装
-      //const id = setTimeout(() => { 
-        changeDevice(
-          detectDevice(window.innerWidth)
-        )
+  if (typeof window !== "undefined") {
+    window.onresize = () => {
+      // @ToDo 時間待ちを実装
+      //const id = setTimeout(() => {
+      changeDevice(detectDevice(window.innerWidth))
       //}, 200)
     }
   }
 
-  const toLayout = Object.assign({}, 
-    data.site.siteMetadata, {
-      currentPath: data.sitePage.path,
-      title: 'Who am I',
-      device
-    })
+  const toLayout = Object.assign({}, data.site.siteMetadata, {
+    currentPath: data.sitePage.path,
+    title: "Who am I",
+    device,
+  })
 
-  return <Container>
-    <Layout {...toLayout}>
-      <Article
-        dangerouslySetInnerHTML={{ __html: html }}
-        device={device}
-      />
-    </Layout>
-  </Container>
+  return (
+    <Container>
+      <Layout {...toLayout}>
+        <Article dangerouslySetInnerHTML={{ __html: html }} device={device} />
+      </Layout>
+    </Container>
+  )
 }
-
 
 export default Whoami
 
 export const pageQuery = graphql`
   query {
-    markdownRemark(frontmatter: {pageid: {eq: "whoami"}}) {
+    markdownRemark(frontmatter: { pageid: { eq: "whoami" } }) {
       html
     }
     site {

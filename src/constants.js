@@ -6,8 +6,8 @@ export const deviceBreakPoint = {
 export const defaultWindowWidth = 980
 
 export const color = {
-  BLACK: '#141414',
-  TRANSLUCENT_BLACK: 'rgba(0, 0, 0, 0.56)',
-  WHITE: '#ffffff',
-  PRIMARY: '#f40622'
+  BLACK: "#141414",
+  TRANSLUCENT_BLACK: "rgba(0, 0, 0, 0.56)",
+  WHITE: "#ffffff",
+  PRIMARY: "#f40622",
 }

@@ -1,7 +1,7 @@
-import { Link as GatsbyLink} from 'gatsby'
-import styled from 'styled-components'
+import { Link as GatsbyLink } from "gatsby"
+import styled from "styled-components"
 
-import { color } from '../../constants'
+import { color } from "../../constants"
 
 export const NavBar = styled.ul`
   height: 100%;
@@ -35,6 +35,6 @@ export const List = styled.li`
 
   /* multi device */
   h3 {
-    font-size: ${({device}) => device === 'desktop' ? 24 : 14}px;
+    font-size: ${({ device }) => (device === "desktop" ? 24 : 14)}px;
   }
 `

@@ -11,9 +11,8 @@ headimg: ./aster-as-code-iamas-01.jpg
 
 ![＊ as Code - 巻物の一つ](./aster-as-code-iamas-01.jpg "＊ as Code - 巻物の一つ")
 
-JavaScriptで記述したソースコードを和紙に印刷して、学内応接室に配置した作品。  
-およそ100行のソースコードを縦の巻物として仕上げることで、モニタと同じ縦スクロールのような視線の誘導を試みた。
-
+JavaScript で記述したソースコードを和紙に印刷して、学内応接室に配置した作品。  
+およそ 100 行のソースコードを縦の巻物として仕上げることで、モニタと同じ縦スクロールのような視線の誘導を試みた。
 
 ![＊ as Code - 全体像](./aster-as-code-iamas-00.jpg "＊ as Code - 全体像")
 
@@ -28,6 +27,6 @@ JavaScriptで記述したソースコードを和紙に印刷して、学内応�
 ## 展示
 
 - 「あしたをプロトタイピングする」展
-    - http://www.ilas.nagoya-u.ac.jp/clas/programs/375.php
-- インタラクション2019
-    - http://www.interaction-ipsj.org/proceedings/2019/data/bib/1A-08.html
+  - http://www.ilas.nagoya-u.ac.jp/clas/programs/375.php
+- インタラクション 2019
+  - http://www.interaction-ipsj.org/proceedings/2019/data/bib/1A-08.html

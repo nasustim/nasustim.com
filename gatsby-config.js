@@ -1,11 +1,11 @@
-const path = require('path')
+const path = require("path")
 
 const TITLE = `nasustim.com`
 const AUTHOR = `Mitsuhiro Hibino`
 const DESCRIPTION = `Mitsuhiro Hibino: Software Developer / Creator.`
 const SITE_URL = `https://nasustim.com`
 const SOCIAL = {
-  twitter: `nasustim`
+  twitter: `nasustim`,
 }
 const GA_TRACK_ID = `UA-130581618-1`
 
@@ -58,27 +58,27 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              showLineNumbers: true,    
-            }
+              showLineNumbers: true,
+            },
           },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           {
             resolve: "gatsby-remark-embed-video",
             options: {
-                width: 750,
-                ratio: 1.77, 
-                height: 422, 
-                related: false,
-                noIframeBorder: true
+              width: 750,
+              ratio: 1.77,
+              height: 422,
+              related: false,
+              noIframeBorder: true,
             },
           },
           {
             resolve: `gatsby-remark-embed-youtube`,
             options: {
               width: 750,
-              height: 422
-            }
+              height: 422,
+            },
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
@@ -129,25 +129,25 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         createLinkInHead: true,
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-netlify`,
       options: {},
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
         host: SITE_URL,
-        sitemap: path.join(SITE_URL, '/sitemap.xml'),
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        sitemap: path.join(SITE_URL, "/sitemap.xml"),
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
     },
     {
       resolve: `gatsby-plugin-webpack-bundle-analyzer`,
       options: {
-        openAnalyzer: false
-      }
+        openAnalyzer: false,
+      },
     },
     `gatsby-plugin-styled-components`,
     /*{

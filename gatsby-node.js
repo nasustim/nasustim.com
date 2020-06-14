@@ -7,11 +7,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   /**
    * data.allMarkdownRemark.edges[X].node.frontmatter
-   * 
+   *
    * page-id: pageid
    * description: description
    * title: title
-   * date: date 
+   * date: date
    */
   const result = await graphql(`
     {
@@ -31,19 +31,17 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  if (result.errors)
-    throw new Error(result.errors) 
-
+  if (result.errors) throw new Error(result.errors)
 
   result.data.allMarkdownRemark.edges
-    .filter(({node}) => node.frontmatter.category === 'works')
-    .forEach(({node}) => 
+    .filter(({ node }) => node.frontmatter.category === "works")
+    .forEach(({ node }) =>
       createPage({
         path: path.join(`/works/`, `${node.fields.slug}`),
         component: WorkTemplate,
         context: {
           slug: `${node.fields.slug}`,
-        }
+        },
       })
     )
 }
@@ -56,7 +54,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value
+      value,
     })
   }
 }

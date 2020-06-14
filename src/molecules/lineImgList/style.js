@@ -1,11 +1,14 @@
-import { Link as GatsbyLink } from 'gatsby'
-import styled from 'styled-components'
+import { Link as GatsbyLink } from "gatsby"
+import styled from "styled-components"
 
 const pcMargin = 1.3
 const spMargin = 2
 
 export const Line = styled.div`
-  width: calc(100% - (${({device}) => device === 'desktop' ? pcMargin : spMargin}px) * 2 );
+  width: calc(
+    100% - (${({ device }) => (device === "desktop" ? pcMargin : spMargin)}px) *
+      2
+  );
 
   display: flex;
   flex-direction: column;
@@ -15,14 +18,14 @@ export const Line = styled.div`
     text-decoration: none;
   }
 
-  margin: 0 ${({device}) => device === 'desktop' ? pcMargin : spMargin}px;
+  margin: 0 ${({ device }) => (device === "desktop" ? pcMargin : spMargin)}px;
 `
 
 export const CardContainer = styled.section`
   position: relative;
   display: flex;
   width: 100%;
-  margin: ${({device}) => device === 'desktop' ? pcMargin : spMargin}px 0;
+  margin: ${({ device }) => (device === "desktop" ? pcMargin : spMargin)}px 0;
   padding: 0;
 `
 

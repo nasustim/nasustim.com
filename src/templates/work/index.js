@@ -1,44 +1,40 @@
-import React, {useState} from 'react'
-import { graphql } from 'gatsby'
+import React, { useState } from "react"
+import { graphql } from "gatsby"
 
-import Layout from '../../layout'
-import { Container } from '../../style'
+import Layout from "../../layout"
+import { Container } from "../../style"
 
-import Article from '../../organisms/article'
+import Article from "../../organisms/article"
 
-import {detectDevice} from '../../resolver'
-import {defaultWindowWidth} from '../../constants'
+import { detectDevice } from "../../resolver"
+import { defaultWindowWidth } from "../../constants"
 
-const WorkTemplete = ({data}) => {
-  const {html, frontmatter} = data.markdownRemark
+const WorkTemplete = ({ data }) => {
+  const { html, frontmatter } = data.markdownRemark
 
-  const size = typeof window === 'undefined' ? defaultWindowWidth : window.innerWidth
+  const size =
+    typeof window === "undefined" ? defaultWindowWidth : window.innerWidth
   const [device, changeDevice] = useState(detectDevice(size))
 
-  if(typeof window !== 'undefined'){
-    window.onresize = () => { // @ToDo 時間待ちを実装
-      //const id = setTimeout(() => { 
-        changeDevice(
-          detectDevice(window.innerWidth)
-        )
+  if (typeof window !== "undefined") {
+    window.onresize = () => {
+      // @ToDo 時間待ちを実装
+      //const id = setTimeout(() => {
+      changeDevice(detectDevice(window.innerWidth))
       //}, 200)
     }
   }
 
-  const toLayout = Object.assign({}, 
-    data.site.siteMetadata, {
-      currentPath: data.sitePage.path,
-      title: frontmatter.title,
-      device
-    })
+  const toLayout = Object.assign({}, data.site.siteMetadata, {
+    currentPath: data.sitePage.path,
+    title: frontmatter.title,
+    device,
+  })
 
   return (
     <Container>
       <Layout {...toLayout}>
-        <Article
-          device={device}
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <Article device={device} dangerouslySetInnerHTML={{ __html: html }} />
       </Layout>
     </Container>
   )
@@ -47,7 +43,7 @@ const WorkTemplete = ({data}) => {
 export default WorkTemplete
 
 export const query = graphql`
-  query WorkByPageId ($slug: String!) {
+  query WorkByPageId($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

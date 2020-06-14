@@ -12,7 +12,7 @@ category: profile
 
 Born and raised in Gifu, Nov 1994.  
 I formerly studied Electronic and Information Engineering, and Media Creation.  
-Currently, I based in Tokyo, and work as a software engineer at web service provider.
+Currently, I'm based in Tokyo, and work as a software engineer at web service provider.
 
 ## Use in work, or usually use
 
@@ -21,7 +21,7 @@ Currently, I based in Tokyo, and work as a software engineer at web service prov
 | Languages | JavaScript, TypeScript, PHP |
 | Libraries and Frameworks | React, jQuery, Express.js, Processing, Electron, React Native |
 | Hardware | Raspberry Pi(Raspbian), ESP32 |
-| Development Tools and Infrastructure | Git, curl, Docker, MySQL |
+| Development Tools and Infrastructure | Git, Docker, MySQL |
 
 ## Hobby Use
 

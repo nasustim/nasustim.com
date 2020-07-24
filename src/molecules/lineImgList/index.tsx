@@ -2,7 +2,7 @@ import React from "react"
 
 import TopImg from "../../atoms/topImg"
 
-import { Line, CardContainer, Link } from "./style.js"
+import { Line, CardContainer, Link } from "./style"
 
 const LineImgList = props => (
   <Line device={props.device}>

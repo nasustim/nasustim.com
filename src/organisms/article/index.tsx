@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Container } from "./style.js"
+import { Container } from "./style"
 
 const Article = ({ device, dangerouslySetInnerHTML }) => (
   <Container

@@ -3,7 +3,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const WorkTemplate = path.resolve(`./src/templates/work/index.js`)
+  const WorkTemplate = path.resolve(`./src/templates/work/index.tsx`)
 
   /**
    * data.allMarkdownRemark.edges[X].node.frontmatter

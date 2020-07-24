@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Content } from "./style.js"
+import { Container, Content } from "./style"
 
 import SEO from "../utils/seo"
 import Nav from "../organisms/nav"

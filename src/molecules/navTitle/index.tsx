@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Container, LogoImg } from "./style.js"
+import { Container, LogoImg } from "./style"
 
 import logo from "./logo.svg"
 

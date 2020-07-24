@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Container, Img, Figcaption } from "./style.js"
+import { Container, Img, Figcaption } from "./style"
 
 const TopImg = ({ imgSrc, device, title }) => (
   <Container device={device}>

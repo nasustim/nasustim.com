@@ -70,3 +70,6 @@ yarn-error.log
 
 # env manager
 .node-version
+
+# Next.js dst files
+.next

@@ -1,7 +1,7 @@
 ---
 title: $ whoami
 date: "2020-05-07T09:00:00.000Z"
-description: "Mitsuhiro Hibino: Born and raised in Gifu, Nov 1994. I formerly studied Electronic and Information Engineering, and Media Creation. Currently, based in Tokyo, and work as a software engineer at web service provider."
+description: "Mitsuhiro Hibino: Born and raised in Gifu, Nov 1994. I formerly studied Electronic and Information Engineering, and Media Creation. Currently, based in Tokyo, and work as a software engineer at SaaS provider."
 pageid: whoami
 category: profile
 ---
@@ -10,35 +10,56 @@ category: profile
 
 ![](./2018-11.jpg)
 
-Born and raised in Gifu, Nov 1994.  
-I formerly studied Electronic and Information Engineering, and Media Creation.  
-Currently, I'm based in Tokyo, and work as a software engineer at web service provider.
+1994年11月 岐阜県生まれ。
+大学で電子情報技術を学び、大学院ではメディアアートを専攻。
+現在は都内でソーシャルゲームを開発している。
 
-## Use in work, or usually use
+## 普段遣い
 
-| Category                             | Libraries, Fields, Technical Skills,,,                        |
-| ------------------------------------ | ------------------------------------------------------------- |
-| Languages                            | JavaScript, TypeScript, PHP                                   |
-| Libraries and Frameworks             | React, jQuery, Express.js, Processing, Electron, React Native |
-| Hardware                             | Raspberry Pi(Raspbian), ESP32                                 |
-| Development Tools and Infrastructure | Git, Docker, MySQL                                            |
 
-## Hobby Use
+<table>
+  <tr>
+    <td>プログラミング言語</td><td>JavaScript, TypeScript, C++, Perl, PHP</td>
+  </tr>
+  <tr>
+    <td>フレームワーク / ライブラリ</td><td>React, Vue.js, Express, Processing</td>
+  </tr>
+  <tr>
+    <td>ハードウェア</td><td>Raspberry Pi, ESP32</td>
+  </tr>
+  <tr>
+    <td>インフラ / 開発ツール</td><td>MySQL, Docker</td>
+  </tr>
+</table>
 
-| Category                 | Libraries, Fields, Technical Skills,,,                               |
-| ------------------------ | -------------------------------------------------------------------- |
-| Languages                | Python, Perl, C++, Golang                                            |
-| Libraries and Frameworks | Vue.js, D3.js, Three.js, Flask, Code Igniter, openFrameworks, OpenCV |
-| Hardware                 | PIC, Atmel AVR                                                       |
-| Electronics              | Circuit Design(Analog/Digital), Soldering, Fritzing, ZUKEN CR-8000   |
-| Misc                     | Adobe (Illustrator, Premiere), Ableton Live                          |
+## 趣味 / たまに触る
+
+
+<table>
+  <tr>
+    <td>プログラミング言語</td><td>Python, Go</td>
+  </tr>
+  <tr>
+    <td>フレームワーク / ライブラリ</td><td>Three.js, openFrameworks, React Native, Unity</td>
+  </tr>
+  <tr>
+    <td>ハードウェア / 電子回路</td><td>Arduino, PIC, Fritzing, はんだ付け</td>
+  </tr>
+  <tr>
+    <td>その他</td><td>Ableton Live, Adobe(Illustrator, Premiere)</td>
+  </tr>
+</table>
 
 ## My Accounts
 
-| Service  | Link to my account                                                    |
-| -------- | --------------------------------------------------------------------- |
-| GitHub   | https://github.com/nasustim<br>https://github.com/playground-nasustim |
-| Twitter  | https://twitter.com/nasustim                                          |
-| Facebook | https://www.facebook.com/mitsuhibino/                                 |
-| Mastodon | https://mstdn.nasustim.com                                            |
-| Keybase  | https://keybase.io/nasustim                                           |
+<table>
+  <tr>
+    <td>GitHub</td><td><a href="https://github.com/nasustim" target="_blank">https://github.com/nasustim</a><br><a href="https://github.com/playground-nasustim" target="_blank">https://github.com/playground-nasustim</a></td>
+  </tr>
+  <tr>
+    <td>Twitter</td><td><a href="https://twitter.com/nasustim" target="_blank">https://twitter.com/nasustim</a></td>
+  </tr>
+  <tr>
+    <td>Facebook</td><td><a href="https://www.facebook.com/mitsuhibino" target="_blank">https://www.facebook.com/mitsuhibino</a></td>
+  </tr>
+</table>

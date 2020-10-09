@@ -10,8 +10,7 @@ category: profile
 
 ![](./2018-11.jpg)
 
-1994年11月 岐阜県生まれ。
-大学で電子情報技術を学び、大学院ではメディアアートを専攻。
+1994年11月 岐阜県生まれ。大学で電子情報技術を学び、大学院ではメディアアートを専攻。  
 現在は都内でソーシャルゲームを開発している。
 
 ## 普段遣い
@@ -19,7 +18,7 @@ category: profile
 
 <table>
   <tr>
-    <td>プログラミング言語</td><td>JavaScript, TypeScript, C++, Perl, PHP</td>
+    <td>プログラミング言語</td><td>JavaScript, TypeScript, Perl, PHP</td>
   </tr>
   <tr>
     <td>フレームワーク / ライブラリ</td><td>React, Vue.js, Express, Processing</td>
@@ -37,13 +36,13 @@ category: profile
 
 <table>
   <tr>
-    <td>プログラミング言語</td><td>Python, Go</td>
+    <td>プログラミング言語</td><td>Python, C++, Go</td>
   </tr>
   <tr>
     <td>フレームワーク / ライブラリ</td><td>Three.js, openFrameworks, React Native, Unity</td>
   </tr>
   <tr>
-    <td>ハードウェア / 電子回路</td><td>Arduino, PIC, Fritzing, はんだ付け</td>
+    <td>ハードウェア / 電子回路</td><td>Arduino, Fritzing, はんだ付け</td>
   </tr>
   <tr>
     <td>その他</td><td>Ableton Live, Adobe(Illustrator, Premiere)</td>

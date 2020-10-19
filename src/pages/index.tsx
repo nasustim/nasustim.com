@@ -38,13 +38,7 @@ const Index = props => {
     imgHeight: node.frontmatter.headimg.childImageSharp.resolutions.height,
   }))
 
-  return (
-    <Container>
-      <Layout {...toLayout}>
-        <PortfolioList device={device} works={works} />
-      </Layout>
-    </Container>
-  )
+  return <PortfolioList device={device} works={works} />
 }
 
 export default Index

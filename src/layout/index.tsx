@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Content } from "./style"
+import { DisplayWrapper, Container, Content } from "./style"
 
 import SEO from "../utils/seo"
 import Nav from "../organisms/nav"
@@ -14,14 +14,16 @@ const Layout = props => {
   const device = props.device
 
   return (
-    <Container device={device}>
-      <SEO title={title} />
-      <Nav currentPath={currentPath} device={device} />
-      <Content device={device}>
-        {props.children}
-        <Footer author={author} establishYear={establishYear} />
-      </Content>
-    </Container>
+    <DisplayWrapper>
+      <Container device={device}>
+        <SEO title={title} />
+        <Nav currentPath={currentPath} device={device} />
+        <Content device={device}>
+          {props.children}
+          <Footer author={author} establishYear={establishYear} />
+        </Content>
+      </Container>
+    </DisplayWrapper>
   )
 }
 

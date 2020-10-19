@@ -150,6 +150,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/layout/index.tsx`),
+      }
+    },
     /*{
       resolve: `gatsby-plugin-nprogress`,
       options: {

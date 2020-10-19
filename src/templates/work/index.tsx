@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../../layout"
-import { Container } from "../../style"
 
 import Article from "../../organisms/article"
 
@@ -31,13 +30,7 @@ const WorkTemplete = ({ data }) => {
     device,
   })
 
-  return (
-    <Container>
-      <Layout {...toLayout}>
-        <Article device={device} dangerouslySetInnerHTML={{ __html: html }} />
-      </Layout>
-    </Container>
-  )
+  return <Article device={device} dangerouslySetInnerHTML={{ __html: html }} />
 }
 
 export default WorkTemplete

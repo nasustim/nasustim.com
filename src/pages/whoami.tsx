@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 
 import Layout from "../layout"
 
-import { Container } from "../style"
 import Article from "../organisms/article"
 
 import { detectDevice } from "../resolver"
@@ -33,13 +32,7 @@ const Whoami = props => {
     device,
   })
 
-  return (
-    <Container>
-      <Layout {...toLayout}>
-        <Article dangerouslySetInnerHTML={{ __html: html }} device={device} />
-      </Layout>
-    </Container>
-  )
+  return <Article dangerouslySetInnerHTML={{ __html: html }} device={device} />
 }
 
 export default Whoami

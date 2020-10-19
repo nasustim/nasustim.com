@@ -36,16 +36,12 @@ const NotFound = props => {
   })
 
   return (
-    <Container>
-      <Layout {...toLayout}>
-        <FullWidthContainer>
-          <CenteredHeading>404 Not Found</CenteredHeading>
-          <RightAlignedText>
-            <Link to={"/"}>Top Page →</Link>
-          </RightAlignedText>
-        </FullWidthContainer>
-      </Layout>
-    </Container>
+    <FullWidthContainer>
+      <CenteredHeading>404 Not Found</CenteredHeading>
+      <RightAlignedText>
+        <Link to={"/"}>Top Page →</Link>
+      </RightAlignedText>
+    </FullWidthContainer>
   )
 }
 

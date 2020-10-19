@@ -5,11 +5,16 @@ import SEO from "../utils/seo"
 import Nav from "../organisms/nav"
 import Footer from "../organisms/footer"
 
-const Layout = props => {
+import { connect } from 'react-redux'
+import * as store from '../flux/store'
+import * as reducer from '../flux/reducers'
+import * as action from '../flux/actions'
+
+const Layout = (props: Props) => {
   const currentPath =
     typeof window !== "undefined" ? window.location.href : "/top"
-  const author = props.author
-  const establishYear = props.establishYear
+  const author = 'Mitsuhiro Hibino'//props.author
+  const establishYear = 2010//props.establishYear
   const title = props.title
   const device = props.device
 
@@ -27,4 +32,11 @@ const Layout = props => {
   )
 }
 
-export default Layout
+const mapStateToProps = (state: store.State) => state.app
+const mapDispatchToProps = ({dispatch}) => ({
+  go: (href: String) => dispatch(action.transit({ href }))
+})
+
+type Props = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps>
+
+export default connect(mapStateToProps, mapDispatchToProps)(Layout)

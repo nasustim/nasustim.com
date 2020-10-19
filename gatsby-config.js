@@ -156,6 +156,12 @@ module.exports = {
         component: require.resolve(`./src/layout/index.tsx`),
       }
     },
+    {
+      resolve: `gatsby-plugin-graphql-codegen`,
+      options: {
+        fileName: `./src/types/gatsby-graphql.d.ts`,
+      }
+    },
     /*{
       resolve: `gatsby-plugin-nprogress`,
       options: {

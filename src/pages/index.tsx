@@ -1,15 +1,18 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../layout"
-import { Container } from "../style"
 import { detectDevice } from "../resolver"
 import { defaultWindowWidth } from "../constants"
 import PortfolioList from "../organisms/portfolioList"
 
+import { connect } from 'react-redux'
+import * as store from '../flux/store'
+import * as reducer from '../flux/reducers'
+import * as action from '../flux/actions'
+
 import path from "path"
 
-const Index = props => {
+const Index = (props: Props) => {
   const { data } = props
 
   const size =
@@ -41,7 +44,15 @@ const Index = props => {
   return <PortfolioList device={device} works={works} />
 }
 
-export default Index
+const mapStateToProps = (state: store.State) => state
+const mapDispatchToProps = ({dispatch}) => ({
+  setLocation: (href: String) => dispatch(action.transit({ href })),
+  setTitle: (title: String) => dispatch(action.setCurrentPageTitle({ title }))
+})
+
+type Props = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps>
+
+export default connect(mapStateToProps, mapDispatchToProps)(Index)
 
 export const pageQuery = graphql`
   query {

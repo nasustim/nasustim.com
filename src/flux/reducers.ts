@@ -1,22 +1,30 @@
 import { ACTION_TYPE, Actions } from './actions'
 
 interface State {
-  device: String;
+  deviceType: String;
   location: String;
   title: String;
+  metaData: {
+    author: String;
+    establishedYear: Number;
+  };
 }
 
 const initialState: State = {
-  device: 'pc',
+  deviceType: 'desktop',
   location: '/',
-  title: 'nasustim.com',
+  title: '',
+  metaData: {
+    author: 'Mitsuhiro Hibino',
+    establishedYear: 2010,
+  },
 }
 
 export default function reducers (prevState: State = initialState, action: Actions) {
   switch (action.type) {
-    case ACTION_TYPE.SET_DEVICE:
+    case ACTION_TYPE.SET_DEVICE_TYPE:
       return {
-        deviceCategory: action.data.deviceCategory,
+        deviceType: action.data.deviceType,
         ...prevState,
       }
     case ACTION_TYPE.TRANSITION_PAGE:
@@ -27,6 +35,11 @@ export default function reducers (prevState: State = initialState, action: Actio
     case ACTION_TYPE.SET_TITLE:
       return {
         title: action.data.title,
+        ...prevState,
+      }
+    case ACTION_TYPE.SET_META_DATA:
+      return {
+        metaData: action.data.metaData,
         ...prevState,
       }
     default:

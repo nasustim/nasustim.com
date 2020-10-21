@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import { DisplayWrapper, Container, Content } from "./style"
 
 import SEO from "../utils/seo"
@@ -7,16 +8,17 @@ import Footer from "../organisms/footer"
 
 import { connect } from 'react-redux'
 import * as store from '../flux/store'
-import * as reducer from '../flux/reducers'
-import * as action from '../flux/actions'
 
-const Layout = (props: Props) => {
-  const currentPath =
-    typeof window !== "undefined" ? window.location.href : "/top"
-  const author = 'Mitsuhiro Hibino'//props.author
-  const establishYear = 2010//props.establishYear
-  const title = props.title
-  const device = props.device
+const mapStateToProps = (state: store.State) => ({ state: state.app })
+
+type Props = ReturnType<typeof mapStateToProps>
+
+const Layout: React.FC<Props> = props => {
+  const currentPath = props.state.location
+  const author = props.state.metaData.author
+  const establishYear = props.state.metaData.establishedYear
+  const title = props.state.title
+  const device = props.state.deviceType
 
   return (
     <DisplayWrapper>
@@ -32,11 +34,4 @@ const Layout = (props: Props) => {
   )
 }
 
-const mapStateToProps = (state: store.State) => state.app
-const mapDispatchToProps = ({dispatch}) => ({
-  go: (href: String) => dispatch(action.transit({ href }))
-})
-
-type Props = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps>
-
-export default connect(mapStateToProps, mapDispatchToProps)(Layout)
+export default connect(mapStateToProps)(Layout)

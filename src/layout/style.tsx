@@ -15,7 +15,7 @@ export const Container = styled.div`
   max-width: 980px;
   height: 100%;
 
-  width: ${({ device }) => (device === "desktop" ? "100%" : "980px")};
+  width: ${({ device }) => (device === "pc" ? "100%" : "980px")};
 `
 
 export const Content = styled.main`

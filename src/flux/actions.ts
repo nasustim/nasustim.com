@@ -1,17 +1,27 @@
 export type Actions = ReturnType<typeof setDeviceCategory> | ReturnType<typeof setCurrentPageTitle> | ReturnType<typeof transit>
 
 export const ACTION_TYPE = {
-  SET_DEVICE: 'SET_DEVICE',
+  SET_DEVICE_TYPE: 'SET_DEVICE_TYPE',
   TRANSITION_PAGE: 'TRANSITION_PAGE',
   SET_TITLE: 'SET_TITLE',
+  SET_META_DATA: 'SET_META_DATA',
+}
+
+export const setMetaData = (metaData) => {
+  return {
+    type: ACTION_TYPE.SET_META_DATA,
+    data: {
+      metaData
+    }
+  }
 }
 
 export const setDeviceCategory = () => {
-  const category = isMobile() ? 'sp' : 'pc'
+  const deviceType = isMobile() ? 'mobile' : 'desktop'
   return {
-    type: ACTION_TYPE.SET_DEVICE,
+    type: ACTION_TYPE.SET_DEVICE_TYPE,
     data: {
-      device: category
+      deviceType
     }
   }
 }

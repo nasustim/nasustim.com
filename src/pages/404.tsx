@@ -1,10 +1,7 @@
-import React, { useState } from "react"
+import React, { useEffect } from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../layout"
-
 import {
-  Container,
   CenteredHeading,
   FullWidthContainer,
   RightAlignedText,
@@ -13,26 +10,28 @@ import {
 import { detectDevice } from "../resolver"
 import { defaultWindowWidth } from "../constants"
 
-const NotFound = props => {
-  const { data } = props
+import { connect } from 'react-redux'
+import * as store from '../flux/store'
+import * as action from '../flux/actions'
 
-  const size =
-    typeof window === "undefined" ? defaultWindowWidth : window.innerWidth
-  const [device, changeDevice] = useState(detectDevice(size))
+import { NotFoundQuery } from '../types/gatsby-graphql';
 
-  if (typeof window !== "undefined") {
-    window.onresize = () => {
-      // @ToDo 時間待ちを実装
-      //const id = setTimeout(() => {
-      changeDevice(detectDevice(window.innerWidth))
-      //}, 200)
-    }
+const mapStateToProps = (state: store.State) => ({ state: state.app })
+const mapDispatchToProps = () => ({
+  dispatch: {
+    setLocation: (href: String) => action.transit({ href }),
+    setTitle: (title: String) => action.setCurrentPageTitle({ title })
   }
+})
 
-  const toLayout = Object.assign({}, data.site.siteMetadata, {
-    currentPath: data.sitePage.path,
-    title: "404 Not Found",
-    device,
+type Props = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps> & { data: NotFoundQuery }
+
+const NotFound: React.FC<Props> = props => {
+  const { data, dispatch } = props
+
+  useEffect(() => {
+    dispatch.setLocation(data.sitePage.path)
+    dispatch.setTitle(`404 Not Found`)
   })
 
   return (
@@ -45,10 +44,10 @@ const NotFound = props => {
   )
 }
 
-export default NotFound
+export default connect(mapStateToProps, mapDispatchToProps)(NotFound)
 
 export const pageQuery = graphql`
-  query {
+  query NotFound {
     site {
       siteMetadata {
         author

@@ -1919,6 +1919,8 @@ export type QueryAllDirectoryArgs = {
 export type QuerySiteArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
+  port?: Maybe<IntQueryOperatorInput>;
+  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -2056,6 +2058,8 @@ export type QueryAllSitePluginArgs = {
 export type Site = Node & {
   buildTime?: Maybe<Scalars['Date']>;
   siteMetadata?: Maybe<SiteSiteMetadata>;
+  port?: Maybe<Scalars['Int']>;
+  host?: Maybe<Scalars['String']>;
   polyfill?: Maybe<Scalars['Boolean']>;
   pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
@@ -2261,6 +2265,8 @@ export type SiteFieldsEnum =
   | 'siteMetadata___siteUrl'
   | 'siteMetadata___social___twitter'
   | 'siteMetadata___establishYear'
+  | 'port'
+  | 'host'
   | 'polyfill'
   | 'pathPrefix'
   | 'id'
@@ -2353,6 +2359,8 @@ export type SiteFieldsEnum =
 export type SiteFilterInput = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
+  port?: Maybe<IntQueryOperatorInput>;
+  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -3157,23 +3165,23 @@ export type StringQueryOperatorInput = {
   glob?: Maybe<Scalars['String']>;
 };
 
-export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
+export type NotFoundQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_1_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'author' | 'description' | 'title' | 'establishYear'>> }>, sitePage?: Maybe<Pick<SitePage, 'path'>> };
+export type NotFoundQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'author' | 'description' | 'title' | 'establishYear'>> }>, sitePage?: Maybe<Pick<SitePage, 'path'>> };
 
-export type Unnamed_2_QueryVariables = Exact<{ [key: string]: never; }>;
+export type IndexQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_2_Query = { allMarkdownRemark: { edges: Array<{ node: { frontmatter?: Maybe<(
+export type IndexQuery = { allMarkdownRemark: { edges: Array<{ node: { frontmatter?: Maybe<(
           Pick<MarkdownRemarkFrontmatter, 'pageid' | 'title'>
           & { headimg?: Maybe<{ childImageSharp?: Maybe<{ resolutions?: Maybe<Pick<ImageSharpResolutions, 'src' | 'height'>> }> }> }
         )> } }> }, site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'author' | 'description' | 'title' | 'establishYear'>> }>, sitePage?: Maybe<Pick<SitePage, 'path'>> };
 
-export type Unnamed_3_QueryVariables = Exact<{ [key: string]: never; }>;
+export type WhoAmiQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_3_Query = { markdownRemark?: Maybe<Pick<MarkdownRemark, 'html'>>, site?: Maybe<{ siteMetadata?: Maybe<(
+export type WhoAmiQuery = { markdownRemark?: Maybe<Pick<MarkdownRemark, 'html'>>, site?: Maybe<{ siteMetadata?: Maybe<(
       Pick<SiteSiteMetadata, 'author' | 'description' | 'title' | 'establishYear'>
       & { social?: Maybe<Pick<SiteSiteMetadataSocial, 'twitter'>> }
     )> }>, sitePage?: Maybe<Pick<SitePage, 'path'>> };
@@ -3188,10 +3196,10 @@ export type WorkByPageIdQuery = { markdownRemark?: Maybe<(
     & { frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'description' | 'pageid' | 'title'>> }
   )>, site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'author' | 'description' | 'title' | 'establishYear'>> }>, sitePage?: Maybe<Pick<SitePage, 'path'>> };
 
-export type Unnamed_4_QueryVariables = Exact<{ [key: string]: never; }>;
+export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_4_Query = { site?: Maybe<{ siteMetadata?: Maybe<(
+export type Unnamed_1_Query = { site?: Maybe<{ siteMetadata?: Maybe<(
       Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>
       & { social?: Maybe<Pick<SiteSiteMetadataSocial, 'twitter'>> }
     )> }> };

@@ -1,42 +1,39 @@
-import React, { useState } from "react"
+import React, { useEffect } from "react"
 import { graphql } from "gatsby"
-
-import Layout from "../../layout"
 
 import Article from "../../organisms/article"
 
-import { detectDevice } from "../../resolver"
-import { defaultWindowWidth } from "../../constants"
+import { connect } from 'react-redux'
+import * as store from '../../flux/store'
+import * as action from '../../flux/actions'
 
-const WorkTemplete = ({ data }) => {
+import { WorkByPageIdQuery } from '../../types/gatsby-graphql';
+
+const mapStateToProps = (state: store.State) => ({state: state.app})
+const mapDispatchToProps = () => ({
+  dispatch: {
+    setLocation: (href: String) => action.transit({ href }),
+    setTitle: (title: String) => action.setCurrentPageTitle({ title })
+  }
+})
+
+type Props = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps> & { data: WorkByPageIdQuery }
+
+const WorkTemplete: React.FC<Props> = ({ data, dispatch, state }) => {
   const { html, frontmatter } = data.markdownRemark
 
-  const size =
-    typeof window === "undefined" ? defaultWindowWidth : window.innerWidth
-  const [device, changeDevice] = useState(detectDevice(size))
-
-  if (typeof window !== "undefined") {
-    window.onresize = () => {
-      // @ToDo 時間待ちを実装
-      //const id = setTimeout(() => {
-      changeDevice(detectDevice(window.innerWidth))
-      //}, 200)
-    }
-  }
-
-  const toLayout = Object.assign({}, data.site.siteMetadata, {
-    currentPath: data.sitePage.path,
-    title: frontmatter.title,
-    device,
+  useEffect(() => {
+    dispatch.setLocation(data.sitePage.path)
+    dispatch.setTitle(frontmatter.title)
   })
 
-  return <Article device={device} dangerouslySetInnerHTML={{ __html: html }} />
+  return <Article device={state.deviceType} dangerouslySetInnerHTML={{ __html: html }} />
 }
 
-export default WorkTemplete
+export default connect(mapStateToProps, mapDispatchToProps)(WorkTemplete)
 
 export const query = graphql`
-  query WorkByPageId($slug: String!) {
+  query WorkByPageId ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

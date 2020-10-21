@@ -4,33 +4,29 @@ import { graphql } from "gatsby"
 import Article from "../../organisms/article"
 
 import { connect } from 'react-redux'
-import * as store from '../../flux/store'
 import * as action from '../../flux/actions'
 
 import { WorkByPageIdQuery } from '../../types/gatsby-graphql';
 
-const mapStateToProps = (state: store.State) => ({state: state.app})
-const mapDispatchToProps = () => ({
+const mapDispatchToProps = (dispatch: Function) => ({
   dispatch: {
-    setLocation: (href: String) => action.transit({ href }),
-    setTitle: (title: String) => action.setCurrentPageTitle({ title })
+    setLocation: (href: String) => dispatch(action.transit({ href })),
+    setTitle: (title: String) => dispatch(action.setCurrentPageTitle({ title }))
   }
 })
 
 type Props = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps> & { data: WorkByPageIdQuery }
 
-const WorkTemplete: React.FC<Props> = ({ data, dispatch, state }) => {
+const WorkTemplete: React.FC<Props> = ({ data, dispatch }) => {
   const { html, frontmatter } = data.markdownRemark
 
-  useEffect(() => {
-    dispatch.setLocation(data.sitePage.path)
-    dispatch.setTitle(frontmatter.title)
-  })
+  dispatch.setLocation(data.sitePage.path)
+  dispatch.setTitle(frontmatter.title)
 
-  return <Article device={state.deviceType} dangerouslySetInnerHTML={{ __html: html }} />
+  return <Article dangerouslySetInnerHTML={{ __html: html }} />
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(WorkTemplete)
+export default connect(() => ({}), mapDispatchToProps)(WorkTemplete)
 
 export const query = graphql`
   query WorkByPageId ($slug: String!) {

@@ -3,8 +3,15 @@ import { Container, Column } from "./style"
 
 import LineImgList from "../../molecules/lineImgList"
 
-const PortfolioList = props => {
-  const device = props.device
+import {connect} from 'react-redux'
+import * as store from "../../flux/store"
+
+const mapStateToProps = ({app}: store.State) => ({ deviceType: app.deviceType })
+
+type Props = ReturnType<typeof mapStateToProps> & { works: any }
+
+const PortfolioList: React.FC<Props> = props => {
+  const device = props.deviceType
   const works = props.works
 
   switch (device) {
@@ -46,7 +53,7 @@ const PortfolioList = props => {
   }
 }
 
-export default PortfolioList
+export default connect(mapStateToProps, ()=>({}))(PortfolioList)
 
 function divideWorks(works, lineCount) {
   let w = [[], [], []].slice(0, lineCount)

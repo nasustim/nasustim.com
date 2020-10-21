@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 import { DisplayWrapper, Container, Content } from "./style"
 
 import SEO from "../utils/seo"
@@ -18,14 +17,14 @@ const Layout: React.FC<Props> = props => {
   const author = props.state.metaData.author
   const establishYear = props.state.metaData.establishedYear
   const title = props.state.title
-  const device = props.state.deviceType
+  const deviceType = props.state.deviceType
 
   return (
     <DisplayWrapper>
-      <Container device={device}>
+      <Container device={deviceType}>
         <SEO title={title} />
-        <Nav currentPath={currentPath} device={device} />
-        <Content device={device}>
+        <Nav currentPath={currentPath} device={deviceType} />
+        <Content device={deviceType}>
           {props.children}
           <Footer author={author} establishYear={establishYear} />
         </Content>

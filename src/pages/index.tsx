@@ -11,25 +11,24 @@ import path from "path"
 
 import { IndexQuery } from '../types/gatsby-graphql'
 
-const mapStateToProps = (state: store.State) => ({ state: state.app })
-const mapDispatchToProps = () => ({
+const mapDispatchToProps = (dispatch: Function) => ({
   dispatch: {
-    setLocation: (href: String) => action.transit({ href }),
-    setTitle: (title: String) => action.setCurrentPageTitle({ title }),
-    setMetaData: (author: String, establishedYear: Number) => action.setMetaData({ author, establishedYear }),
+    setLocation: (href: String) => dispatch(action.transit({ href })),
+    setTitle: (title: String) => dispatch(action.setCurrentPageTitle({ title })),
+    setMetaData: (author: String, establishedYear: Number) => dispatch(action.setMetaData({ author, establishedYear })),
+    setDeviceType: () => dispatch(action.updateDeviceCategory()),
   }
 })
 
-type Props = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps> & { data: IndexQuery }
+type Props = ReturnType<typeof mapDispatchToProps> & { data: IndexQuery }
 
 const Index: React.FC<Props> = props => {
-  const { data, state, dispatch } = props
+  const { data, dispatch } = props
 
-  useEffect(() => {
-    dispatch.setLocation(data.sitePage.path)
-    dispatch.setTitle('Top Page')
-    dispatch.setMetaData(data.site.siteMetadata.author, data.site.siteMetadata.establishYear)
-  })
+  dispatch.setLocation('/')
+  dispatch.setTitle('Top Page')
+  dispatch.setMetaData(data.site.siteMetadata.author, data.site.siteMetadata.establishYear)
+  dispatch.setDeviceType()
 
   const works = data.allMarkdownRemark.edges.map(({ node }) => ({
     title: node.frontmatter.title,
@@ -38,10 +37,10 @@ const Index: React.FC<Props> = props => {
     imgHeight: node.frontmatter.headimg.childImageSharp.resolutions.height,
   }))
 
-  return <PortfolioList device={state.deviceType} works={works} />
+  return <PortfolioList works={works} />
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Index)
+export default connect(() => ({}), mapDispatchToProps)(Index)
 
 export const pageQuery = graphql`
   query Index {

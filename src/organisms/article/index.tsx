@@ -2,11 +2,16 @@ import React from "react"
 
 import { Container } from "./style"
 
-const Article = ({ device, dangerouslySetInnerHTML }) => (
+import {connect} from 'react-redux'
+import * as store from "../../flux/store"
+
+const mapStateToProps = ({app}: store.State) => ({ deviceType: app.deviceType })
+
+const Article = ({ deviceType, dangerouslySetInnerHTML }) => (
   <Container
-    device={device}
+    device={deviceType}
     dangerouslySetInnerHTML={dangerouslySetInnerHTML}
   />
 )
 
-export default Article
+export default connect(mapStateToProps)(Article)

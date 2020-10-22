@@ -16,7 +16,6 @@ const mapDispatchToProps = (dispatch: Function) => ({
     setLocation: (href: String) => dispatch(action.transit({ href })),
     setTitle: (title: String) => dispatch(action.setCurrentPageTitle({ title })),
     setMetaData: (author: String, establishedYear: Number) => dispatch(action.setMetaData({ author, establishedYear })),
-    setDeviceType: () => dispatch(action.updateDeviceCategory()),
   }
 })
 
@@ -28,7 +27,6 @@ const Index: React.FC<Props> = props => {
   dispatch.setLocation('/')
   dispatch.setTitle('Top Page')
   dispatch.setMetaData(data.site.siteMetadata.author, data.site.siteMetadata.establishYear)
-  dispatch.setDeviceType()
 
   const works = data.allMarkdownRemark.edges.map(({ node }) => ({
     title: node.frontmatter.title,

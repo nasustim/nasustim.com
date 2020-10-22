@@ -8,6 +8,8 @@ import Footer from "../organisms/footer"
 import { connect } from 'react-redux'
 import * as store from '../flux/store'
 
+import '../utils/observer'
+
 const mapStateToProps = (state: store.State) => ({ state: state.app })
 
 type Props = ReturnType<typeof mapStateToProps>

@@ -16,8 +16,7 @@ export const setMetaData = (metaData) => {
   }
 }
 
-export const updateDeviceCategory = () => {
-  const deviceType = isMobile() ? 'mobile' : 'desktop'
+export const updateDeviceCategory = ({ deviceType }) => {
   return {
     type: ACTION_TYPE.SET_DEVICE_TYPE,
     data: {
@@ -39,6 +38,3 @@ export const transit = ({ href = '/' }) => ({
     href,
   },
 })
-
-const ua = typeof window !== 'undefined' ? window.navigator.userAgent : ''
-const isMobile = () => !!['iPhone', 'iPad', 'iPod', 'Android'].find(v => ua.indexOf(v) > 0)

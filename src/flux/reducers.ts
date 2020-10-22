@@ -16,8 +16,8 @@ const initialState: State = {
   title: '',
   metaData: {
     author: 'Mitsuhiro Hibino',
-    establishedYear: 2010,
-  },
+    establishedYear: 2010
+  }
 }
 
 export default function reducers (prevState: State = initialState, action: Actions) {
@@ -25,22 +25,22 @@ export default function reducers (prevState: State = initialState, action: Actio
     case ACTION_TYPE.SET_DEVICE_TYPE:
       return {
         deviceType: action.data.deviceType,
-        ...prevState,
+        ...prevState
       }
     case ACTION_TYPE.TRANSITION_PAGE:
       return {
         href: action.data.href,
-        ...prevState,
+        ...prevState
       }
     case ACTION_TYPE.SET_TITLE:
       return {
         title: action.data.title,
-        ...prevState,
+        ...prevState
       }
     case ACTION_TYPE.SET_META_DATA:
       return {
         metaData: action.data.metaData,
-        ...prevState,
+        ...prevState
       }
     default:
       return prevState

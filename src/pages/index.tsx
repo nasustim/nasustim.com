@@ -1,13 +1,13 @@
-import React, { useEffect } from "react"
-import { graphql } from "gatsby"
+import React, { useEffect } from 'react'
+import { graphql } from 'gatsby'
 
-import PortfolioList from "../organisms/portfolioList"
+import PortfolioList from '../organisms/portfolioList'
 
 import { connect } from 'react-redux'
 import * as store from '../flux/store'
 import * as action from '../flux/actions'
 
-import path from "path"
+import path from 'path'
 
 import { IndexQuery } from '../types/gatsby-graphql'
 
@@ -15,7 +15,7 @@ const mapDispatchToProps = (dispatch: Function) => ({
   dispatch: {
     setLocation: (href: String) => dispatch(action.transit({ href })),
     setTitle: (title: String) => dispatch(action.setCurrentPageTitle({ title })),
-    setMetaData: (author: String, establishedYear: Number) => dispatch(action.setMetaData({ author, establishedYear })),
+    setMetaData: (author: String, establishedYear: Number) => dispatch(action.setMetaData({ author, establishedYear }))
   }
 })
 
@@ -30,9 +30,9 @@ const Index: React.FC<Props> = props => {
 
   const works = data.allMarkdownRemark.edges.map(({ node }) => ({
     title: node.frontmatter.title,
-    linkUri: path.join("/works/", node.frontmatter.pageid),
+    linkUri: path.join('/works/', node.frontmatter.pageid),
     imgSrc: node.frontmatter.headimg.childImageSharp.resolutions.src,
-    imgHeight: node.frontmatter.headimg.childImageSharp.resolutions.height,
+    imgHeight: node.frontmatter.headimg.childImageSharp.resolutions.height
   }))
 
   return <PortfolioList works={works} />

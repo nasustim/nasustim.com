@@ -4,7 +4,7 @@ export const ACTION_TYPE = {
   SET_DEVICE_TYPE: 'SET_DEVICE_TYPE',
   TRANSITION_PAGE: 'TRANSITION_PAGE',
   SET_TITLE: 'SET_TITLE',
-  SET_META_DATA: 'SET_META_DATA',
+  SET_META_DATA: 'SET_META_DATA'
 }
 
 export const setMetaData = (metaData) => {
@@ -28,13 +28,13 @@ export const updateDeviceCategory = ({ deviceType }) => {
 export const setCurrentPageTitle = ({ title }) => ({
   type: ACTION_TYPE.SET_TITLE,
   data: {
-    title,
-  },
+    title
+  }
 })
 
 export const transit = ({ href = '/' }) => ({
   type: ACTION_TYPE.TRANSITION_PAGE,
   data: {
-    href,
-  },
+    href
+  }
 })

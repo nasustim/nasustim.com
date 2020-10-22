@@ -1,12 +1,12 @@
-import React, { useEffect } from "react"
-import { graphql } from "gatsby"
+import React, { useEffect } from 'react'
+import { graphql } from 'gatsby'
 
-import Article from "../organisms/article"
+import Article from '../organisms/article'
 
 import { connect } from 'react-redux'
 import * as action from '../flux/actions'
 
-import { WhoAmiQuery } from '../types/gatsby-graphql';
+import { WhoAmiQuery } from '../types/gatsby-graphql'
 
 const mapDispatchToProps = (dispatch: Fucntion) => ({
   dispatch: {

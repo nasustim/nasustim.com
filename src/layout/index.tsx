@@ -1,9 +1,9 @@
-import React from "react"
-import { DisplayWrapper, Container, Content } from "./style"
+import React from 'react'
+import { DisplayWrapper, Container, Content } from './style'
 
-import SEO from "../utils/seo"
-import Nav from "../organisms/nav"
-import Footer from "../organisms/footer"
+import SEO from '../utils/seo'
+import Nav from '../organisms/nav'
+import Footer from '../organisms/footer'
 
 import { connect } from 'react-redux'
 import * as store from '../flux/store'

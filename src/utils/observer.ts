@@ -1,4 +1,3 @@
-import store from '../flux/store'
 import Store from '../flux/store'
 import { updateDeviceCategory } from '../flux/actions'
 

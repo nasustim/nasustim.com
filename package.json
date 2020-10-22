@@ -91,7 +91,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "pre-commit": "eslint --fix src/**/*.{js,tsx} & stylelint --fix src/**/*.{css,scss} & git add --all"
+    "pre-commit": "eslint --fix src/**/*.{js,tsx} & stylelint --fix src/**/*.{css,scss} & git add --all  &> /dev/null"
   },
   "husky": {
     "hooks": {

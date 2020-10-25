@@ -10,7 +10,7 @@ import {
   RightAlignedText,
 } from "../style"
 
-import { detectDevice } from "../resolver"
+import { detectDevice } from "../utils/resolver"
 import { defaultWindowWidth } from "../constants"
 
 const NotFound = props => {

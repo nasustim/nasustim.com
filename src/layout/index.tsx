@@ -2,8 +2,8 @@ import React from "react"
 import { Container, Content } from "./style"
 
 import SEO from "../utils/seo"
-import Nav from "../organisms/nav"
-import Footer from "../organisms/footer"
+import Nav from "../containers/nav"
+import Footer from "../containers/footer"
 
 const Layout = props => {
   const currentPath =

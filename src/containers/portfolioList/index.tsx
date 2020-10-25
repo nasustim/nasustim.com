@@ -1,7 +1,7 @@
 import React from "react"
 import { Container, Column } from "./style"
 
-import LineImgList from "../../molecules/lineImgList"
+import LineImgList from "../../components/lineImgList"
 
 const PortfolioList = props => {
   const device = props.device

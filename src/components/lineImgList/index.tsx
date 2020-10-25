@@ -1,6 +1,6 @@
 import React from "react"
 
-import TopImg from "../../atoms/topImg"
+import TopImg from "../../components/topImg"
 
 import { Line, CardContainer, Link } from "./style"
 

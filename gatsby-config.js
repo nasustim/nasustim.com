@@ -115,7 +115,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        pathToConfigModule: `src/utils/typography.ts`,
       },
     },
     `gatsby-plugin-sass`,
@@ -150,12 +150,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
-    /*{
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        color: `#000000`,
-        showSpinner: false,
-      },
-    },*/
   ],
 }

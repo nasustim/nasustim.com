@@ -1,8 +1,8 @@
 import React from "react"
 
 import { Container } from "./style"
-import NavTitle from "../../molecules/navTitle"
-import NavButton from "../../molecules/navButton"
+import NavTitle from "../../components/navTitle"
+import NavButton from "../../components/navButton"
 
 const Nav = ({ currentPath, device }) => {
   const isTop = currentPath.match(/whoami/)

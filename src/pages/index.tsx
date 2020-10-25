@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../layout"
+import Layout from "../layouts"
 import { Container } from "../style"
 import { detectDevice } from "../utils/resolver"
 import { defaultWindowWidth } from "../constants"
@@ -50,7 +50,7 @@ const Index = props => {
 export default Index
 
 export const pageQuery = graphql`
-  query {
+  query IndexQuery {
     allMarkdownRemark(
       filter: { frontmatter: { category: { eq: "works" } } }
       sort: { fields: frontmatter___date, order: DESC }

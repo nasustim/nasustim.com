@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../../layout"
+import Layout from "../../layouts"
 import { Container } from "../../style"
 
 import Article from "../../containers/article"

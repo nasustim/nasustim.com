@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../layout"
+import Layout from "../layouts"
 
 import {
   Container,
@@ -52,7 +52,7 @@ const NotFound = props => {
 export default NotFound
 
 export const pageQuery = graphql`
-  query {
+  query NotfoundQuery {
     site {
       siteMetadata {
         author

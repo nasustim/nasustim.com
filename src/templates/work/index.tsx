@@ -9,7 +9,13 @@ import Article from "../../containers/article"
 import { detectDevice } from "../../utils/resolver"
 import { defaultWindowWidth } from "../../constants"
 
-const WorkTemplete = ({ data }) => {
+import { WorksPageQuery } from '../../types/graphql-type'
+
+interface Props {
+  data: WorksPageQuery
+}
+
+const WorkTemplete: React.FC<Props> = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark
 
   const size =
@@ -43,7 +49,7 @@ const WorkTemplete = ({ data }) => {
 export default WorkTemplete
 
 export const query = graphql`
-  query WorkByPageId($slug: String!) {
+  query WorksPage ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

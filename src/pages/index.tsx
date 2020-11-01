@@ -9,7 +9,13 @@ import PortfolioList from "../containers/portfolioList"
 
 import path from "path"
 
-const Index = props => {
+import { TopPageQuery } from '../types/graphql-type'
+
+interface Props {
+  data: TopPageQuery
+}
+
+const Index: React.FC<Props> = props => {
   const { data } = props
 
   const size =
@@ -50,7 +56,7 @@ const Index = props => {
 export default Index
 
 export const pageQuery = graphql`
-  query {
+  query TopPage {
     allMarkdownRemark(
       filter: { frontmatter: { category: { eq: "works" } } }
       sort: { fields: frontmatter___date, order: DESC }

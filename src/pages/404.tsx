@@ -13,7 +13,13 @@ import {
 import { detectDevice } from "../utils/resolver"
 import { defaultWindowWidth } from "../constants"
 
-const NotFound = props => {
+import { NotFoundPageQuery } from '../types/graphql-type'
+
+interface Props {
+  data: NotFoundPageQuery
+}
+
+const NotFound: React.FC<Props> = props => {
   const { data } = props
 
   const size =
@@ -52,7 +58,7 @@ const NotFound = props => {
 export default NotFound
 
 export const pageQuery = graphql`
-  query {
+  query NotFoundPage {
     site {
       siteMetadata {
         author

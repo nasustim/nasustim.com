@@ -9,7 +9,13 @@ import Article from "../containers/article"
 import { detectDevice } from "../utils/resolver"
 import { defaultWindowWidth } from "../constants"
 
-const Whoami = props => {
+import { WhoAmIPageQuery } from '../types/graphql-type'
+
+interface Props {
+  data: WhoAmIPageQuery
+}
+
+const Whoami: React.FC<Props> = props => {
   const { data } = props
 
   const { html } = data.markdownRemark
@@ -45,7 +51,7 @@ const Whoami = props => {
 export default Whoami
 
 export const pageQuery = graphql`
-  query {
+  query WhoAmIPage {
     markdownRemark(frontmatter: { pageid: { eq: "whoami" } }) {
       html
     }

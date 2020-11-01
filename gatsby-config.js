@@ -150,5 +150,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-graphql-codegen`,
+      options: {
+        fileName: './src/types/graphql-type.d.ts',
+      },
+    },
   ],
 }

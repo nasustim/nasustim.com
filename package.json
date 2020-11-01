@@ -81,7 +81,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn pre-commit"
+      "pre-commit": "yarn pre-commit && git add --all"
     }
   }
 }

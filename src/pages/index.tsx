@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import Layout from '../layout'
 import { Container } from '../style'
 import { detectDevice } from '../utils/resolver'
-import { defaultWindowWidth } from '../constants'
 import PortfolioList from '../containers/portfolioList'
 
 import path from 'path'
@@ -18,22 +17,9 @@ interface Props {
 const Index: React.FC<Props> = (props) => {
   const { data } = props
 
-  const size = typeof window === 'undefined' ? defaultWindowWidth : window.innerWidth
-  const [device, changeDevice] = useState(detectDevice(size))
-
-  if (typeof window !== 'undefined') {
-    window.onresize = () => {
-      // @ToDo 時間待ちを実装
-      //const id = setTimeout(() => {
-      changeDevice(detectDevice(window.innerWidth))
-      //}, 200)
-    }
-  }
-
   const toLayout = Object.assign({}, data.site.siteMetadata, {
     currentPath: data.sitePage.path,
     title: 'home',
-    device,
   })
 
   const works = data.allMarkdownRemark.edges.map(({ node }) => ({
@@ -46,7 +32,7 @@ const Index: React.FC<Props> = (props) => {
   return (
     <Container>
       <Layout {...toLayout}>
-        <PortfolioList device={device} works={works} />
+        <PortfolioList works={works} />
       </Layout>
     </Container>
   )

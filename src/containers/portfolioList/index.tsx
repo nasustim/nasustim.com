@@ -1,49 +1,40 @@
 import React from 'react'
-import { Container, Column } from './style'
 
 import LineImgList from '../../components/lineImgList'
 
 const PortfolioList = (props) => {
-  const device = props.device
   const works = props.works
 
-  switch (device) {
-    case 'desktop':
-      const desktopLine = divideWorks(works, 3)
-      return (
-        <Container>
-          <Column>
-            <LineImgList device={device} works={desktopLine[0]} />
-          </Column>
-          <Column>
-            <LineImgList device={device} works={desktopLine[1]} />
-          </Column>
-          <Column>
-            <LineImgList device={device} works={desktopLine[2]} />
-          </Column>
-        </Container>
-      )
-    case 'tablet':
-      const tabletLine = divideWorks(works, 2)
-      return (
-        <Container>
-          <Column>
-            <LineImgList device={device} works={tabletLine[0]} />
-          </Column>
-          <Column>
-            <LineImgList device={device} works={tabletLine[1]} />
-          </Column>
-        </Container>
-      )
-    default:
-      return (
-        <Container>
-          <Column>
-            <LineImgList device={device} works={works} />
-          </Column>
-        </Container>
-      )
-  }
+  // ToDo: 取り急ぎ、いずれ抜く
+  const device: string = 'desktop'
+  const columnAmount = device === 'desktop' ? 3 : device === 'tablet' ? 2 : 1
+
+  const lines = divideWorks(works, columnAmount)
+  return (
+    <React.Fragment>
+      <section className={'container'}>
+        {lines.map((line) => (
+          <div className={'column'}>
+            <LineImgList works={line} />
+          </div>
+        ))}
+      </section>
+      <style jsx>{`
+        .conteiner {
+          margin: 0;
+          padding: 0;
+
+          width: 100%;
+
+          display: flex;
+          flex-direction: row;
+        }
+        .column {
+          flex: 1;
+        }
+      `}</style>
+    </React.Fragment>
+  )
 }
 
 export default PortfolioList

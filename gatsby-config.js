@@ -156,5 +156,14 @@ module.exports = {
         fileName: './src/types/graphql-type.d.ts',
       },
     },
+    {
+      resolve: `gatsby-plugin-styled-jsx`,
+      options: {
+        optimizeForSpeed: true,
+        sourceMaps: false,
+        vendorPrefixes: true,
+        styleModule: './src/style/index.scss',
+      },
+    },
   ],
 }

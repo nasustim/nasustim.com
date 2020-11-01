@@ -4,9 +4,9 @@ import { graphql } from "gatsby"
 import Layout from "../layout"
 
 import { Container } from "../style"
-import Article from "../organisms/article"
+import Article from "../containers/article"
 
-import { detectDevice } from "../resolver"
+import { detectDevice } from "../utils/resolver"
 import { defaultWindowWidth } from "../constants"
 
 const Whoami = props => {

@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import { color } from "../../constants"
+import { color } from '../../constants'
 
 export const Img = styled.img`
   z-index: 1;
@@ -42,7 +42,7 @@ export const Figcaption = styled.figcaption`
     h1 {
       text-align: center;
       color: ${color.WHITE};
-      font-size: ${({ device }) => (device === "desktop" ? 20 : 15)}px;
+      font-size: ${({ device }) => (device === 'desktop' ? 20 : 15)}px;
       line-height: 1.2;
       margin: 10px;
     }

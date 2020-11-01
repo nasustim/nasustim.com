@@ -1,13 +1,13 @@
-import React, { useState } from "react"
-import { graphql } from "gatsby"
+import React, { useState } from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../../layout"
-import { Container } from "../../style"
+import Layout from '../../layout'
+import { Container } from '../../style'
 
-import Article from "../../containers/article"
+import Article from '../../containers/article'
 
-import { detectDevice } from "../../utils/resolver"
-import { defaultWindowWidth } from "../../constants"
+import { detectDevice } from '../../utils/resolver'
+import { defaultWindowWidth } from '../../constants'
 
 import { WorksPageQuery } from '../../types/graphql-type'
 
@@ -18,11 +18,10 @@ interface Props {
 const WorkTemplete: React.FC<Props> = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark
 
-  const size =
-    typeof window === "undefined" ? defaultWindowWidth : window.innerWidth
+  const size = typeof window === 'undefined' ? defaultWindowWidth : window.innerWidth
   const [device, changeDevice] = useState(detectDevice(size))
 
-  if (typeof window !== "undefined") {
+  if (typeof window !== 'undefined') {
     window.onresize = () => {
       // @ToDo 時間待ちを実装
       //const id = setTimeout(() => {
@@ -49,7 +48,7 @@ const WorkTemplete: React.FC<Props> = ({ data }) => {
 export default WorkTemplete
 
 export const query = graphql`
-  query WorksPage ($slug: String!) {
+  query WorksPage($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

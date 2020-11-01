@@ -1,0 +1,12 @@
+# configuration files
+node_modules/
+package.json
+package-lock.json
+
+# gatsby output directory
+.cache/
+public/
+static/
+
+# auto gererated type file
+src/types/graphql-type.d.ts

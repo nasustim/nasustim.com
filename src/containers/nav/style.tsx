@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Container = styled.header`
   * {
@@ -28,5 +28,5 @@ export const Container = styled.header`
 
   background-color: rgba($color: #ffffff, $alpha: 0.6);
 
-  height: ${({ device }) => (device === "desktop" ? 110 : 60)}px;
+  height: ${({ device }) => (device === 'desktop' ? 110 : 60)}px;
 `

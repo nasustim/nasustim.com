@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100%;
@@ -13,7 +13,5 @@ const styleTemplate = `
 `
 
 export const FullWidthContainer = styled.div([styleTemplate])
-export const CenteredHeading = styled.h1([
-  styleTemplate + `text-align: center;`,
-])
+export const CenteredHeading = styled.h1([styleTemplate + `text-align: center;`])
 export const RightAlignedText = styled.p([styleTemplate + `text-align: right;`])

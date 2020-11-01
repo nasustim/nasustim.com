@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Container = styled.div`
   left: auto;
@@ -8,7 +8,7 @@ export const Container = styled.div`
   max-width: 980px;
   height: 100%;
 
-  width: ${({ device }) => (device === "desktop" ? "100%" : "980px")};
+  width: ${({ device }) => (device === 'desktop' ? '100%' : '980px')};
 `
 
 export const Content = styled.main`
@@ -22,8 +22,5 @@ export const Content = styled.main`
 
   z-index: 5;
 
-  ${({ device }) =>
-    device === "desktop"
-      ? `top: calc(110px + 10px)`
-      : `top: calc(60px + 10px)`};
+  ${({ device }) => (device === 'desktop' ? `top: calc(110px + 10px)` : `top: calc(60px + 10px)`)};
 `

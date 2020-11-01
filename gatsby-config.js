@@ -1,4 +1,4 @@
-const path = require("path")
+const path = require('path')
 
 const TITLE = `nasustim.com`
 const AUTHOR = `Mitsuhiro Hibino`
@@ -64,7 +64,7 @@ module.exports = {
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           {
-            resolve: "gatsby-remark-embed-video",
+            resolve: 'gatsby-remark-embed-video',
             options: {
               width: 750,
               ratio: 1.77,
@@ -136,11 +136,11 @@ module.exports = {
       options: {},
     },
     {
-      resolve: "gatsby-plugin-robots-txt",
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: SITE_URL,
-        sitemap: path.join(SITE_URL, "/sitemap.xml"),
-        policy: [{ userAgent: "*", allow: "/" }],
+        sitemap: path.join(SITE_URL, '/sitemap.xml'),
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
     {
@@ -150,5 +150,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-graphql-codegen`,
+      options: {
+        fileName: './src/types/graphql-type.d.ts',
+      },
+    },
   ],
 }

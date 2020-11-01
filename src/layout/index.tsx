@@ -1,13 +1,12 @@
-import React from "react"
-import { Container, Content } from "./style"
+import React from 'react'
+import { Container, Content } from './style'
 
-import SEO from "../utils/seo"
-import Nav from "../containers/nav"
-import Footer from "../containers/footer"
+import SEO from '../utils/seo'
+import Nav from '../containers/nav'
+import Footer from '../containers/footer'
 
-const Layout = props => {
-  const currentPath =
-    typeof window !== "undefined" ? window.location.href : "/top"
+const Layout = (props) => {
+  const currentPath = typeof window !== 'undefined' ? window.location.href : '/top'
   const author = props.author
   const establishYear = props.establishYear
   const title = props.title

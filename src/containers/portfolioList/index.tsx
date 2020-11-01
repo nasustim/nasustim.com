@@ -1,14 +1,14 @@
-import React from "react"
-import { Container, Column } from "./style"
+import React from 'react'
+import { Container, Column } from './style'
 
-import LineImgList from "../../components/lineImgList"
+import LineImgList from '../../components/lineImgList'
 
-const PortfolioList = props => {
+const PortfolioList = (props) => {
   const device = props.device
   const works = props.works
 
   switch (device) {
-    case "desktop":
+    case 'desktop':
       const desktopLine = divideWorks(works, 3)
       return (
         <Container>
@@ -23,7 +23,7 @@ const PortfolioList = props => {
           </Column>
         </Container>
       )
-    case "tablet":
+    case 'tablet':
       const tabletLine = divideWorks(works, 2)
       return (
         <Container>

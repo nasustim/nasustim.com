@@ -34,7 +34,7 @@ exports.createPages = async ({ graphql, actions }) => {
   if (result.errors) throw new Error(result.errors)
 
   result.data.allMarkdownRemark.edges
-    .filter(({ node }) => node.frontmatter.category === "works")
+    .filter(({ node }) => node.frontmatter.category === 'works')
     .forEach(({ node }) =>
       createPage({
         path: path.join(`/works/`, `${node.fields.slug}`),
@@ -42,7 +42,7 @@ exports.createPages = async ({ graphql, actions }) => {
         context: {
           slug: `${node.fields.slug}`,
         },
-      })
+      }),
     )
 }
 

@@ -1,22 +1,27 @@
-import React, { useState } from "react"
-import { graphql } from "gatsby"
+import React, { useState } from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../layout"
-import { Container } from "../style"
-import { detectDevice } from "../utils/resolver"
-import { defaultWindowWidth } from "../constants"
-import PortfolioList from "../containers/portfolioList"
+import Layout from '../layout'
+import { Container } from '../style'
+import { detectDevice } from '../utils/resolver'
+import { defaultWindowWidth } from '../constants'
+import PortfolioList from '../containers/portfolioList'
 
-import path from "path"
+import path from 'path'
 
-const Index = props => {
+import { TopPageQuery } from '../types/graphql-type'
+
+interface Props {
+  data: TopPageQuery
+}
+
+const Index: React.FC<Props> = (props) => {
   const { data } = props
 
-  const size =
-    typeof window === "undefined" ? defaultWindowWidth : window.innerWidth
+  const size = typeof window === 'undefined' ? defaultWindowWidth : window.innerWidth
   const [device, changeDevice] = useState(detectDevice(size))
 
-  if (typeof window !== "undefined") {
+  if (typeof window !== 'undefined') {
     window.onresize = () => {
       // @ToDo 時間待ちを実装
       //const id = setTimeout(() => {
@@ -27,13 +32,13 @@ const Index = props => {
 
   const toLayout = Object.assign({}, data.site.siteMetadata, {
     currentPath: data.sitePage.path,
-    title: "home",
+    title: 'home',
     device,
   })
 
   const works = data.allMarkdownRemark.edges.map(({ node }) => ({
     title: node.frontmatter.title,
-    linkUri: path.join("/works/", node.frontmatter.pageid),
+    linkUri: path.join('/works/', node.frontmatter.pageid),
     imgSrc: node.frontmatter.headimg.childImageSharp.resolutions.src,
     imgHeight: node.frontmatter.headimg.childImageSharp.resolutions.height,
   }))
@@ -50,7 +55,7 @@ const Index = props => {
 export default Index
 
 export const pageQuery = graphql`
-  query {
+  query TopPage {
     allMarkdownRemark(
       filter: { frontmatter: { category: { eq: "works" } } }
       sort: { fields: frontmatter___date, order: DESC }

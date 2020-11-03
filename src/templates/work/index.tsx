@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../../layout'
-
 import Article from '../../containers/article'
 
 import { WorksPageQuery } from '../../types/graphql-type'

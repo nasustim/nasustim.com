@@ -1,6 +1,7 @@
 import React from 'react'
+import styled from 'styled-components'
 
-import LineImgList from '../../components/lineImgList'
+import LineImgList from '../components/line-img-list'
 
 const PortfolioList = (props) => {
   const works = props.works
@@ -11,35 +12,28 @@ const PortfolioList = (props) => {
 
   const lines = divideWorks(works, columnAmount)
   return (
-    <React.Fragment>
-      <section>
-        {lines.map((line) => (
-          <div>
-            <LineImgList works={line} />
-          </div>
-        ))}
-      </section>
-      <Style />
-    </React.Fragment>
+    <Wrapper>
+      {lines.map((line) => (
+        <div>
+          <LineImgList works={line} />
+        </div>
+      ))}
+    </Wrapper>
   )
 }
 
 export default PortfolioList
 
-const Style = () => (
-  <style jsx>{`
-    section {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-    }
-    div {
-      flex: 1;
-    }
-  `}</style>
-)
+const Wrapper = styled.section`
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  div {
+    flex: 1;
+  }
+`
 
 function divideWorks(works, lineCount) {
   let w = [[], [], []].slice(0, lineCount)

@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../layout'
-import PortfolioList from '../containers/portfolioList'
+import PortfolioList from '../containers/portfolio-list'
 
 import path from 'path'
 
+import { Work } from '../types/index'
 import { TopPageQuery } from '../types/graphql-type'
 
 interface Props {
@@ -20,12 +21,14 @@ const Index: React.FC<Props> = (props) => {
     title: 'home',
   })
 
-  const works = data.allMarkdownRemark.edges.map(({ node }) => ({
-    title: node.frontmatter.title,
-    linkUri: path.join('/works/', node.frontmatter.pageid),
-    imgSrc: node.frontmatter.headimg.childImageSharp.resolutions.src,
-    imgHeight: node.frontmatter.headimg.childImageSharp.resolutions.height,
-  }))
+  const works = data.allMarkdownRemark.edges.map(
+    ({ node }): Work => ({
+      title: node.frontmatter.title,
+      linkUri: path.join('/works/', node.frontmatter.pageid),
+      imgSrc: node.frontmatter.headimg.childImageSharp.resolutions.src,
+      imgHeight: node.frontmatter.headimg.childImageSharp.resolutions.height,
+    }),
+  )
 
   return (
     <Layout {...toLayout}>

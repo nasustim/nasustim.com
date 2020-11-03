@@ -83,7 +83,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest",
-    "pre-commit": "npm run format"
+    "pre-commit": "npm run format",
+    "ci:test": "act"
   },
   "husky": {
     "hooks": {

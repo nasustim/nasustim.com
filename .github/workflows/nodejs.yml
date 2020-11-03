@@ -18,7 +18,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-yarn-
     - name: Setup Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v2-beta
       with:
         node-version: '14'
         check-latest: true
@@ -41,7 +41,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-yarn-
     - name: Setup Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v2-beta
       with:
         node-version: '14'
         check-latest: true

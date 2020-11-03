@@ -13,15 +13,44 @@ const Layout = (props) => {
   const device = props.device
 
   return (
-    <Container device={device}>
+    <div>
       <SEO title={title} />
-      <Nav currentPath={currentPath} device={device} />
-      <Content device={device}>
+      <Nav currentPath={currentPath} />
+      <main>
         {props.children}
         <Footer author={author} establishYear={establishYear} />
-      </Content>
-    </Container>
+      </main>
+      <Style />
+    </div>
   )
 }
 
 export default Layout
+
+const Style = () => (
+  <style jsx>{`
+    div {
+      left: auto;
+      right: auto;
+      margin: 0 auto;
+      max-width: $default-page-width;
+      height: 100%;
+      width: 100%;
+      @media screen and (max-width: $max-tablet-size) {
+        width: 980px;
+      }
+      main {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 980px;
+        position: absolute;
+        z-index: 5;
+        top: 120px; // 110px + 10px
+        @media screen and (max-width: $max-tablet-size) {
+          top: 70px; // 60px + 10px
+        }
+      }
+    }
+  `}</style>
+)

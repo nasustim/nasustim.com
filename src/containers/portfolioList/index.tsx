@@ -12,32 +12,34 @@ const PortfolioList = (props) => {
   const lines = divideWorks(works, columnAmount)
   return (
     <React.Fragment>
-      <section className={'container'}>
+      <section>
         {lines.map((line) => (
-          <div className={'column'}>
+          <div>
             <LineImgList works={line} />
           </div>
         ))}
       </section>
-      <style jsx>{`
-        .conteiner {
-          margin: 0;
-          padding: 0;
-
-          width: 100%;
-
-          display: flex;
-          flex-direction: row;
-        }
-        .column {
-          flex: 1;
-        }
-      `}</style>
+      <Style />
     </React.Fragment>
   )
 }
 
 export default PortfolioList
+
+const Style = () => (
+  <style jsx>{`
+    section {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+    div {
+      flex: 1;
+    }
+  `}</style>
+)
 
 function divideWorks(works, lineCount) {
   let w = [[], [], []].slice(0, lineCount)

@@ -20,7 +20,7 @@ const Whoami: React.FC<Props> = (props) => {
 
   const { html } = data.markdownRemark
 
-  const size = typeof window === 'undefined' ? defaultWindowWidth : window.innerWidth
+  const size = window?.innerWidth || 980
   const [device, changeDevice] = useState(detectDevice(size))
 
   if (typeof window !== 'undefined') {
@@ -39,11 +39,9 @@ const Whoami: React.FC<Props> = (props) => {
   })
 
   return (
-    <Container>
-      <Layout {...toLayout}>
-        <Article dangerouslySetInnerHTML={{ __html: html }} device={device} />
-      </Layout>
-    </Container>
+    <Layout {...toLayout}>
+      <Article dangerouslySetInnerHTML={{ __html: html }} />
+    </Layout>
   )
 }
 

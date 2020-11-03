@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../layout'
-import { Container } from '../style'
-import { detectDevice } from '../utils/resolver'
 import PortfolioList from '../containers/portfolioList'
 
 import path from 'path'
@@ -30,11 +28,9 @@ const Index: React.FC<Props> = (props) => {
   }))
 
   return (
-    <Container>
-      <Layout {...toLayout}>
-        <PortfolioList works={works} />
-      </Layout>
-    </Container>
+    <Layout {...toLayout}>
+      <PortfolioList works={works} />
+    </Layout>
   )
 }
 

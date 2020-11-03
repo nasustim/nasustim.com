@@ -1,15 +1,28 @@
 import React from 'react'
 
-import { Container, FooterSection } from './style'
-
 const Footer = ({ author, establishYear }) => (
-  <Container>
-    <FooterSection>
+  <section>
+    <footer>
       <small>
         © {author}, {establishYear} - {new Date().getFullYear()}
       </small>
-    </FooterSection>
-  </Container>
+    </footer>
+    <Style />
+  </section>
 )
 
 export default Footer
+
+const Style = () => (
+  <style jsx>{`
+    section {
+      width: 100%;
+      margin: 48px 0 12px;
+      footer {
+        width: 100%;
+        text-align: center;
+        font-style: oblique;
+      }
+    }
+  `}</style>
+)

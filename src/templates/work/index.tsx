@@ -1,12 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../../layout'
-import { Container } from '../../style'
 
 import Article from '../../containers/article'
-
-import { detectDevice } from '../../utils/resolver'
 
 import { WorksPageQuery } from '../../types/graphql-type'
 
@@ -23,11 +20,9 @@ const WorkTemplete: React.FC<Props> = ({ data }) => {
   })
 
   return (
-    <Container>
-      <Layout {...toLayout}>
-        <Article dangerouslySetInnerHTML={{ __html: html }} />
-      </Layout>
-    </Container>
+    <Layout {...toLayout}>
+      <Article dangerouslySetInnerHTML={{ __html: html }} />
+    </Layout>
   )
 }
 

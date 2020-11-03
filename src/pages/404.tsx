@@ -3,10 +3,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../layout'
 
-import { Container, CenteredHeading, FullWidthContainer, RightAlignedText } from '../style'
-
 import { detectDevice } from '../utils/resolver'
-import { defaultWindowWidth } from '../constants'
 
 import { NotFoundPageQuery } from '../types/graphql-type'
 
@@ -17,7 +14,7 @@ interface Props {
 const NotFound: React.FC<Props> = (props) => {
   const { data } = props
 
-  const size = typeof window === 'undefined' ? defaultWindowWidth : window.innerWidth
+  const size = window?.innerWidth || 980 // defaultWindowWidth
   const [device, changeDevice] = useState(detectDevice(size))
 
   if (typeof window !== 'undefined') {
@@ -36,18 +33,35 @@ const NotFound: React.FC<Props> = (props) => {
   })
 
   return (
-    <Container>
-      <Layout {...toLayout}>
-        <FullWidthContainer>
-          <CenteredHeading>404 Not Found</CenteredHeading>
-          <RightAlignedText>
-            <Link to={'/'}>Top Page →</Link>
-          </RightAlignedText>
-        </FullWidthContainer>
-      </Layout>
-    </Container>
+    <Layout {...toLayout}>
+      <div>
+        <h1>404 Not Found</h1>
+        <p>
+          <Link to={'/'}>Top Page →</Link>
+        </p>
+      </div>
+      <Style />
+    </Layout>
   )
 }
+
+const Style = () => (
+  <style jsx>{`
+    div {
+      width: 100%;
+      margin: 12px 0;
+
+      h1 {
+        @extend div;
+        text-align: center;
+      }
+      p {
+        @extend div;
+        text-align: right;
+      }
+    }
+  `}</style>
+)
 
 export default NotFound
 

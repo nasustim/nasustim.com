@@ -1,11 +1,11 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import NavTitle from 'nasustim.com/src/components/navTitle'
+import TopImg from 'nasustim.com/src/components/top-img'
 
-describe('LineImgList', () => {
+describe('TopImg', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(<NavTitle />).toJSON()
+    const tree = renderer.create(<TopImg />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

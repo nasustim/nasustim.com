@@ -2,7 +2,7 @@
 
 exports[`LineImgList renders correctly 1`] = `
 <div
-  className="sc-gsTCUz enmupd"
+  className="sc-gsTCUz dSyjIx"
 >
   <section>
     <a
@@ -10,7 +10,7 @@ exports[`LineImgList renders correctly 1`] = `
       href=""
     >
       <figure
-        className="sc-bdfBwQ hgWnPK"
+        className="sc-bdfBwQ kRLmCA"
       >
         <img
           alt=""

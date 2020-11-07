@@ -11,23 +11,22 @@ category: profile
 ![](./2018-11.jpg)
 
 1994年11月 岐阜県生まれ。大学で電子情報技術を学び、大学院ではメディアアートを専攻。  
-現在は都内でソーシャルゲームを開発している。
+現在は都内のIT企業でソフトウェアエンジニアとしてソーシャルゲームの開発に携わっています。
 
-## 普段遣い
-
+## お仕事 / 普段遣い
 
 <table>
   <tr>
-    <td>プログラミング言語</td><td>JavaScript, TypeScript, Perl, PHP</td>
+    <td>プログラミング言語</td><td>JavaScript & TypeScript, Perl(5.xx.x)</td>
   </tr>
   <tr>
-    <td>フレームワーク / ライブラリ</td><td>React, Vue.js, Express, Processing</td>
+    <td>フレームワーク / ライブラリ</td><td>React, Vue.js, Express</td>
   </tr>
   <tr>
     <td>ハードウェア</td><td>Raspberry Pi, ESP32</td>
   </tr>
   <tr>
-    <td>インフラ / 開発ツール</td><td>MySQL, Docker</td>
+    <td>インフラ / 開発ツール</td><td>MySQL, Docker, AWS</td>
   </tr>
 </table>
 
@@ -36,10 +35,10 @@ category: profile
 
 <table>
   <tr>
-    <td>プログラミング言語</td><td>Python, C++, Go</td>
+    <td>プログラミング言語</td><td>PHP, C++, Go</td>
   </tr>
   <tr>
-    <td>フレームワーク / ライブラリ</td><td>Three.js, openFrameworks, React Native, Unity</td>
+    <td>フレームワーク / ライブラリ</td><td>Three.js, openFrameworks, React Native, Unity, Processing</td>
   </tr>
   <tr>
     <td>ハードウェア / 電子回路</td><td>Arduino, Fritzing, はんだ付け</td>
@@ -60,5 +59,8 @@ category: profile
   </tr>
   <tr>
     <td>Facebook</td><td><a href="https://www.facebook.com/mitsuhibino" target="_blank">https://www.facebook.com/mitsuhibino</a></td>
+  </tr>
+  <tr>
+    <td>Keybase</td><td><a href="https://keybase.io/nasustim" target="_blank">https://keybase.io/nasustim</a></td>
   </tr>
 </table>

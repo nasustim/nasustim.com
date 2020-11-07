@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import Layout from '../layout'
 
-import { NotFoundPageQuery } from '../types/graphql-type'
+import { NotFoundPageQuery } from 'query-types'
 
 interface Props {
   data: NotFoundPageQuery

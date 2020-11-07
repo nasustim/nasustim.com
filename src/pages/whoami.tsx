@@ -5,7 +5,7 @@ import Layout from '../layout'
 
 import Article from '../containers/article'
 
-import { WhoAmIPageQuery } from '../types/graphql-type'
+import { WhoAmIPageQuery } from 'query-types'
 
 interface Props {
   data: WhoAmIPageQuery

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import logo from '../assets/logo.svg'
 
+import { sassVariableToValue } from '../utils/style'
 import { MAX_TABLET_SIZE } from '../style/constants.scss'
 
 const NavTitle = () => (
@@ -19,7 +20,7 @@ export default NavTitle
 const Wrapper = styled.div`
   margin: 15px;
   width: 45px; // 10px * 2 + 15px
-  @media screen and (max-width: ${MAX_TABLET_SIZE}) {
+  @media screen and (max-width: ${sassVariableToValue(MAX_TABLET_SIZE)}px) {
     width: 35px; // 10px * 2 + 15
   }
   * {

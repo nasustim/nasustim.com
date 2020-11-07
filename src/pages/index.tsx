@@ -7,7 +7,7 @@ import PortfolioList from '../containers/portfolio-list'
 import path from 'path'
 
 import { Work } from '../types/index'
-import { TopPageQuery } from '../types/graphql-type'
+import { TopPageQuery } from 'query-types'
 
 interface Props {
   data: TopPageQuery

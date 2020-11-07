@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { sassVariableToValue } from '../utils/style'
 import { MAX_TABLET_SIZE, COLOR_WHITE } from '../style/constants.scss'
 
 const TopImg = ({ imgSrc, title }) => (
@@ -74,7 +75,7 @@ div {
     line-height: 1.2;
     margin: 10px;
 
-    @media screen and (max-width: ${MAX_TABLET_SIZE}) {
+    @media screen and (max-width: ${sassVariableToValue(MAX_TABLET_SIZE)}px) {
       font-size: 15px;
     }
   }

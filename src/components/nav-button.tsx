@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
+import { sassVariableToValue } from '../utils/style'
 import {
   MAX_TABLET_SIZE,
   COLOR_BLACK,
@@ -48,7 +49,7 @@ const Wrapper = styled.ul`
     }
     h3 {
       font-size: 24px;
-      @media screen and (max-width: ${MAX_TABLET_SIZE}) {
+      @media screen and (max-width: ${sassVariableToValue(MAX_TABLET_SIZE)}px) {
         font-size: 14px;
       }
     }

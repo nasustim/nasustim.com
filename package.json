@@ -84,11 +84,13 @@
     "clean": "gatsby clean",
     "test": "jest",
     "pre-commit": "npm run format",
+    "pre-push": "npm run test",
     "ci:test": "act"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run pre-commit && git add --all"
+      "pre-commit": "npm run pre-commit && git add --all",
+      "pre-push": "npm run pre-push"
     }
   }
 }

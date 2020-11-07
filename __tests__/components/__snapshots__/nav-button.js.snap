@@ -2,7 +2,7 @@
 
 exports[`NavButton renders correctly 1`] = `
 <ul
-  className="sc-bdfBwQ kXuqOz"
+  className="sc-bdfBwQ cyIKzZ"
 >
   <li
     data-selected={true}

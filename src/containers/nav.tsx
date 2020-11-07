@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import NavTitle from '../components/nav-title'
 import NavButton from '../components/nav-button'
 
-import { MAX_TABLET_SIZE } from '../style/constants.scss'
+import { Sizes } from '../style/constants.ts'
 
 const Nav = ({ currentPath }) => {
   const isTop = currentPath.match(/whoami/)
@@ -42,7 +42,7 @@ const Wrapper = styled.header`
   position: fixed;
   background-color: rgba($color: #ffffff, $alpha: 0.6);
   height: 110px;
-  @media screen and (max-width: ${MAX_TABLET_SIZE}) {
+  @media screen and (max-width: ${Sizes.MAX_TABLET_SIZE}) {
     height: 60px;
   }
 `

@@ -2,7 +2,7 @@
 
 exports[`TopImg renders correctly 1`] = `
 <figure
-  className="sc-bdfBwQ hgWnPK"
+  className="sc-bdfBwQ kRLmCA"
 >
   <img
     className="img"

@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-import { sassVariableToValue } from '../utils/style'
 import {
   MAX_TABLET_SIZE,
   COLOR_BLACK,
@@ -42,21 +41,25 @@ const Wrapper = styled.ul`
     transition: all 200ms ease-in-out;
     &[data-selected='true'] {
       background-color: ${COLOR_BLACK};
+      h3 {
+        color: ${COLOR_WHITE};
+      }
     }
     &:hover {
       background-color: ${COLOR_TRANSPARENT_BLACK};
-      color: ${COLOR_PRIMARY};
-    }
-    h3 {
-      font-size: 24px;
-      @media screen and (max-width: ${sassVariableToValue(MAX_TABLET_SIZE)}px) {
-        font-size: 14px;
+      h3 {
+        // color: ${COLOR_PRIMARY};
       }
     }
-    text-decoration: none;
-    color: ${COLOR_BLACK};
-    &[data-selected='true'] {
-      color: ${COLOR_WHITE};
+    a {
+      text-decoration: none;
+      h3 {
+        color: ${COLOR_BLACK};
+        font-size: 24px;
+        @media screen and (max-width: ${MAX_TABLET_SIZE}) {
+          font-size: 14px;
+        }
+      }
     }
   }
 `

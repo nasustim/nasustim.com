@@ -3,18 +3,23 @@ import styled from 'styled-components'
 
 import LineImgList from '../components/line-img-list'
 
+import { sassVariableToValue as v } from '../utils/style'
+import { MAX_TABLET_SIZE, MAX_MOBILE_SIZE, DEFAULT_PAGE_WIDTH } from '../style/constants.scss'
+
 const PortfolioList = (props) => {
   const works = props.works
 
   // ToDo: 取り急ぎ、いずれ抜く
-  const device: string = 'desktop'
+  // ToDo: オブザーバでサイズ変更監視したい
+  const w = typeof window !== 'undefined' ? window.innerWidth : 980
+  const device: string = w > v(MAX_TABLET_SIZE) ? 'desktop' : w > v(MAX_MOBILE_SIZE) ? 'tablet' : 'mobile'
   const columnAmount = device === 'desktop' ? 3 : device === 'tablet' ? 2 : 1
 
   const lines = divideWorks(works, columnAmount)
   return (
     <Wrapper>
-      {lines.map((line) => (
-        <div>
+      {lines.map((line, index) => (
+        <div key={`portfolio-list--${index}`}>
           <LineImgList works={line} />
         </div>
       ))}
@@ -32,6 +37,9 @@ const Wrapper = styled.section`
   flex-direction: row;
   div {
     flex: 1;
+    @media screen and (min-width: ${DEFAULT_PAGE_WIDTH}) {
+      margin: 0 1.3px;
+    }
   }
 `
 

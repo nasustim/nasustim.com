@@ -3,13 +3,9 @@ import { graphql } from 'gatsby'
 
 import Layout from '../layout'
 
-import { Container } from '../style'
 import Article from '../containers/article'
 
-import { detectDevice } from '../utils/resolver'
-import { defaultWindowWidth } from '../constants'
-
-import { WhoAmIPageQuery } from '../types/graphql-type'
+import { WhoAmIPageQuery } from 'query-types'
 
 interface Props {
   data: WhoAmIPageQuery
@@ -20,30 +16,15 @@ const Whoami: React.FC<Props> = (props) => {
 
   const { html } = data.markdownRemark
 
-  const size = typeof window === 'undefined' ? defaultWindowWidth : window.innerWidth
-  const [device, changeDevice] = useState(detectDevice(size))
-
-  if (typeof window !== 'undefined') {
-    window.onresize = () => {
-      // @ToDo 時間待ちを実装
-      //const id = setTimeout(() => {
-      changeDevice(detectDevice(window.innerWidth))
-      //}, 200)
-    }
-  }
-
   const toLayout = Object.assign({}, data.site.siteMetadata, {
     currentPath: data.sitePage.path,
     title: 'Who am I',
-    device,
   })
 
   return (
-    <Container>
-      <Layout {...toLayout}>
-        <Article dangerouslySetInnerHTML={{ __html: html }} device={device} />
-      </Layout>
-    </Container>
+    <Layout {...toLayout}>
+      <Article dangerouslySetInnerHTML={{ __html: html }} />
+    </Layout>
   )
 }
 

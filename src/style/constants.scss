@@ -1,0 +1,20 @@
+// breakpoints
+$max-mobile-size: 380px;
+$max-tablet-size: 979px;
+$default-page-width: $max-tablet-size + 1px;
+
+// colors
+$color-black: #141414;
+$color-transparent-black: rgba(0, 0, 0, 0.56);
+$color-white: #ffffff;
+$color-primary: #f40622;
+
+:export {
+  MAX_MOBILE_SIZE: $max-mobile-size;
+  MAX_TABLET_SIZE: $max-tablet-size;
+  DEFAULT_PAGE_WIDTH: $default-page-width;
+  COLOR_BLACK: $color-black;
+  COLOR_TRANSPARENT_BLACK: $color-transparent-black;
+  COLOR_WHITE: $color-white;
+  COLOR_PRIMARY: $color-primary;
+}

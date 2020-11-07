@@ -1,3 +1,4 @@
+@use 'constants' as c;
 // figure for img
 .gatsby-resp-image-figure {
   text-align: center;
@@ -41,7 +42,7 @@ th, td {
   line-height: calc(27px * #{$font});
 }
 // mobile
-@media (max-width: 380px) {
+@media (max-width: c.$max-mobile-size) {
   p, li, figcaption {
     @include base-font-size(0.85);
   }
@@ -53,7 +54,7 @@ th, td {
   }
 }
 // tablet
-@media (min-width: 381px) and (max-width: 980px) {
+@media (min-width: c.$max-mobile-size + 1px) and (max-width: c.$max-tablet-size) {
   p, li, figcaption {
     @include base-font-size(0.92);
   }
@@ -65,7 +66,7 @@ th, td {
   }
 }
 // desktop
-@media (min-width: 981px) {
+@media (min-width: c.$default-page-width) {
   p, li, figcaption {
     @include base-font-size;
   }

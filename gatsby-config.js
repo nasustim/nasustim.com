@@ -118,7 +118,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography.ts`,
       },
     },
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
@@ -149,12 +148,20 @@ module.exports = {
         openAnalyzer: false,
       },
     },
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-graphql-codegen`,
       options: {
-        fileName: './src/types/graphql-type.d.ts',
+        fileName: './node_modules/query-types/index.ts',
       },
     },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        outputStyle: 'compressed',
+        useResolveUrlLoader: true,
+        implementation: require('sass'),
+      },
+    },
+    `gatsby-plugin-styled-components`,
   ],
 }

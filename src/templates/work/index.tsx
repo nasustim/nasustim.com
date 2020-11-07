@@ -1,13 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../../layout'
-import { Container } from '../../style'
-
 import Article from '../../containers/article'
-
-import { detectDevice } from '../../utils/resolver'
-import { defaultWindowWidth } from '../../constants'
 
 import { WorksPageQuery } from '../../types/graphql-type'
 
@@ -18,30 +13,15 @@ interface Props {
 const WorkTemplete: React.FC<Props> = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark
 
-  const size = typeof window === 'undefined' ? defaultWindowWidth : window.innerWidth
-  const [device, changeDevice] = useState(detectDevice(size))
-
-  if (typeof window !== 'undefined') {
-    window.onresize = () => {
-      // @ToDo 時間待ちを実装
-      //const id = setTimeout(() => {
-      changeDevice(detectDevice(window.innerWidth))
-      //}, 200)
-    }
-  }
-
   const toLayout = Object.assign({}, data.site.siteMetadata, {
     currentPath: data.sitePage.path,
     title: frontmatter.title,
-    device,
   })
 
   return (
-    <Container>
-      <Layout {...toLayout}>
-        <Article device={device} dangerouslySetInnerHTML={{ __html: html }} />
-      </Layout>
-    </Container>
+    <Layout {...toLayout}>
+      <Article dangerouslySetInnerHTML={{ __html: html }} />
+    </Layout>
   )
 }
 

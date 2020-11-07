@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LineImgList renders correctly 1`] = `
+<div
+  className="sc-gsTCUz brByUF"
+>
+  <section>
+    <a
+      className="link"
+      href=""
+    >
+      <figure
+        className="sc-bdfBwQ hgWnPK"
+      >
+        <img
+          alt=""
+          className="img"
+          src=""
+        />
+        <figcaption
+          className="figcaption"
+        >
+          <div>
+            <h1>
+              
+            </h1>
+          </div>
+        </figcaption>
+      </figure>
+    </a>
+  </section>
+</div>
+`;

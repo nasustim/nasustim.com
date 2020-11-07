@@ -1,4 +1,4 @@
-const path = require("path")
+const path = require('path')
 
 const TITLE = `nasustim.com`
 const AUTHOR = `Mitsuhiro Hibino`
@@ -64,7 +64,7 @@ module.exports = {
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           {
-            resolve: "gatsby-remark-embed-video",
+            resolve: 'gatsby-remark-embed-video',
             options: {
               width: 750,
               ratio: 1.77,
@@ -115,10 +115,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        pathToConfigModule: `src/utils/typography.ts`,
       },
     },
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
@@ -136,11 +135,11 @@ module.exports = {
       options: {},
     },
     {
-      resolve: "gatsby-plugin-robots-txt",
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: SITE_URL,
-        sitemap: path.join(SITE_URL, "/sitemap.xml"),
-        policy: [{ userAgent: "*", allow: "/" }],
+        sitemap: path.join(SITE_URL, '/sitemap.xml'),
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
     {
@@ -149,13 +148,20 @@ module.exports = {
         openAnalyzer: false,
       },
     },
-    `gatsby-plugin-styled-components`,
-    /*{
-      resolve: `gatsby-plugin-nprogress`,
+    {
+      resolve: `gatsby-plugin-graphql-codegen`,
       options: {
-        color: `#000000`,
-        showSpinner: false,
+        fileName: './node_modules/query-types/index.ts',
       },
-    },*/
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        outputStyle: 'compressed',
+        useResolveUrlLoader: true,
+        implementation: require('sass'),
+      },
+    },
+    `gatsby-plugin-styled-components`,
   ],
 }

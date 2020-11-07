@@ -1,56 +1,46 @@
-import React, { useState } from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../layout"
-import { Container } from "../style"
-import { detectDevice } from "../resolver"
-import { defaultWindowWidth } from "../constants"
-import PortfolioList from "../organisms/portfolioList"
+import Layout from '../layout'
+import PortfolioList from '../containers/portfolio-list'
 
-import path from "path"
+import path from 'path'
 
-const Index = props => {
+import { Work } from '../types/index'
+import { TopPageQuery } from 'query-types'
+
+interface Props {
+  data: TopPageQuery
+}
+
+const Index: React.FC<Props> = (props) => {
   const { data } = props
-
-  const size =
-    typeof window === "undefined" ? defaultWindowWidth : window.innerWidth
-  const [device, changeDevice] = useState(detectDevice(size))
-
-  if (typeof window !== "undefined") {
-    window.onresize = () => {
-      // @ToDo 時間待ちを実装
-      //const id = setTimeout(() => {
-      changeDevice(detectDevice(window.innerWidth))
-      //}, 200)
-    }
-  }
 
   const toLayout = Object.assign({}, data.site.siteMetadata, {
     currentPath: data.sitePage.path,
-    title: "home",
-    device,
+    title: 'home',
   })
 
-  const works = data.allMarkdownRemark.edges.map(({ node }) => ({
-    title: node.frontmatter.title,
-    linkUri: path.join("/works/", node.frontmatter.pageid),
-    imgSrc: node.frontmatter.headimg.childImageSharp.resolutions.src,
-    imgHeight: node.frontmatter.headimg.childImageSharp.resolutions.height,
-  }))
+  const works = data.allMarkdownRemark.edges.map(
+    ({ node }): Work => ({
+      title: node.frontmatter.title,
+      linkUri: path.join('/works/', node.frontmatter.pageid),
+      imgSrc: node.frontmatter.headimg.childImageSharp.resolutions.src,
+      imgHeight: node.frontmatter.headimg.childImageSharp.resolutions.height,
+    }),
+  )
 
   return (
-    <Container>
-      <Layout {...toLayout}>
-        <PortfolioList device={device} works={works} />
-      </Layout>
-    </Container>
+    <Layout {...toLayout}>
+      <PortfolioList works={works} />
+    </Layout>
   )
 }
 
 export default Index
 
 export const pageQuery = graphql`
-  query {
+  query TopPage {
     allMarkdownRemark(
       filter: { frontmatter: { category: { eq: "works" } } }
       sort: { fields: frontmatter___date, order: DESC }

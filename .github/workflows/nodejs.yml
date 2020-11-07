@@ -1,25 +1,51 @@
-name: Node CI
+name: nasustim.com build
 
 on: [push]
 
 jobs:
-  build:
-
+  test:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - uses: actions/checkout@v2
+    - name: Get yarn cache directory path  # reference: https://github.com/actions/cache/blob/main/examples.md#node---yarn-2
+      id: yarn-cache-dir-path
+      run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+    - uses: actions/cache@v2
+      id: yarn-cache
       with:
-        node-version: ${{ matrix.node-version }}
-    - name: yarn install and build
-      run: |
-        yarn install --frozen-lockfile
-        yarn build
-      env:
-        CI: true
+        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
+    - name: Setup Node.js
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: '14'
+        check-latest: true
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+    - name: Full Test
+      run: yarn test
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Get yarn cache directory path  # reference: https://github.com/actions/cache/blob/main/examples.md#node---yarn-2
+      id: yarn-cache-dir-path
+      run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+    - uses: actions/cache@v2
+      id: yarn-cache
+      with:
+        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
+    - name: Setup Node.js
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: '14'
+        check-latest: true
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+    - name: Build
+      run: yarn build

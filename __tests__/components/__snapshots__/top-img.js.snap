@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopImg renders correctly 1`] = `
+<figure
+  className="sc-bdfBwQ hgWnPK"
+>
+  <img
+    className="img"
+  />
+  <figcaption
+    className="figcaption"
+  >
+    <div>
+      <h1 />
+    </div>
+  </figcaption>
+</figure>
+`;

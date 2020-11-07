@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavButton renders correctly 1`] = `
+<ul
+  className="sc-bdfBwQ cyIKzZ"
+>
+  <li
+    data-selected={true}
+  >
+    <a
+      className="link"
+      data-selected={true}
+      href="/"
+    >
+      <h3>
+        Portfolio
+      </h3>
+    </a>
+  </li>
+  <li
+    data-selected={false}
+  >
+    <a
+      className="link"
+      data-selected={false}
+      href="/whoami"
+    >
+      <h3>
+        Whoami
+      </h3>
+    </a>
+  </li>
+</ul>
+`;

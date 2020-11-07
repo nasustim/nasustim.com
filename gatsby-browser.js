@@ -1,6 +1,2 @@
-// custom typefaces
-// import "typeface-montserrat"
-// import "typeface-merriweather"
-
-import "prismjs/themes/prism-twilight.css"
-import "./src/index.scss"
+import 'prismjs/themes/prism-twilight.css'
+import './src/style/index.scss'

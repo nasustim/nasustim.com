@@ -1,49 +1,34 @@
-import React, { useState } from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../../layout"
-import { Container } from "../../style"
+import Layout from '../../layout'
+import Article from '../../containers/article'
 
-import Article from "../../organisms/article"
+import { WorksPageQuery } from '../../types/graphql-type'
 
-import { detectDevice } from "../../resolver"
-import { defaultWindowWidth } from "../../constants"
+interface Props {
+  data: WorksPageQuery
+}
 
-const WorkTemplete = ({ data }) => {
+const WorkTemplete: React.FC<Props> = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark
-
-  const size =
-    typeof window === "undefined" ? defaultWindowWidth : window.innerWidth
-  const [device, changeDevice] = useState(detectDevice(size))
-
-  if (typeof window !== "undefined") {
-    window.onresize = () => {
-      // @ToDo 時間待ちを実装
-      //const id = setTimeout(() => {
-      changeDevice(detectDevice(window.innerWidth))
-      //}, 200)
-    }
-  }
 
   const toLayout = Object.assign({}, data.site.siteMetadata, {
     currentPath: data.sitePage.path,
     title: frontmatter.title,
-    device,
   })
 
   return (
-    <Container>
-      <Layout {...toLayout}>
-        <Article device={device} dangerouslySetInnerHTML={{ __html: html }} />
-      </Layout>
-    </Container>
+    <Layout {...toLayout}>
+      <Article dangerouslySetInnerHTML={{ __html: html }} />
+    </Layout>
   )
 }
 
 export default WorkTemplete
 
 export const query = graphql`
-  query WorkByPageId($slug: String!) {
+  query WorksPage($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

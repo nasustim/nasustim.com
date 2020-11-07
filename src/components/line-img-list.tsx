@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import TopImg from '../components/top-img'
 
-import { MAX_TABLET_SIZE } from '../style/constants.scss'
+import { Sizes } from '../style/constants'
 
 const LineImgList = ({ works }) => (
   <Wrapper>
@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   width: calc(100% - 1.3px);
   flex-direction: column;
   align-items: flex-start;
-  @media screen and (max-width: ${MAX_TABLET_SIZE}) {
+  @media screen and (max-width: ${Sizes.MAX_TABLET_SIZE}) {
     width: 100%;
   }
   section {
@@ -32,7 +32,7 @@ const Wrapper = styled.div`
     width: 100%;
     margin: 1.3px 0;
     padding: 0;
-    @media screen and (max-width: ${MAX_TABLET_SIZE}) {
+    @media screen and (max-width: ${Sizes.MAX_TABLET_SIZE}) {
       margin: 1px 0;
     }
     .link {

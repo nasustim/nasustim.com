@@ -5,7 +5,7 @@ import SEO from '../utils/seo'
 import Nav from '../containers/nav'
 import Footer from '../containers/footer'
 
-import { MAX_TABLET_SIZE, DEFAULT_PAGE_WIDTH } from '../style/constants.scss'
+import { Sizes } from '../style/constants'
 
 const Layout = (props) => {
   const currentPath = typeof window !== 'undefined' ? window.location.href : '/top'
@@ -27,16 +27,14 @@ const Layout = (props) => {
 
 export default Layout
 
-console.log(MAX_TABLET_SIZE)
-
 const Wrapper = styled.div`
   left: auto;
   right: auto;
   margin: 0 auto;
-  max-width: ${DEFAULT_PAGE_WIDTH};
+  max-width: ${Sizes.DEFAULT_PAGE_WIDTH};
   height: 100%;
   width: 100%;
-  @media screen and (max-width: ${MAX_TABLET_SIZE}) {
+  @media screen and (max-width: ${Sizes.MAX_TABLET_SIZE}) {
     width: 980px;
   }
   main {
@@ -47,7 +45,7 @@ const Wrapper = styled.div`
     position: absolute;
     z-index: 5;
     top: 120px; // 110px + 10px
-    @media screen and (max-width: ${MAX_TABLET_SIZE}) {
+    @media screen and (max-width: ${Sizes.MAX_TABLET_SIZE}) {
       top: 70px; // 60px + 10px
     }
   }

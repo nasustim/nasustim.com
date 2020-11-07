@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { MAX_TABLET_SIZE, COLOR_WHITE } from '../style/constants.scss'
+import { Sizes, Colors } from '../style/constants.ts'
 
 const TopImg = ({ imgSrc, title }) => (
   <Wrapper>
@@ -69,12 +69,12 @@ div {
   will-change: transform;
   h1 {
     text-align: center;
-    color: ${COLOR_WHITE};
+    color: ${Colors.COLOR_WHITE};
     font-size: 20px;
     line-height: 1.2;
     margin: 10px;
 
-    @media screen and (max-width: ${MAX_TABLET_SIZE}) {
+    @media screen and (max-width: ${Sizes.MAX_TABLET_SIZE}) {
       font-size: 15px;
     }
   }

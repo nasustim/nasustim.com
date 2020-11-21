@@ -5,8 +5,6 @@ package-lock.json
 
 # gatsby output directory
 .cache/
+.next/
 public/
 static/
-
-# auto gererated type file
-src/types/graphql-type.d.ts

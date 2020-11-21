@@ -5,7 +5,3 @@ My Portfolio Site.
 ## Author
 
 - [Mitsuhiro HIBINO](https://nasustim.com)
-
-## Boilerplate
-
-- [gatsby-starter-blog: Gatsby Starter | Gatsby](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog)

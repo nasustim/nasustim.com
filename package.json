@@ -38,13 +38,13 @@
   },
   "scripts": {
     "format": "prettier --write \"**/*.{ts,tsx,js}\"",
-    "test": "jest",
+    "test": "echo \"please write test and execute -> jest\" | exit 0",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "pre-commit": "npm run format",
-    "pre-push": "echo \"write test and run -> npm run test\"",
-    "ci:test": "act"
+    "pre-push": "npm run test",
+    "ci:dry-run": "act"
   },
   "husky": {
     "hooks": {

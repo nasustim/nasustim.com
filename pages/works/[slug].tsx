@@ -3,6 +3,7 @@ import { GetStaticProps } from 'next'
 import { getArticleContent, ArticleContent, getArticleUri } from '../../repositories/article'
 
 import Layout from '../../components/Layout'
+import HTMLify from '../../components/HTMLify'
 
 type Props = {
   article: ArticleContent
@@ -18,15 +19,14 @@ const WorkPage: React.FC<Props> = ({ article }) => {
 
   return (
     <Layout {...layoutProps}>
-      <p>/works/{article.attributes.pageId}</p>
-      <p>{article.body}</p>
+      <div>{HTMLify(article.body)}</div>
     </Layout>
   )
 }
 
 export default WorkPage
 
-export const config = { amp: true }
+//export const config = { amp: true }
 
 type StaticProps = { params: { slug: string } }
 export const getStaticProps = async ({ params }: StaticProps) => {

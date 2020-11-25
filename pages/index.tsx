@@ -1,32 +1,27 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import { getWhoamiContent } from '../repositories/whoami'
+import { getArticleList } from '../repositories/top'
 
-type Props = {
-  body: string
-  updatedDate: string
-  description: string
-}
+type Props = {}
 
 export default function IndexPage(props: Props) {
   const layoutProps = {
     pageId: '/',
     title: '',
-    description: props.description,
-    updatedDate: props.updatedDate,
+    description: '',
+    updatedDate: '',
   }
   return (
     <Layout {...layoutProps}>
-      <p>{props.body}</p>
+      <div>{'home'}</div>
     </Layout>
   )
 }
 
-export const config = { amp: true }
+//export const config = { amp: true }
 
 export const getStaticProps = async () => {
-  const whoami = await getWhoamiContent()
   return {
-    props: { ...whoami },
+    props: {},
   }
 }

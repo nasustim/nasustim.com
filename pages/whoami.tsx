@@ -1,13 +1,34 @@
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
+import React from 'react'
+import Layout from '../components/Layout'
+import { getWhoamiContent } from '../repositories/whoami'
 
-function WhoamiPage() {
-  // gatsbyで作成していたときは `/` ページにポートフォリオリストを置いていたが、諸々の都合で `/whoami` をトップページに移動
-  const router = useRouter()
-  useEffect(() => {
-    router.push('/')
-  })
+import HTMLify from '../components/HTMLify'
 
-  return <div>{`redirecting to toppage`}</div>
+type Props = {
+  body: string
+  updatedDate: string
+  description: string
 }
-export default WhoamiPage
+
+export default function WhoamiPage(props: Props) {
+  const layoutProps = {
+    pageId: '/',
+    title: '',
+    description: props.description,
+    updatedDate: props.updatedDate,
+  }
+  return (
+    <Layout {...layoutProps}>
+      <div>{HTMLify(props.body)}</div>
+    </Layout>
+  )
+}
+
+//export const config = { amp: true }
+
+export const getStaticProps = async () => {
+  const whoami = await getWhoamiContent()
+  return {
+    props: { ...whoami },
+  }
+}

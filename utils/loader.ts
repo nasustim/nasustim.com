@@ -34,7 +34,9 @@ export async function loadArticle(slug: string) {
     .catch(onError)
 }
 
-export async function loadArticleList(): Promise<Array<string>> {
+// -------------------------------
+
+export async function loadArticleIds(): Promise<Array<string>> {
   const articleDir = resolve(process.cwd(), articleFilePath)
   return readdir(articleDir, { encoding: 'utf-8' })
     .then((v) => {

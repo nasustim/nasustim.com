@@ -1,0 +1,15 @@
+@import '../styles/util.scss';
+
+.layout {
+  width: $tablet-max + 1px;
+  height: 100vh;
+
+  @media screen and (max-width: $tablet-max) and (min-width: $mobile-max + 1px) {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  @media screen and (max-width: $mobile-max) {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}

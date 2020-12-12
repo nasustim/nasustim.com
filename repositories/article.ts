@@ -1,25 +1,13 @@
-import { loadArticle, loadArticleList, Attributes } from '../utils/loader'
+import { loadArticle, loadArticleList } from '../utils/loader'
 
-async function getArticleUri(): Promise<Array<string>> {
-  const articleList = await loadArticleList()
-  return articleList.map((v) => `/works/${v}`)
+export default async function getArticleContent(slug: string): Promise<ArticleContent> {
+  return await loadArticle(slug)
 }
 
-// ---------------------
-
-export type ArticleContent = {
-  body: string
-  attributes: Attributes
+export async function getArticleUris(): Promise<ArticleUriList> {
+  return (await loadArticleList()).map(({ uri }) => uri)
 }
 
-async function getArticleContent(slug: string): Promise<ArticleContent> {
-  const article = await loadArticle(slug)
-  return {
-    body: article.body,
-    attributes: article.attributes as Attributes,
-  }
-}
+export type ArticleContent = FrontMatter
 
-// ---------------------
-
-export { getArticleUri, getArticleContent }
+export type ArticleUriList = Array<string>

@@ -1,8 +1,8 @@
 import React from 'react'
 import { GetStaticProps } from 'next'
-import { getArticleContent, ArticleContent, getArticleUri } from '../../repositories/article'
+import getArticleContent, { ArticleContent, getArticleUris } from '../../repositories/article'
 
-import Layout from '../../components/Layout'
+import Meta from '../../components/Layout/Meta'
 import HTMLify from '../../components/HTMLify'
 
 type Props = {
@@ -10,18 +10,17 @@ type Props = {
 }
 
 const WorkPage: React.FC<Props> = ({ article }) => {
-  const layoutProps = {
+  const metaProps: MetaProps = {
     title: article.attributes.title,
     description: article.attributes.description,
     updatedDate: article.attributes.date,
-    pageId: article.attributes.pageId,
+    pageId: article.attributes.pageid,
   }
 
-  return (
-    <Layout {...layoutProps}>
-      <div>{HTMLify(article.body)}</div>
-    </Layout>
-  )
+  return <div>
+    <Meta { ...metaProps } />
+    {HTMLify(article.body)}
+  </div>
 }
 
 export default WorkPage
@@ -30,15 +29,13 @@ export default WorkPage
 
 type StaticProps = { params: { slug: string } }
 export const getStaticProps = async ({ params }: StaticProps) => {
-  const article = await getArticleContent(params.slug as string)
+  const articleContent = await getArticleContent(params.slug)
   return {
-    props: {
-      article,
-    },
+    props: articleContent,
   }
 }
 
 export const getStaticPaths = async () => {
-  const paths = await getArticleUri()
+  const paths = await getArticleUris()
   return { paths, fallback: false }
 }

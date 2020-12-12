@@ -1,16 +1,18 @@
-import { loadArticleIds } from '../utils/loader'
+import { loadProfile, loadArticleList, ArticleListItem } from '../utils/loader'
 
-export type ArticleList = {
-  imgPath: string
-  uri: string
-  title: string
+export default async function getTopPageContent() {
+  const profileLoader = loadProfile()
+  const articleListLoader = loadArticleList()
+
+  return Promise.all([profileLoader, articleListLoader])
+    .then(([ {body, attributes}, articleList ]) => {
+      return {
+        body,
+        updatedDate: attributes.date,
+        description: attributes.description,
+        articleList,
+      }
+    })
 }
 
-async function getArticleList(): Promise<ArticleList> {
-  const articleIds = await loadArticleIds()
-  //return articleList
-}
-
-// ---------------------
-
-export { getArticleList }
+export type ArticleList = Array<ArticleListItem>

@@ -1,7 +1,10 @@
 import React from 'react'
 import getTopPageContent, {ArticleList} from '../repositories/top'
-import Meta from '../components/Layout/Meta'
-import HTMLify from '../components/HTMLify'
+
+
+import Meta from '../Containers/meta'
+import HTMLify from '../Containers/htmlify'
+
 
 type Props = {
   body: string

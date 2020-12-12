@@ -2,8 +2,9 @@ import '../styles/index.scss'
 
 import App from 'next/app'
 import Head from 'next/head'
-import styles from './_app.module.scss'
+import styles from './styles/_app.module.scss'
 import Background from '../Containers/background'
+import Header from '../Containers/header'
 
 
 export default class _App extends App {
@@ -20,6 +21,9 @@ export default class _App extends App {
         <Background />
       </div>
       <div className={ styles.container }>
+        <div className={ styles.header }>
+          <Header />
+        </div>
         <div className={ styles.content }>
           <Component {...pageProps} />
         </div>

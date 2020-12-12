@@ -22,7 +22,7 @@ export default class _App extends App {
       </div>
       <div className={ styles.container }>
         <div className={ styles.header }>
-          <Header />
+        {  /*<Header /> 今はいらない */  }
         </div>
         <div className={ styles.content }>
           <Component {...pageProps} />

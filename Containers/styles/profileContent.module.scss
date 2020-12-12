@@ -6,9 +6,6 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  @media #{$unless-pc} {
-    flex-direction: columns;
-  }
 }
 
 .profileImg {

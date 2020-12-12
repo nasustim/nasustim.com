@@ -6,6 +6,9 @@ import Meta from '../containers/meta'
 import HTMLify from '../containers/htmlify'
 
 import ProfileContent, {ProfileProps} from '../containers/profileContent'
+import Social from '../containers/social'
+
+import styles from './styles/index.module.scss'
 
 
 type Props = {
@@ -26,9 +29,10 @@ export default function IndexPage(props: Props) {
     text: profileText
   }
 
-  return <div>
+  return <div className={styles.container}>
     <Meta { ...metaProps } />
     <ProfileContent {...profileProps} />
+    <Social />
   </div>
 }
 

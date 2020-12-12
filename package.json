@@ -8,6 +8,10 @@
     "url": "https://github.com/nasustim/nasustim.com/issues"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.13",
     "@types/styled-components": "^5.1.4",
     "babel-plugin-styled-components": "^1.12.0",
     "front-matter": "^4.0.2",

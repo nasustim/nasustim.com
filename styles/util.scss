@@ -1,2 +1,13 @@
 $mobile-max: 400px;
 $tablet-max: 860px;
+$laptop-max: 1180px;
+
+@function min-break-point($value) {
+  @return $value + 1px;
+}
+
+$if-laptop: "screen and (max-width: " + $laptop-max + ") and (min-width: " + min-break-point($tablet-max) + ")";
+$if-tablet: "screen and (max-width: " + $tablet-max + ") and (min-width: " + min-break-point($mobile-max) + ")";
+$if-mobile: "screen and (max-width: " + $mobile-max + ")";
+
+$unless-pc: "screen and (max-width: " + $tablet-max + ")";

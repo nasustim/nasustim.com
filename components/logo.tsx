@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
-const Logo = () => <div><Image width={`70px`} height={`70px`} src={`/static/assets/logo.svg`} /></div>
+import styles from './styles/logo.module.scss'
+
+const Logo = () => <div className={styles.container}><Image width={50} height={50} src={`/static/assets/logo.svg`} /></div>
 
 export default Logo

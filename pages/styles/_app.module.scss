@@ -14,12 +14,12 @@
 
 .outline-size {
   & > * {
-    width: $tablet-max + 1px;
+    width: $laptop-max * 0.8;
 
-    @media screen and (max-width: $tablet-max) and (min-width: $mobile-max + 1px) {
-      width: 100%;
+    @media #{$if-laptop} {
+      width: $tablet-max * 0.8;
     }
-    @media screen and (max-width: $mobile-max) {
+    @media #{$unless-pc} {
       width: 100%;
     }
   }

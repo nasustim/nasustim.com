@@ -2,8 +2,10 @@ import React from 'react'
 import getTopPageContent, {ArticleList} from '../repositories/top'
 
 
-import Meta from '../Containers/meta'
-import HTMLify from '../Containers/htmlify'
+import Meta from '../containers/meta'
+import HTMLify from '../containers/htmlify'
+
+import ProfileContent, {ProfileProps} from '../containers/profileContent'
 
 
 type Props = {
@@ -14,17 +16,19 @@ type Props = {
 }
 
 export default function IndexPage(props: Props) {
-  const layoutProps: MetaProps = {
+  const metaProps: MetaProps = {
     pageId: '/',
     title: 'What is nasustim?',
     description: props.description,
     updatedDate: props.updatedDate,
   }
+  const profileProps: ProfileProps = {
+    text: profileText
+  }
+
   return <div>
-    <Meta { ...layoutProps } />
-    {HTMLify(props.body)}
-    wawawa
-    { props.articleList.map(v => (<p key={ v.uri }>{ v.title + ' - ' + v.uri }</p>)) }
+    <Meta { ...metaProps } />
+    <ProfileContent {...profileProps} />
   </div>
 }
 
@@ -36,3 +40,11 @@ export const getStaticProps = async () => {
     props: topPageData,
   }
 }
+
+// ------
+// ToDo: これもマークダウン or 何かで管理したい
+const profileText = [
+  `はじめまして、日比野光紘です。`,
+  `1994年11月 岐阜県生まれ。大学で電子情報技術、大学院ではメディアアートを専攻。`,
+  `現在は都内のIT企業でソーシャルゲームの開発に携わっています。`,
+]

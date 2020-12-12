@@ -1,13 +1,10 @@
 import React from 'react'
-import { GetStaticProps } from 'next'
 import getArticleContent, { ArticleContent, getArticleUris } from '../../repositories/article'
 
-import Meta from '../../components/Layout/Meta'
-import HTMLify from '../../components/HTMLify'
+import Meta from '../../Containers/meta'
+import HTMLify from '../../Containers/htmlify'
 
-type Props = {
-  article: ArticleContent
-}
+type Props =  { article: ArticleContent }
 
 const WorkPage: React.FC<Props> = ({ article }) => {
   const metaProps: MetaProps = {
@@ -31,7 +28,9 @@ type StaticProps = { params: { slug: string } }
 export const getStaticProps = async ({ params }: StaticProps) => {
   const articleContent = await getArticleContent(params.slug)
   return {
-    props: articleContent,
+    props: { 
+      article: articleContent
+    },
   }
 }
 

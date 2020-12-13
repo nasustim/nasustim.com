@@ -1,25 +1,34 @@
 import styles from './styles/social.module.scss'
 
+import layoutStyles from './styles/profileContent.module.scss'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faGithub, faFacebook, faKeybase } from '@fortawesome/free-brands-svg-icons'
 
 import Link from 'next/link'
 
-const Social: React.FC<{}> = () => {
-  return <div className={styles.container}>
+const Social: React.FC<{}> = () => (
+  <div className={styles.container}>
     <div className={styles.item}>
-      <Link href={`https://github.com/nasustim`}><FontAwesomeIcon color={`green`} icon={faGithub} /></Link>
+      <Link href={`https://github.com/nasustim`}>
+        <FontAwesomeIcon icon={faGithub} />
+      </Link>
     </div>
     <div className={styles.item}>
-      <Link href={`https://twitter.com/nasustim`}><FontAwesomeIcon color={`green`} icon={faTwitter} /></Link>
+      <Link href={`https://twitter.com/nasustim`}>
+        <FontAwesomeIcon icon={faTwitter} />
+      </Link>
     </div>
     <div className={styles.item}>
-      <Link href={`https://facebook.com/mitsuhibino`}><FontAwesomeIcon color={`green`} icon={faFacebook} /></Link>
+      <Link href={`https://facebook.com/mitsuhibino`}>
+        <FontAwesomeIcon icon={faFacebook} />
+      </Link>
     </div>
     <div className={styles.item}>
-      <Link href={`https://keybase.io/nasustim`}><FontAwesomeIcon color={`green`} icon={faKeybase} /></Link>
+      <Link href={`https://keybase.io/nasustim`}>
+        <FontAwesomeIcon icon={faKeybase} />
+      </Link>
     </div>
   </div>
-}
-
+)
 export default Social

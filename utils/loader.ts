@@ -38,17 +38,16 @@ export async function loadArticleList(): Promise<Array<ArticleListItem>> {
     .then((v) => {
       return v.filter((i) => !!!i.match(/$./))
     })
-    .then(ids => {
-      return Promise.all( ids.map(id => loadArticle(id)) )
-        .then(articles => {
-          return articles.map(article => {
-            return {
-              title: article.attributes.title,
-              imgPath: '',
-              uri: `/works/${ article.attributes.pageid }`
-            }
-          })
+    .then((ids) => {
+      return Promise.all(ids.map((id) => loadArticle(id))).then((articles) => {
+        return articles.map((article) => {
+          return {
+            title: article.attributes.title,
+            imgPath: '',
+            uri: `/works/${article.attributes.pageid}`,
+          }
         })
+      })
     })
     .catch(onError)
 }

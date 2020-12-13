@@ -6,6 +6,10 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+
+  @media #{$unless-pc} {
+    flex-direction: column;
+  }
 }
 
 .profileImg {
@@ -16,11 +20,15 @@
     width: $tablet-max * 0.2;
   }
   @media #{$unless-pc} {
-    width: 20%;
+    width: 42.5%;
   }
 }
 
 .profileText {
   flex-grow: 1;
   margin: 10px;
+
+  @media #{$unless-pc} {
+    width: 100%;
+  }
 }

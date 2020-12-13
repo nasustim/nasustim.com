@@ -7,6 +7,10 @@
   justify-content: flex-start;
 
   margin: 40px 0;
+
+  @media #{$unless-pc} {
+    margin: 15px 5px;
+  }
 }
 
 .document {
@@ -23,10 +27,17 @@
   h2{
     margin: 15px 0 10px;
     font-size: 18pt;
+
   }
   h3, h4, h5 {
     margin: 15px 0 10px;
     font-size: 16pt;
+
+    &::before {
+      content: "";
+      border-left: 3.6px #888888 solid;
+      margin-right: 5px;
+    }
   }
   p {
     font-size: 12pt;

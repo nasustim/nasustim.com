@@ -3,49 +3,26 @@ name: nasustim.com build
 on: [push]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Get yarn cache directory path  # reference: https://github.com/actions/cache/blob/main/examples.md#node---yarn-2
-      id: yarn-cache-dir-path
-      run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-    - uses: actions/cache@v2
-      id: yarn-cache
-      with:
-        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-yarn-
-    - name: Setup Node.js
-      uses: actions/setup-node@v2-beta
-      with:
-        node-version: '14'
-        check-latest: true
-    - name: Install dependencies
-      run: yarn install --frozen-lockfile
-    - name: Full Test
-      run: yarn test
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Get yarn cache directory path  # reference: https://github.com/actions/cache/blob/main/examples.md#node---yarn-2
-      id: yarn-cache-dir-path
-      run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-    - uses: actions/cache@v2
-      id: yarn-cache
+    - name: Get npm cache directory path  # reference: https://github.com/actions/cache/blob/main/examples.md#using-multiple-systems-and-npm-config
+      id: npm-cache
+      uses: actions/cache@v2
+      run: |
+        echo "::set-output name=dir::$(npm config get cache)"
       with:
-        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        path: ${{ steps.npm-cache.outputs.dir }}
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
-          ${{ runner.os }}-yarn-
+          ${{ runner.os }}-node-
     - name: Setup Node.js
       uses: actions/setup-node@v2-beta
       with:
-        node-version: '14'
+        node-version: '15.x'
         check-latest: true
     - name: Install dependencies
-      run: yarn install --frozen-lockfile
-    - name: Build
-      run: yarn build
+      run: npm ci
+    - name: Full Test
+      run: npm run test

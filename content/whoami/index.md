@@ -1,66 +1,36 @@
 ---
-title: $ whoami
+title: 
 date: "2020-05-07T09:00:00.000Z"
-description: "Mitsuhiro Hibino: Born and raised in Gifu, Nov 1994. I formerly studied Electronic and Information Engineering, and Media Creation. Currently, based in Tokyo, and work as a software engineer at SaaS provider."
-pageid: whoami
+description: ""
+pageid: about-me
 category: profile
 ---
 
 # Mitsuhiro Hibino
 
-![](./2018-11.jpg)
+1994年11月 岐阜県出身。  
+大学で電子情報技術、大学院でメディアアートを学びました。  
+現在は東京のIT企業でスマートフォン向けゲームの開発に携わっています。
 
-1994年11月 岐阜県生まれ。大学で電子情報技術を学び、大学院ではメディアアートを専攻。  
-現在は都内のIT企業でソフトウェアエンジニアとしてソーシャルゲームの開発に携わっています。
+----
 
-## お仕事 / 普段遣い
+## 技術スタック
 
-<table>
-  <tr>
-    <td>プログラミング言語</td><td>JavaScript & TypeScript, Perl(5.xx.x)</td>
-  </tr>
-  <tr>
-    <td>フレームワーク / ライブラリ</td><td>React, Vue.js, Express</td>
-  </tr>
-  <tr>
-    <td>ハードウェア</td><td>Raspberry Pi, ESP32</td>
-  </tr>
-  <tr>
-    <td>インフラ / 開発ツール</td><td>MySQL, Docker, AWS</td>
-  </tr>
-</table>
+### JavaScript(/TypeScript)
 
-## 趣味 / たまに触る
+これまでにReactを用いたSPAの開発に実務として数回携わりました。現職でも所属プロジェクトでVue.js, AngularJSベースのSPAの開発/運用を行っています。
 
+また、JSが一番使い慣れたプログラミング言語なので、素早く作って使いたいスクリプトを書く際にも、特別な事情がなければNode.jsを使用します。  
 
-<table>
-  <tr>
-    <td>プログラミング言語</td><td>PHP, C++, Go</td>
-  </tr>
-  <tr>
-    <td>フレームワーク / ライブラリ</td><td>Three.js, openFrameworks, React Native, Unity, Processing</td>
-  </tr>
-  <tr>
-    <td>ハードウェア / 電子回路</td><td>Arduino, Fritzing, はんだ付け</td>
-  </tr>
-  <tr>
-    <td>その他</td><td>Ableton Live, Adobe(Illustrator, Premiere)</td>
-  </tr>
-</table>
+### Perl
 
-## My Accounts
+現職ではPerlのWebアプリケーションフレームワークを用いてサーバサイドの開発/運用を行っています。
 
-<table>
-  <tr>
-    <td>GitHub</td><td><a href="https://github.com/nasustim" target="_blank">https://github.com/nasustim</a><br><a href="https://github.com/playground-nasustim" target="_blank">https://github.com/playground-nasustim</a></td>
-  </tr>
-  <tr>
-    <td>Twitter</td><td><a href="https://twitter.com/nasustim" target="_blank">https://twitter.com/nasustim</a></td>
-  </tr>
-  <tr>
-    <td>Facebook</td><td><a href="https://www.facebook.com/mitsuhibino" target="_blank">https://www.facebook.com/mitsuhibino</a></td>
-  </tr>
-  <tr>
-    <td>Keybase</td><td><a href="https://keybase.io/nasustim" target="_blank">https://keybase.io/nasustim</a></td>
-  </tr>
-</table>
+### インフラ/開発技術
+
+Gitを用いた複数人でのシステム開発を行っています。  
+また、システム開発時のインスタンス操作, アプリケーション/DBのログ監視をAWS上で行っています。
+
+個人レベルではCIを用いた自動テスト/ビルド、Dockerを用いた仮想環境でのアプリケーション開発を行っています。
+
+また学生時代にRaspberry Piを用いて自宅サーバを2年間運用していた経験からLinuxでの環境構築, 運用をするための調べ方をある程度理解できていると自負しています。

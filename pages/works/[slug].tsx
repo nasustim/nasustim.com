@@ -1,8 +1,10 @@
 import React from 'react'
 import getArticleContent, { ArticleContent, getArticleUris } from '../../repositories/article'
 
-import Meta from '../../containers/meta'
-import HTMLify from '../../containers/htmlify'
+import Meta from '../../components/meta'
+import HTMLify from '../../components/htmlify'
+
+import styles from '../styles/works.module.scss'
 
 type Props = { article: ArticleContent }
 
@@ -15,9 +17,9 @@ const WorkPage: React.FC<Props> = ({ article }) => {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <Meta {...metaProps} />
-      {HTMLify(article.body)}
+      <HTMLify markdown={article.body} />
     </div>
   )
 }

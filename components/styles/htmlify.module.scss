@@ -1,0 +1,37 @@
+@import '../../styles/color.scss';
+
+.document {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  h1 {
+    margin: 20px 0 10px;
+    font-size: 23pt;
+  }
+  h2{
+    margin: 15px 0 10px;
+    font-size: 18pt;
+
+  }
+  h3, h4, h5 {
+    margin: 15px 0 10px;
+    font-size: 16pt;
+
+    &::before {
+      content: "";
+      border-left: 3.6px $color-black solid;
+      margin-right: 5px;
+    }
+  }
+  p {
+    font-size: 12pt;
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+
+  ul {
+    font-size: 12pt;
+    margin: 5px 10px;
+    li {
+      margin: 3px 10px;
+    }
+  }
+}

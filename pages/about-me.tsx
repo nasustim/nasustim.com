@@ -15,8 +15,8 @@ type Props = {
 
 export default function IndexPage(props: Props) {
   const metaProps: MetaProps = {
-    pageId: '/',
-    title: 'What is nasustim?',
+    pageId: 'about-me',
+    title: 'About Me',
     description: props.description,
     updatedDate: props.updatedDate,
   }

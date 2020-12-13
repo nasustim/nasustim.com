@@ -13,7 +13,6 @@ export default class _App extends App {
     return (
       <div className={styles.layout}>
         <Head>
-          <title>{pageProps.title}</title>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           {!!process.env.GA_TRACKING_ID_FOR_BROWSER && (
             <>

@@ -6,5 +6,6 @@ module.exports = {
   },
   env: {
     GA_TRACKING_ID_FOR_BROWSER: process.env.GA_TRACK_ID,
+    URL: 'https://nasustim.com',
   },
 }

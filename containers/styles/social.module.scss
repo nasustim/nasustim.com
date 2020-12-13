@@ -12,12 +12,12 @@
   flex-direction: row;
   justify-content: flex-start;
 
-  & > svg {
+  & svg {
     font-size: 3.6em;
   }
 
-  & > * {
-    cursor: pointer;
+  & a {
+    color: black;
     transition: color 0.2s ease-out;
     &:hover {
       color: #888888;

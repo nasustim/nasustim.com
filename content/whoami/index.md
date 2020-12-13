@@ -1,7 +1,7 @@
 ---
 title: 
 date: "2020-05-07T09:00:00.000Z"
-description: ""
+description: "1994年11月 岐阜県出身。大学で電子情報技術、大学院でメディアアートを学びました。現在は東京のIT企業でスマートフォン向けゲームの開発に携わっています。"
 pageid: about-me
 category: profile
 ---

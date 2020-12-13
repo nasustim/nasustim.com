@@ -1,25 +1,25 @@
 import React from 'react'
 import PortraitImg from '../components/portraitImg'
-import ProfileText from './profileText'
+import OutlineProfile from './outlineProfile'
 
-import styles from './styles/profileContent.module.scss'
+import styles from './styles/mainItem.module.scss'
 
 export type ProfileProps = {
   text: Array<string>
   imgUri: string
 }
 
-const ProfileContent: React.FC<ProfileProps> = ({ text, imgUri }) => {
+const MainItem: React.FC<ProfileProps> = ({ text, imgUri }) => {
   return (
-    <article className={styles.container}>
+    <section className={styles.container}>
       <div className={styles.profileImg}>
         <PortraitImg src={imgUri} />
       </div>
       <div className={styles.profileText}>
-        <ProfileText text={text} />
+        <OutlineProfile text={text} />
       </div>
-    </article>
+    </section>
   )
 }
 
-export default ProfileContent
+export default MainItem

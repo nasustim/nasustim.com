@@ -11,3 +11,8 @@ $if-tablet: "screen and (max-width: " + $tablet-max + ") and (min-width: " + min
 $if-mobile: "screen and (max-width: " + $mobile-max + ")";
 
 $unless-pc: "screen and (max-width: " + $tablet-max + ")";
+
+// ----
+
+$pc-header-height: 70px;
+$unless-pc-header-height: 40px;

@@ -1,6 +1,17 @@
+@import '../styles/responsive.scss';
+
 .container {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  height: 70px;
+  height: $pc-header-height;
+
+  @media #{$unless-pc} {
+    height: $unless-pc-header-height;
+  }
+}
+
+.yodayoda {
+  width: 100%;
+  //background-color: #888888;
 }

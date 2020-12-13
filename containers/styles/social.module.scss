@@ -1,3 +1,5 @@
+@import '../../styles/color.scss';
+
 .container {
   margin-top: 40px;
 
@@ -12,15 +14,15 @@
   flex-direction: row;
   justify-content: flex-start;
 
-  & svg {
+  svg {
     font-size: 3.6em;
   }
 
-  & a {
-    color: black;
+  a {
+    color: $color-black;
     transition: color 0.2s ease-out;
     &:hover {
-      color: #888888;
+      color: $color-primary;
     }
   }
 }

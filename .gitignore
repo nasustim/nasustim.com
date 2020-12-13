@@ -64,3 +64,4 @@ yarn-error.log
 # nextjs
 .next/
 .cache/
+out/

@@ -1,10 +1,10 @@
 import React from 'react'
 import getTopPageContent, { ArticleList } from '../repositories/top'
 
-import Meta from '../Containers/meta'
-import HTMLify from '../Containers/htmlify'
+import Meta from '../containers/meta'
+//import HTMLify from '../Containers/htmlify'
 
-import ProfileContent, { ProfileProps } from '../Containers/profileContent'
+import ProfileContent, { ProfileProps } from '../containers/profileContent'
 
 import styles from './styles/index.module.scss'
 

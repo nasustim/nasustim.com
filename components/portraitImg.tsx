@@ -26,7 +26,8 @@ const PortraitImg: React.FC<ProfileProps> = ({ src }) => {
   }
   return (
     <div style={_style} className={styles.container}>
-      <Image width={100} height={100} layout={`responsive`} src={src} />
+      {/*<Image width={100} height={100} layout={`responsive`} src={src} />*/}
+      <img src={src} className={styles.img} />
     </div>
   )
 }

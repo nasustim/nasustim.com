@@ -1,8 +1,8 @@
 import React from 'react'
 import getTopPageContent, { ArticleList } from '../repositories/top'
 
-import Meta from '../containers/meta'
-import HTMLify from '../containers/htmlify'
+import Meta from '../components/meta'
+import HTMLify from '../components/htmlify'
 
 import styles from './styles/about-me.module.scss'
 
@@ -24,7 +24,7 @@ export default function IndexPage(props: Props) {
   return (
     <div className={styles.container}>
       <Meta {...metaProps} />
-      <div className={styles.document}>{HTMLify(props.body)}</div>
+      <HTMLify markdown={props.body} />
     </div>
   )
 }

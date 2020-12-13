@@ -1,4 +1,4 @@
-import styles from './styles/profileText.module.scss'
+import styles from './styles/outlineProfile.module.scss'
 
 import Link from 'next/link'
 
@@ -8,7 +8,7 @@ export type ProfileTextProps = {
   text: Array<string>
 }
 
-const ProfileText: React.FC<ProfileTextProps> = ({ text }) => (
+const outlineProfile: React.FC<ProfileTextProps> = ({ text }) => (
   <div className={styles.container}>
     <div className={styles.textBg}></div>
     <div className={styles.text}>
@@ -25,4 +25,4 @@ const ProfileText: React.FC<ProfileTextProps> = ({ text }) => (
   </div>
 )
 
-export default ProfileText
+export default outlineProfile

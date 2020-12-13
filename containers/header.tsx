@@ -1,9 +1,9 @@
-import Logo from '../components/logo'
 import styles from './styles/header.module.scss'
 
 const Header = () => (
   <div className={styles.container}>
-    <Logo />
+    {/**  ナビゲーションバーとかほしい */}
+    <div className={styles.yodayoda}></div>
   </div>
 )
 

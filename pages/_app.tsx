@@ -1,10 +1,10 @@
-import '../styles/index.scss'
+import '../styles/global.scss'
 
 import App from 'next/app'
 import Head from 'next/head'
 import styles from './styles/_app.module.scss'
 import Background from '../containers/background'
-//import Header from '../Containers/header'
+import Header from '../containers/header'
 
 export default class _App extends App {
   render() {
@@ -39,10 +39,12 @@ export default class _App extends App {
           <Background />
         </div>
         <div className={styles.container}>
-          <div className={styles.header}>{/*<Header /> 今はいらない */}</div>
-          <div className={styles.content}>
+          <header className={styles.header}>
+            <Header />
+          </header>
+          <main className={styles.content}>
             <Component {...pageProps} />
-          </div>
+          </main>
         </div>
       </div>
     )

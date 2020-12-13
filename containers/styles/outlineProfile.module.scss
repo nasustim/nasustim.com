@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap');
+@import '../../styles/color.scss';
 
 .container {
   position: relative;
@@ -39,13 +40,14 @@
     font-size: 14pt;
     font-weight: 300;
   
-    border-bottom: 3px black dotted;
+    border-bottom: 3px $color-black dotted;
 
     cursor: pointer;
-    transition: color  0.2s ease-out, border-bottom 0.2s ease-out;
+    transition: color  0.2s ease-out, border-bottom 0.2s ease-out, filter 0.4s ease-in-out;
     &:hover {
-      color: #888888;
-      border-bottom: 3px #888888 dotted;
+      color: $color-primary;
+      filter: drop-shadow(0 0 3px $color-primary);
+      border-bottom: 3px $color-primary dotted;
     }
   }
 }

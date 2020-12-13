@@ -1,10 +1,10 @@
 import React from 'react'
 import getTopPageContent, { ArticleList } from '../repositories/top'
 
-import Meta from '../containers/meta'
+import Meta from '../components/meta'
 //import HTMLify from '../Containers/htmlify'
 
-import ProfileContent, { ProfileProps } from '../containers/profileContent'
+import MainItem, { ProfileProps } from '../containers/mainItem'
 
 import styles from './styles/index.module.scss'
 
@@ -30,7 +30,7 @@ export default function IndexPage(props: Props) {
   return (
     <div className={styles.container}>
       <Meta {...metaProps} />
-      <ProfileContent {...profileProps} />
+      <MainItem {...profileProps} />
     </div>
   )
 }

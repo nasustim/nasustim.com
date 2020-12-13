@@ -7,7 +7,7 @@ export type ProfileTextProps = {
 const ProfileText: React.FC<ProfileTextProps> = ({text}) => <div className={styles.container}>
   <div className={ styles.textBg }></div>
   <div className={styles.text}>
-    { text.map(t => (<p>{ t }</p>)) }
+    { text.map((t, idx) => (<p key={`${t}-${idx}`}>{ t }</p>)) }
   </div>
 </div>
 

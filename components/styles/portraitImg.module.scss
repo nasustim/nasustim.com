@@ -1,4 +1,6 @@
 .container {
-  border-radius: 50%;
+  //border-radius: 50% 25% 30% 65% / 19% 20% 25% 78%;
   overflow: hidden;
+
+  transition: border-radius 0.5s ease-in-out;
 }

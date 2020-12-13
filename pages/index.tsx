@@ -32,6 +32,9 @@ export default function IndexPage(props: Props) {
   return <div className={styles.container}>
     <Meta { ...metaProps } />
     <ProfileContent {...profileProps} />
+    {/**
+     * ここにコンテンツが増えていく
+     *  */}
     <Social />
   </div>
 }

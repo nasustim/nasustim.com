@@ -1,8 +1,8 @@
 import React from 'react'
 import getTopPageContent, { ArticleList } from '../repositories/top'
 
-import Meta from '../containers/meta'
-import HTMLify from '../containers/htmlify'
+import Meta from '../Containers/meta'
+import HTMLify from '../Containers/htmlify'
 
 import styles from './styles/about-me.module.scss'
 

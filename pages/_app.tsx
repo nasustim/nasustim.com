@@ -3,8 +3,8 @@ import '../styles/index.scss'
 import App from 'next/app'
 import Head from 'next/head'
 import styles from './styles/_app.module.scss'
-import Background from '../containers/background'
-import Header from '../containers/header'
+import Background from '../Containers/background'
+import Header from '../Containers/header'
 
 export default class _App extends App {
   render() {

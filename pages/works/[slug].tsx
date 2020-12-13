@@ -1,8 +1,8 @@
 import React from 'react'
 import getArticleContent, { ArticleContent, getArticleUris } from '../../repositories/article'
 
-import Meta from '../../containers/meta'
-import HTMLify from '../../containers/htmlify'
+import Meta from '../../Containers/meta'
+import HTMLify from '../../Containers/htmlify'
 
 type Props = { article: ArticleContent }
 

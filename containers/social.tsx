@@ -1,6 +1,6 @@
 import styles from './styles/social.module.scss'
 
-import layoutStyles from './styles/profileContent.module.scss'
+//import layoutStyles from './styles/profileContent.module.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faGithub, faFacebook, faKeybase } from '@fortawesome/free-brands-svg-icons'

@@ -20,7 +20,8 @@
     width: $tablet-max * 0.2;
   }
   @media #{$unless-pc} {
-    width: 42.5%;
+    width: 42.5vw;
+    height: 42.5vw;
   }
 }
 

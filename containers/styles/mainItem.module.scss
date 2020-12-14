@@ -13,6 +13,7 @@
 }
 
 .profileImg {
+  display: flex;
   width: $laptop-max * 0.2;
   margin: 10px;
   flex-shrink: 0;

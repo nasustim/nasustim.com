@@ -1,8 +1,6 @@
-import React from 'react'
-import getArticleContent, { ArticleContent, getArticleUris } from '../../repositories/article'
-
-import Meta from '../../components/meta'
-import HTMLify from '../../components/htmlify'
+import getArticleContent, { ArticleContent, getArticleUris } from 'repositories/article'
+import Meta from 'components/common/meta'
+import HTMLify from 'components/common/htmlify'
 
 import styles from '../styles/works.module.scss'
 

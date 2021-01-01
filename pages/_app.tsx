@@ -2,9 +2,11 @@ import '../styles/global.scss'
 
 import App from 'next/app'
 import Head from 'next/head'
+
+import Background from 'containers/common/background'
+import Header from 'containers/common/header'
+
 import styles from './styles/_app.module.scss'
-import Background from '../containers/background'
-import Header from '../containers/header'
 
 export default class _App extends App {
   render() {
@@ -23,13 +25,7 @@ export default class _App extends App {
               />
               <script
                 dangerouslySetInnerHTML={{
-                  __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${process.env.GA_TRACKING_ID_FOR_BROWSER}', {
-                    page_path: window.location.pathname,
-                  });`,
+                  __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${process.env.GA_TRACKING_ID_FOR_BROWSER}', {page_path: window.location.pathname,});`,
                 }}
               />
             </>

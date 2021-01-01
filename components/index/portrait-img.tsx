@@ -1,5 +1,5 @@
 // import Image from 'next/image'
-import styles from './styles/portraitImg.module.scss'
+import styles from './styles/portrait-img.module.scss'
 
 import { useState } from 'react'
 

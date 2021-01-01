@@ -1,9 +1,10 @@
-import styles from './styles/social.module.scss'
-
+// 本当はそれぞれコンポーネントに分けたいけどTree Shakingしてほしいのです......。
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faGithub, faFacebook, faKeybase } from '@fortawesome/free-brands-svg-icons'
 
-const Social: React.FC<{}> = () => (
+import styles from './styles/social-list.module.scss'
+
+const SocialList = () => (
   <div className={styles.container}>
     <div className={styles.item}>
       <a href={`https://github.com/nasustim`}>
@@ -27,4 +28,4 @@ const Social: React.FC<{}> = () => (
     </div>
   </div>
 )
-export default Social
+export default SocialList

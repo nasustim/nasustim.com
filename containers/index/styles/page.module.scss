@@ -1,6 +1,9 @@
-@import "../../styles/responsive.scss";
+@import 'styles/responsive.scss';
+@import 'styles/color.scss';
 
-.container {
+// === wrapper ===
+
+.wrapper {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -12,7 +15,9 @@
   }
 }
 
-.profileImg {
+// === profile img ===
+
+.imgContainer {
   display: flex;
   width: $laptop-max * 0.2;
   margin: 10px;
@@ -26,7 +31,9 @@
   }
 }
 
-.profileText {
+// === description, links,,,,
+
+.descriptionContainer {
   flex-grow: 1;
   margin: 10px;
 

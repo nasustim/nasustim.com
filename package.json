@@ -44,7 +44,7 @@
   "scripts": {
     "format": "prettier --write \"**/*.{ts,tsx,js}\"",
     "test": "echo \"please write test and execute\" | exit 0",
-    "dev": "next dev",
+    "start": "next dev",
     "build": "next build",
     "serve": "next start",
     "pre-commit": "npm run format",

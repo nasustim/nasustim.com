@@ -1,7 +1,7 @@
-import { readFile, readdir, copyFile } from 'fs/promises'
-import { copyFileSync } from 'fs'
+import { readFile, readdir } from 'fs/promises'
 import { resolve } from 'path'
 import frontmatter from 'front-matter'
+import sharp from 'sharp'
 
 import { onError } from './error'
 
@@ -39,13 +39,23 @@ function copyImgs(slug: string, body: string, headerimg: string) {
 
   const _src = resolve(process.cwd(), articleFilePath, slug, headerimg)
   const _dst = resolve(process.cwd(), staticImgPath, headerimg)
-  copyFileSync(_src, _dst)
+  resize(_src, _dst)
   for (const imgName of includedImgs as Array<string>) {
     const src = resolve(process.cwd(), articleFilePath, slug, imgName)
     const dst = resolve(process.cwd(), staticImgPath, imgName)
-    copyFileSync(src, dst)
+    resize(src, dst)
   }
   return
+}
+
+async function resize (_src: string, _dst: string) {
+  return sharp(_src)
+    .resize(860, 600, {
+      fit: 'inside'
+    })
+    .toFile(_dst)
+    .then(info => console.log(info))
+    .catch(err => { throw new Error(err) })
 }
 
 // -------------------------------

@@ -12,6 +12,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.13",
+    "@types/sharp": "^0.27.0",
     "dayjs": "^1.10.2",
     "front-matter": "^4.0.2",
     "fs": "^0.0.1-security",
@@ -22,6 +23,7 @@
     "react-dom": "^17.0.1",
     "react-markdown": "^5.0.3",
     "sass": "^1.30.0",
+    "sharp": "^0.26.2",
     "typescript": "^4.1.3"
   },
   "devDependencies": {

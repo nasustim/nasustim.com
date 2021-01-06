@@ -1,10 +1,10 @@
 ---
 title: IAMASONIC(2019年夏) webページ
-date: "2019-07-15T00:00:00.000Z"
+date: "2019-07-15"
 description: IAMAS学内のライブイベント、IAMASONICの告知用webページの実装。アニメーションライブラリやCSSアニメーションを用いたイベントページを実装した。
 category: works
 pageid: iamasonic2019
-headimg: ./thumbnail.png
+headimg: ./thumbnail_iamasonic2019.png
 ---
 
 # IAMASONIC(2019 年夏) web ページ

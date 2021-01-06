@@ -1,30 +1,30 @@
-import getTopPageContent, { ArticleList } from 'repositories/top'
+import { getArticleList, ArticleList as TypeArticleList } from 'repositories/works'
 
 import Meta from 'components/common/meta'
-import HTMLify from 'components/common/htmlify'
+import Page from 'containers/works/page'
 import Footer from 'components/common/footer'
 
-import styles from './styles/about-me.module.scss'
+import styles from '../styles/about-me.module.scss'
 
 type Props = {
   body: string
   updatedDate: string
   description: string
-  articleList: ArticleList
+  articleItems: TypeArticleList
 }
 
 export default function IndexPage(props: Props) {
   const metaProps: MetaProps = {
     pageId: 'about-me',
     title: 'About Me',
-    description: props.description,
-    updatedDate: props.updatedDate,
+    description: 'xxxx',
+    updatedDate: 'xxxx',
   }
 
   return (
     <div className={styles.container}>
       <Meta {...metaProps} />
-      <HTMLify markdown={props.body} />
+      <Page articleItems={props.articleItems} />
       <Footer />
     </div>
   )
@@ -33,8 +33,10 @@ export default function IndexPage(props: Props) {
 //export const config = { amp: true }
 
 export const getStaticProps = async () => {
-  const topPageData = await getTopPageContent()
+  const articleItems = await getArticleList()
   return {
-    props: topPageData,
+    props: {
+      articleItems,
+    },
   }
 }

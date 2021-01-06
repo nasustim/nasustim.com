@@ -1,6 +1,6 @@
 ---
 title: OTON GLASS インターン
-date: "2017-12-18T00:00:00.000Z"
+date: "2017-12-18"
 description: インターン
 category: works
 pageid: oton-glass

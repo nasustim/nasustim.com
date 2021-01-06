@@ -1,6 +1,7 @@
 import getArticleContent, { ArticleContent, getArticleUris } from 'repositories/article'
 import Meta from 'components/common/meta'
 import HTMLify from 'components/common/htmlify'
+import Footer from 'components/common/footer'
 
 import styles from '../styles/works.module.scss'
 
@@ -18,6 +19,7 @@ const WorkPage: React.FC<Props> = ({ article }) => {
     <div className={styles.container}>
       <Meta {...metaProps} />
       <HTMLify markdown={article.body} />
+      <Footer />
     </div>
   )
 }

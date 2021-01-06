@@ -34,9 +34,9 @@ export async function loadArticle(slug: string): Promise<FrontMatter> {
     .catch(onError)
 }
 
-function copyImgs (slug: string, body: string) {
+function copyImgs(slug: string, body: string) {
   const includedImgs = body.match(/([\w\.\-\_\/]+\.(?:jpe?g|png|gif))/g)
-  if ( includedImgs?.length === 0  ) return
+  if (includedImgs?.length === 0) return
 
   for (const imgName of includedImgs as Array<string>) {
     const src = resolve(process.cwd(), articleFilePath, slug, imgName)
@@ -76,5 +76,5 @@ export type ArticleListItem = {
   uri: string
   title: string
   updatedDate: string
-  description?: string  // yodayoda
+  description?: string // yodayoda
 }

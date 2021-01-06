@@ -15,6 +15,11 @@ const ProfileContents = () => {
             <span>{`About Me`}</span>
           </Link>
         </p>
+        <p>
+          <Link href={`/works`}>
+            <span>{`Works`}</span>
+          </Link>
+        </p>
         <SocialList />
       </div>
     </div>

@@ -34,7 +34,7 @@ export const getStaticProps = async () => {
   const articleItems = await getArticleList()
   return {
     props: {
-      articleItems
+      articleItems,
     },
   }
 }

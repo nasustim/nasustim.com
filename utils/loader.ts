@@ -59,8 +59,9 @@ export async function loadArticleList(): Promise<Array<ArticleListItem>> {
         return articles.map((article) => {
           return {
             title: article.attributes.title,
-            imgPath: '',
+            imgPath: article.attributes.headimg,
             uri: `/works/${article.attributes.pageid}`,
+            updatedDate: article.attributes.date,
           }
         })
       })
@@ -74,4 +75,6 @@ export type ArticleListItem = {
   imgPath: string
   uri: string
   title: string
+  updatedDate: string
+  description?: string  // yodayoda
 }

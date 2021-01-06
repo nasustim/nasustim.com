@@ -1,6 +1,6 @@
 ---
 title: NxPC.Live vol.32 webページ
-date: "2020-03-20T00:00:00.000Z"
+date: "2020-03-20"
 description: NxPC.Live vol.43のイベントwebページを制作しました。
 category: works
 pageid: nxpc-43

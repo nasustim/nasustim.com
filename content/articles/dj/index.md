@@ -1,6 +1,6 @@
 ---
 title: DJ
-date: "2015-08-15T15:00:00.000Z"
+date: "2015-08-15"
 description: 細々と活動している
 pageid: dj
 category: works

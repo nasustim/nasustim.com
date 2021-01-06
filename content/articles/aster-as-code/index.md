@@ -1,6 +1,6 @@
 ---
 title: ＊ as Code (Aster as Code)
-date: "2018-11-28T15:00:00.000Z"
+date: "2018-11-28"
 description: "《＊ as Code》 - Mitsuhiro Hibino"
 pageid: aster-as-code
 category: works

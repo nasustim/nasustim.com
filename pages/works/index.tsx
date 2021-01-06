@@ -1,7 +1,8 @@
 import { getArticleList, ArticleList as TypeArticleList } from 'repositories/works'
 
 import Meta from 'components/common/meta'
-import ArticleList from 'components/works/article-list'
+import Page from 'containers/works/page'
+import Footer from 'components/common/footer'
 
 import styles from '../styles/about-me.module.scss'
 
@@ -23,7 +24,8 @@ export default function IndexPage(props: Props) {
   return (
     <div className={styles.container}>
       <Meta {...metaProps} />
-      <ArticleList list={props.articleItems} />
+      <Page articleItems={props.articleItems} />
+      <Footer />
     </div>
   )
 }

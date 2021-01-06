@@ -1,0 +1,9 @@
+@import 'styles/responsive.scss';
+@import 'styles/color.scss';
+
+// === wrapper ===
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}

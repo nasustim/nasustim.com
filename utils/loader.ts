@@ -28,16 +28,18 @@ export async function loadArticle(slug: string): Promise<FrontMatter> {
   return readFile(articlePath, { encoding: 'utf-8' })
     .then((payload) => {
       const article = frontmatter(payload) as FrontMatter
-      copyImgs(slug, article.body)
+      copyImgs(slug, article.body, article.attributes.headimg)
       return article
     })
     .catch(onError)
 }
 
-function copyImgs(slug: string, body: string) {
+function copyImgs(slug: string, body: string, headerimg: string) {
   const includedImgs = body.match(/([\w\.\-\_\/]+\.(?:jpe?g|png|gif))/g)
-  if (includedImgs?.length === 0) return
 
+  const _src = resolve(process.cwd(), articleFilePath, slug, headerimg)
+  const _dst = resolve(process.cwd(), staticImgPath, headerimg)
+  copyFileSync(_src, _dst)
   for (const imgName of includedImgs as Array<string>) {
     const src = resolve(process.cwd(), articleFilePath, slug, imgName)
     const dst = resolve(process.cwd(), staticImgPath, imgName)
@@ -59,7 +61,7 @@ export async function loadArticleList(): Promise<Array<ArticleListItem>> {
         return articles.map((article) => {
           return {
             title: article.attributes.title,
-            imgPath: article.attributes.headimg,
+            imgPath: `/works/${article.attributes.headimg}`,
             uri: `/works/${article.attributes.pageid}`,
             updatedDate: article.attributes.date,
           }

@@ -2,6 +2,7 @@ import getTopPageContent, { ArticleList } from 'repositories/top'
 
 import Meta from 'components/common/meta'
 import HTMLify from 'components/common/htmlify'
+import Footer from 'components/common/footer'
 
 import styles from './styles/about-me.module.scss'
 
@@ -24,6 +25,7 @@ export default function IndexPage(props: Props) {
     <div className={styles.container}>
       <Meta {...metaProps} />
       <HTMLify markdown={props.body} />
+      <Footer />
     </div>
   )
 }

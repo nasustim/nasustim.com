@@ -4,7 +4,7 @@ date: "2018-07-20"
 description: NxPC.Live vol.32のイベントwebページ。メインビジュアルの画像をSVG化し、D3.jsで演出を加えました。
 category: works
 pageid: nxpc-32
-headimg: ./thumbnail.png
+headimg: ./thumbnail_nxpc32.png
 ---
 
 # NxPC.Live vol.32 web ページ

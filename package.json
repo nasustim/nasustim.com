@@ -48,14 +48,15 @@
     "format": "prettier --write \"**/*.{ts,tsx,js}\"",
     "test": "echo \"please write test and execute\" | exit 0",
     "start": "npm run clean:static-img && next dev",
-    "build": "next build",
+    "build": "npm run image:process && next build",
     "serve": "next start",
     "pre-commit": "npm run format",
     "pre-push": "npm run test",
     "ci:dry-run": "act",
     "export": "next export",
     "deploy": "npm run build && npm run export",
-    "clean:static-img": "rm -fr public/works/*.png && rm -fr public/works/*.jpg"
+    "clean:static-img": "rm -fr public/works/* && npm run image:process",
+    "image:process": "node script/image-processing.js"
   },
   "husky": {
     "hooks": {

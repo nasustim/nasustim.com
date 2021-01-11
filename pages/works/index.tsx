@@ -4,7 +4,7 @@ import Meta from 'components/common/meta'
 import Page from 'containers/works/page'
 import Footer from 'components/common/footer'
 
-import styles from '../styles/about-me.module.scss'
+import styles from '../styles/works.module.scss'
 
 type Props = {
   body: string
@@ -15,8 +15,8 @@ type Props = {
 
 export default function IndexPage(props: Props) {
   const metaProps: MetaProps = {
-    pageId: 'about-me',
-    title: 'About Me',
+    pageId: 'works',
+    title: 'Works',
     description: 'xxxx',
     updatedDate: 'xxxx',
   }

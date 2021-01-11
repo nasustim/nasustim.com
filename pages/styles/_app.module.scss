@@ -60,4 +60,9 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+
+  @media #{$unless-pc} {
+    overflow-x: hidden;
+  }
 }

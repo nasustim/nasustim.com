@@ -2,6 +2,11 @@
 @import './responsive.scss';
 @import './color.scss';
 
+html, body {
+  // 背景を何か動的なものにしたい場合はcontainers/common/backgroundで
+  background-color: $color-white;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -19,4 +24,8 @@ div#__next {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+h1, h2, h3, h4, h5, li {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }

@@ -19,7 +19,7 @@ const PortraitImg: React.FC<ProfileProps> = ({ src }) => {
     clearInterval(IntId)
     const newStyle = style.map(set)
     setStyle(newStyle)
-  }, 5000)
+  }, 3000)
 
   const _style = {
     borderRadius: `${style[0][0]}% ${style[1][0]}% ${style[2][0]}% ${style[3][0]}%/${style[0][1]}% ${style[1][1]}% ${style[2][1]}% ${style[3][1]}%`,

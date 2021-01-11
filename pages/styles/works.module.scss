@@ -9,6 +9,6 @@
   margin: $pc-header-height 0;
 
   @media #{$unless-pc} {
-    margin: $unless-pc-header-height 5px;
+    margin: $unless-pc-header-height 0px;
   }
 }

@@ -2,6 +2,7 @@
 @import 'responsive.scss';
 
 $pc-height: 150px;
+$sp-height: 100px;
 
 .container {
   display: flex;
@@ -17,6 +18,10 @@ $pc-height: 150px;
 
   transition: filter .2s;
   filter: grayscale(100%) hue-rotate(0);
+
+  @media #{$unless-pc} {
+    height: $sp-height;
+  }
 
   @include responsive-link {
     filter: grayscale(0%) hue-rotate(10deg);
@@ -37,6 +42,11 @@ $pc-height: 150px;
   width: $pc-height;
   height: $pc-height;
   flex-shrink: 0;
+
+  @media #{$unless-pc} {
+    width: $sp-height;
+    height: $sp-height;
+  }
 }
 
 .thumbnail {
@@ -55,21 +65,31 @@ $pc-height: 150px;
   // width: 100%;
 }
 
-$common-margin-left: 20px;
+$pc-margin: 20px;
+$sp-margin: 10px;
 
 .title {
-  margin-left: $common-margin-left;
+  margin: 0 $pc-margin;
   font-size: 23pt;
   color: $color-white;
+
+  @media #{$unless-pc} {
+    margin: 0 $sp-margin;
+    font-size: 18pt;
+  }
 }
 
 // 本当はアニメーションで矢印を引くつもりだったのでこの命名
 .arrowWrapper {
-  margin-left: $common-margin-left;
+  margin: 10px $pc-margin;
   height: 2px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+
+  @media #{$unless-pc} {
+    margin: 10px $sp-margin;
+  }
 }
 
 .arrow {

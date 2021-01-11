@@ -20,7 +20,7 @@ export default function IndexPage(props: Props) {
     updatedDate: props.updatedDate,
   }
   const profileProps: ProfileProps = {
-    imgUri: `/static/me/2018-11.jpg`,
+    imgUri: `/about-me/me.jpg`,
   }
 
   return (

@@ -12,12 +12,10 @@ const ProfileContents = () => {
         <h1>nasustim</h1>
         <p>
           <Link href={`/about-me`}>
-            <span>{`About Me`}</span>
+            <span>About Me</span>
           </Link>
-        </p>
-        <p>
           <Link href={`/works`}>
-            <span>{`Works`}</span>
+            <span>Works</span>
           </Link>
         </p>
         <SocialList />

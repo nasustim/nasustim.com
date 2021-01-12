@@ -62,6 +62,12 @@ $sp-height: 100px;
   flex-direction: column;
   justify-content: center;
 
+  height: $pc-height;
+
+  @media #{$unless-pc} {
+    height: $sp-height;
+  }
+
   // width: 100%;
 }
 

@@ -22,7 +22,6 @@
     }
   }
   p {
-    display: flex;
     font-size: 12pt;
     margin: 10px 0;
     line-height: 1.5;
@@ -37,11 +36,9 @@
   }
 
   img {
-    justify-self: center;
-    margin: 0 auto;
-    // 縦長画像の見栄えが悪いのでとりいそぎ
-    max-width: 60vw;
-    max-height: 80vh;
+    width: 60%;
+    left: 50%;
+    transform: translateX(25%);
   }
 
   table {

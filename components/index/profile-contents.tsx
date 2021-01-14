@@ -9,7 +9,7 @@ const ProfileContents = () => {
     <div className={styles.container}>
       <div className={styles.textBg}></div>
       <div className={styles.text}>
-        <h1>nasustim</h1>
+        <h1>Mitsuhiro Hibino</h1>
         <p>
           <Link href={`/about-me`}>
             <span>About Me</span>

@@ -3,15 +3,30 @@
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   height: $pc-header-height;
+
+  font-family: 'Comfortaa', cursive;
 
   @media #{$unless-pc} {
     height: $unless-pc-header-height;
   }
 }
 
-.yodayoda {
-  width: 100%;
-  //background-color: #888888;
+.headerWrapper {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.logo {
+  font-size: 17pt;
+  font-weight: 600;
+  
+  &, & a { text-decoration: none; }
+
+  @media #{$unless-pc} {
+    margin: 20px auto auto 5px;
+  }
 }

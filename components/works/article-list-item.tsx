@@ -21,8 +21,7 @@ const ArticleListItem: React.FC<Props> = ({ item }) => {
         <div className={styles.titleContainer}>
           <h2 className={styles.title}>{item.title}</h2>
           <div className={styles.arrowWrapper}>
-            <div className={styles.arrow}>
-            </div>
+            <div className={styles.arrow}></div>
           </div>
         </div>
       </div>

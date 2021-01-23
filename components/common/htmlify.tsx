@@ -12,15 +12,10 @@ export type Props = {
 }
 
 const HTMLify: React.FC<Props> = ({ markdown }) => {
-
   // See: https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol2/spring-raining/index.html
-  const html = unified()
-    .use(parse)
-    .use(remark2react)
-    .processSync(markdown)
-    .result as ReactChild
+  const html = unified().use(parse).use(remark2react).processSync(markdown).result as ReactChild
 
-  return <div className={styles.document}>{ html }</div>
+  return <div className={styles.document}>{html}</div>
 }
 
 export default HTMLify

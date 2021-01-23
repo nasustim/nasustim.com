@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap');
 @import 'responsive.scss';
+@import 'color.scss';
 
 .container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
   height: $pc-header-height;
 
   font-family: 'Comfortaa', cursive;
@@ -14,14 +16,10 @@
   }
 }
 
-.headerWrapper {
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-}
-
 .logo {
+  display: inline-block;
+  width: 200px;
+
   font-size: 17pt;
   font-weight: 600;
   
@@ -29,5 +27,33 @@
 
   @media #{$unless-pc} {
     margin: 20px auto auto 5px;
+  }
+}
+
+.nav {
+  flex-grow: 1;
+
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  p span {
+    display: inline-block;
+    margin-right: 15px;
+    line-height: 1.4;
+    font-family: 'Comfortaa', cursive;
+  
+    font-size: 14pt;
+    font-weight: 300;
+  
+    border-bottom: 3px $color-black dotted;
+
+    cursor: pointer;
+    transition: color  0.2s ease-out, border-bottom 0.2s ease-out, filter 0.4s ease-in-out;
+    @include responsive-link {
+      color: $color-primary;
+      filter: drop-shadow(0 0 3px $color-primary);
+      border-bottom: 3px $color-primary dotted;
+    }
   }
 }

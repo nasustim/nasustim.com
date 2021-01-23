@@ -27,6 +27,15 @@ export default function IndexPage(props: Props) {
     <div className={styles.container}>
       <Meta {...metaProps} />
       <Page {...profileProps} />
+      {/*<div style={{ backgroundColor: 'green' }}>{`
+aaaaaaaaaaaaaaaaa\r\n
+aaaaaaaaaaaaaaaaa\r\n
+aaaaaaaaaaaaaaaaa\r\n
+aaaaaaaaaaaaaaaaa\r\n
+aaaaaaaaaaaaaaaaa\r\n
+aaaaaaaaaaaaaaaaa\r\n
+aaaaaaaaaaaaaaaaa\r\n
+  `}</div>*/}
     </div>
   )
 }

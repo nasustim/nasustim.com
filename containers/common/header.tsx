@@ -7,12 +7,20 @@ const Header = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.headerWrapper}>
-        {isTopPage ? null : (
-          <div className={styles.logo}>
-            <Link href={'/'}>nasustim.com</Link>
-          </div>
-        )}
+      {isTopPage ? null : (
+        <div className={styles.logo}>
+          <Link href={'/'}>nasustim.com</Link>
+        </div>
+      )}
+      <div className={styles.nav}>
+        <p>
+          <Link href={`/about-me`}>
+            <span>About Me</span>
+          </Link>
+          <Link href={`/works`}>
+            <span>Works</span>
+          </Link>
+        </p>
       </div>
     </div>
   )

@@ -5,9 +5,10 @@
 
 .wrapper {
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 
   @media #{$unless-pc} {
@@ -18,10 +19,10 @@
 // === profile img ===
 
 .imgContainer {
-  display: flex;
+  //display: flex;
   width: $laptop-max * 0.2;
   margin: 10px;
-  flex-shrink: 0;
+  //flex-shrink: 0;
   @media #{$if-laptop} {
     width: $tablet-max * 0.2;
   }
@@ -34,7 +35,7 @@
 // === description, links,,,,
 
 .descriptionContainer {
-  flex-grow: 1;
+  width: $laptop-max * 0.5;
   margin: 10px;
 
   @media #{$unless-pc} {

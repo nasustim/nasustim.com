@@ -5,11 +5,12 @@ import styles from './styles/page.module.scss'
 
 export type ProfileProps = {
   imgUri: string
+  id?: string
 }
 
-const Page: React.FC<ProfileProps> = ({ imgUri }) => {
+const Page: React.FC<ProfileProps> = ({ id = undefined, imgUri }) => {
   return (
-    <section className={styles.wrapper}>
+    <section id={id} className={styles.wrapper}>
       <div className={styles.imgContainer}>
         <PortraitImg src={imgUri} />
       </div>

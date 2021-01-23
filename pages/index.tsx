@@ -1,7 +1,13 @@
+import { useEffect, useState } from 'react'
+
 import getTopPageContent, { ArticleList } from 'repositories/top'
+import { getArticleList, ArticleList as TypeArticleList } from 'repositories/works'
 
 import Meta from 'components/common/meta'
 import Page, { ProfileProps } from 'containers/index/page'
+import WorksPage from 'containers/works/page'
+import Footer from 'components/common/footer'
+import HTMLify from 'components/common/htmlify'
 
 import styles from './styles/index.module.scss'
 
@@ -10,6 +16,12 @@ type Props = {
   updatedDate: string
   description: string
   articleList: ArticleList
+  articleItems: TypeArticleList
+}
+const options = {
+  root: null,
+  rootMargin: '-50% 0px',
+  threshold: 0,
 }
 
 export default function IndexPage(props: Props) {
@@ -26,16 +38,12 @@ export default function IndexPage(props: Props) {
   return (
     <div className={styles.container}>
       <Meta {...metaProps} />
-      <Page {...profileProps} />
-      {/*<div style={{ backgroundColor: 'green' }}>{`
-aaaaaaaaaaaaaaaaa\r\n
-aaaaaaaaaaaaaaaaa\r\n
-aaaaaaaaaaaaaaaaa\r\n
-aaaaaaaaaaaaaaaaa\r\n
-aaaaaaaaaaaaaaaaa\r\n
-aaaaaaaaaaaaaaaaa\r\n
-aaaaaaaaaaaaaaaaa\r\n
-  `}</div>*/}
+      <Page id='top' {...profileProps} />
+      <div id='about-me' style={{ minHeight: '100vh', margin: '40px auto' }}>
+        <HTMLify markdown={props.body} />
+      </div>
+      <WorksPage id='works' articleItems={props.articleItems} />
+      <Footer />
     </div>
   )
 }
@@ -44,7 +52,8 @@ aaaaaaaaaaaaaaaaa\r\n
 
 export const getStaticProps = async () => {
   const topPageData = await getTopPageContent()
+  const articleItems = await getArticleList()
   return {
-    props: topPageData,
+    props: Object.assign({}, topPageData, { articleItems }),
   }
 }

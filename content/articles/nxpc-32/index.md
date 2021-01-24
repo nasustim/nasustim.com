@@ -16,7 +16,7 @@ NxPC.Live vol.32 のイベント web ページ。
 
 ## 公開 URL
 
-- http://nxpclab.info/vol.32/
+- [http://nxpclab.info/vol.32/](http://nxpclab.info/vol.32/)
 
 ## 技術要素
 

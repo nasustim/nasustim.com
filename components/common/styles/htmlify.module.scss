@@ -1,4 +1,5 @@
 @import 'color.scss';
+@import 'responsive.scss';
 
 .document {
   // fonts
@@ -27,6 +28,12 @@
     font-size: 12pt;
     margin: 10px 0;
     line-height: 1.5;
+  }
+  a {
+    color: $color-secondary;
+    @include responsive-link {
+      color: $color-primary;
+    }
   }
 
   ul {

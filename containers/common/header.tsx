@@ -6,6 +6,8 @@ import Link from 'next/link'
 import { LocationContext } from 'layout'
 import HeaderLink from 'components/common/header-link'
 
+import scroll from 'utils/scroller'
+
 const options = {
   root: null,
   rootMargin: '-50% 0px',
@@ -43,8 +45,17 @@ const Header = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.logo} data-is-hide={!isTopPage || !isTopContent ? '1' : '0'}>
-        <Link href={'/'}>nasustim.com</Link>
+      <div className={styles.logo} data-is-hide={!isTopPage || !isTopContent ? '0' : '1'}>
+        {isTopPage ? (
+          <span
+            onClick={(_) => {
+              scroll('top')
+            }}>
+            nasustim.com
+          </span>
+        ) : (
+          <Link href={'/'}>nasustim.com</Link>
+        )}
       </div>
       <nav className={styles.nav} data-is-hide={!isTopPage ? '1' : '0'}>
         <HeaderLink scrollTo={`bio`} isCurrent={isTopPage && currentContent === 'bio'}>

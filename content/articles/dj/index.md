@@ -11,6 +11,8 @@ headimg: ./nxpc35.jpg
 
 ![NxPC.Live vol.35 - Photo by 植松頌太さん](./nxpc35.jpg "NxPC.Live vol.35 - Photo by 植松頌太さん")
 
+![Interm Report vol.1 - Photo by 稲垣謙一さん](./interim-report-vol-1.jpg "Interm Report vol.1 - Photo by 稲垣謙一さん")
+
 細々と活動している。
 
 <!--NxPC.Live vol. 31-->

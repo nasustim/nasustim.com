@@ -12,11 +12,12 @@ category: profile
 
 ## Skill
 
-### プログラミング
+### ソフトウェア開発
+
+プログラミング言語
 
 - JavaScript/TypeScript, Perl, C/C++, Go, PHP
-
-### 開発ツール
+  - 具体的な説明はこちら: [私の技術スタック（2021年1月版） - nasustim's weblog](https://nasustim.hatenadiary.com/entry/2021/01/25/010902)
 - Git, Docker, AWS
 
 ### その他

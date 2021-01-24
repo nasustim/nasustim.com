@@ -6,30 +6,10 @@ pageid: about-me
 category: profile
 ---
 
-# Mitsuhiro Hibino
+# Bio
 
 1994年11月 岐阜県出身、東京都在住。  
 大学で電子情報技術、大学院でメディア表現を学びました。現在は都内のゲーム会社にてスマートフォン向けゲームの開発に携わっています。
-<!--
-## 趣味
-
-### 
--->
-
-<!--
-## Bio
-
-<table>
-  <tbody>
-    <tr>
-      <td>2020/04 〜</td><td>ゲーム会社(東京)</td>
-    </tr>
-    <tr>
-      <td>2017/04 〜 2020/03</td><td>IAMAS メディア表現研究科<br>修士(メディア表現)</td>
-    </tr>
-  </tbody>
-</table>
--->
 
 ## Skill
 ### JavaScript / TypeScript

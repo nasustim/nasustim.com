@@ -8,8 +8,21 @@ import Header from 'containers/common/header'
 
 import styles from './styles/_app.module.scss'
 
+import { config, library } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import { faTwitter, faGithub, faFacebook, faKeybase } from '@fortawesome/free-brands-svg-icons'
+
+function addFonts() {
+  // ref: https://stackoverflow.com/questions/44752189/how-to-add-font-awesome-to-next-js-project
+  //config.autoAddCss = false;
+  library.add(faTwitter, faGithub, faFacebook, faKeybase)
+}
+
 export default class _App extends App {
   render() {
+    // font awesome読み込ませ隊
+    addFonts()
+
     const { Component, pageProps } = this.props
 
     return (
@@ -30,6 +43,11 @@ export default class _App extends App {
               />
             </>
           )}
+          <link rel='preconnect' href='https://fonts.gstatic.com' />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Noto+Sans+JP:wght@300&family=Noto+Serif+JP:wght@300&display=swap'
+            rel='stylesheet'
+          />
         </Head>
 
         <div className={styles.background}>

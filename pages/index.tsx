@@ -18,11 +18,6 @@ type Props = {
   articleList: ArticleList
   articleItems: TypeArticleList
 }
-const options = {
-  root: null,
-  rootMargin: '-50% 0px',
-  threshold: 0,
-}
 
 export default function IndexPage(props: Props) {
   const metaProps: MetaProps = {

@@ -11,6 +11,9 @@ const options = {
 
 const Header = () => {
   const [currentPage, updateCurrentPage] = useState('')
+
+  const isRoot = useRouter().pathname === '/'
+
   useEffect(() => {
     const pages = ['works', 'about-me', 'top'].map((v) => document.getElementById(v)) as HTMLElement[]
     const observer = new IntersectionObserver((entries) => {
@@ -20,10 +23,11 @@ const Header = () => {
         }
       })
     }, options)
-    pages.forEach((page) => observer.observe(page))
-  }, [currentPage])
 
-  const isTopPage = currentPage === 'top' || useRouter().pathname != '/'
+    pages.forEach((page) => observer.observe(page))
+  }, [])
+
+  const isTopPage = currentPage == 'top' && isRoot
 
   return (
     <div className={styles.container}>

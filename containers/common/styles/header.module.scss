@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap');
 @import 'responsive.scss';
 @import 'color.scss';
 
@@ -8,8 +7,6 @@
   align-items: center;
   width: 100%;
   height: $pc-header-height;
-
-  font-family: 'Comfortaa', cursive;
 
   @media #{$unless-pc} {
     height: $unless-pc-header-height;
@@ -22,6 +19,8 @@
 
   font-size: 17pt;
   font-weight: 600;
+
+  font-family: 'Comfortaa', cursive;
   
   &, & a { text-decoration: none; }
 
@@ -45,11 +44,12 @@
   flex-direction: row;
   justify-content: flex-end;
 
+  font-family: 'Noto Sans JP', sans-serif;
+
   p span {
     display: inline-block;
     margin-right: 15px;
     line-height: 1.4;
-    font-family: 'Comfortaa', cursive;
   
     font-size: 14pt;
     font-weight: 300;

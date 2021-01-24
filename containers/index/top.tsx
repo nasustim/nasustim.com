@@ -1,7 +1,7 @@
 import PortraitImg from 'components/index/portrait-img'
 import ProfileContents from 'components/index/profile-contents'
 
-import styles from './styles/page.module.scss'
+import styles from './styles/top.module.scss'
 
 export type ProfileProps = {
   imgUri: string

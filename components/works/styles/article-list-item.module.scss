@@ -79,8 +79,6 @@ $sp-height: 100px;
   @media #{$unless-pc} {
     height: $sp-height;
   }
-
-  // width: 100%;
 }
 
 $pc-margin: 20px;
@@ -88,7 +86,7 @@ $sp-margin: 10px;
 
 .title {
   margin: 0 $pc-margin;
-  font-size: 23pt;
+  font-size: 18pt;
   color: $color-white;
 
   @media #{$unless-pc} {

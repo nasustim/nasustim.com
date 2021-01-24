@@ -1,6 +1,8 @@
 import React from 'react'
 import HTMLify from 'components/common/htmlify'
 
+import styles from './styles/bio.module.scss'
+
 type Props = {
   body: string
   id: string
@@ -8,9 +10,10 @@ type Props = {
 
 const Bio: React.FC<Props> = ({ body, id }) => {
   return (
-    <div id={id} style={{ minHeight: '100vh', margin: '40px auto' }}>
+    <section id={id} className={styles.container}>
+      <h1 className={styles.title}>Bio</h1>
       <HTMLify markdown={body} />
-    </div>
+    </section>
   )
 }
 

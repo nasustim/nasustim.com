@@ -1,4 +1,4 @@
-import { loadArticle, loadArticleList } from '../utils/loader'
+import { loadArticle, loadArticleList } from '../utils/content-loader'
 
 export default async function getArticleContent(slug: string): Promise<ArticleContent> {
   return await loadArticle(slug)

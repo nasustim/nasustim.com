@@ -1,4 +1,4 @@
-import { loadProfile, loadArticleList, ArticleListItem } from '../utils/loader'
+import { loadProfile, loadArticleList, ArticleListItem } from '../utils/content-loader'
 
 export default async function getTopPageContent() {
   const profileLoader = loadProfile()

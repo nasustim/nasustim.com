@@ -3,7 +3,7 @@ import dayjs from 'dayjs'
 
 import ArticleListItem from 'components/works/article-list-item'
 
-import styles from './styles/page.module.scss'
+import styles from './styles/works.module.scss'
 
 type Item = {
   title: string

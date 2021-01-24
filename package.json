@@ -59,7 +59,7 @@
     "export": "next export",
     "deploy": "npm run build && npm run export",
     "clean:static-img": "rm -fr public/works/* && npm run image:process",
-    "image:process": "node script/image-processing.js"
+    "image:process": "node script/image-compress.js"
   },
   "husky": {
     "hooks": {

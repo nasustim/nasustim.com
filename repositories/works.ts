@@ -1,4 +1,4 @@
-import { loadArticleList, ArticleListItem } from '../utils/loader'
+import { loadArticleList, ArticleListItem } from '../utils/content-loader'
 
 export async function getArticleList(): Promise<Array<ArticleListItem>> {
   return await loadArticleList()

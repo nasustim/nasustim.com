@@ -11,7 +11,7 @@ const options = {
   threshold: 0,
 }
 
-const pageNames = ['works', 'about-me', 'top']
+const pageNames = ['works', 'bio', 'top']
 
 const Header = () => {
   const [currentContent, updateCurrentContent] = useState('')
@@ -49,8 +49,8 @@ const Header = () => {
         <p>
           <span
             onClick={(_) => scroll('about-me', currentContent)}
-            data-is-top={isTopPage && currentContent == 'about-me' ? 'true' : 'false'}>
-            About Me
+            data-is-top={isTopPage && currentContent == 'bio' ? 'true' : 'false'}>
+            Bio
           </span>
           <span
             onClick={(_) => scroll('works', currentContent)}

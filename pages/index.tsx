@@ -4,10 +4,10 @@ import getTopPageContent, { ArticleList } from 'repositories/top'
 import { getArticleList, ArticleList as TypeArticleList } from 'repositories/works'
 
 import Meta from 'components/common/meta'
-import Page, { ProfileProps } from 'containers/index/page'
-import WorksPage from 'containers/works/page'
+import Page, { ProfileProps } from 'containers/index/top/page'
+import BioPage from 'containers/index/bio'
+import WorksPage from 'containers/index/works/page'
 import Footer from 'components/common/footer'
-import HTMLify from 'components/common/htmlify'
 
 import styles from './styles/index.module.scss'
 
@@ -34,9 +34,7 @@ export default function IndexPage(props: Props) {
     <div className={styles.container}>
       <Meta {...metaProps} />
       <Page id='top' {...profileProps} />
-      <div id='about-me' style={{ minHeight: '100vh', margin: '40px auto' }}>
-        <HTMLify markdown={props.body} />
-      </div>
+      <BioPage id='about-me' body={props.body} />
       <WorksPage id='works' articleItems={props.articleItems} />
       <Footer />
     </div>

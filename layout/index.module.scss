@@ -44,6 +44,17 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: $laptop-max;
+  @media #{$if-laptop} {
+    width: $tablet-max;
+  }
+  @media #{$unless-pc} {
+    width: 100%;
+  }
 }
 
 .background {

@@ -42,12 +42,10 @@ const Header = () => {
 
   return (
     <div className={styles.container}>
-      {isTopPage && !isTopContent ? (
-        <div className={styles.logo} data-is-top={isTopPage ? 'true' : 'false'}>
-          <Link href={'/'}>nasustim.com</Link>
-        </div>
-      ) : null}
-      <div className={styles.nav}>
+      <div className={styles.logo} data-is-hide={!isTopPage || !isTopContent ? '1' : '0'}>
+        <Link href={'/'}>nasustim.com</Link>
+      </div>
+      <div className={styles.nav} data-is-hide={!isTopPage ? '1' : '0'}>
         <p>
           <Link href={`/#about-me`}>
             <span data-is-top={isTopPage && currentContent == 'about-me' ? 'true' : 'false'}>About Me</span>

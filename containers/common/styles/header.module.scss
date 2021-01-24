@@ -25,7 +25,7 @@
 
   opacity: 1;
   transition: opacity 0.4s;
-  &[data-is-top="false"] {
+  &[data-is-hide="0"] {
     opacity: 0;
   }
 
@@ -70,5 +70,11 @@
     @media #{$unless-pc} {
       font-size: 10pt;
     }
+  }
+
+  opacity: 1;
+  transition: opacity 0.4s;
+  &[data-is-hide="1"] {
+    opacity: 0;
   }
 }

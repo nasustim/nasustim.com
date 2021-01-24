@@ -22,12 +22,16 @@ headimg: ./module-whom-exam-iamas.jpg
 ## 展示システム
 
 - クライアント
-  - https://github.com/nasustim/code-player-module-whom
+  - [https://github.com/nasustim/code-player-module-whom](https://github.com/nasustim/code-player-module-whom)
 - サーバ
-  - https://github.com/nasustim/code-server-module-whom
+  - [https://github.com/nasustim/code-server-module-whom](https://github.com/nasustim/code-server-module-whom)
 
 ## 展示
 
 - [IAMAS2020 Graduation and Project Research Exhibition](https://www.iamas.ac.jp/exhibit20/)
+
+## 入選
+
+- [第25回学生CGコンテスト アート部門 - ノミネート](https://archive.campusgenius.jp/2019/works/4616/)
 
 <iframe width="400" height="300" src="https://www.youtube.com/embed/0Nxng8d4PN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

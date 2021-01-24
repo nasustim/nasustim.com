@@ -28,27 +28,26 @@
 .header {
   @extend .absolute;
   @extend .outline-size;
+  display: flex;
   position: fixed;
   z-index: 2;
-  width: 100%;
-  display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
 }
 
 .content {
   @extend .absolute;
   @extend .outline-size;
-  min-height: 100%;
-  z-index: 1;
   display: flex;
+  z-index: 1;
+  right: 0;
+  left: 0;
   flex-direction: row;
   justify-content: center;
-
-  margin: auto;
-  left: 0;
-  right: 0;
   width: $laptop-max;
+  min-height: 100%;
+  margin: auto;
   @media #{$if-laptop} {
     width: $tablet-max;
   }
@@ -59,14 +58,14 @@
 
 .background {
   @extend .absolute;
+  z-index: 1;
   width: 100%;
   height: 100%;
-  z-index: 1;
 }
 
 .container {
   @extend .absolute;
+  z-index: 2;
   width: 100%;
   //height: 100%;
-  z-index: 2;
 }

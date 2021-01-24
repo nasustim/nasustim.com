@@ -4,6 +4,7 @@ import styles from './styles/header.module.scss'
 import Link from 'next/link'
 
 import { LocationContext } from 'layout'
+import HeaderLink from 'components/common/header-link'
 
 const options = {
   root: null,
@@ -45,35 +46,16 @@ const Header = () => {
       <div className={styles.logo} data-is-hide={!isTopPage || !isTopContent ? '1' : '0'}>
         <Link href={'/'}>nasustim.com</Link>
       </div>
-      <div className={styles.nav} data-is-hide={!isTopPage ? '1' : '0'}>
-        <p>
-          <span
-            onClick={(_) => scroll('about-me', currentContent)}
-            data-is-top={isTopPage && currentContent == 'bio' ? 'true' : 'false'}>
-            Bio
-          </span>
-          <span
-            onClick={(_) => scroll('works', currentContent)}
-            data-is-top={isTopPage && currentContent == 'works' ? 'true' : 'false'}>
-            Works
-          </span>
-        </p>
-      </div>
+      <nav className={styles.nav} data-is-hide={!isTopPage ? '1' : '0'}>
+        <HeaderLink scrollTo={`bio`} isCurrent={isTopPage && currentContent === 'bio'}>
+          Bio
+        </HeaderLink>
+        <HeaderLink scrollTo={`works`} isCurrent={isTopPage && currentContent === 'works'}>
+          Works
+        </HeaderLink>
+      </nav>
     </div>
   )
-}
-
-const scroll = (_id: string, _currentContent: string) => {
-  if (_currentContent === _id) return
-
-  const element = document.getElementById(_id)
-  if (element) {
-    console.log(element.getBoundingClientRect().top)
-    window.scrollTo({
-      top: window.pageYOffset + element.getBoundingClientRect().top - 80,
-      behavior: 'smooth',
-    })
-  }
 }
 
 export default Header

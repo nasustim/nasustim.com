@@ -21,7 +21,7 @@
     transition: color 0.2s ease-out, filter 0.4s ease-in-out;
     @include responsive-link {
       color: $color-secondary;
-      filter: drop-shadow(0px 0px 3px $color-secondary);
+      filter: drop-shadow(0px 0px 3px $color-primary);
     }
 
     @media #{$unless-pc} {

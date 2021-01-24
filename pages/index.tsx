@@ -1,7 +1,7 @@
 import getTopPageContent, { ArticleList } from 'repositories/top'
 import { getArticleList, ArticleList as TypeArticleList } from 'repositories/works'
 
-import Meta from 'components/common/meta'
+import Meta, { Props as MetaProps } from 'components/common/meta'
 import Page, { ProfileProps } from 'containers/index/top'
 import BioPage from 'containers/index/bio'
 import WorksPage from 'containers/index/works'
@@ -19,8 +19,7 @@ type Props = {
 
 export default function IndexPage(props: Props) {
   const metaProps: MetaProps = {
-    pageId: '/',
-    title: 'home',
+    title: 'top',
     description: props.description,
     updatedDate: props.updatedDate,
   }

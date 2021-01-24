@@ -1,5 +1,5 @@
 import getArticleContent, { ArticleContent, getArticleUris } from 'repositories/article'
-import Meta from 'components/common/meta'
+import Meta, { Props as MetaProps } from 'components/common/meta'
 import HTMLify from 'components/common/htmlify'
 import Footer from 'components/common/footer'
 
@@ -12,7 +12,6 @@ const WorkPage: React.FC<Props> = ({ article }) => {
     title: article.attributes.title,
     description: article.attributes.description,
     updatedDate: article.attributes.date,
-    pageId: article.attributes.pageid,
   }
 
   return (

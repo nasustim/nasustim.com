@@ -12,6 +12,8 @@ $sp-height: 100px;
 
   margin: 10px auto;
 
+  font-family: 'Noto Sans JP', sans-serif;
+
   background-color: $color-secondary;
 
   cursor: pointer;
@@ -32,6 +34,16 @@ $sp-height: 100px;
       transition: transform .2s ease-in;
     }
   }
+  overflow: hidden;
+}
+
+.containerEven {
+  @extend .container;
+  border-radius: 16px 28px;
+}
+.containerOdd {
+  @extend .container;
+  border-radius: 32px 10px;
 }
 
 // -----
@@ -81,20 +93,20 @@ $sp-margin: 10px;
 
   @media #{$unless-pc} {
     margin: 0 $sp-margin;
-    font-size: 18pt;
+    font-size: 13pt;
   }
 }
 
 // 本当はアニメーションで矢印を引くつもりだったのでこの命名
 .arrowWrapper {
-  margin: 10px $pc-margin;
+  margin: 7px $pc-margin 0;
   height: 2px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 
   @media #{$unless-pc} {
-    margin: 10px $sp-margin;
+    margin: 7px $sp-margin 0;
   }
 }
 

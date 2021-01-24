@@ -8,4 +8,7 @@ module.exports = {
     GA_TRACKING_ID_FOR_BROWSER: process.env.GA_TRACK_ID,
     URL: 'https://nasustim.com',
   },
+  experimental: {
+    optimizeFonts: true,
+  },
 }

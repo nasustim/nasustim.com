@@ -10,12 +10,12 @@ const options = {
 }
 
 const Header = () => {
-  const [currentPage, updateCurrentPage] = useState('top')
+  const [currentPage, updateCurrentPage] = useState('')
   useEffect(() => {
-    const pages = ['top', 'about-me', 'works'].map((v) => document.getElementById(v)) as HTMLElement[]
+    const pages = ['works', 'about-me', 'top'].map((v) => document.getElementById(v)) as HTMLElement[]
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((v) => {
-        if (v.isIntersecting && v.target.id !== currentPage) {
+        if (v.isIntersecting && v.target.id && v.target.id !== currentPage) {
           updateCurrentPage(v.target.id)
         }
       })
@@ -23,7 +23,7 @@ const Header = () => {
     pages.forEach((page) => observer.observe(page))
   }, [currentPage])
 
-  const isTopPage = currentPage === 'top'
+  const isTopPage = currentPage === 'top' || useRouter().pathname != '/'
 
   return (
     <div className={styles.container}>
@@ -33,10 +33,10 @@ const Header = () => {
       <div className={styles.nav}>
         <p>
           <Link href={`/#about-me`}>
-            <span data-is-top={currentPage == 'about-me' ? 'true' : 'false'}>About Me</span>
+            <span data-is-top={!isTopPage && currentPage == 'about-me' ? 'true' : 'false'}>About Me</span>
           </Link>
           <Link href={`/#works`}>
-            <span data-is-top={currentPage == 'works' ? 'true' : 'false'}>Works</span>
+            <span data-is-top={!isTopPage && currentPage == 'works' ? 'true' : 'false'}>Works</span>
           </Link>
         </p>
       </div>

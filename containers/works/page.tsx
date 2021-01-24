@@ -20,8 +20,8 @@ const Page: React.FC<Props> = ({ articleItems, id = undefined }) => {
   const sortedArticleItems = articleItems.sort((a, b) => (dayjs(a.updatedDate).isAfter(dayjs(b.updatedDate)) ? -1 : 1))
   return (
     <section id={id} className={styles.wrapper}>
-      {sortedArticleItems.map((item) => (
-        <ArticleListItem key={`key-item-${item.uri}`} item={item} />
+      {sortedArticleItems.map((item, index) => (
+        <ArticleListItem key={`key-item-${item.uri}`} item={item} index={index} />
       ))}
     </section>
   )

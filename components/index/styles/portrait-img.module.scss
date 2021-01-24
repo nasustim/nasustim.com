@@ -5,6 +5,8 @@
   overflow: hidden;
 
   transition: border-radius 5s ease-in-out;
+
+  background-clip: content-box;
 }
 
 .img {

@@ -32,7 +32,6 @@
   @media #{$unless-pc} {
     width: 150px;
     font-size: 10pt;
-    margin-left: 10px;
   }
 }
 
@@ -47,7 +46,7 @@
 
   p span {
     display: inline-block;
-    margin-right: 15px;
+    margin-left: 15px;
     line-height: 1.4;
   
     font-size: 14pt;

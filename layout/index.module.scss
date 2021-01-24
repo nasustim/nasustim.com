@@ -20,7 +20,7 @@
       width: $tablet-max * 0.8;
     }
     @media #{$unless-pc} {
-      width: 100%;
+      width: 95%;
     }
   }
 }
@@ -39,7 +39,6 @@
 .content {
   @extend .absolute;
   @extend .outline-size;
-  width: 100%;
   min-height: 100%;
   z-index: 1;
   display: flex;

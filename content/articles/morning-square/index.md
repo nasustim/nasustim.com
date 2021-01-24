@@ -9,10 +9,13 @@ headimg: ./morning-square01.png
 
 # Morning Square
 
-![](./morning-square-logo.png)
-
 岐阜県大垣市付近のオススメの「モーニング」が楽しめる喫茶店を、街を探検するような感覚で探すことのできる web アプリケーション。  
 東海地方では専ら高齢者に広く使われているサービスとなった喫茶店のモーニングをスマホの特性を生かした操作で探すことができる。
+
+
+!["Morning Square - 探す画面"](./morning-square02.png "Morning Square - 探す画面")
+
+!["Morning Square - 詳細画面"](./morning-square01.png "Morning Square - 詳細画面")
 
 ## 共同制作
 
@@ -46,10 +49,4 @@ headimg: ./morning-square01.png
 - データベース
   - SQLite3
 
----
 
-!["Morning Square - 探す画面"](./morning-square02.png "Morning Square - 探す画面")
-
-!["Morning Square - 詳細画面"](./morning-square01.png "Morning Square - 詳細画面")
-
----

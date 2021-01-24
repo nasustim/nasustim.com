@@ -25,10 +25,11 @@
   
   &, & a { text-decoration: none; }
 
-  opacity: 1;
+  opacity: 0;
   transition: opacity 0.4s;
+  cursor: pointer;
   &[data-is-hide="0"] {
-    opacity: 0;
+    opacity: 1;
   }
 
   @media #{$unless-pc} {

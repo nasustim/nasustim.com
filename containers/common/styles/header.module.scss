@@ -57,13 +57,14 @@
 
     cursor: pointer;
     transition: color  0.2s ease-out, border-bottom 0.2s ease-out, filter 0.4s ease-in-out;
-    @include responsive-link {
-      color: $color-primary;
+    
+    &[data-is-top="true"] {
+      color: $color-secondary;
       filter: drop-shadow(0 0 3px $color-primary);
       border-bottom: 3px $color-primary dotted;
     }
-    &[data-is-top="true"] {
-      color: $color-secondary;
+    @include responsive-link {
+      color: $color-primary;
       filter: drop-shadow(0 0 3px $color-primary);
       border-bottom: 3px $color-primary dotted;
     }

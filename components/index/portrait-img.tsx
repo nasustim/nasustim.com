@@ -1,7 +1,7 @@
 // import Image from 'next/image'
 import styles from './styles/portrait-img.module.scss'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export type ProfileProps = {
   src: string
@@ -20,6 +20,10 @@ const PortraitImg: React.FC<ProfileProps> = ({ src }) => {
     const newStyle = style.map(set)
     setStyle(newStyle)
   }, 3000)
+
+  useEffect(() => () => {
+    clearInterval(IntId)
+  })
 
   const _style = {
     borderRadius: `${style[0][0]}% ${style[1][0]}% ${style[2][0]}% ${style[3][0]}%/${style[0][1]}% ${style[1][1]}% ${style[2][1]}% ${style[3][1]}%`,

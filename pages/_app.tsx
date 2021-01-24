@@ -1,20 +1,22 @@
 import '../styles/global.scss'
 
+import React from 'react'
+
 import App from 'next/app'
 import Head from 'next/head'
 
 import Background from 'containers/common/background'
 import Header from 'containers/common/header'
 
-import styles from './styles/_app.module.scss'
+import Layout from 'layout'
 
-import { config, library } from '@fortawesome/fontawesome-svg-core'
+import { config as cssConfig, library } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { faTwitter, faGithub, faFacebook, faKeybase } from '@fortawesome/free-brands-svg-icons'
 
 function addFonts() {
   // ref: https://stackoverflow.com/questions/44752189/how-to-add-font-awesome-to-next-js-project
-  //config.autoAddCss = false;
+  cssConfig.autoAddCss = false
   library.add(faTwitter, faGithub, faFacebook, faKeybase)
 }
 
@@ -26,7 +28,7 @@ export default class _App extends App {
     const { Component, pageProps } = this.props
 
     return (
-      <div className={styles.layout}>
+      <React.Fragment>
         <Head>
           <meta name='viewport' content='width=device-width,initial-scale=1' />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
@@ -49,19 +51,10 @@ export default class _App extends App {
             rel='stylesheet'
           />
         </Head>
-
-        <div className={styles.background}>
-          <Background />
-        </div>
-        <div className={styles.container}>
-          <header className={styles.header}>
-            <Header />
-          </header>
-          <main className={styles.content}>
-            <Component {...pageProps} />
-          </main>
-        </div>
-      </div>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </React.Fragment>
     )
   }
 }

@@ -3,7 +3,7 @@ import Meta from 'components/common/meta'
 import HTMLify from 'components/common/htmlify'
 import Footer from 'components/common/footer'
 
-import styles from '../styles/about-me.module.scss'
+import styles from './styles/slug.module.scss'
 
 type Props = { article: ArticleContent }
 

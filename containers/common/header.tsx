@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from './styles/header.module.scss'
+
+import { LocationContext } from 'layout'
 
 const options = {
   root: null,
@@ -9,38 +11,47 @@ const options = {
   threshold: 0,
 }
 
-const Header = () => {
-  const [currentPage, updateCurrentPage] = useState('')
+const pageNames = ['works', 'about-me', 'top']
 
-  const isRoot = useRouter().pathname === '/'
+const Header = () => {
+  const [currentContent, updateCurrentContent] = useState('')
+  const location = useContext(LocationContext)
+
+  const isTopPage = '/' === location
+  const isTopContent = currentContent === 'top'
 
   useEffect(() => {
-    const pages = ['works', 'about-me', 'top'].map((v) => document.getElementById(v)) as HTMLElement[]
+    const pages = pageNames.map((v) => document.getElementById(v)).filter((v) => v != null) as HTMLElement[]
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((v) => {
-        if (v.isIntersecting && v.target.id && v.target.id !== currentPage) {
-          updateCurrentPage(v.target.id)
+        if (v.isIntersecting && v.target.id && v.target.id !== currentContent) {
+          updateCurrentContent(v.target.id)
         }
       })
     }, options)
 
-    pages.forEach((page) => observer.observe(page))
-  }, [])
+    if (pages.length === 0) updateCurrentContent('')
+    else pages.forEach((page) => observer.observe(page))
 
-  const isTopPage = currentPage == 'top' && isRoot
+    return function () {
+      updateCurrentContent('top')
+      pages.forEach((page) => observer.unobserve(page))
+    }
+  }, [isTopPage])
 
   return (
     <div className={styles.container}>
-      <div className={styles.logo} data-is-top={isTopPage ? 'true' : 'false'}>
+      <div className={styles.logo} data-is-hide={!isTopPage || !isTopContent ? '1' : '0'}>
         <Link href={'/'}>nasustim.com</Link>
       </div>
-      <div className={styles.nav}>
+      <div className={styles.nav} data-is-hide={!isTopPage ? '1' : '0'}>
         <p>
           <Link href={`/#about-me`}>
-            <span data-is-top={!isTopPage && currentPage == 'about-me' ? 'true' : 'false'}>About Me</span>
+            <span data-is-top={isTopPage && currentContent == 'about-me' ? 'true' : 'false'}>About Me</span>
           </Link>
           <Link href={`/#works`}>
-            <span data-is-top={!isTopPage && currentPage == 'works' ? 'true' : 'false'}>Works</span>
+            <span data-is-top={isTopPage && currentContent == 'works' ? 'true' : 'false'}>Works</span>
           </Link>
         </p>
       </div>

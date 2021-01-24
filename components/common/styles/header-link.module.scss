@@ -3,15 +3,12 @@
 
 .container {
   margin-left: 15px;
-  line-height: 1.4;
-
+  transition: color  0.2s ease-out, border-bottom 0.2s ease-out, filter 0.4s ease-in-out;
+  border-bottom: 3px $color-black dotted;
   font-size: 14pt;
   font-weight: 300;
-
-  border-bottom: 3px $color-black dotted;
-
+  line-height: 1.4;
   cursor: pointer;
-  transition: color  0.2s ease-out, border-bottom 0.2s ease-out, filter 0.4s ease-in-out;
 
   &::before {
     content: "[";
@@ -30,10 +27,11 @@
       opacity: 1;
     }
   }
+
   @include responsive-link {
+    border-bottom: 3px $color-primary dotted;
     color: $color-primary;
     filter: drop-shadow(0 0 3px $color-primary);
-    border-bottom: 3px $color-primary dotted;
   }
   @media #{$unless-pc} {
     font-size: 10pt;

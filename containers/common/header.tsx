@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
 import styles from './styles/header.module.scss'
+
+import Link from 'next/link'
 
 import { LocationContext } from 'layout'
 
@@ -47,16 +47,32 @@ const Header = () => {
       </div>
       <div className={styles.nav} data-is-hide={!isTopPage ? '1' : '0'}>
         <p>
-          <Link href={`/#about-me`}>
-            <span data-is-top={isTopPage && currentContent == 'about-me' ? 'true' : 'false'}>About Me</span>
-          </Link>
-          <Link href={`/#works`}>
-            <span data-is-top={isTopPage && currentContent == 'works' ? 'true' : 'false'}>Works</span>
-          </Link>
+          <span
+            onClick={(_) => scroll('about-me')}
+            data-is-top={isTopPage && currentContent == 'about-me' ? 'true' : 'false'}>
+            About Me
+          </span>
+          <span
+            onClick={(_) => scroll('works')}
+            data-is-top={isTopPage && currentContent == 'works' ? 'true' : 'false'}>
+            Works
+          </span>
         </p>
       </div>
     </div>
   )
+}
+
+const scroll = (_id: string) => {
+  const element = document.getElementById(_id)
+
+  if (element) {
+    console.log(element.getBoundingClientRect().top)
+    window.scrollTo({
+      top: window.pageYOffset + element.getBoundingClientRect().top,
+      behavior: 'smooth',
+    })
+  }
 }
 
 export default Header

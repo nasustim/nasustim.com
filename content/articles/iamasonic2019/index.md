@@ -22,7 +22,5 @@ IAMAS 学内のライブイベント、IAMASONIC の告知用 web ページ。
 
 ## 企画
 
-- Ryo Morita
-  - https://morita-ryo.com/
-- Mariho Suzuki
-  - https://marihosuzuki.tumblr.com/
+- [Ryo Morita](https://morita-ryo.com/)
+- [Mariho Suzuki](https://marihosuzuki.tumblr.com/)

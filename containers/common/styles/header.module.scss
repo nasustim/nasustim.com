@@ -1,33 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap');
 @import 'responsive.scss';
+@import 'color.scss';
 
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  align-items: center;
   height: $pc-header-height;
-
-  font-family: 'Comfortaa', cursive;
 
   @media #{$unless-pc} {
     height: $unless-pc-header-height;
   }
 }
 
-.headerWrapper {
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-}
-
 .logo {
+  display: inline-block;
+  width: 200px;
+
   font-size: 17pt;
   font-weight: 600;
+
+  font-family: 'Comfortaa', cursive;
   
   &, & a { text-decoration: none; }
 
+  opacity: 1;
+  transition: opacity 0.4s;
+  &[data-is-hide="0"] {
+    opacity: 0;
+  }
+
   @media #{$unless-pc} {
-    margin: 20px auto auto 5px;
+    width: 150px;
+    font-size: 10pt;
+  }
+}
+
+.nav {
+  flex-grow: 1;
+
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  font-family: 'Noto Sans JP', sans-serif;
+
+  p span {
+    display: inline-block;
+    margin-left: 15px;
+    line-height: 1.4;
+  
+    font-size: 14pt;
+    font-weight: 300;
+  
+    border-bottom: 3px $color-black dotted;
+
+    cursor: pointer;
+    transition: color  0.2s ease-out, border-bottom 0.2s ease-out, filter 0.4s ease-in-out;
+    
+    &[data-is-top="true"] {
+      color: $color-secondary;
+      filter: drop-shadow(0 0 3px $color-primary);
+      border-bottom: 3px $color-primary dotted;
+    }
+    @include responsive-link {
+      color: $color-primary;
+      filter: drop-shadow(0 0 3px $color-primary);
+      border-bottom: 3px $color-primary dotted;
+    }
+    @media #{$unless-pc} {
+      font-size: 10pt;
+    }
+  }
+
+  opacity: 1;
+  transition: opacity 0.4s;
+  &[data-is-hide="1"] {
+    opacity: 0;
   }
 }

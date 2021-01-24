@@ -1,6 +1,6 @@
 ---
 title: VJ
-date: "2017-10-15T00:00:00.000Z"
+date: "2017-10-15"
 description: 嗜む程度に。
 category: waste
 pageid: vj

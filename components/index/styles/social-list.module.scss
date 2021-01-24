@@ -1,0 +1,31 @@
+@import 'responsive.scss';
+@import 'color.scss';
+
+.container {
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.item {
+  flex: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  svg, path {
+    font-size: 38pt;
+    color: $color-black;
+    transition: color 0.2s ease-out, filter 0.4s ease-in-out;
+    @include responsive-link {
+      color: $color-secondary;
+      filter: drop-shadow(0px 0px 3px $color-primary);
+    }
+
+    @media #{$unless-pc} {
+      font-size: 30pt;
+    }
+  }
+}

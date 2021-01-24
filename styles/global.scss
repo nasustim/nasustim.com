@@ -1,0 +1,27 @@
+@import "~normalize.css";
+@import './responsive.scss';
+@import './color.scss';
+
+html, body {
+  // 背景を何か動的なものにしたい場合はcontainers/common/backgroundで
+  background-color: $color-white;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+
+  color: $color-black;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+div#__next {
+  @extend body;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

@@ -1,0 +1,14 @@
+@import 'responsive.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+
+  margin: $pc-header-height 0;
+
+  @media #{$unless-pc} {
+    margin: $unless-pc-header-height 0px;
+  }
+}

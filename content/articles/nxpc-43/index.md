@@ -25,6 +25,5 @@ NxPC.Live vol.43 のイベント web ページを制作しました。
 
 ## 技術要素
 
-- 開発環境
-  - Webpack
-  - TypeScript
+- Webpack
+- TypeScript

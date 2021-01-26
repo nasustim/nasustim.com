@@ -13,7 +13,7 @@ headimg: ./nxpc35.jpg
 
 ![Interm Report vol.1 - Photo by 稲垣謙一さん](./interim-report-vol-1.jpg "Interm Report vol.1 - Photo by 稲垣謙一さん")
 
-細々と活動している。
+細々と活動しています。
 
 <!--NxPC.Live vol. 31-->
 <!--Interim Report vol. 3 - Photo by 川村将貴さん-->

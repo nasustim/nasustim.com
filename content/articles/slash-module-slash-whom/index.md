@@ -33,5 +33,3 @@ headimg: ./module-whom-exam-iamas.jpg
 ## 入選
 
 - [第25回学生CGコンテスト アート部門 - ノミネート](https://archive.campusgenius.jp/2019/works/4616/)
-
-<iframe width="400" height="300" src="https://www.youtube.com/embed/0Nxng8d4PN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

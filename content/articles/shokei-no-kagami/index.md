@@ -25,7 +25,3 @@ headimg: ./shokei-no-kagami.png
 
 - [Koki Nishimoto](https://nishimoto-koki.tumblr.com)
 - [Sho Iijima](https://shoiijima.github.io)
-
-## Works
-
-- Make data-sets by OpenCV

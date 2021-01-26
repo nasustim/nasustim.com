@@ -26,7 +26,5 @@ JavaScript で記述したソースコードを和紙に印刷して、学内応
 
 ## 展示
 
-- 「あしたをプロトタイピングする」展
-  - http://www.ilas.nagoya-u.ac.jp/clas/programs/375.php
-- インタラクション 2019
-  - http://www.interaction-ipsj.org/proceedings/2019/data/bib/1A-08.html
+- [「あしたをプロトタイピングする」展](http://www.ilas.nagoya-u.ac.jp/clas/programs/375.php)
+- [情報処理学会 インタラクション 2019](http://www.interaction-ipsj.org/proceedings/2019/data/bib/1A-08.html)

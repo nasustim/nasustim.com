@@ -4,6 +4,10 @@
 $pc-height: 150px;
 $sp-height: 100px;
 
+.link {
+  text-decoration: none;
+}
+
 .container {
   display: flex;
   flex-direction: row;

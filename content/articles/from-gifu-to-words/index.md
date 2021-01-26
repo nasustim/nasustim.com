@@ -24,20 +24,12 @@ IAMAS オープンハウス 2017 で展示を行いました。
 - コーパス
   - [word2vec の学習済み日本語モデルを公開します | カメリオ開発者ブログ](http://aial.shiroyagi.co.jp/2017/02/japanese-word2vec-model-builder)[^1]
 
-## 技術要素
+## 技術スタック
 
-### フロントエンド
-
-- データバインド
+- フロントエンド
   - D3.js
-- 音声認識
   - Web Speech API(Google Chrome)
-
-### バックエンド
-
-- Web アプリケーションフレームワーク
+- サーバサイド
   - Express(Node.js)
-- 形態素解析
   - kuromoji.js
-- 各単語の意味解析
-  - word2vec(Gensim)
+  - Gensim(Python)

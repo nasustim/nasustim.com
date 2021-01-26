@@ -11,7 +11,7 @@ headimg: ./thumbnail_nxpc32.png
 
 ![NxPC.Live vol.32 - ヘッダー部分](./nxpc-32.png "NxPC.Live vol.32 - ヘッダー部分")
 
-NxPC.Live vol.32 のイベント web ページ。
+NxPC.Live vol.32 のイベント web ページを作成しました。
 メインビジュアルの画像を SVG 化し、D3.js で演出を加えました。
 
 ## 公開 URL
@@ -20,7 +20,5 @@ NxPC.Live vol.32 のイベント web ページ。
 
 ## 技術要素
 
-- ライブラリ
-  - D3.js
-- ビルド
-  - Gulp
+- D3.js
+- Gulp

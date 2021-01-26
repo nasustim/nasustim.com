@@ -19,34 +19,22 @@ headimg: ./morning-square01.png
 
 ## 共同制作
 
-- UI/UX & コンセプトデザイン
-  - Hiromu Ehara
+- UI/UX & Concept Design: Hiromu Ehara
 
 ## 公開 URL
 
-- https://morning-sq.v.nasustim.com
+- [https://morning-sq.v.nasustim.com](https://morning-sq.v.nasustim.com)
 
 ## 技術要素
 
-### バックエンド
-
-- サーバ内でのプロキシ
-  - Nginx
-- Web アプリケーションフレームワーク
+- サーバサイド
   - Express(Node.js)
-
-### フロントエンド
-
-- DOM の操作
+- フロントエンド
   - jQuery
-- 画像表示機能
   - Lightbox
-
-### インフラ
-
-- 仮想環境
+- インフラ
+  - Nginx
   - Docker Compose
-- データベース
   - SQLite3
 
 

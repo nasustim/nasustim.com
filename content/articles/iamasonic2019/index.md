@@ -12,15 +12,15 @@ headimg: ./thumbnail_iamasonic2019.png
 !["IAMASONIC 2019 - ページのヘッダ部分"](./iamasonic2019-00.png "IAMASONIC 2019 - ページのヘッダ部分")
 
 IAMAS 学内のライブイベント、IAMASONIC の告知用 web ページ。
-アニメーションライブラリや CSS アニメーションを用いたイベントページを実装した。
+アニメーションライブラリや CSS アニメーションを用いたイベントページを作成しました。
 
 !["IAMASONIC 2019 - ページのフッター部分"](./iamasonic2019-01.png "IAMASONIC 2019 - ページのフッター部分")
 
 ## 公開 URL
 
-- https://www.iamas.ac.jp/iamasonic/
+- [https://www.iamas.ac.jp/iamasonic](https://www.iamas.ac.jp/iamasonic/)
 
-## 企画
+## 企画 & デザイン
 
 - [Ryo Morita](https://morita-ryo.com/)
 - [Mariho Suzuki](https://marihosuzuki.tumblr.com/)

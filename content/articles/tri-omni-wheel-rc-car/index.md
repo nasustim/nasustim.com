@@ -16,13 +16,10 @@ PIC マイコンによる PWM 制御でモータ一つ一つに流れる電圧�
 
 ![完成品](./comp.jpg "完成品")
 
-<!--![イメージ](./mock.png "イメージ")-->
+![イメージ](./mock.png "イメージ")
 
 ## 技術要素
 
-- マイコン
-  - Microchip PIC 16F84A
-- プログラミング
-  - C (CCS C Compiler)
-- Communicate
-  - 自作プロトコル
+- Microchip PIC 16F84A
+- C言語 (CCS C Compiler)
+- AM変復調モジュール

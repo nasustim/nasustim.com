@@ -5,9 +5,6 @@ import React from 'react'
 import App from 'next/app'
 import Head from 'next/head'
 
-import Background from 'containers/common/background'
-import Header from 'containers/common/header'
-
 import Layout from 'layout'
 
 import { config as cssConfig, library } from '@fortawesome/fontawesome-svg-core'

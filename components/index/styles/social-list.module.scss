@@ -2,23 +2,23 @@
 @import 'color.scss';
 
 .container {
-  margin-top: 40px;
 
   display: flex;
   flex-direction: row;
+  margin-top: 40px;
 }
 
 .item {
-  flex: 1;
 
   display: flex;
+  flex: 1;
   flex-direction: row;
   justify-content: flex-start;
 
   svg, path {
-    font-size: 38pt;
-    color: $color-black;
     transition: color 0.2s ease-out, filter 0.4s ease-in-out;
+    color: $color-black;
+    font-size: 38pt;
     @include responsive-link {
       color: $color-secondary;
       filter: drop-shadow(0px 0px 3px $color-primary);

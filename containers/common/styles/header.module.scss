@@ -15,19 +15,19 @@
 .logo {
   display: inline-block;
   width: 200px;
+  transition: opacity 0.4s;
+
+  opacity: 0;
+
+  font-family: 'Comfortaa', cursive;
 
   font-size: 17pt;
   font-weight: 600;
-
-  font-family: 'Comfortaa', cursive;
+  cursor: pointer;
 
   filter: drop-shadow(2px 3px 0px $color-white);
   
   &, & a { text-decoration: none; }
-
-  opacity: 0;
-  transition: opacity 0.4s;
-  cursor: pointer;
   &[data-is-hide="0"] {
     opacity: 1;
   }
@@ -39,16 +39,16 @@
 }
 
 .nav {
-  flex-grow: 1;
 
   display: inline-flex;
   flex-direction: row;
+  flex-grow: 1;
   justify-content: flex-end;
-
-  font-family: 'Comfortaa', cursive;
+  transition: opacity 0.4s;
 
   opacity: 1;
-  transition: opacity 0.4s;
+
+  font-family: 'Comfortaa', cursive;
   &[data-is-hide="1"] {
     opacity: 0;
   }

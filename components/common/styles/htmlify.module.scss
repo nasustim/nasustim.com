@@ -21,14 +21,14 @@
     .decorated {
       &::before {
         content: "";
-        border-left: 3.6px $color-black solid;
         margin-right: 5px;
+        border-left: 3.6px $color-black solid;
       }
     }
   }
   p {
-    font-size: 12pt;
     margin: 10px 0;
+    font-size: 12pt;
     line-height: 1.5;
   }
   a {
@@ -39,8 +39,8 @@
   }
 
   ul {
-    font-size: 12pt;
     margin: 5px 10px;
+    font-size: 12pt;
     li {
       margin: 10px 10px;
     }
@@ -55,8 +55,8 @@
     border-spacing: 4px;
     tr {
       td {
-        border-bottom: solid 1px #999999;
         padding: 5px 10px;
+        border-bottom: solid 1px #999999;
       }
     }
   }

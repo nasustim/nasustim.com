@@ -73,6 +73,7 @@
   },
   "include": [
     "next-env.d.ts",
+    "nasustim.com.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],

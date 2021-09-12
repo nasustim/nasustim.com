@@ -17,7 +17,8 @@ const HeaderLink: React.FC<Props> = ({ children, isCurrent, scrollTo }) => {
       onClick={(_) => {
         if (!isCurrent) scroll(scrollTo)
       }}
-      data-is-top={isCurrent ? '1' : '0'}>
+      data-is-top={isCurrent ? '1' : '0'}
+    >
       {children}
     </span>
   )

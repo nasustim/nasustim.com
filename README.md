@@ -1,4 +1,4 @@
-# nasustim.com [![Netlify Status](https://api.netlify.com/api/v1/badges/2d9672f0-3c8e-4da1-a26c-a7288f5787ae/deploy-status)](https://app.netlify.com/sites/nasustim/deploys)
+# nasustim.com [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnasustim%2Fnasustim.com%2Ftree%2Fmaster)
 
 My Portfolio Site.
 

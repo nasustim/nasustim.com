@@ -1,4 +1,4 @@
-# nasustim.com [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnasustim%2Fnasustim.com%2Ftree%2Fmaster)
+# nasustim.com [![Deployment Status](https://img.shields.io/endpoint?url=https://nasustim.com/api/vercel/deployment-status)](https://nasustim.com)
 
 My Portfolio Site.
 

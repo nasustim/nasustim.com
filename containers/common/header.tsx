@@ -50,7 +50,8 @@ const Header = () => {
           <span
             onClick={(_) => {
               scroll('top')
-            }}>
+            }}
+          >
             nasustim.com
           </span>
         ) : (

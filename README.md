@@ -1,4 +1,4 @@
-# nasustim.com [![Deployment Status](https://img.shields.io/endpoint?url=https://nasustim.com/api/vercel/deployment-status)](https://nasustim.com)
+# nasustim.com [![Netlify Status](https://api.netlify.com/api/v1/badges/2d9672f0-3c8e-4da1-a26c-a7288f5787ae/deploy-status)](https://app.netlify.com/sites/nasustim/deploys)
 
 My Portfolio Site.
 

@@ -8,7 +8,7 @@ module.exports = (phase, { defaultConfig }) => {
     env: {
       GA_TRACKING_ID_FOR_BROWSER: process.env.GA_TRACK_ID,
       URL: process.env.URL,
-      SITE_TITLE: 'nasustim.com', // develop, productionで共通なのでここに書く
+      SITE_TITLE: 'nasustim.com',
     },
     experimental: {
       optimizeFonts: true,

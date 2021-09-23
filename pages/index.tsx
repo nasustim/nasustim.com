@@ -10,7 +10,6 @@ import Footer from 'components/common/footer'
 import styles from './styles/index.module.scss'
 
 type Props = {
-  body: string
   updatedDate: string
   description: string
   articleList: ArticleList
@@ -20,8 +19,8 @@ type Props = {
 export default function IndexPage(props: Props) {
   const metaProps: MetaProps = {
     title: 'top',
-    description: props.description,
-    updatedDate: props.updatedDate,
+    description: 'Mitsuhiro Hibino. a creator, software engineer',
+    updatedDate: '2020-05-07T09:00:00.000Z',
   }
   const profileProps: ProfileProps = {
     imgUri: `/about-me/me.jpg`,
@@ -31,7 +30,7 @@ export default function IndexPage(props: Props) {
     <div className={styles.container}>
       <Meta {...metaProps} />
       <Page id='top' {...profileProps} />
-      <BioPage id='bio' body={props.body} />
+      <BioPage id='bio' />
       <WorksPage id='works' articleItems={props.articleItems} />
       <Footer />
     </div>
@@ -41,9 +40,10 @@ export default function IndexPage(props: Props) {
 //export const config = { amp: true }
 
 export const getStaticProps = async () => {
-  const topPageData = await getTopPageContent()
+  const topPageContent = await getTopPageContent()
   const articleItems = await getArticleList()
+
   return {
-    props: Object.assign({}, topPageData, { articleItems }),
+    props: Object.assign({}, Object.assign({}, topPageContent), { articleItems }),
   }
 }

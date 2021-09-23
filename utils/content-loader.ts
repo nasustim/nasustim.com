@@ -8,17 +8,6 @@ const defaultMarkdownFileName = `index.mdx`
 
 // -------------------------------
 
-const profileFilePath = `content/whoami/`
-
-export async function loadProfile(): Promise<FrontMatter> {
-  const myProfilePath = resolve(process.cwd(), profileFilePath, defaultMarkdownFileName)
-  return readFile(myProfilePath, { encoding: 'utf-8' })
-    .then((payload) => frontmatter(payload) as FrontMatter)
-    .catch(onError)
-}
-
-// -------------------------------
-
 const articleFilePath = `content/articles/`
 
 export async function loadArticle(slug: string): Promise<FrontMatter> {

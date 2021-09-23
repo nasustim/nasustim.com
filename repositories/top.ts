@@ -1,14 +1,10 @@
-import { loadProfile, loadArticleList, ArticleListItem } from '../utils/content-loader'
+import { loadArticleList, ArticleListItem } from '../utils/content-loader'
 
 export default async function getTopPageContent() {
-  const profileLoader = loadProfile()
   const articleListLoader = loadArticleList()
 
-  return Promise.all([profileLoader, articleListLoader]).then(([{ body, attributes }, articleList]) => {
+  return Promise.all([articleListLoader]).then(([articleList]) => {
     return {
-      body,
-      updatedDate: attributes.date,
-      description: attributes.description,
       articleList,
     }
   })

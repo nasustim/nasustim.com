@@ -6,6 +6,7 @@ import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 
 import styles from './styles/slug.module.scss'
+import htmlStyles from '../../containers/index/styles/bio.module.scss'
 
 type Props = {
   attributes: Attributes
@@ -22,7 +23,9 @@ const WorkPage: React.FC<Props> = ({ body, attributes }) => {
   return (
     <div className={styles.container}>
       <Meta {...metaProps} />
-      <MDXRemote {...body} />
+      <div className={htmlStyles.document}>
+        <MDXRemote {...body} />
+      </div>
       <Footer />
     </div>
   )

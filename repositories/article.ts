@@ -9,5 +9,6 @@ export async function getArticleUris(): Promise<ArticleUriList> {
 }
 
 export type ArticleContent = FrontMatter
+export type Attributes = FrontMatterAttributes
 
 export type ArticleUriList = Array<string>

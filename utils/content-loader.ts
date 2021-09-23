@@ -4,7 +4,7 @@ import frontmatter from 'front-matter'
 
 import { onError } from './error'
 
-const defaultMarkdownFileName = `index.md`
+const defaultMarkdownFileName = `index.mdx`
 
 // -------------------------------
 

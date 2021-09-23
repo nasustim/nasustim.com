@@ -1,23 +1,28 @@
-import getArticleContent, { ArticleContent, getArticleUris } from 'repositories/article'
+import getArticleContent, { Attributes, getArticleUris } from 'repositories/article'
 import Meta, { Props as MetaProps } from 'components/common/meta'
-import HTMLify from 'components/common/htmlify'
 import Footer from 'components/common/footer'
+
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 
 import styles from './styles/slug.module.scss'
 
-type Props = { article: ArticleContent }
+type Props = {
+  attributes: Attributes
+  body: MDXRemoteSerializeResult
+}
 
-const WorkPage: React.FC<Props> = ({ article }) => {
+const WorkPage: React.FC<Props> = ({ body, attributes }) => {
   const metaProps: MetaProps = {
-    title: article.attributes.title,
-    description: article.attributes.description,
-    updatedDate: article.attributes.date,
+    title: attributes.title,
+    description: attributes.description,
+    updatedDate: attributes.date,
   }
 
   return (
     <div className={styles.container}>
       <Meta {...metaProps} />
-      <HTMLify markdown={article.body} />
+      <MDXRemote {...body} />
       <Footer />
     </div>
   )
@@ -30,9 +35,12 @@ export default WorkPage
 type StaticProps = { params: { slug: string } }
 export const getStaticProps = async ({ params }: StaticProps) => {
   const articleContent = await getArticleContent(params.slug)
+  const body = await serialize(articleContent.body)
+
   return {
     props: {
-      article: articleContent,
+      attributes: articleContent.attributes,
+      body: body,
     },
   }
 }

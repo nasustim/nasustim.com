@@ -1,4 +1,4 @@
-name: nasustim.com build
+name: nasustim.com frontend
 
 on: [push]
 

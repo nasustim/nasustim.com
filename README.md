@@ -4,4 +4,4 @@ My Portfolio Site.
 
 ## Author
 
-- [Mitsuhiro HIBINO](https://nasustim.com)
+- [nasustim](https://nasustim.com)

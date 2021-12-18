@@ -1,9 +1,15 @@
 import styles from './styles/footer.module.scss'
 
-const Footer = () => (
-  <footer className={styles.container}>
-    <small className={styles.text}>© 2010 - 2021, Mitsuhiro Hibino</small>
-  </footer>
-)
+const Footer = () => {
+  const startYear = 2010
+  const currentYear = new Date().getFullYear()
+  const copyrightText = `© ${startYear} - ${currentYear}, nasustim`
+
+  return (
+    <footer className={styles.container}>
+      <small className={styles.text}>{copyrightText}</small>
+    </footer>
+  )
+}
 
 export default Footer

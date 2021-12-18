@@ -1,7 +1,7 @@
 ---
 title: 
 date: "2020-05-07T09:00:00.000Z"
-description: "Mitsuhiro Hibino. a creator, software engineer"
+description: "nasustim or \"Mitsuhiro Hibino\". a creator, software engineer"
 pageid: about-me
 category: profile
 ---

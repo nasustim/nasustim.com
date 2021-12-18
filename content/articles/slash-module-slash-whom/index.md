@@ -1,7 +1,7 @@
 ---
 title: "/module/Whom"
 date: "2019-09-27"
-description: "《/module/Whom》 - Mitsuhiro Hibino プログラミング言語の一つであるJavaScriptを用いて自分自身の考えを記述し、また映像や声といったメディアの特性を用いてJavaScriptやそれに似た言語を読むことのできる人のみではなく、より多くの鑑賞者にソースコードというメディアを通じて自身の考えを伝えることを試みた作品です。"
+description: "《/module/Whom》 - nasustim プログラミング言語の一つであるJavaScriptを用いて自分自身の考えを記述し、また映像や声といったメディアの特性を用いてJavaScriptやそれに似た言語を読むことのできる人のみではなく、より多くの鑑賞者にソースコードというメディアを通じて自身の考えを伝えることを試みた作品です。"
 category: works
 pageid: slash-module-slash-whom
 headimg: ./module-whom-exam-iamas.jpg

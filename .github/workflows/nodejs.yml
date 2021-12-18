@@ -7,23 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Get npm cache directory path  # reference: https://github.com/actions/cache/blob/main/examples.md#using-multiple-systems-and-npm-config
-      id: npm-cache
-      uses: actions/cache@v2
-      run: |
-        echo "::set-output name=dir::$(npm config get cache)"
-      with:
-        path: ${{ steps.npm-cache.outputs.dir }}
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+
     - name: Setup Node.js
-      uses: actions/setup-node@v2-beta
+      uses: actions/setup-node@v2
       with:
         node-version-file: ./.node-version
+        cache: 'npm'
+        cache-dependency-path: ./package-lock.json
+
     - name: Install dependencies
       run: npm ci
+
     - name: Production build
       run: npm run deploy
+
     - name: Full Test
       run: npm run test

@@ -3,7 +3,7 @@ import styles from './styles/footer.module.scss'
 const Footer = () => {
   const startYear = 2010
   const currentYear = new Date().getFullYear()
-  const copyrightText = `© ${startYear} - ${currentYear}, Mitsuhiro Hibino`
+  const copyrightText = `© ${startYear} - ${currentYear}, nasustim`
 
   return (
     <footer className={styles.container}>

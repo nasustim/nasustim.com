@@ -4,7 +4,7 @@ import styles from './styles/profile-contents.module.scss'
 const ProfileContents = () => (
   <div className={styles.container}>
     <div className={styles.text}>
-      <h1>Mitsuhiro Hibino</h1>
+      <h1>nasustim</h1>
       <SocialList />
     </div>
   </div>

@@ -1,7 +1,7 @@
 ---
 title: ＊ as Code (Aster as Code)
 date: "2018-11-28"
-description: "《＊ as Code》 - Mitsuhiro Hibino"
+description: "《＊ as Code》 - nasustim"
 pageid: aster-as-code
 category: works
 headimg: ./aster-as-code-iamas-01.jpg

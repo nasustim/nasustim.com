@@ -11,7 +11,8 @@ export default class _App extends App {
     const { Component, pageProps } = this.props
 
     const measurementId = process.env.GA_MEASUREMENT_ID ?? ''
-    const canonicalUrl = (process.env.DOMAIN ?? '') + pageProps.canonicalPath
+    const canonicalUrl = (process.env.DOMAIN ?? '') + pageProps.seo.canonicalPath
+    const isNoindex = pageProps.seo.isNoindex
 
     return (
       <React.Fragment>
@@ -21,6 +22,7 @@ export default class _App extends App {
           <SEO
             {...{
               canonicalUrl,
+              isNoindex,
             }}
           />
         </Head>

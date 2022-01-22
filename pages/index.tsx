@@ -10,7 +10,10 @@ export const getStaticProps = async () => {
   return {
     props: {
       title: 'nasustim.com',
-      canonicalPath: '/',
+      seo: {
+        canonicalPath: '/',
+        isNoindex: false,
+      },
     },
   }
 }

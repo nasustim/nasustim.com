@@ -10,7 +10,10 @@ export const getStaticProps = async () => {
   return {
     props: {
       title: '404 Not Found',
-      canonicalPath: '/404',
+      seo: {
+        canonicalPath: '/404',
+        isNoindex: true,
+      },
     },
   }
 }

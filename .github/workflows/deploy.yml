@@ -24,8 +24,8 @@ jobs:
         run: npm run build
         env:
           CI: true
-#          URL_PREFIX: nasustim
           GITHUB_PAGES: true
+          GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
 
       - name: Export
         run: |

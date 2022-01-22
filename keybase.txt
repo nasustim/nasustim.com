@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/nasustim
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://nasustim.com
+  * I am nasustim (https://keybase.io/nasustim) on keybase.
+  * I have a public key ASCl83ZQ6svpxZApYnTv4l4sweq8dO4D_qReRaPy6zlbDwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120a5f37650eacbe9c590296274efe25e2cc1eabc74ee03fea45e45a3f2eb395b0f0a",
+      "host": "keybase.io",
+      "kid": "0120a5f37650eacbe9c590296274efe25e2cc1eabc74ee03fea45e45a3f2eb395b0f0a",
+      "uid": "8e0b9a399c2c8ebe1639ce9afdfcd519",
+      "username": "nasustim"
+    },
+    "merkle_root": {
+      "ctime": 1576735241,
+      "hash": "0a58b7b0c9b9623a17ac8df2b7c5cd9c53e4e116babfe8957870ff9ebb2ef9be0432460a7da848fca1db62ca0a031e5a6ccc0ce6562e8385fbe64514dbd7cfa8",
+      "hash_meta": "0d6936b5d803240648bc4377fe2e1f5fe64081eb73219d30fc35d64beb9d17f7",
+      "seqno": 13792881
+    },
+    "service": {
+      "entropy": "p12QLNg8M0YKmx+UWHSUkw/O",
+      "hostname": "nasustim.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.1.1"
+  },
+  "ctime": 1576735246,
+  "expire_in": 504576000,
+  "prev": "34861e20f1d8083f49303e13fe084bc55749dc21f144d37266ea00ee20aeab85",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgpfN2UOrL6cWQKWJ07+JeLMHqvHTuA/6kXkWj8us5Ww8Kp3BheWxvYWTESpcCCMQgNIYeIPHYCD9JMD4T/ghLxVdJ3CHxRNNyZuoA7iCuq4XEIMqbF/Q1iTKSDjSCJzrFx+urS4oAOaxHfcRHyWQpyYsGAgHCo3NpZ8RAyie+Xw0axvjEcQJt87UzpfiU17TF/n/gNEGWQFUXmdw0mjbdZXwetlN96osfGH0VgJ899mS5v8c6kiproaYjBahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIK70c1E6BXhU46iwhZW1leUXNanobjZhYtjJjdG1zhrmo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/nasustim
+
+==================================================================

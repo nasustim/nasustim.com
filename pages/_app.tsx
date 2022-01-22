@@ -1,3 +1,5 @@
+import '../styles/global.scss'
+
 import React from 'react'
 
 import App from 'next/app'
@@ -5,6 +7,8 @@ import Head from 'next/head'
 
 import GA from '../components/atoms/ga'
 import SEO from '../components/atoms/seo'
+
+import Layout from '../components/layout'
 
 export default class _App extends App {
   render() {
@@ -26,7 +30,9 @@ export default class _App extends App {
             }}
           />
         </Head>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </React.Fragment>
     )
   }

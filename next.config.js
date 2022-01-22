@@ -2,9 +2,9 @@ const path = require('path')
 
 module.exports = (phase, { defaultConfig }) => {
   return {
-    // sassOptions: {
-    //   includePaths: [path.join(__dirname, 'styles')],
-    // },
+    sassOptions: {
+      includePaths: [path.join(__dirname, 'styles')],
+    },
     env: {
       DOMAIN: 'https://nasustim.com',
       SITE_TITLE: 'nasustim.com',

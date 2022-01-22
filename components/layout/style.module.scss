@@ -1,0 +1,13 @@
+@use '../../styles/variables.scss' as *;
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+
+  width: $content-width-pc;
+  height: 100%;
+
+  @media (max-width: 799px) {
+    width: 100%;
+  }
+}

@@ -3,8 +3,8 @@ import React from 'react'
 import App from 'next/app'
 import Head from 'next/head'
 
-import GA from '../components/atoms/GA'
-import SEO from '../components/atoms/SEO'
+import GA from '../components/atoms/ga'
+import SEO from '../components/atoms/seo'
 
 export default class _App extends App {
   render() {

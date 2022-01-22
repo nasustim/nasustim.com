@@ -6,6 +6,7 @@ module.exports = (phase, { defaultConfig }) => {
     //   includePaths: [path.join(__dirname, 'styles')],
     // },
     env: {
+      URL: 'https://nasustim.com',
       SITE_TITLE: 'nasustim.com',
       GA_MEASUREMENT_ID: process.env.GA_MEASUREMENT_ID,
     },

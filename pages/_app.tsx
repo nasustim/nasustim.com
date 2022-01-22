@@ -11,6 +11,7 @@ export default class _App extends App {
     const { Component, pageProps } = this.props
 
     const measurementId = process.env.GA_MEASUREMENT_ID ?? ''
+    const canonicalUrl = (process.env.DOMAIN ?? '') + pageProps.canonicalPath
 
     return (
       <React.Fragment>
@@ -19,7 +20,7 @@ export default class _App extends App {
           <GA measurementId={measurementId} />
           <SEO
             {...{
-              canonicalUrl: process.env.URL ?? '',
+              canonicalUrl,
             }}
           />
         </Head>

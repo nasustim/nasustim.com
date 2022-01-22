@@ -1,7 +1,3 @@
-# nasustim.com ![Vercel](https://vercelbadge.vercel.app/api/nasustim/nasustim.com)
+# nasustim.com ![deploy](https://github.com/nasustim/nasustim.com/actions/workflows/deploy.yml/badge.svg?branch=main)
 
-My Portfolio Site.
-
-## Author
-
-- [nasustim](https://nasustim.com)
+My Page.

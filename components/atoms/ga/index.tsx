@@ -19,10 +19,11 @@ const Component: React.VFC<Props> = ({ measurementId }) => {
 
 export default Component
 
-const _loadScript = (measurementId: string) => `
+const _loadScript = (measurementId: string) =>
+  `
 window.dataLayer = window.dataLayer || [];
 function gtag(){ dataLayer.push(arguments); }
 gtag('js', new Date());
 
 gtag('config', '${measurementId}');
-`
+`.replaceAll(/\n|\r/g, '')

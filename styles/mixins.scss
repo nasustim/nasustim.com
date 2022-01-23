@@ -1,0 +1,13 @@
+@use './variables.scss' as var;
+
+@mixin media-pc {
+  @media screen and (min-width: var.$content-width-pc) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media screen and (max-width: calc(var.$content-width-pc - 1px)) {
+    @content;
+  }
+}

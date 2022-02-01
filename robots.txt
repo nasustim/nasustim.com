@@ -1,2 +1,10 @@
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: https://nasustim.com
+
+# Sitemaps
+Sitemap: https://nasustim.com/sitemap.xml
+Sitemap: https://nasustim.com/sitemap-0.xml

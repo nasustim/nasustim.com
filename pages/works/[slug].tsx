@@ -18,7 +18,7 @@ const Page: React.VFC<Props> = (props) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const pathsList = [
-    'slash-modul-slash-whom',
+    'slash-module-slash-whom',
     'shokei-no-kagami',
     'aster-as-code',
     'dj',

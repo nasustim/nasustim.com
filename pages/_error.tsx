@@ -3,13 +3,12 @@ import React from 'react'
 
 type Props = SuperPageProps
 
-const Page: React.VFC<Props> = (props) => <></>
+const Page: React.VFC<Props> = (props) => <p>error</p>
 
 export const getStaticProps = async () => {
   return {
     props: {
       seo: {
-        canonicalPath: '/500',
         isNoindex: true,
       },
     },

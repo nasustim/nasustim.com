@@ -6,7 +6,6 @@ all: setup
 
 setup:
 	npm install
-	npm run prepare
 
 clean:
 	rm -fr "${PWD}/package-lock.json"

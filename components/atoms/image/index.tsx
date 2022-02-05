@@ -16,7 +16,7 @@ const Component: React.VFC<Props> = ({ src, size }) => {
   )
 }
 
-const Container: React.FC<{}> = ({ children }) => <span>{children}</span>
+const Container: React.FC = ({ children }) => <span>{children}</span>
 const imageLoader: ImageLoader = (opt) => {
   const src = opt.src.match('^/*') ? opt.src : `/${opt.src}`
   return `${process.env.DOMAIN}${src}`

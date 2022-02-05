@@ -10,7 +10,7 @@ const Page: React.VFC<Props> = (props) => {
       <h1 className='heading'>Mitsuhiro Hibino</h1>
       <Image src={'/images/me.jpg'} size={{ width: 100, height: 100 }} />
       <ul className='text'>
-        <li>place: Tokyo</li>
+        <li>location: Tokyo</li>
         <li>job: software engineer</li>
         <ul>
           <li>specification: web server-side</li>

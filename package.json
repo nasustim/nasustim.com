@@ -37,7 +37,7 @@
     "test": "echo \"please write test and execute\" | exit 0",
     "start": "next dev",
     "build": "next build",
-    "sitemap": "next-sitemap --config sitemap.config.js",
+    "sitemap": "next-sitemap --config sitemap/config.js",
     "serve": "next start",
     "pre-commit": "npm run format",
     "pre-push": "npm run test",

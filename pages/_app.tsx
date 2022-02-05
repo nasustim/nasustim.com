@@ -22,7 +22,6 @@ export default class _App extends App {
     return (
       <React.Fragment>
         <Head>
-          <meta name='viewport' content='width=device-width,initial-scale=1' />
           <GA measurementId={measurementId} />
           <SEO
             {...{

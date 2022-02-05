@@ -1,0 +1,7 @@
+@use '../styles/mixins.scss' as mixins;
+
+.page_inner {
+  @include mixins.media-mobile {
+    padding: 0 8px 0 8px;
+  }
+}

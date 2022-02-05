@@ -1,7 +1,29 @@
 @use '../styles/mixins.scss' as mixins;
 
 .page_inner {
+  &:not(:first-child) {
+    margin-top: 36px;
+
+    @include mixins.media-mobile {
+      margin-top: 20px;
+    }
+  }
+
   @include mixins.media-mobile {
     padding: 0 8px 0 8px;
+  }
+}
+
+.external_profile_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  align-content: center;
+
+  & > * {
+    margin-right: 32px;
+    margin-top: 20px;
   }
 }

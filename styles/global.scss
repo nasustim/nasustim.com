@@ -12,5 +12,18 @@ html, body {
 
 /* nextjs ui container */
 #__next {
-  @extend .full
+  @extend .full;
+}
+
+/* text roles */
+.heading {
+  margin: 12px 0 0 0;
+  line-height: 2;
+  font-family: 'Mukta', sans-serif;
+}
+
+.text {
+  margin: 6px 0 0 0;
+  line-height: 1.6;
+  font-family: 'Spectral', serif;
 }

@@ -13,7 +13,7 @@ const Page: React.VFC<Props> = (props) => {
     loaded(true)
   }, [])
 
-  return !loading ? <div></div> : <div>工事中</div>
+  return !loading ? <div></div> : <div className='text'>🚧 Under Construction 🚧</div>
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {

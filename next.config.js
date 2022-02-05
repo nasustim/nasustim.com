@@ -5,6 +5,9 @@ module.exports = (phase, { defaultConfig }) => {
     sassOptions: {
       includePaths: [path.join(__dirname, 'styles')],
     },
+    images: {
+      loader: 'custom',
+    },
     env: {
       DOMAIN: 'https://nasustim.com',
       SITE_TITLE: 'nasustim.com',

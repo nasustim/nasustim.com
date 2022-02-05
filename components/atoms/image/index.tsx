@@ -11,7 +11,7 @@ type Props = {
 const Component: React.VFC<Props> = ({ src, size }) => {
   return (
     <Container>
-      <Image loader={imageLoader} src={src} width={size.width} height={size.height} />
+      <Image loader={imageLoader} unoptimized={true} src={src} width={size.width} height={size.height} />
     </Container>
   )
 }

@@ -8,12 +8,7 @@ export default class CustomDocument extends Document {
   render() {
     return (
       <Html lang='ja'>
-        <Head>
-          <link
-            href='https://fonts.googleapis.com/css2?family=Mukta:wght@600&family=Spectral:ital,wght@0,300;1,300&display=optional'
-            rel='stylesheet'
-          />
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />

@@ -25,7 +25,7 @@ export default class _App extends App {
           <meta name='viewport' content='width=device-width,initial-scale=1' />
 
           <link
-            href='https://fonts.googleapis.com/css2?family=Mukta:wght@600&family=Spectral:ital,wght@0,300;1,300&display=optional'
+            href='https://fonts.googleapis.com/css2?family=Mukta:wght@600&family=Spectral:ital,wght@0,300;1,300&display=swap'
             rel='stylesheet'
           />
 

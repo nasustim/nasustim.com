@@ -1,15 +1,21 @@
 import React from 'react'
 
-type Props = {
-  title: string
-} & SuperPageProps
+import Image from '../components/atoms/image'
 
-const Page: React.VFC<Props> = (props) => <div>{props.title}</div>
+type Props = SuperPageProps
+
+const Page: React.VFC<Props> = (props) => {
+  return (
+    <React.Fragment>
+      <h1>Mitsuhiro Hibino</h1>
+      <Image src={'/images/me.jpg'} size={{ width: 100, height: 100 }} />
+    </React.Fragment>
+  )
+}
 
 export const getStaticProps = async () => {
   return {
     props: {
-      title: 'nasustim.com',
       seo: {
         canonicalPath: '/',
         isNoindex: false,

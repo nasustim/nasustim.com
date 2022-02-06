@@ -72,7 +72,8 @@
     "incremental": true
   },
   "include": [
-    "next-env.d.ts",
+    "types/next-env.d.ts",
+    "types/project.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { SocialIcon } from 'react-social-icons'
 
-import styles from './style.module.scss'
+import styles from '../styles/layouts/index.module.scss'
 
 const socialServiceUrls = [
   'https://github.com/nasustim',
@@ -17,8 +17,8 @@ const Layout: React.FC = ({ children }) => {
       <main className={styles.main}>{children}</main>
       <footer>
         <div className={styles.external_profile_list}>
-          {socialServiceUrls.map((v) => (
-            <SocialIcon url={v} fgColor='transparent' />
+          {socialServiceUrls.map((v, i) => (
+            <SocialIcon url={v} fgColor='transparent' key={`social-icon--${i}`} />
           ))}
         </div>
         <div style={{ width: '100%', margin: '20px auto 10px', textAlign: 'center' }}>

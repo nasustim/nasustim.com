@@ -6,10 +6,10 @@ import React from 'react'
 import App from 'next/app'
 import Head from 'next/head'
 
-import GA from '../components/atoms/ga'
-import SEO from '../components/atoms/seo'
+import GA from '../atoms/ga'
+import SEO from '../atoms/seo'
 
-import Layout from '../components/layout'
+import Layout from '../layouts'
 
 export default class _App extends App {
   render() {

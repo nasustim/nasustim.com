@@ -1,0 +1,24 @@
+@use '../responsive.scss' as r;
+@use '../texts.scss' as t;
+
+.page_inner {
+  &:not(:first-child) {
+    margin-top: 36px;
+
+    @include r.media-mobile {
+      margin-top: 20px;
+    }
+  }
+
+  @include r.media-mobile {
+    padding: 0 8px 0 8px;
+  }
+}
+
+.title {
+  @include t.heading;
+}
+
+.profile {
+  @include t.article;
+}

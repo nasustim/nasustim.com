@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = (phase, { defaultConfig }) => {
   return {
     sassOptions: {
-      includePaths: [path.join(__dirname, 'styles')],
+      includePaths: [path.join(__dirname, 'src/styles')],
     },
     // images: {
     //   loader: 'custom',

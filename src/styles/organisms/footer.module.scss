@@ -6,12 +6,12 @@
   flex-direction: row;
   flex-wrap: wrap;
 
+  justify-content: space-around;
+
   padding: 0 1em;
   @include r.media-pc {
     padding: 0 10em;
   }
-
-  justify-content: space-around;
 
   & > * {
     margin-top: 20px;

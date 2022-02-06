@@ -1,10 +1,10 @@
 /* text roles */
 @mixin heading {
-  line-height: 2;
   font-family: 'Mukta', sans-serif;
+  line-height: 2;
 }
 
 @mixin article {
-  line-height: 1.6;
   font-family: 'Spectral', serif;
+  line-height: 1.6;
 }

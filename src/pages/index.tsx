@@ -13,11 +13,11 @@ const Page: React.VFC<Props> = (props) => {
       </div>
       <div className={style.page_inner}>
         <div className={style.profile}>
-          <div className={'intro-image'}>
+          <div className={style.profile_image}>
             <TopImage src={'/images/me.jpg'} />
           </div>
-          <div className='intro-text'>
-            <p className='text'>Under Construction</p>
+          <div className={style.profile_text}>
+            <p>Under Construction</p>
           </div>
         </div>
       </div>

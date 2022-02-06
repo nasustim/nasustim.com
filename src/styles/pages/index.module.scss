@@ -20,5 +20,23 @@
 }
 
 .profile {
+  display: flex;
+  flex-direction: row;
+  @include r.media-mobile {
+    flex-direction: column;
+  }
+}
+
+.profile_image {
+  margin: auto 10px;
+  @include r.media-mobile {
+    margin: 0;
+  }
+}
+.profile_text {
   @include t.article;
+  margin: auto 10px;
+  @include r.media-mobile {
+    margin: 0;
+  }
 }

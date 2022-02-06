@@ -3,6 +3,9 @@ import React from 'react'
 import TopImage from '../atoms/top-image'
 import style from '../styles/pages/index.module.scss'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBuilding, faUser } from '@fortawesome/free-solid-svg-icons'
+
 type Props = SuperPageProps
 
 const Page: React.VFC<Props> = (props) => {
@@ -17,7 +20,12 @@ const Page: React.VFC<Props> = (props) => {
             <TopImage src={'/images/me.jpg'} />
           </div>
           <div className={style.profile_text}>
-            <p>Under Construction</p>
+            <p>
+              <FontAwesomeIcon icon={faUser} /> Software Engineer, Creator
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faBuilding} /> mixi inc., freelancer
+            </p>
           </div>
         </div>
       </div>

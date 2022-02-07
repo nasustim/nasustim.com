@@ -1,7 +1,12 @@
-html, body, #__next /* nextjs ui container */ {
+@use './colors.scss' as c;
 
+html, body, #__next /* nextjs ui container */ {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: c.$white;
 }

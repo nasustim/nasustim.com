@@ -1,10 +1,18 @@
+@use './colors.scss' as c;
+
+%color { color: c.$black; }
+
 /* text roles */
 @mixin heading {
+  @extend %color;
+
   font-family: 'Mukta', sans-serif;
   line-height: 2;
 }
 
 @mixin article {
+  @extend %color;
+
   font-family: 'Spectral', serif;
   line-height: 1.6;
 }

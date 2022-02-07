@@ -10,7 +10,7 @@
 
   @include r.media-mobile {
     width: 100%;
-    height: 150px;
+    height: calc(100vw / 8 * 3); // 縦横比 3/8に寄せたい
     border-radius: 15px 7px;
   }
 }

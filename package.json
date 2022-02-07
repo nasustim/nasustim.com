@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "husky": "^7.0.4",
+    "lint-staged": "^12.3.3",
     "npm-check-updates": "^12.2.1",
     "prettier": "^2.5.1",
     "stylelint": "^14.3.0",
@@ -50,5 +51,9 @@
     "update": "ncu",
     "upgrade": "ncu -u && npm install",
     "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": ["npm run format"],
+    "*.{css,scss}": ["npm run stylelint"]
   }
 }

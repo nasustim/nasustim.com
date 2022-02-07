@@ -24,7 +24,7 @@ const Page: React.VFC<Props> = (props) => {
               <FontAwesomeIcon icon={faUser} /> Software Engineer, Creator
             </p>
             <p>
-              <FontAwesomeIcon icon={faBuilding} /> mixi inc., freelancer
+              <FontAwesomeIcon icon={faBuilding} /> web service company, freelancer
             </p>
           </div>
         </div>

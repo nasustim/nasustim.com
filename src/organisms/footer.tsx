@@ -1,20 +1,24 @@
-import { SocialIcon } from 'react-social-icons'
-
 import styles from '../styles/organisms/footer.module.scss'
 
-const socialServiceUrls = [
-  'https://github.com/nasustim',
-  'https://facebook.com/mitsuhibino',
-  'https://instagram.com/nasustim',
-  'https://keybase.io/nasustim',
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faFacebook, faInstagramSquare, faKeybase, IconDefinition } from '@fortawesome/free-brands-svg-icons'
+
+type SNSs = Array<[string, IconDefinition]>
+const snss: SNSs = [
+  ['https://github.com/nasustim', faGithub],
+  ['https://facebook.com/mitsuhibino', faFacebook],
+  ['https://instagram.com/nasustim', faInstagramSquare],
+  ['https://keybase.io/nasustim', faKeybase],
 ]
 
 const Component: React.VFC = () => {
   return (
     <footer>
       <div className={styles.sns_link_list}>
-        {socialServiceUrls.map((v, i) => (
-          <SocialIcon url={v} fgColor='transparent' key={`social-icon--${i}`} />
+        {snss.map(([url, icon], i) => (
+          <a href={url} key={`sns-icon-${i}`}>
+            <FontAwesomeIcon icon={icon} />
+          </a>
         ))}
       </div>
       <div className={styles.credit}>

@@ -1,5 +1,6 @@
 @use '../responsive.scss' as r;
 @use '../texts.scss' as t;
+@use '../colors.scss' as c;
 
 .sns_link_list {
   display: flex;
@@ -13,8 +14,11 @@
     padding: 0 10em;
   }
 
-  & > * {
+  & a {
     margin-top: 20px;
+    color: c.$black;
+    font-size: 30px;
+    text-decoration: none;
   }
 }
 

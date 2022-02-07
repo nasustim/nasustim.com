@@ -7,7 +7,7 @@ import App from 'next/app'
 import Head from 'next/head'
 
 import GA from '../atoms/ga'
-import SEO from '../atoms/seo'
+import Meta from '../atoms/meta'
 
 import Layout from '../layouts'
 
@@ -16,8 +16,9 @@ export default class _App extends App {
     const { Component, pageProps } = this.props
 
     const measurementId = process.env.GA_MEASUREMENT_ID ?? ''
-    const canonicalUrl = (process.env.DOMAIN ?? '') + pageProps.seo.canonicalPath
-    const isNoindex = pageProps.seo.isNoindex
+    const canonicalUrl = (process.env.DOMAIN ?? '') + pageProps.meta.canonicalPath
+    const isNoindex = pageProps.meta.isNoindex
+    const title = pageProps.meta.title ? `${pageProps.meta.title} - nasustim.com` : 'nasustim.com'
 
     return (
       <React.Fragment>
@@ -30,8 +31,9 @@ export default class _App extends App {
           />
 
           <GA measurementId={measurementId} />
-          <SEO
+          <Meta
             {...{
+              title,
               canonicalUrl,
               isNoindex,
             }}

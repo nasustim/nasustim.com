@@ -21,7 +21,7 @@ const Page: React.VFC<Props> = () => {
 export const getStaticProps = async () => {
   return {
     props: {
-      seo: {
+      meta: {
         canonicalPath: '/',
         isNoindex: false,
       },

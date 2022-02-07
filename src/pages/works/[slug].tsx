@@ -45,9 +45,10 @@ export const getStaticProps: GetStaticProps<Props, StaticParams> = async (contex
   return {
     props: {
       slug,
-      seo: {
+      meta: {
         canonicalPath: `/works/${slug}`,
         isNoindex: true,
+        title: slug,
       },
     },
   }

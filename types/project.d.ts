@@ -1,8 +1,9 @@
-interface SeoProps {
+interface MetaDataProps {
   canonicalPath: string
   isNoindex: boolean
+  title?: string
 }
 
 interface SuperPageProps {
-  seo: SeoProps
+  meta: MetaDataProps
 }

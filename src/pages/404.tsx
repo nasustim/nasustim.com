@@ -4,15 +4,15 @@ type Props = {
   title: string
 } & SuperPageProps
 
-const Page: React.VFC<Props> = (props) => <div>{props.title}</div>
+const Page: React.VFC<Props> = (props) => <div>404</div>
 
 export const getStaticProps = async () => {
   return {
     props: {
-      title: '404 Not Found',
-      seo: {
+      meta: {
         canonicalPath: '/404',
         isNoindex: true,
+        title: '404 Not Found',
       },
     },
   }

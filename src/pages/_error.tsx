@@ -8,7 +8,7 @@ const Page: React.VFC<Props> = (props) => <p>error</p>
 export const getStaticProps = async () => {
   return {
     props: {
-      seo: {
+      meta: {
         isNoindex: true,
       },
     },

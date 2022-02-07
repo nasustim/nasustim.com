@@ -2,6 +2,8 @@
 @use '../texts.scss' as t;
 @use '../colors.scss' as c;
 
+// sns list
+
 .sns_link_list {
   display: flex;
   flex-direction: row;
@@ -13,22 +15,25 @@
   @include r.media-pc {
     padding: 0 10em;
   }
-
-  & >a {
-    margin-top: 20px;
-    text-decoration: none;
-    & > svg {
-      width: 30px;
-      height: 30px;
-      color: c.$black;
-    }
-  }
 }
+
+.sns_link_list__link {
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.sns_link_list__icon {
+  width: 30px;
+  height: 30px;
+  color: c.$black;
+}
+
+// credit
 
 .credit {
   @include t.article;
 
   width: 100%;
-   margin: 20px auto 10px;
-    text-align: center;
+  margin: 20px auto 10px;
+  text-align: center;
 }

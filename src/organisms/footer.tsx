@@ -16,8 +16,8 @@ const Component: React.VFC = () => {
     <footer>
       <div className={styles.sns_link_list}>
         {snss.map(([url, icon], i) => (
-          <a href={url} key={`sns-icon-${i}`}>
-            <FontAwesomeIcon icon={icon} />
+          <a href={url} key={`sns-icon-${i}`} className={styles.sns_link_list__link}>
+            <FontAwesomeIcon icon={icon} className={styles.sns_link_list__icon} />
           </a>
         ))}
       </div>

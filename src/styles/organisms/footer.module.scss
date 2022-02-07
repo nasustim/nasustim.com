@@ -14,11 +14,13 @@
     padding: 0 10em;
   }
 
-  & a {
+  & >a {
     margin-top: 20px;
-    color: c.$black;
-    font-size: 30px;
     text-decoration: none;
+    & > svg {
+      height: 30px;
+      color: c.$black;
+    }
   }
 }
 

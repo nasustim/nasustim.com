@@ -15,11 +15,13 @@
   }
 }
 
-.title {
+/* Introduction */
+
+.introduction__title {
   @include t.heading;
 }
 
-.profile {
+.introduction__profile {
   display: flex;
   flex-direction: row;
   @include r.media-mobile {
@@ -27,15 +29,14 @@
   }
 }
 
-.profile_image {
+.introduction__profile_image {
   margin: auto 10px;
   @include r.media-mobile {
     margin: 0;
   }
 }
 
-.profile_text {
-
+.introduction__profile_text {
   @include t.article;
   margin: 0 10px;
   @include r.media-mobile {

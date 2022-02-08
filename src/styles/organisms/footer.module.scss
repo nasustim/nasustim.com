@@ -23,7 +23,7 @@
 }
 
 .sns_link_list__icon {
-  width: 30px;
+  width: 30px !important; // fort-awesomeのスタイルを打ち消すため
   height: 30px;
   color: c.$black;
 }

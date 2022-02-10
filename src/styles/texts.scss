@@ -16,3 +16,12 @@
   font-family: 'Spectral', serif;
   line-height: 1.6;
 }
+
+@mixin link {
+  @include article;
+
+  transition: color .4s ease-out;
+  &:hover {
+    color: c.$dark-primary;
+  }
+}

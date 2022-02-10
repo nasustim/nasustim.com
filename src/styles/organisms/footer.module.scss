@@ -1,6 +1,5 @@
 @use '../responsive.scss' as r;
 @use '../texts.scss' as t;
-@use '../colors.scss' as c;
 
 // sns list
 
@@ -20,12 +19,13 @@
 .sns_link_list__link {
   margin-top: 20px;
   text-decoration: none;
+
+  @include t.link;
 }
 
 .sns_link_list__icon {
   width: 30px !important; // fort-awesomeのスタイルを打ち消すため
   height: 30px;
-  color: c.$black;
 }
 
 // credit

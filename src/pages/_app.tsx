@@ -23,6 +23,7 @@ export default class _App extends App {
     return (
       <React.Fragment>
         <Head>
+          <title>{title}</title>
           <meta name='viewport' content='width=device-width,initial-scale=1' />
 
           <link
@@ -33,7 +34,6 @@ export default class _App extends App {
           <GA measurementId={measurementId} />
           <Meta
             {...{
-              title,
               canonicalUrl,
               isNoindex,
             }}

@@ -6,14 +6,14 @@
 @mixin heading {
   @extend %color;
 
-  font-family: 'Mukta', sans-serif;
+  font-family: 'Signika Negative', sans-serif;
   line-height: 2;
 }
 
 @mixin article {
   @extend %color;
 
-  font-family: 'Spectral', serif;
+  font-family: 'Work Sans', sans-serif;
   line-height: 1.6;
 }
 

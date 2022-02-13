@@ -6,22 +6,19 @@
   flex-direction: row;
   flex-wrap: wrap;
 
-  justify-content: space-around;
+  justify-content: flex-start;
 
-  padding: 0 1em;
-  @include r.media-pc {
-    padding: 0 10em;
-  }
+  margin-bottom: 10px;
 }
 
 .sns_link_list__link {
-  margin-top: 20px;
+  margin-right: 20px;
   text-decoration: none;
 
   @include t.link;
 }
 
 .sns_link_list__icon {
-  width: 30px !important; // fort-awesomeのスタイルを打ち消すため
-  height: 30px;
+  width: 24px !important; // fort-awesomeのスタイルを打ち消すため
+  height: 24px;
 }

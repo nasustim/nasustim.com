@@ -1,6 +1,8 @@
 import React from 'react'
 
 import TopImage from '../atoms/top-image'
+import SnsList from '../organisms/sns-list'
+
 import style from '../styles/pages/index.module.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -41,6 +43,7 @@ const Introduction: React.VFC = () => (
       </div>
       <div className={style.introduction__profile_text}>
         <h1>Mitsuhiro Hibino</h1>
+        <SnsList />
         <p>
           <FontAwesomeIcon icon={faUser} /> Software Engineer, Creator
         </p>

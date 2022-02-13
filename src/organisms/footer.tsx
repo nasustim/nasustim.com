@@ -7,7 +7,7 @@ type SNSs = Array<[string, IconDefinition]>
 const snss: SNSs = [
   ['https://github.com/nasustim', faGithub],
   ['https://facebook.com/mitsuhibino', faFacebook],
-  ['https://instagram.com/nasustim', faInstagramSquare],
+  ['https://instagram.com/mitsu.mn5t', faInstagramSquare],
   ['https://keybase.io/nasustim', faKeybase],
 ]
 

@@ -1,8 +1,6 @@
 @use '../responsive.scss' as r;
 @use '../texts.scss' as t;
 
-// sns list
-
 .sns_link_list {
   display: flex;
   flex-direction: row;
@@ -26,14 +24,4 @@
 .sns_link_list__icon {
   width: 30px !important; // fort-awesomeのスタイルを打ち消すため
   height: 30px;
-}
-
-// credit
-
-.credit {
-  @include t.article;
-
-  width: 100%;
-  margin: 20px auto 10px;
-  text-align: center;
 }

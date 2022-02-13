@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Footer from '../organisms/footer'
+import Footer from './footer'
 
 import styles from '../styles/layouts/index.module.scss'
 

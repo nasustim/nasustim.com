@@ -1,0 +1,9 @@
+@use '../texts.scss' as t;
+
+.credit {
+  @include t.article;
+
+  width: 100%;
+  margin: 20px auto 10px;
+  text-align: center;
+}

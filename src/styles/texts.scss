@@ -1,4 +1,5 @@
 @use './colors.scss' as c;
+@use './responsive.scss' as r;
 
 %color { color: c.$black; }
 
@@ -21,7 +22,14 @@
   @include article;
 
   transition: color .4s ease-out;
-  &:hover {
-    color: c.$dark-primary;
+  @include r.media-pc {
+    &:hover {
+      color: c.$dark-primary;
+    }
+  }
+  @include r.media-mobile {
+    &:active {
+      color: c.$dark-primary;
+    }
   }
 }

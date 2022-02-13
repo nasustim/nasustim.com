@@ -35,12 +35,12 @@ export default Page
 
 const Introduction: React.VFC = () => (
   <>
-    <h1 className={style.introduction__title}>Mitsuhiro Hibino</h1>
     <div className={style.introduction__profile}>
       <div className={style.introduction__profile_image}>
         <TopImage src={'/images/me.jpg'} />
       </div>
       <div className={style.introduction__profile_text}>
+        <h1>Mitsuhiro Hibino</h1>
         <p>
           <FontAwesomeIcon icon={faUser} /> Software Engineer, Creator
         </p>

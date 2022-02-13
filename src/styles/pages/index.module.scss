@@ -2,12 +2,10 @@
 @use '../texts.scss' as t;
 
 .page_inner {
-  &:not(:first-child) {
-    margin-top: 36px;
+  margin-top: 36px;
 
-    @include r.media-mobile {
-      margin-top: 20px;
-    }
+  @include r.media-mobile {
+    margin-top: 20px;
   }
 
   @include r.media-mobile {
@@ -16,11 +14,6 @@
 }
 
 /* Introduction */
-
-.introduction__title {
-  @include t.heading;
-}
-
 .introduction__profile {
   display: flex;
   flex-direction: row;
@@ -41,6 +34,12 @@
   margin: 0 10px;
   @include r.media-mobile {
     margin: 20px 0;
+  }
+
+  h1 {
+    @include t.heading;
+    margin: 0 auto 20px;
+    line-height: 1;
   }
 
   p {

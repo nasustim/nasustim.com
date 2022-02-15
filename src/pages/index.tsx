@@ -6,7 +6,7 @@ import SnsList from '../organisms/sns-list'
 import style from '../styles/pages/index.module.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBuilding, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 
 type Props = SuperPageProps
 
@@ -15,6 +15,25 @@ const Page: React.VFC<Props> = () => {
     <>
       <div className={style.page_inner}>
         <Introduction />
+      </div>
+      <div className={style.page_inner}>
+        <Section
+          title={'Job Experience'}
+          article={[
+            '2021/03 - current: Beauty Tech SaaS Developer (Shibuya, Tokyo)',
+            '2020/04 - 2021/03: Mobile Game Developer (Shinagawa, Tokyo)',
+            '2018/12 - current: freelance developer',
+          ]}
+        />
+      </div>
+      <div className={style.page_inner}>
+        <Section
+          title={'Educational Experience'}
+          article={[
+            '2017/04 - 2020/03: Institute of Advanced Media Arts and Sciences (Master of Arts(Media Creation))',
+            '2013/04 - 2017/03: Polytechnic Collage Gifu',
+          ]}
+        />
       </div>
     </>
   )
@@ -47,10 +66,21 @@ const Introduction: React.VFC = () => (
         <p>
           <FontAwesomeIcon icon={faUser} /> Software Engineer, Creator
         </p>
-        <p>
-          <FontAwesomeIcon icon={faBuilding} /> web service company, freelancer
-        </p>
       </div>
     </div>
   </>
+)
+
+// Section
+type SectionProps = {
+  title: string
+  article: Array<string>
+}
+const Section: React.VFC<SectionProps> = ({ title, article = [] }) => (
+  <div className={style.section_container}>
+    <h2>{title}</h2>
+    {article.map((text) => (
+      <p>{text}</p>
+    ))}
+  </div>
 )

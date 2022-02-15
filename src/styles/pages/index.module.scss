@@ -23,7 +23,7 @@
 }
 
 .introduction__profile_image {
-  margin: auto 10px;
+  margin: 0 10px 0 0;
   @include r.media-mobile {
     margin: 0;
   }
@@ -51,5 +51,19 @@
       height: $size;
       vertical-align: baseline;
     }
+  }
+}
+
+/* Section */
+.section_container {
+  margin-top: 20px;
+
+  h2 {
+    @include t.heading;
+    margin: 0 auto;
+  }
+  p {
+    @include t.article;
+    margin: 0 auto;
   }
 }

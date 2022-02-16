@@ -42,14 +42,22 @@
     line-height: 1;
   }
 
-  p {
-    margin: 0 auto 8px;
+  table {
     $size: 16px;
+
+    margin: 0 auto 8px;
     font-size: $size;
-    svg {
-      display: inline;
-      height: $size;
-      vertical-align: baseline;
+    td {
+      &:nth-child(1) {
+        width: $size;
+        height: $size;
+        svg {
+          height: $size * 0.82;
+        }
+      }
+      &:not(&:nth-child(1)) {
+        padding-left: 4px;
+      }
     }
   }
 }

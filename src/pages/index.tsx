@@ -63,12 +63,20 @@ const Introduction: React.VFC = () => (
       <div className={style.introduction__profile_text}>
         <h1>Mitsuhiro Hibino</h1>
         <SnsList />
-        <p>
-          <FontAwesomeIcon icon={faUser} /> Software Engineer, Creator
-        </p>
-        <p>
-          <FontAwesomeIcon icon={faLocationDot} /> Software Engineer, Creator
-        </p>
+        <table>
+          <tr>
+            <td>
+              <FontAwesomeIcon icon={faUser} />
+            </td>
+            <td>Software Engineer, Creator</td>
+          </tr>
+          <tr>
+            <td>
+              <FontAwesomeIcon icon={faLocationDot} />
+            </td>
+            <td>Tokyo, Japan</td>
+          </tr>
+        </table>
       </div>
     </div>
   </>

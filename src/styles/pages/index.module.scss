@@ -43,6 +43,7 @@
   }
 
   table {
+    width: 100%;
     $size: 16px;
 
     margin: 0 auto 8px;
@@ -70,8 +71,25 @@
     @include t.heading;
     margin: 0 auto;
   }
-  p {
+  table {
+    width: 100%;
     @include t.article;
-    margin: 0 auto;
+    $size: 16px;
+
+    margin: 0 auto 8px;
+    font-size: $size;
+    td {
+      vertical-align: top;
+      &:nth-child(1) {
+        width: 160px;
+
+        @include r.media-mobile {
+          width: 92px;
+        }
+      }
+      &:not(&:nth-child(1)) {
+        padding-left: 4px;
+      }
+    }
   }
 }

@@ -20,9 +20,18 @@ const Page: React.VFC<Props> = () => {
         <Section
           title={'Job Experience'}
           article={[
-            '2021/03 - current: Beauty Tech SaaS Developer (Shibuya, Tokyo)',
-            '2020/04 - 2021/03: Mobile Game Developer (Shinagawa, Tokyo)',
-            '2018/12 - current: freelance developer',
+            {
+              period: '2021/03 - current',
+              content: ['Beauty Tech SaaS Developer (Shibuya, Tokyo)'],
+            },
+            {
+              period: '2020/04 - 2021/03',
+              content: ['Mobile Game Developer (Shinagawa, Tokyo)'],
+            },
+            {
+              period: '2018/12 - current',
+              content: ['freelance developer'],
+            },
           ]}
         />
       </div>
@@ -30,8 +39,14 @@ const Page: React.VFC<Props> = () => {
         <Section
           title={'Educational Experience'}
           article={[
-            '2017/04 - 2020/03: Institute of Advanced Media Arts and Sciences (Master of Arts(Media Creation))',
-            '2013/04 - 2017/03: Polytechnic Collage Gifu',
+            {
+              period: '2017/04 - 2020/03',
+              content: ['Institute of Advanced Media Arts and Sciences', 'Master of Arts(Media Creation)'],
+            },
+            {
+              period: '2013/04 - 2017/03',
+              content: ['Polytechnic Collage Gifu(Electronics and Informatics)'],
+            },
           ]}
         />
       </div>
@@ -64,18 +79,20 @@ const Introduction: React.VFC = () => (
         <h1>Mitsuhiro Hibino</h1>
         <SnsList />
         <table>
-          <tr>
-            <td>
-              <FontAwesomeIcon icon={faUser} />
-            </td>
-            <td>Software Engineer, Creator</td>
-          </tr>
-          <tr>
-            <td>
-              <FontAwesomeIcon icon={faLocationDot} />
-            </td>
-            <td>Tokyo, Japan</td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>
+                <FontAwesomeIcon icon={faUser} />
+              </td>
+              <td>Software Engineer, Creator</td>
+            </tr>
+            <tr>
+              <td>
+                <FontAwesomeIcon icon={faLocationDot} />
+              </td>
+              <td>Tokyo, Japan</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>
@@ -85,13 +102,35 @@ const Introduction: React.VFC = () => (
 // Section
 type SectionProps = {
   title: string
-  article: Array<string>
+  article: Array<{
+    period: string
+    content: Array<string>
+  }>
 }
-const Section: React.VFC<SectionProps> = ({ title, article = [] }) => (
+const Section: React.VFC<SectionProps> = ({ title, article }) => (
   <div className={style.section_container}>
     <h2>{title}</h2>
-    {article.map((text) => (
-      <p key={`article-${text}`}>{text}</p>
-    ))}
+    <table>
+      <tbody>
+        {article.map((a, i) => (
+          <tr key={`table-line--${i}`}>
+            <td>{a.period}</td>
+            <td>
+              {a.content.reduce((prev, current) => {
+                if (!prev) return <>{current}</>
+
+                return (
+                  <>
+                    {prev}
+                    <br />
+                    {current}
+                  </>
+                )
+              })}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   </div>
 )

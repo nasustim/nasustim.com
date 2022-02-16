@@ -120,17 +120,9 @@ const Section: React.VFC<SectionProps> = ({ title, article }) => (
           <tr key={`table-line--${i}`}>
             <td>{a.period}</td>
             <td>
-              {a.content.reduce((prev, current) => {
-                if (!prev) return <>{current}</>
-
-                return (
-                  <>
-                    {prev}
-                    <br />
-                    {current}
-                  </>
-                )
-              })}
+              {a.content.map((c, j) => (
+                <div key={`content--${i}${j}`}>{c}</div>
+              ))}
             </td>
           </tr>
         ))}

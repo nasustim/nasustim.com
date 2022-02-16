@@ -6,7 +6,7 @@ import SnsList from '../organisms/sns-list'
 import style from '../styles/pages/index.module.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
 type Props = SuperPageProps
 
@@ -66,6 +66,9 @@ const Introduction: React.VFC = () => (
         <p>
           <FontAwesomeIcon icon={faUser} /> Software Engineer, Creator
         </p>
+        <p>
+          <FontAwesomeIcon icon={faLocationDot} /> Software Engineer, Creator
+        </p>
       </div>
     </div>
   </>
@@ -80,7 +83,7 @@ const Section: React.VFC<SectionProps> = ({ title, article = [] }) => (
   <div className={style.section_container}>
     <h2>{title}</h2>
     {article.map((text) => (
-      <p>{text}</p>
+      <p key={`article-${text}`}>{text}</p>
     ))}
   </div>
 )

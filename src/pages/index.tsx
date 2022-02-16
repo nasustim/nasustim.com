@@ -22,11 +22,15 @@ const Page: React.VFC<Props> = () => {
           article={[
             {
               period: '2021/03 - current',
-              content: ['Beauty Tech SaaS Developer (Shibuya, Tokyo)'],
+              content: ['mixi inc. (Shibuya, Tokyo)'],
             },
             {
               period: '2020/04 - 2021/03',
-              content: ['Mobile Game Developer (Shinagawa, Tokyo)'],
+              content: ['Mobile Factory (Shinagawa, Tokyo)'],
+            },
+            {
+              period: '2019/03 - 2019/10',
+              content: ['Hakbee Lanka (Nagoya, Aichi, Japan)', '→ Part Time'],
             },
             {
               period: '2018/12 - current',
@@ -41,7 +45,7 @@ const Page: React.VFC<Props> = () => {
           article={[
             {
               period: '2017/04 - 2020/03',
-              content: ['Institute of Advanced Media Arts and Sciences', 'Master of Arts(Media Creation)'],
+              content: ['Institute of Advanced Media Arts and Sciences', '→ Master of Arts(Media Creation)'],
             },
             {
               period: '2013/04 - 2017/03',

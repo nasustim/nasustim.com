@@ -49,7 +49,7 @@ const Page: React.VFC<Props> = () => {
             },
             {
               period: '2013/04 - 2017/03',
-              content: ['Polytechnic Collage Gifu(Electronics and Informatics)'],
+              content: ['Polytechnic College Gifu(Electronics and Informatics)'],
             },
           ]}
         />

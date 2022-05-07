@@ -1,9 +1,0 @@
-# configuration files
-node_modules/
-package.json
-package-lock.json
-
-.cache/
-.next/
-public/
-static/

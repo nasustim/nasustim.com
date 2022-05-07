@@ -38,7 +38,7 @@
     "url": "git+https://github.com/nasustim/nasustim.com.git"
   },
   "scripts": {
-    "format": "prettier --write \"**/*.{ts,tsx,js}\"",
+    "format": "prettier --write --ignore-path .gitignore \"**/*.{ts,tsx,js}\"",
     "test": "echo \"please write test and execute\" | exit 0",
     "start": "next dev",
     "build": "next build",

@@ -1,0 +1,16 @@
+name: Test Renovate
+
+on:
+  push:
+    paths:
+      - "renovate.json"
+      - ".github/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Lint Action
+        uses: wearerequired/lint-action@v2.0.0

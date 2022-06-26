@@ -1,4 +1,4 @@
-name: Test Renovate
+name: Test GitHub Actions
 
 on:
   push:

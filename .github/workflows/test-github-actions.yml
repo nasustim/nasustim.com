@@ -3,7 +3,6 @@ name: Test Renovate
 on:
   push:
     paths:
-      - "renovate.json"
       - ".github/**"
 
 jobs:

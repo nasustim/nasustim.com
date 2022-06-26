@@ -1,0 +1,15 @@
+name: Test GitHub Actions
+
+on:
+  push:
+    paths:
+      - ".github/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Lint Action
+        uses: wearerequired/lint-action@v2.0.0

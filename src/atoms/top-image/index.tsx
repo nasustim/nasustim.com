@@ -6,7 +6,7 @@ type Props = {
   src: string
 }
 
-const Component: React.VFC<Props> = ({ src }) => {
+const Component: React.FC<Props> = ({ src }) => {
   return (
     <span>
       <img src={src} className={style.img} />

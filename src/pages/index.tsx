@@ -10,7 +10,7 @@ import { faUser, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
 type Props = SuperPageProps
 
-const Page: React.VFC<Props> = () => {
+const Page: React.FC<Props> = () => {
   return (
     <>
       <div className={style.page_inner}>
@@ -73,7 +73,7 @@ export default Page
 
 // Contents
 
-const Introduction: React.VFC = () => (
+const Introduction: React.FC = () => (
   <>
     <div className={style.introduction__profile}>
       <div className={style.introduction__profile_image}>

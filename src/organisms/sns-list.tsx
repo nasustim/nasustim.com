@@ -11,7 +11,7 @@ const snss: SNSs = [
   ['https://keybase.io/nasustim', faKeybase],
 ]
 
-const Component: React.VFC = () => (
+const Component: React.FC = () => (
   <div className={styles.sns_link_list}>
     {snss.map(([url, icon], i) => (
       <a

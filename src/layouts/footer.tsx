@@ -1,6 +1,6 @@
 import styles from '../styles/layouts/footer.module.scss'
 
-const Component: React.VFC = () => {
+const Component: React.FC = () => {
   return (
     <footer>
       <div className={styles.credit}>

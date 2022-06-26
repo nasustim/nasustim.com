@@ -48,8 +48,6 @@
     "pre-push": "npm run test",
     "export": "next export",
     "stylelint": "stylelint --fix \"**/*.scss\" \"!**/node_modules/**\"",
-    "update": "ncu",
-    "upgrade": "ncu -u && npm install",
     "prepare": "husky install"
   },
   "lint-staged": {

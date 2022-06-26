@@ -5,6 +5,8 @@ on:
     paths:
       - "**.ts"
       - "**.js"
+      - "**.tsx"
+      - "**.jsx"
       - "**.json"
 
 jobs:

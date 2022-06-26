@@ -1,0 +1,32 @@
+name: Test Nodejs
+
+on:
+  push:
+    paths:
+      - "**.ts"
+      - "**.js"
+      - "**.tsx"
+      - "**.jsx"
+      - "**.json"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ./.node-version
+          cache: 'npm'
+          cache-dependency-path: ./package-lock.json
+
+      - name: Install
+        run: npm ci
+
+      - name: Test
+        run: npm run test
+        
+  
+     

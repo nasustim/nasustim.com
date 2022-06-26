@@ -1,10 +1,14 @@
-import React from 'react'
+import { type ReactNode } from 'react'
 
 import Footer from './footer'
 
 import styles from '../styles/layouts/index.module.scss'
 
-const Layout: React.FC = ({ children }) => {
+type Props = {
+  children: ReactNode
+}
+
+const Layout: React.FC<Props> = ({ children }) => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>{children}</main>

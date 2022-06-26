@@ -4,7 +4,7 @@ type Props = {
   measurementId: string
 }
 
-const Component: React.VFC<Props> = ({ measurementId }) => {
+const Component: React.FC<Props> = ({ measurementId }) => {
   return (
     <>
       <script async src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}></script>

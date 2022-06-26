@@ -3,7 +3,7 @@ import React from 'react'
 
 type Props = SuperPageProps
 
-const Page: React.VFC<Props> = (props) => <p>error</p>
+const Page: React.FC<Props> = (props) => <p>error</p>
 
 export const getStaticProps = async () => {
   return {

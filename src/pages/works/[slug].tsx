@@ -6,7 +6,7 @@ type Props = {
   slug: string
 } & SuperPageProps
 
-const Page: React.VFC<Props> = (props) => {
+const Page: React.FC<Props> = (props) => {
   const [loading, loaded] = useState(false)
 
   useEffect(() => {

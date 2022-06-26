@@ -4,7 +4,7 @@ type Props = {
   title: string
 } & SuperPageProps
 
-const Page: React.VFC<Props> = (props) => <div>404</div>
+const Page: React.FC<Props> = (props) => <div>404</div>
 
 export const getStaticProps = async () => {
   return {

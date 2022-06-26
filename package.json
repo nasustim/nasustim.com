@@ -44,7 +44,6 @@
     "sitemap": "next-sitemap --config ./sitemap.config.js",
     "serve": "next start",
     "pre-commit": "npm run format",
-    "pre-push": "npm run test",
     "export": "next export",
     "stylelint": "stylelint --fix \"**/*.scss\" \"!**/node_modules/**\"",
     "prepare": "husky install"

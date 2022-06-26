@@ -74,7 +74,7 @@
   },
   "include": [
     "next-env.d.ts",
-    "types/project.d.ts",
+    "src/nasustim.com.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],

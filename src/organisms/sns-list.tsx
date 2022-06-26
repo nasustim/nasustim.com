@@ -16,6 +16,7 @@ const Component: React.VFC = () => (
     {snss.map(([url, icon], i) => (
       <a href={url} key={`sns-icon-${i}`} className={styles.sns_link_list__link} target='_blank'>
         <FontAwesomeIcon icon={icon} className={styles.sns_link_list__icon} />
+        {'test hogehoge'}
       </a>
     ))}
   </div>

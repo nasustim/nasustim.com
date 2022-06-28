@@ -5,9 +5,6 @@ import React from 'react'
 import App from 'next/app'
 import Head from 'next/head'
 
-import GA from '../atoms/ga'
-import Meta from '../atoms/meta'
-
 export default class _App extends App {
   render() {
     const { Component, pageProps } = this.props
@@ -29,13 +26,18 @@ export default class _App extends App {
             rel='stylesheet'
           />
 
-          <GA measurementId={measurementId} />
-          <Meta
-            {...{
-              canonicalUrl,
-              isNoindex,
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];
+                      function gtag(){ dataLayer.push(arguments); }
+                      gtag('js', new Date());
+                      gtag('config', '${measurementId}');`,
             }}
           />
+
+          <link rel='canonical' href={canonicalUrl}></link>
+          {isNoindex ? <meta name='robots' content='noindex,nofollow'></meta> : null}
         </Head>
         <Component {...pageProps} />
       </React.Fragment>

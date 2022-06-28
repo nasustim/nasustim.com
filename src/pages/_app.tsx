@@ -1,5 +1,4 @@
 import 'normalize.css'
-import '../styles/global.scss'
 
 import React from 'react'
 
@@ -8,8 +7,6 @@ import Head from 'next/head'
 
 import GA from '../atoms/ga'
 import Meta from '../atoms/meta'
-
-import Layout from '../layouts'
 
 export default class _App extends App {
   render() {
@@ -26,6 +23,7 @@ export default class _App extends App {
           <title>{title}</title>
           <meta name='viewport' content='width=device-width,initial-scale=1' />
 
+          {/* load external font */}
           <link
             href='https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&family=Work+Sans:ital,wght@0,400;0,600;1,400&display=swap'
             rel='stylesheet'
@@ -39,9 +37,7 @@ export default class _App extends App {
             }}
           />
         </Head>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Component {...pageProps} />
       </React.Fragment>
     )
   }

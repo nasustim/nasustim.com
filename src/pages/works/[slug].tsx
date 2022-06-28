@@ -13,10 +13,12 @@ const Page: React.FC<Props> = (props) => {
     loaded(true)
   }, [])
 
-  return !loading ? <div></div> : <div className='text'>🚧 Under Construction 🚧</div>
+  return !loading ? <div></div> : <div>🚧 Under Construction 🚧</div>
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  // 以前のページで用意していた個別ページ
+  // ToDo: コンテンツを復活させる
   const pathsList = [
     'slash-module-slash-whom',
     'shokei-no-kagami',

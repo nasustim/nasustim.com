@@ -6,6 +6,8 @@ type Props = {
 
 const Page: React.FC<Props> = (props) => <div>404</div>
 
+export default Page
+
 export const getStaticProps = async () => {
   return {
     props: {
@@ -17,5 +19,3 @@ export const getStaticProps = async () => {
     },
   }
 }
-
-export default Page

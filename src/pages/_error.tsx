@@ -5,6 +5,8 @@ type Props = SuperPageProps
 
 const Page: React.FC<Props> = (props) => <p>error</p>
 
+export default Page
+
 export const getStaticProps = async () => {
   return {
     props: {
@@ -14,5 +16,3 @@ export const getStaticProps = async () => {
     },
   }
 }
-
-export default Page

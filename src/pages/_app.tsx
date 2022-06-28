@@ -41,9 +41,13 @@ export default class _App extends App {
 function _setupGA(measurementId: string): void {
   //@ts-ignore
   window.dataLayer = window.dataLayer ?? []
+  //@ts-ignore
   function gtag() {
+    //@ts-ignore
     dataLayer.push(arguments)
   }
+  //@ts-ignore
   gtag('js', new Date())
+  //@ts-ignore
   gtag('config', measurementId)
 }

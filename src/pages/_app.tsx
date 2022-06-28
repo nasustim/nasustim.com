@@ -20,12 +20,6 @@ export default class _App extends App {
           <title>{title}</title>
           <meta name='viewport' content='width=device-width,initial-scale=1' />
 
-          {/* load external font */}
-          <link
-            href='https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&family=Work+Sans:ital,wght@0,400;0,600;1,400&display=swap'
-            rel='stylesheet'
-          />
-
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}></script>
           <script
             dangerouslySetInnerHTML={{

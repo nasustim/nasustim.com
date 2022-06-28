@@ -4,6 +4,7 @@ import React from 'react'
 
 import App from 'next/app'
 import Head from 'next/head'
+import Script from 'next/script'
 
 export default class _App extends App {
   render() {
@@ -20,13 +21,11 @@ export default class _App extends App {
           <title>{title}</title>
           <meta name='viewport' content='width=device-width,initial-scale=1' />
 
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `window.dataLayer = window.dataLayer || [];
-                      function gtag(){ dataLayer.push(arguments); }
-                      gtag('js', new Date());
-                      gtag('config', '${measurementId}');`,
+          <Script
+            strategy='lazyOnload'
+            src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
+            onLoad={() => {
+              _setupGA(measurementId)
             }}
           />
 
@@ -37,4 +36,14 @@ export default class _App extends App {
       </React.Fragment>
     )
   }
+}
+
+function _setupGA(measurementId: string): void {
+  //@ts-ignore
+  window.dataLayer = window.dataLayer ?? []
+  function gtag() {
+    dataLayer.push(arguments)
+  }
+  gtag('js', new Date())
+  gtag('config', measurementId)
 }

@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version-file: ./.node-version
-          cache: 'npm'
+          cache: npm
           cache-dependency-path: ./package-lock.json
 
       - name: Install
@@ -27,6 +27,6 @@ jobs:
 
       - name: Test
         run: npm run test
-        
-  
-     
+
+      - name: Build
+        run: npm run build

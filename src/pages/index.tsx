@@ -1,9 +1,14 @@
 import React from 'react'
+import Layout from '../layout'
 
 type Props = SuperPageProps
 
 const Page: React.FC<Props> = (props) => {
-  return <div>nasustim.com</div>
+  return (
+    <Layout>
+      <div>nasustim.com</div>
+    </Layout>
+  )
 }
 
 export default Page

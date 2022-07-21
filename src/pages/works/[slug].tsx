@@ -2,6 +2,8 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import { useEffect, useState } from 'react'
 
+import Layout from '../../layout'
+
 type Props = {
   slug: string
 } & SuperPageProps
@@ -13,7 +15,7 @@ const Page: React.FC<Props> = (props) => {
     loaded(true)
   }, [])
 
-  return !loading ? <div></div> : <div>🚧 Under Construction 🚧</div>
+  return <Layout>{!loading ? <div></div> : <div>🚧 Under Construction 🚧</div>}</Layout>
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {

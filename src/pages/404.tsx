@@ -1,10 +1,15 @@
 import React from 'react'
+import Layout from '../layout'
 
 type Props = {
   title: string
 } & SuperPageProps
 
-const Page: React.FC<Props> = (props) => <div>404</div>
+const Page: React.FC<Props> = (props) => (
+  <Layout>
+    <div>404</div>
+  </Layout>
+)
 
 export default Page
 

@@ -9,6 +9,7 @@ module.exports = (phase, { defaultConfig }) => {
     },
     experimental: {
       optimizeFonts: true,
+      forceSwcTransforms: true,
     },
     reactStrictMode: true,
   }

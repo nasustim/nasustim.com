@@ -7,6 +7,7 @@
     "url": "https://github.com/nasustim/nasustim.com/issues"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.3",
     "@types/node": "18.0.0",
     "@types/react": "18.0.15",
     "next": "12.2.2",
@@ -18,6 +19,8 @@
     "typescript": "4.7.4"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.18.6",
+    "@emotion/babel-plugin": "^11.9.2",
     "husky": "8.0.1",
     "lint-staged": "13.0.3",
     "prettier": "2.7.1",

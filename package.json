@@ -7,7 +7,7 @@
     "url": "https://github.com/nasustim/nasustim.com/issues"
   },
   "dependencies": {
-    "@emotion/react": "11.10.0",
+    "@emotion/react": "11.10.4",
     "@types/node": "18.0.0",
     "@types/react": "18.0.17",
     "next": "12.2.5",

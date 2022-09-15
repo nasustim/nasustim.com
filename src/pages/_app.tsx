@@ -9,7 +9,8 @@ import Script from 'next/script'
 
 export default class _App extends App {
   render() {
-    const { Component, pageProps } = this.props
+    const { Component } = this.props
+    const pageProps = this.props.pageProps as SuperPageProps
 
     const measurementId = process.env.GA_MEASUREMENT_ID ?? ''
     const canonicalUrl = (process.env.DOMAIN ?? '') + pageProps.meta.canonicalPath

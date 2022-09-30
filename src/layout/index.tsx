@@ -7,13 +7,17 @@ const style = css`
 `
 
 const styleInner = css`
-  width: 100%;
+  // sp
+  width: calc(100% - 20px);
   height: 100%;
 
   margin-left: auto;
   margin-right: auto;
+
+  // pc
   @media (min-width: 780px) {
     width: 780px;
+    padding: 0;
   }
 `
 

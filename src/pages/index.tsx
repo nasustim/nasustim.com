@@ -1,12 +1,16 @@
 import React from 'react'
 import Layout from '../layout'
 
+import PageTitle from '../atoms/PageTitle'
+import Image from '../atoms/Image'
+
 type Props = SuperPageProps
 
 const Page: React.FC<Props> = (props) => {
   return (
     <Layout>
-      <div>nasustim.com</div>
+      <PageTitle text={'nasustim.com'} />
+      <Image src='/static/profile_400x400.jpg' width={150} height={150} />
     </Layout>
   )
 }

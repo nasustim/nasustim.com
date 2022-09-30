@@ -2,20 +2,11 @@ import React, { ReactNode } from 'react'
 import { css } from '@emotion/react'
 
 const style = css`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   width: 100%;
   height: 100%;
 
-  // children
-  & > * {
-    width: 100%;
-    height: 100%;
-
-    @media (min-width: 780px) {
-      width: 780px;
-    }
+  @media (min-width: 780px) {
+    width: 780px;
   }
 `
 

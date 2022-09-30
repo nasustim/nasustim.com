@@ -7,6 +7,6 @@ interface Props {
   height: number
 }
 
-const Image: React.FC<Props> = ({ src, width, height }: Props) => <NextImage src={src} width={width} height={height} />
+const Image: React.FC<Props> = ({ src, width, height }) => <NextImage src={src} width={width} height={height} />
 
 export default Image

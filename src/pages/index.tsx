@@ -10,7 +10,7 @@ type Props = SuperPageProps
 const Page: React.FC<Props> = (props) => {
   return (
     <Layout>
-      <PageTitle text={'nasustim.com'} />
+      <PageTitle>nasustim.com</PageTitle>
       <Image src='/static/profile_400x400.jpg' width={150} height={150} />
       <Text>
         岐阜県岐阜市出身、都内在住のソフトウェアエンジニア。現在は株式会社MIXIで美容サロン予約サービスのサーバサイド,

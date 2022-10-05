@@ -1,5 +1,4 @@
 import React from 'react'
-import NextImage from 'next/image'
 
 interface Props {
   src: string
@@ -7,6 +6,6 @@ interface Props {
   height: number
 }
 
-const Image: React.FC<Props> = ({ src, width, height }) => <NextImage src={src} width={width} height={height} />
+const Image: React.FC<Props> = ({ src, width, height }) => <img src={src} width={width} height={height} />
 
 export default Image

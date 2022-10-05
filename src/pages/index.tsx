@@ -17,6 +17,7 @@ const Page: React.FC<Props> = (props) => {
         岐阜県岐阜市出身、都内在住のソフトウェアエンジニア。現在は株式会社MIXIで美容サロン予約サービスのサーバサイド,
         インフラ開発を担当している。
       </Text>
+      {/* ToDo: コンポーネント化 */}
       <div>
         <SectionTitle>Links</SectionTitle>
         <ul>

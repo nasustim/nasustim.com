@@ -1,10 +1,10 @@
 import React from 'react'
 import Layout from '../layout'
 
-import PageTitle from '../atoms/PageTitle'
-import SectionTitle from '../atoms/SectionTitle'
-import Image from '../atoms/Image'
-import Text from '../atoms/Text'
+import PageTitle from '../components/PageTitle'
+import SectionTitle from '../components/SectionTitle'
+import Image from '../components/Image'
+import Text from '../components/Text'
 
 type Props = SuperPageProps
 

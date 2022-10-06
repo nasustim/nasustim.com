@@ -1,6 +1,8 @@
 import React from 'react'
 import Layout from '../layout'
 
+import Section from '../organisms/Section'
+
 import PageTitle from '../atoms/PageTitle'
 import SectionTitle from '../atoms/SectionTitle'
 import Image from '../atoms/Image'
@@ -13,12 +15,13 @@ const Page: React.FC<Props> = (props) => {
     <Layout>
       <PageTitle>nasustim.com</PageTitle>
       <Image src='/static/profile_400x400.jpg' width={150} height={150} />
-      <Text>
-        岐阜県岐阜市出身、都内在住のソフトウェアエンジニア。現在は株式会社MIXIで美容サロン予約サービスのサーバサイド,
-        インフラ開発を担当している。
-      </Text>
-      {/* ToDo: コンポーネント化 */}
-      <div>
+      <Section>
+        <Text>
+          岐阜県岐阜市出身、都内在住のソフトウェアエンジニア。現在は株式会社MIXIで美容サロン予約サービスのサーバサイド,
+          インフラ開発を担当している。
+        </Text>
+      </Section>
+      <Section>
         <SectionTitle>Links</SectionTitle>
         <ul>
           <li>
@@ -40,7 +43,7 @@ const Page: React.FC<Props> = (props) => {
             </a>
           </li>
         </ul>
-      </div>
+      </Section>
     </Layout>
   )
 }

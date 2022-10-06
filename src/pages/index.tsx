@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../layout'
 
 import Section from '../organisms/Section'
+import { Ul, Li } from '../organisms/List'
 
 import PageTitle from '../atoms/PageTitle'
 import SectionTitle from '../atoms/SectionTitle'
@@ -23,26 +24,26 @@ const Page: React.FC<Props> = (props) => {
       </Section>
       <Section>
         <SectionTitle>Links</SectionTitle>
-        <ul>
-          <li>
+        <Ul>
+          <Li>
             Keybase:{' '}
             <a target='_blank' href='https://keybase.io/nasustim'>
               https://keybase.io/nasustim
             </a>
-          </li>
-          <li>
+          </Li>
+          <Li>
             GitHub:{' '}
             <a target='_blank' href='https://github.com/nasustim'>
               https://github.com/nasustim
             </a>
-          </li>
-          <li>
+          </Li>
+          <Li>
             Facebook:{' '}
             <a target='_blank' href='https://www.facebook.com/mitsuhibino'>
               https://www.facebook.com/mitsuhibino
             </a>
-          </li>
-        </ul>
+          </Li>
+        </Ul>
       </Section>
     </Layout>
   )

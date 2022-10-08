@@ -6,8 +6,7 @@ interface Props {
 }
 
 const style = css`
-  font-size: 22px;
-
+  font-size: 26px;
   font-family: 'Signika Negative', sans-serif;
 `
 

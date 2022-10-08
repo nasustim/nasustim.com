@@ -4,7 +4,9 @@ import { css } from '@emotion/react'
 const style = css`
   text-decoration: underline;
   color: rgb(63, 0, 255);
-  font-weight: 570;
+
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
 
   &:hover {
     color: rgb(95, 158, 160);

@@ -10,6 +10,8 @@ const style = css`
   padding: 0;
   line-height: 1.5;
   font-size: 14px;
+
+  font-family: 'Work Sans', sans-serif;
 `
 
 const Text: React.FC<Props> = ({ children }) => <p css={style}>{children}</p>

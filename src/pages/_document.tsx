@@ -10,8 +10,10 @@ export default class CustomDocument extends Document {
       <Html lang='ja'>
         <Head>
           {/* load external font */}
+          <link rel='preconnect' href='https://fonts.googleapis.com' />
+          <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='' />
           <link
-            href='https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&family=Work+Sans:ital,wght@0,400;0,600;1,400&display=swap'
+            href='https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;700&family=Work+Sans:wght@400;600&display=swap'
             rel='stylesheet'
           />
         </Head>

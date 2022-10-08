@@ -6,7 +6,8 @@ interface Props {
 }
 
 const style = css`
-  font-size: 22px;
+  font-size: 26px;
+  font-family: 'Signika Negative', sans-serif;
 `
 
 const PageTitle: React.FC<Props> = ({ children }) => <h1 css={style}>{children}</h1>

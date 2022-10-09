@@ -32,4 +32,6 @@ jobs:
         run: npm run build
 
       - name: Format check
-        run: npm run ts:check
+        run: |
+          npm run ts:check
+          npm run stylelint:check

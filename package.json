@@ -43,8 +43,8 @@
     "serve": "next start",
     "pre-commit": "npm run format",
     "export": "next export",
-    "stylelint:fix": "stylelint --fix \"**/*.scss\" \"!**/node_modules/**\"",
-    "stylelint:check": "stylelint --fix \"**/*.scss\" \"!**/node_modules/**\"",
+    "stylelint:fix": "stylelint --fix \"src/**/*.{scss,css}\" \"!**/node_modules/**\"",
+    "stylelint:check": "stylelint \"src/**/*.{scss,css}\" \"!**/node_modules/**\"",
     "prepare": "husky install"
   },
   "lint-staged": {

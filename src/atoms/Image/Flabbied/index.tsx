@@ -41,9 +41,9 @@ const FlabbiedImage: React.FC<BaseProps> = ({ width, height, src }) => {
     const light = new AmbientLight(0xffffff)
     scene.add(light)
 
-    const texture = new TextureLoader().load(src, () => {
-      const w = (width * 8) / 10
-      const h = (height * 8) / 10
+    const texture = new TextureLoader().load(src, (tex) => {
+      const w = 80 // [%]
+      const h = 80 // [%]
 
       const geometry = new PlaneGeometry(1, 1)
       const material = new MeshPhongMaterial({ map: texture })

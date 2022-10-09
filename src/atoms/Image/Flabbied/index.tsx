@@ -9,6 +9,7 @@ import {
   PlaneGeometry,
   MeshPhongMaterial,
   Mesh,
+  MeshBasicMaterial,
 } from 'three'
 
 import { BaseProps } from '../const'
@@ -45,8 +46,10 @@ const FlabbiedImage: React.FC<BaseProps> = ({ width, height, src }) => {
       const w = 80 // [%]
       const h = 80 // [%]
 
-      const geometry = new PlaneGeometry(1, 1)
-      const material = new MeshPhongMaterial({ map: texture })
+      const geometry = new PlaneGeometry(1, 1, 64, 64)
+      const material = new MeshBasicMaterial({ map: texture })
+      material.wireframe = true
+
       const plane = new Mesh(geometry, material)
       plane.scale.set(w, h, 1)
       scene.add(plane)

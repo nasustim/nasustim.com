@@ -16,7 +16,7 @@ const Page: React.FC<Props> = (props) => {
   return (
     <Layout>
       <PageTitle>nasustim.com</PageTitle>
-      <FlabbiedImage src='/static/profile_400x400.jpg' width={150} height={150} />
+      <FlabbiedImage src='/static/profile_400x400.jpg' width={300} height={300} />
       <Section>
         <Text>
           岐阜県岐阜市出身、都内在住のソフトウェアエンジニア。現在は<Link to='https://mixi.co.jp/'>株式会社MIXI</Link>

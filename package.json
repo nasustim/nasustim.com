@@ -34,7 +34,8 @@
     "url": "git+https://github.com/nasustim/nasustim.com.git"
   },
   "scripts": {
-    "format": "prettier --write --ignore-path .gitignore \"**/*.{ts,tsx,js}\"",
+    "ts:format": "prettier --write --ignore-path .gitignore \"**/*.{ts,tsx,js}\"",
+    "ts:check": "prettier -c \"src/**/*.{ts,tsx}\"",
     "test": "echo \"please write test and execute\" | exit 0",
     "start": "next dev",
     "build": "next build",
@@ -47,7 +48,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "npm run format"
+      "npm run ts:format"
     ],
     "*.{css,scss}": [
       "npm run stylelint"

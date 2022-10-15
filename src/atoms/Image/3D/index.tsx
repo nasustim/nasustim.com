@@ -7,20 +7,19 @@ import {
   AmbientLight,
   TextureLoader,
   PlaneGeometry,
-  MeshPhongMaterial,
   Mesh,
   MeshBasicMaterial,
 } from 'three'
 
 import { BaseProps } from '../const'
 
-const FlabbiedImage: React.FC<BaseProps> = ({ width, height, src }) => {
+const Image3D: React.FC<BaseProps> = ({ width, height, src }) => {
   const style = css`
     width: ${width}px;
     height: ${height}px;
   `
 
-  const contaierId = 'flabbied-image'
+  const contaierId = 'image-3d'
 
   useEffect(() => {
     document.querySelectorAll(`#${contaierId} > *`).forEach((c) => {
@@ -28,7 +27,6 @@ const FlabbiedImage: React.FC<BaseProps> = ({ width, height, src }) => {
     })
 
     // reference: https://qiita.com/karadaharu/items/436134d336ad94b50b57
-
     const scene = new Scene()
     const renderer = new WebGLRenderer({ alpha: true, antialias: true })
     renderer.setSize(width, height)
@@ -43,12 +41,11 @@ const FlabbiedImage: React.FC<BaseProps> = ({ width, height, src }) => {
     scene.add(light)
 
     const texture = new TextureLoader().load(src, (tex) => {
-      const w = 80 // [%]
-      const h = 80 // [%]
+      const w = 95 // [%]
+      const h = 95 // [%]
 
       const geometry = new PlaneGeometry(1, 1, 64, 64)
       const material = new MeshBasicMaterial({ map: texture })
-      material.wireframe = true
 
       const plane = new Mesh(geometry, material)
       plane.scale.set(w, h, 1)
@@ -65,4 +62,4 @@ const FlabbiedImage: React.FC<BaseProps> = ({ width, height, src }) => {
   return <div css={style} id={contaierId}></div>
 }
 
-export default FlabbiedImage
+export default Image3D

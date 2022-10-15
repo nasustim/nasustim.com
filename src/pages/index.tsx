@@ -6,7 +6,7 @@ import { Ul, Li } from '../organisms/List'
 
 import PageTitle from '../atoms/PageTitle'
 import SectionTitle from '../atoms/SectionTitle'
-import Image from '../atoms/Image'
+import Image3D from '../atoms/Image/3D'
 import Text from '../atoms/Text'
 import Link from '../atoms/Link'
 
@@ -16,7 +16,7 @@ const Page: React.FC<Props> = (props) => {
   return (
     <Layout>
       <PageTitle>nasustim.com</PageTitle>
-      <Image src='/static/profile_400x400.jpg' width={150} height={150} />
+      <Image3D src='/static/profile_400x400.jpg' width={150} height={150} />
       <Section>
         <Text>
           岐阜県岐阜市出身、都内在住のソフトウェアエンジニア。現在は<Link to='https://mixi.co.jp/'>株式会社MIXI</Link>

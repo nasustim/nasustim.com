@@ -9,7 +9,7 @@
   "dependencies": {
     "@emotion/react": "11.10.4",
     "@types/node": "18.11.5",
-    "@types/react": "18.0.21",
+    "@types/react": "18.0.22",
     "next": "12.3.1",
     "next-sitemap": "3.1.29",
     "normalize.css": "8.0.1",

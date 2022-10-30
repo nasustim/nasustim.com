@@ -10,7 +10,7 @@
     "@emotion/react": "11.10.5",
     "@types/node": "18.11.7",
     "@types/react": "18.0.24",
-    "next": "12.3.1",
+    "next": "13.0.0",
     "next-sitemap": "3.1.29",
     "normalize.css": "8.0.1",
     "postcss-scss": "4.0.5",

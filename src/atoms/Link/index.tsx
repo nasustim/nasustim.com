@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react'
+import Link from 'next/link'
 import { css } from '@emotion/react'
 
 const style = css`
@@ -19,9 +20,9 @@ interface Props {
   isInternal?: boolean
 }
 
-const Link: React.FC<Props> = (props) => (
-  <a href={props.to} css={style} target={props.isInternal ? '' : '_blank'}>
+const _Link: React.FC<Props> = (props) => (
+  <Link href={props.to} css={style} target={props.isInternal ? '' : '_blank'}>
     {props.children}
-  </a>
+  </Link>
 )
-export default Link
+export default _Link

@@ -1,15 +1,11 @@
 import React, { ReactNode } from 'react'
-import { css } from '@emotion/react'
+
+import style from './index.module.scss'
 
 interface Props {
   children: ReactNode
 }
 
-const style = css`
-  font-size: 26px;
-  font-family: 'Signika Negative', sans-serif;
-`
-
-const PageTitle: React.FC<Props> = ({ children }) => <h1 css={style}>{children}</h1>
+const PageTitle: React.FC<Props> = ({ children }) => <h1 className={style.root}>{children}</h1>
 
 export default PageTitle

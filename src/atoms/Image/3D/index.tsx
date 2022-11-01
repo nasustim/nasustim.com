@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { css } from '@emotion/react'
 import {
   Scene,
   WebGLRenderer,
@@ -14,11 +13,6 @@ import {
 import { BaseProps } from '../const'
 
 const Image3D: React.FC<BaseProps> = ({ width, height, src }) => {
-  const style = css`
-    width: ${width}px;
-    height: ${height}px;
-  `
-
   const contaierId = 'image-3d'
 
   useEffect(() => {
@@ -59,7 +53,11 @@ const Image3D: React.FC<BaseProps> = ({ width, height, src }) => {
     render()
   }, [])
 
-  return <div css={style} id={contaierId}></div>
+  const style = {
+    width: `${width}px`,
+    height: `${height}px`,
+  }
+  return <div style={style} id={contaierId}></div>
 }
 
 export default Image3D

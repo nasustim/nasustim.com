@@ -70,8 +70,7 @@
     "noEmit": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "incremental": true,
-    "jsxImportSource": "@emotion/react"
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",

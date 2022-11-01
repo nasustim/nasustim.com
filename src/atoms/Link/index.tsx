@@ -1,18 +1,7 @@
 import React, { ReactNode } from 'react'
 import Link from 'next/link'
-import { css } from '@emotion/react'
 
-const style = css`
-  text-decoration: underline;
-  color: rgb(63, 0, 255);
-
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 600;
-
-  &:hover {
-    color: rgb(95, 158, 160);
-  }
-`
+import style from './index.module.scss'
 
 interface Props {
   children: ReactNode
@@ -21,7 +10,7 @@ interface Props {
 }
 
 const _Link: React.FC<Props> = (props) => (
-  <Link href={props.to} css={style} target={props.isInternal ? '' : '_blank'}>
+  <Link href={props.to} className={style.root} target={props.isInternal ? '' : '_blank'}>
     {props.children}
   </Link>
 )

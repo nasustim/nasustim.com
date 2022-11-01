@@ -6,9 +6,10 @@ module.exports = (phase, { defaultConfig }) => {
       GA_MEASUREMENT_ID: process.env.GA_MEASUREMENT_ID,
     },
     experimental: {
+      appDir: true,
       optimizeFonts: true,
-      forceSwcTransforms: true,
     },
+    swcMinify: true,
     reactStrictMode: true,
   }
 }

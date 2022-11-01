@@ -68,3 +68,5 @@ out/
 
 .env*
 !.env.sample
+
+.vscode

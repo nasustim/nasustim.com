@@ -1,5 +1,6 @@
+'use client'
+
 import React from 'react'
-import Layout from '../layout'
 
 import Section from '../organisms/Section'
 import { Ul, Li } from '../organisms/List'
@@ -10,11 +11,11 @@ import Image3D from '../atoms/Image/3D'
 import Text from '../atoms/Text'
 import Link from '../atoms/Link'
 
-type Props = SuperPageProps
+interface Props {}
 
 const Page: React.FC<Props> = (props) => {
   return (
-    <Layout>
+    <React.Fragment>
       <PageTitle>nasustim.com</PageTitle>
       <Image3D src='/static/profile_400x400.jpg' width={150} height={150} />
       <Section>
@@ -37,17 +38,8 @@ const Page: React.FC<Props> = (props) => {
           </Li>
         </Ul>
       </Section>
-    </Layout>
+    </React.Fragment>
   )
 }
 
 export default Page
-
-export const getStaticProps = () => ({
-  props: {
-    meta: {
-      canonicalPath: '/',
-      isNoindex: false,
-    },
-  },
-})

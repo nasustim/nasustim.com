@@ -7,7 +7,7 @@
     "url": "https://github.com/nasustim/nasustim.com/issues"
   },
   "dependencies": {
-    "@types/node": "18.11.7",
+    "@types/node": "18.11.9",
     "@types/react": "18.0.24",
     "next": "13.0.1",
     "next-sitemap": "3.1.29",

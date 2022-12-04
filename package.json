@@ -25,7 +25,8 @@
     "prettier": "2.8.0",
     "sass": "^1.55.0",
     "stylelint": "14.15.0",
-    "stylelint-config-property-sort-order-smacss": "9.0.0"
+    "stylelint-config-property-sort-order-smacss": "9.0.0",
+    "stylelint-config-standard-scss": "^6.1.0"
   },
   "homepage": "https://github.com/nasustim/nasustim.com#readme",
   "main": "src/pages/index.tsx",

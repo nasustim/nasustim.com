@@ -1,4 +1,4 @@
-name: Test Nodejs
+name: Test App
 
 on:
   push:
@@ -8,6 +8,8 @@ on:
       - "**.tsx"
       - "**.jsx"
       - "**.json"
+      - "**.css"
+      - "**.scss"
 
 jobs:
   test:

@@ -7,11 +7,11 @@
     "url": "https://github.com/nasustim/nasustim.com/issues"
   },
   "dependencies": {
+    "@acab/reset.css": "^0.5.3",
     "@types/node": "18.11.10",
     "@types/react": "18.0.26",
     "next": "13.0.6",
     "next-sitemap": "3.1.32",
-    "normalize.css": "8.0.1",
     "postcss-scss": "^4.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",

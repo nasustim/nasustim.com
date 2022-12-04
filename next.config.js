@@ -3,7 +3,7 @@ module.exports = (phase, { defaultConfig }) => {
     env: {
       DOMAIN: 'https://nasustim.com',
       SITE_TITLE: 'nasustim.com',
-      GA_MEASUREMENT_ID: process.env.GA_MEASUREMENT_ID,
+      GA_MEASUREMENT_ID: process.env.GA_MEASUREMENT_ID ?? '',
     },
     experimental: {
       optimizeFonts: true,

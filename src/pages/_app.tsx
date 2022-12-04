@@ -1,4 +1,4 @@
-import 'normalize.css'
+import '@acab/reset.css'
 import '../global.css'
 
 import React from 'react'

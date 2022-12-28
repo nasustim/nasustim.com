@@ -1,14 +1,14 @@
 import React from 'react'
-import Layout from '../layout'
+import Layout from '../components/layout'
 
-import Section from '../organisms/Section'
-import { Ul, Li } from '../organisms/List'
+import Section from '../components/organisms/Section'
+import { Ul, Li } from '../components/organisms/List'
 
-import PageTitle from '../atoms/PageTitle'
-import SectionTitle from '../atoms/SectionTitle'
-import Image3D from '../atoms/Image3D'
-import Text from '../atoms/Text'
-import Link from '../atoms/Link'
+import PageTitle from '../components/atoms/PageTitle'
+import SectionTitle from '../components/atoms/SectionTitle'
+import Image3D from '../components/atoms/Image3D'
+import Text from '../components/atoms/Text'
+import Link from '../components/atoms/Link'
 
 type Props = SuperPageProps
 

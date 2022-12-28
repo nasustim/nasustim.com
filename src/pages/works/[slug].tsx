@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import { useEffect, useState } from 'react'
 
-import Layout from '../../layout'
+import Layout from '../../components/layout'
 
 type Props = {
   slug: string

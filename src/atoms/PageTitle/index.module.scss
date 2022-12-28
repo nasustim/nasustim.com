@@ -1,5 +1,8 @@
+@use "../../constants.scss" as c;
+
 .root {
   padding: 8px 0 16px;
+  color: c.$color-text-primary;
   font-family: "Signika Negative", sans-serif;
   font-size: 26px;
 }

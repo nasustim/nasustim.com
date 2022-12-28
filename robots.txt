@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://nasustim.com
-
-# Sitemaps
-Sitemap: https://nasustim.com/sitemap.xml

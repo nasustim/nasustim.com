@@ -1,0 +1,10 @@
+.root {
+  color: rgb(63 0 255);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  text-decoration: underline;
+
+  &:hover {
+    color: rgb(95 158 160);
+  }
+}

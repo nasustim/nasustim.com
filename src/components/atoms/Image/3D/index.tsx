@@ -10,7 +10,7 @@ import {
   MeshBasicMaterial,
 } from 'three'
 
-import { Props } from '../Image'
+import { Props } from '../Normal'
 
 const Image3D: React.FC<Props> = ({ width, height, src }) => {
   const contaierId = 'image-3d'

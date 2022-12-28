@@ -1,10 +1,12 @@
+@use "../../constants.scss" as c;
+
 .root {
-  color: rgb(63 0 255);
+  color: c.$color-text-link;
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
   text-decoration: underline;
 
   &:hover {
-    color: rgb(95 158 160);
+    color: c.$color-text-link__hover;
   }
 }

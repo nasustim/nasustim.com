@@ -1,6 +1,9 @@
+@use "../constants" as c;
+
 .root {
   width: 100%;
   height: 100%;
+  background-color: c.$color-bg-white;
 }
 
 .inner {

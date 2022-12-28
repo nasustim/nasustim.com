@@ -4,5 +4,9 @@ module.exports = {
   customSyntax: 'postcss-scss',
   rules: {
     'number-leading-zero': null,
+    'at-rule-no-unknown': [
+      true,
+      { 'ignoreAtRules': [ 'use' ] }
+    ]
   },
 }

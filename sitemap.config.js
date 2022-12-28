@@ -1,6 +1,6 @@
 module.exports = {
   siteUrl: 'https://nasustim.com',
-  changefreq: 'weekly',
+  changefreq: 'daily',
   autoLastmod: true,
   generateRobotsTxt: true,
   sitemapSize: 7000,

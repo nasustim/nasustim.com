@@ -6,7 +6,7 @@ import { Ul, Li } from '../organisms/List'
 
 import PageTitle from '../atoms/PageTitle'
 import SectionTitle from '../atoms/SectionTitle'
-import Image3D from '../atoms/Image/3D'
+import Image3D from '../atoms/Image3D'
 import Text from '../atoms/Text'
 import Link from '../atoms/Link'
 

@@ -10,9 +10,9 @@ import {
   MeshBasicMaterial,
 } from 'three'
 
-import { BaseProps } from '../const'
+import { Props } from '../Image'
 
-const Image3D: React.FC<BaseProps> = ({ width, height, src }) => {
+const Image3D: React.FC<Props> = ({ width, height, src }) => {
   const contaierId = 'image-3d'
 
   useEffect(() => {

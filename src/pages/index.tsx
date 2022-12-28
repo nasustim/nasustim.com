@@ -4,11 +4,11 @@ import Layout from '../components/layout'
 import Section from '../components/organisms/Section'
 import { Ul, Li } from '../components/organisms/List'
 
-import PageTitle from '../components/atoms/PageTitle'
-import SectionTitle from '../components/atoms/SectionTitle'
+import PageTitle from '../components/atoms/Text/H1'
+import SectionTitle from '../components/atoms/Text/H2'
 import Image3D from '../components/atoms/Image3D'
-import Text from '../components/atoms/Text'
-import Link from '../components/atoms/Link'
+import Text from '../components/atoms/Text/Plain'
+import Link from '../components/atoms/Text/Link'
 
 type Props = SuperPageProps
 

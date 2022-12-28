@@ -1,0 +1,36 @@
+name: Update sitemap
+
+on:
+  schedule:
+    - cron: '0 0 * * 1'
+      
+jobs:
+  update-sitemap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: ./.node-version
+          cache: 'npm'
+          cache-dependency-path: ./package-lock.json
+
+      - run: npm ci
+        
+      - run: npm run sitemap
+        
+      - run: |
+          # diffがない場合はskip
+          has_diff=$(git status | grep 'Changes not staged for commit' || true)
+          if [ -z "${has_diff}" ]; then
+            exit 0
+          fi
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "[auto commit] update sitemap"
+          git push origin main
+
+      

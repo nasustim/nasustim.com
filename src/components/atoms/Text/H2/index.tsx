@@ -5,6 +5,6 @@ interface Props {
   children: ReactNode
 }
 
-const Text: React.FC<Props> = ({ children }) => <h2 className={style.root}>{children}</h2>
+const Text: React.FC<Props> = ({ children }) => <h2 className={style.h2}>{children}</h2>
 
 export default Text

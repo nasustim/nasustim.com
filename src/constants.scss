@@ -6,10 +6,17 @@ $color-text-link: rgb(63 0 255);
 $color-text-link__hover: rgb(95 158 160);
 
 // medis query
-$width-max-mobile: 780px;
+$width-max-mobile: 600px;
+$width-max-tablet: 1024px;
+
+@mixin mq-tablet {
+  @media screen and (min-width: calc($width-max-mobile + 1px)) and (max-width: $width-max-tablet) {
+    @content;
+  }
+}
 
 @mixin mq-pc {
-  @media screen and (min-width: calc($width-max-mobile + 1px)) {
+  @media screen and (min-width: calc($width-max-tablet + 1px)) {
     @content;
   }
 }

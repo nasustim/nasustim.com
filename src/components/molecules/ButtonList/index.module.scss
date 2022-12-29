@@ -1,0 +1,9 @@
+.buttonlist {
+  width: 100%;
+  margin: 8px 0;
+
+  // Button
+  & > * {
+    margin-right: 12px;
+  }
+}

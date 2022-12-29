@@ -3,6 +3,9 @@ import '../global.css'
 
 import React from 'react'
 
+import { Provider } from 'react-redux'
+import { store } from '../redux/store'
+
 import App from 'next/app'
 import Head from 'next/head'
 import Script from 'next/script'
@@ -19,28 +22,30 @@ export default class _App extends App {
 
     return (
       <React.Fragment>
-        <Head>
-          <title>{title}</title>
-          <meta name='viewport' content='width=device-width,initial-scale=1' />
-          measurementId !== '' ? (
-          <Script
-            defer
-            src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-            strategy='afterInteractive'
-          />
-          <Script id='ga' defer strategy='afterInteractive'>
-            {`
+        <Provider store={store}>
+          <Head>
+            <title>{title}</title>
+            <meta name='viewport' content='width=device-width,initial-scale=1' />
+            measurementId !== '' ? (
+            <Script
+              defer
+              src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
+              strategy='afterInteractive'
+            />
+            <Script id='ga' defer strategy='afterInteractive'>
+              {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());    
                 gtag('config', '${measurementId}');
             `}
-          </Script>
-          ) : ()
-          <link rel='canonical' href={canonicalUrl}></link>
-          {isNoindex ? <meta name='robots' content='noindex,nofollow'></meta> : null}
-        </Head>
-        <Component {...pageProps} />
+            </Script>
+            ) : ()
+            <link rel='canonical' href={canonicalUrl}></link>
+            {isNoindex ? <meta name='robots' content='noindex,nofollow'></meta> : null}
+          </Head>
+          <Component {...pageProps} />
+        </Provider>
       </React.Fragment>
     )
   }

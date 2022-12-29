@@ -19,7 +19,9 @@ const HeaderProfile: React.FC<Props> = () => {
       <div className={style.texts}>
         <H1>HIBINO Mitsuhiro</H1>
         <P>
-          岐阜県岐阜市出身、都内在住のソフトウェアエンジニア。現在は<Link to='https://mixi.co.jp/'>株式会社MIXI</Link>
+          岐阜県岐阜市出身、都内在住のソフトウェアエンジニア。
+          <br />
+          現在は<Link to='https://mixi.co.jp/'>株式会社MIXI</Link>
           で美容サロン予約サービスのサーバサイド, インフラ開発を担当している。
         </P>
       </div>

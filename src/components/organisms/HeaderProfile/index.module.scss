@@ -1,10 +1,10 @@
-.root {
+.headerprofile {
   display: flex;
   flex-direction: row;
   width: 100%;
-}
 
-.texts {
-  flex-grow: 1;
-  padding: 0 8px;
+  &__texts {
+    flex-grow: 1;
+    padding: 0 8px;
+  }
 }

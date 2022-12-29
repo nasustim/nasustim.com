@@ -5,6 +5,6 @@ interface Props {
   children: ReactNode
 }
 
-const Section: React.FC<Props> = ({ children }) => <section className={style.root}>{children}</section>
+const Section: React.FC<Props> = ({ children }) => <section className={style.section}>{children}</section>
 
 export default Section

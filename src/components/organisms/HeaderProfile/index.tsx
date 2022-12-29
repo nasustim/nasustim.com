@@ -12,11 +12,11 @@ const imageSize = 140
 
 const HeaderProfile: React.FC<Props> = () => {
   return (
-    <div className={style.root}>
-      <div className={style.imageContainer}>
+    <div className={style.headerprofile}>
+      <div className={style.headerprofile__image_container}>
         <Image src={'/static/profile_400x400.jpg'} width={imageSize} height={imageSize} />
       </div>
-      <div className={style.texts}>
+      <div className={style.headerprofile__texts}>
         <H1>HIBINO Mitsuhiro</H1>
         <P>
           岐阜県岐阜市出身、都内在住のソフトウェアエンジニア。

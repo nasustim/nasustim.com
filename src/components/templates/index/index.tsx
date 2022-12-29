@@ -11,9 +11,9 @@ import HeaderProfile from '../../organisms/HeaderProfile'
 
 interface Props {}
 
-const Layout: React.FC<Props> = () => (
-  <div className={style.root}>
-    <div className={style.inner}>
+const Template: React.FC<Props> = () => (
+  <div className={style.template}>
+    <div className={style.template__inner}>
       <Section>
         <HeaderProfile />
       </Section>
@@ -34,4 +34,4 @@ const Layout: React.FC<Props> = () => (
     </div>
   </div>
 )
-export default Layout
+export default Template

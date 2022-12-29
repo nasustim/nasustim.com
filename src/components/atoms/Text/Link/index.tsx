@@ -10,7 +10,7 @@ interface Props {
 }
 
 const _Link: React.FC<Props> = (props) => (
-  <Link href={props.to} className={style.root} target={props.isInternal ? '' : '_blank'}>
+  <Link href={props.to} className={style.link} target={props.isInternal ? '' : '_blank'}>
     {props.children}
   </Link>
 )

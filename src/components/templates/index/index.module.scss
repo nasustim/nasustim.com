@@ -13,6 +13,12 @@
   margin-right: auto;
   margin-left: auto;
 
+  // tablet
+  @include c.mq-tablet {
+    width: c.$width-max-mobile;
+    padding: 0;
+  }
+
   // pc
   @include c.mq-pc {
     width: c.$width-max-mobile;

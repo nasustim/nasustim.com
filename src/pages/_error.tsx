@@ -1,6 +1,6 @@
 // 現状クライアント側のみで動作させているので、Next.jsの都合で用意している
 import React from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/templates/index'
 
 type Props = SuperPageProps
 

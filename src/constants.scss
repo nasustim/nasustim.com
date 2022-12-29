@@ -4,3 +4,12 @@ $color-bg-white: #fff;
 $color-text-primary: #000;
 $color-text-link: rgb(63 0 255);
 $color-text-link__hover: rgb(95 158 160);
+
+// medis query
+$width-max-mobile: 780px;
+
+@mixin mq-pc {
+  @media screen and (min-width: calc($width-max-mobile + 1px)) {
+    @content;
+  }
+}

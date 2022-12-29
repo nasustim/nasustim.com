@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import Text from '../../atoms/Text'
+import Text from '../../atoms/Text/Plain'
 
 interface Props {
   children: ReactNode

@@ -1,7 +1,5 @@
 module.exports = {
-  plugins: [
-    'stylelint-scss',
-  ],
+  plugins: ['stylelint-scss'],
   extends: ['stylelint-config-standard', 'stylelint-config-property-sort-order-smacss'],
   customSyntax: 'postcss-scss',
   rules: {

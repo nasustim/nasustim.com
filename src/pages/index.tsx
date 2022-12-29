@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 
 import Section from '../components/organisms/Section'
-import { Ul, Li } from '../components/organisms/List'
+import { Ul, Li } from '../components/molecules/List'
 
 import SectionTitle from '../components/atoms/Text/H2'
 import Link from '../components/atoms/Text/Link'

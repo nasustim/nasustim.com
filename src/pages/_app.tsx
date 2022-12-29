@@ -22,15 +22,21 @@ export default class _App extends App {
         <Head>
           <title>{title}</title>
           <meta name='viewport' content='width=device-width,initial-scale=1' />
-
+          measurementId !== '' ? (
           <Script
-            strategy='lazyOnload'
+            defer
             src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-            onLoad={() => {
-              _setupGA(measurementId)
-            }}
+            strategy='afterInteractive'
           />
-
+          <Script id='ga' defer strategy='afterInteractive'>
+            {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());    
+                gtag('config', '${measurementId}');
+            `}
+          </Script>
+          ) : ()
           <link rel='canonical' href={canonicalUrl}></link>
           {isNoindex ? <meta name='robots' content='noindex,nofollow'></meta> : null}
         </Head>
@@ -38,18 +44,4 @@ export default class _App extends App {
       </React.Fragment>
     )
   }
-}
-
-function _setupGA(measurementId: string): void {
-  //@ts-ignore
-  window.dataLayer = window.dataLayer ?? []
-  //@ts-ignore
-  function gtag() {
-    //@ts-ignore
-    dataLayer.push(arguments)
-  }
-  //@ts-ignore
-  gtag('js', new Date())
-  //@ts-ignore
-  gtag('config', measurementId)
 }

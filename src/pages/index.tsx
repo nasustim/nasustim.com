@@ -4,24 +4,18 @@ import Layout from '../components/layout'
 import Section from '../components/organisms/Section'
 import { Ul, Li } from '../components/organisms/List'
 
-import PageTitle from '../components/atoms/Text/H1'
 import SectionTitle from '../components/atoms/Text/H2'
-import Image3D from '../components/atoms/Image/3D'
-import Text from '../components/atoms/Text/Plain'
 import Link from '../components/atoms/Text/Link'
+
+import HeaderProfile from '../components/organisms/HeaderProfile'
 
 type Props = SuperPageProps
 
 const Page: React.FC<Props> = (props) => {
   return (
     <Layout>
-      <PageTitle>nasustim.com</PageTitle>
-      <Image3D src='/static/profile_400x400.jpg' width={150} height={150} />
       <Section>
-        <Text>
-          岐阜県岐阜市出身、都内在住のソフトウェアエンジニア。現在は<Link to='https://mixi.co.jp/'>株式会社MIXI</Link>
-          で美容サロン予約サービスのサーバサイド, インフラ開発を担当している。
-        </Text>
+        <HeaderProfile />
       </Section>
       <Section>
         <SectionTitle>Links</SectionTitle>

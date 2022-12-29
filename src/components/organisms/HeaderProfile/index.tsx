@@ -12,7 +12,7 @@ import { Facebook, GitHub, Keybase } from '../../atoms/Icons'
 
 interface Props {}
 
-const imageSize = 140
+const imageSize = 150
 
 const HeaderProfile: React.FC<Props> = () => {
   const transition = (to: string) => {
@@ -35,19 +35,19 @@ const HeaderProfile: React.FC<Props> = () => {
         <ButtonList
           contentList={[
             {
-              child: <Facebook size={26} />,
+              child: <Facebook size={28} />,
               action: function () {
                 transition('https://www.facebook.com/mitsuhibino')
               },
             },
             {
-              child: <GitHub size={26} />,
+              child: <GitHub size={28} />,
               action: function () {
                 transition('https://github.com/nasustim')
               },
             },
             {
-              child: <Keybase size={26} />,
+              child: <Keybase size={28} />,
               action: function () {
                 transition('https://keybase.io/nasustim')
               },

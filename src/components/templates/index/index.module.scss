@@ -20,7 +20,7 @@
 
     // pc
     @include c.mq-pc {
-      width: c.$width-max-mobile;
+      width: c.$width-max-tablet * 0.9;
       padding: 0;
     }
   }

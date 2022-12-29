@@ -14,8 +14,8 @@
   margin-left: auto;
 
   // pc
-  @media (min-width: 780px) {
-    width: 780px;
+  @include c.mq-pc {
+    width: c.$width-max-mobile;
     padding: 0;
   }
 }

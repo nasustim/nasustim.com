@@ -1,14 +1,30 @@
+@use "../../../constants.scss" as c;
+
+$mobile-gap: 16px;
+
 .headerprofile {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
+
+  // 画像, テキスト間の余白
+  // スマホ向け
+  gap: $mobile-gap;
+
+  @include c.mq-pc {
+    flex-direction: row;
+  }
 
   &__image_container {
     display: flex;
-    flex-shrink: 0;
+    flex-shrink: 1;
     align-items: center;
     justify-content: center;
-    width: 220px;
+
+    @include c.mq-pc {
+      flex-shrink: 0;
+      width: 220px;
+    }
   }
 
   &__texts {

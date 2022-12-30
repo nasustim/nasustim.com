@@ -1,0 +1,27 @@
+@use "../../../constants" as c;
+
+.template {
+  width: 100%;
+  height: 100%;
+  background-color: c.$color-bg-white;
+
+  &__inner {
+    // sp
+    width: calc(100% - 20px);
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    // tablet
+    @include c.mq-tablet {
+      width: c.$width-max-mobile;
+      padding: 0;
+    }
+
+    // pc
+    @include c.mq-pc {
+      width: c.$width-max-tablet * 0.9;
+      padding: 0;
+    }
+  }
+}

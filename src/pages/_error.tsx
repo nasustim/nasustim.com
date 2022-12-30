@@ -1,14 +1,10 @@
-// 現状クライアント側のみで動作させているので、Next.jsの都合で用意している
+// Note: 現状クライアント側のみで動作させているので、Next.jsの都合で用意している
 import React from 'react'
-import Layout from '../components/templates/index'
+import Template from '../components/templates/error'
 
 type Props = SuperPageProps
 
-const Page: React.FC<Props> = (props) => (
-  <Layout>
-    <p>error</p>
-  </Layout>
-)
+const Page: React.FC<Props> = (props) => <Template />
 
 export default Page
 

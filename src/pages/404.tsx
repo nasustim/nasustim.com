@@ -1,15 +1,15 @@
 import React from 'react'
-import Layout from '../components/templates/index'
+
+import Template from '../components/templates/error'
 
 type Props = {
   title: string
 } & SuperPageProps
 
-const Page: React.FC<Props> = (props) => (
-  <Layout>
-    <div>404</div>
-  </Layout>
-)
+const Page: React.FC<Props> = (props) => {
+  const error = new Error('404 Not Found')
+  return <Template error={error} />
+}
 
 export default Page
 

@@ -12,9 +12,9 @@ interface Props {
 
 const ButtonList: React.FC<Props> = (props) => {
   return (
-    <div className={style.buttonlist}>
+    <div className={style['button-list']}>
       {props.contentList.map((v, i) => (
-        <Button key={`buttonlist--button--${i}`} action={v.action}>
+        <Button key={`button-list--button--${i}`} action={v.action}>
           {v.child}
         </Button>
       ))}

@@ -6,7 +6,6 @@ import Image from '../../atoms/Image/3D'
 import H1 from '../../atoms/Text/H1'
 import P from '../../atoms/Text/Plain'
 import Link from '../../atoms/Text/Link'
-import Button from '../../atoms/Button'
 import ButtonList from '../../molecules/ButtonList'
 import { Facebook, GitHub, Keybase } from '../../atoms/Icons'
 
@@ -20,11 +19,11 @@ const HeaderProfile: React.FC<Props> = () => {
   }
 
   return (
-    <div className={style.headerprofile}>
-      <div className={style.headerprofile__image_container}>
+    <div className={style['header-profile']}>
+      <div className={style['header-profile__image_container']}>
         <Image src={'/static/profile_400x400.jpg'} width={imageSize} height={imageSize} />
       </div>
-      <div className={style.headerprofile__texts}>
+      <div className={style['header-profile__texts']}>
         <H1>HIBINO Mitsuhiro</H1>
         <P>
           岐阜県岐阜市出身、都内在住のソフトウェアエンジニア。

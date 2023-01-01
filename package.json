@@ -31,7 +31,8 @@
     "stylelint-config-property-sort-order-smacss": "9.0.0",
     "stylelint-config-standard-scss": "^6.1.0",
     "stylelint-scss": "^4.3.0",
-    "stylelint-selector-bem-pattern": "^2.1.1"
+    "stylelint-selector-bem-pattern": "^2.1.1",
+    "typescript-plugin-css-modules": "^4.1.1"
   },
   "homepage": "https://github.com/nasustim/nasustim.com#readme",
   "main": "src/pages/index.tsx",

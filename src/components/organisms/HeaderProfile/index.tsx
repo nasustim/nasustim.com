@@ -13,6 +13,7 @@ import { Facebook, GitHub, Keybase } from '../../atoms/Icons'
 interface Props {}
 
 const imageSize = 150
+const snsIconSize = 32
 
 const HeaderProfile: React.FC<Props> = () => {
   const transition = (to: string) => {
@@ -38,21 +39,21 @@ const HeaderProfile: React.FC<Props> = () => {
               transition('https://www.facebook.com/mitsuhibino')
             }}
           >
-            <Facebook size={28} isButton={true} />
+            <Facebook size={snsIconSize} isButton={true} />
           </Button>
           <Button
             action={() => {
               transition('https://github.com/nasustim')
             }}
           >
-            <GitHub size={28} isButton={true} />
+            <GitHub size={snsIconSize} isButton={true} />
           </Button>
           <Button
             action={() => {
               transition('https://keybase.io/nasustim')
             }}
           >
-            <Keybase size={28} isButton={true} />
+            <Keybase size={snsIconSize} isButton={true} />
           </Button>
         </ButtonList>
       </div>

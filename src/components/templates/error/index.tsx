@@ -13,7 +13,7 @@ const defaultError = new Error('Internal Error')
 const Template: React.FC<Props> = ({ error = defaultError }) => (
   <div className={style.template}>
     <Section>
-      <H1>{error.message}</H1>
+      <H1 isCentered={true}>{error.message}</H1>
     </Section>
   </div>
 )

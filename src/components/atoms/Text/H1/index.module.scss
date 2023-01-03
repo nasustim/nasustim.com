@@ -6,6 +6,10 @@
   font-size: 36px;
   line-height: 1.2;
 
+  &[data-is-centered="1"] {
+    text-align: center;
+  }
+
   @include c.mq-pc {
     font-size: 42px;
     line-height: 1.5;

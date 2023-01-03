@@ -8,14 +8,15 @@ import { FaKeybase } from 'react-icons/fa'
 
 interface Props {
   size: number
+  isButton?: boolean
 }
 
 interface IconContainerProps extends Props {
   Icon: IconType
 }
-const IconContainer: React.FC<IconContainerProps> = ({ Icon, size }) => {
+const IconContainer: React.FC<IconContainerProps> = ({ Icon, size, isButton = false }) => {
   return (
-    <div className={style.icon} style={{ fontSize: `${size}px` }}>
+    <div className={style.icon} style={{ fontSize: `${size}px` }} data-is-button={isButton ? 1 : 0}>
       <Icon />
     </div>
   )

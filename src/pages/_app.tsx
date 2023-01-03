@@ -1,5 +1,5 @@
 import '@acab/reset.css'
-import '../global.css'
+import '../global.scss'
 
 import React from 'react'
 

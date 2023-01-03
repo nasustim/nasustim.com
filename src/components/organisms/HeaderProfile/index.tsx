@@ -6,12 +6,14 @@ import Image from '../../atoms/Image/3D'
 import H1 from '../../atoms/Text/H1'
 import P from '../../atoms/Text/Plain'
 import Link from '../../atoms/Text/Link'
+import Button from '../../atoms/Button'
 import ButtonList from '../../molecules/ButtonList'
 import { Facebook, GitHub, Keybase } from '../../atoms/Icons'
 
 interface Props {}
 
 const imageSize = 150
+const snsIconSize = 32
 
 const HeaderProfile: React.FC<Props> = () => {
   const transition = (to: string) => {
@@ -31,28 +33,29 @@ const HeaderProfile: React.FC<Props> = () => {
           現在は<Link to='https://mixi.co.jp/'>株式会社MIXI</Link>
           で美容サロン予約サービスのサーバサイド, インフラ開発を担当している。
         </P>
-        <ButtonList
-          contentList={[
-            {
-              child: <Facebook size={28} />,
-              action: function () {
-                transition('https://www.facebook.com/mitsuhibino')
-              },
-            },
-            {
-              child: <GitHub size={28} />,
-              action: function () {
-                transition('https://github.com/nasustim')
-              },
-            },
-            {
-              child: <Keybase size={28} />,
-              action: function () {
-                transition('https://keybase.io/nasustim')
-              },
-            },
-          ]}
-        />
+        <ButtonList>
+          <Button
+            action={() => {
+              transition('https://www.facebook.com/mitsuhibino')
+            }}
+          >
+            <Facebook size={snsIconSize} isButton={true} />
+          </Button>
+          <Button
+            action={() => {
+              transition('https://github.com/nasustim')
+            }}
+          >
+            <GitHub size={snsIconSize} isButton={true} />
+          </Button>
+          <Button
+            action={() => {
+              transition('https://keybase.io/nasustim')
+            }}
+          >
+            <Keybase size={snsIconSize} isButton={true} />
+          </Button>
+        </ButtonList>
       </div>
     </div>
   )

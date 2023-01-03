@@ -1,16 +1,16 @@
-@use "../../../constants" as c;
+@use "../../../../constants.scss" as c;
 
-.template {
-  width: 100%;
-  height: 100%;
-  background-color: c.$color-bg-white;
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
 
   &__inner {
     // sp
     width: calc(100% - 20px);
-    height: 100%;
-    margin-right: auto;
-    margin-left: auto;
 
     // tablet
     @include c.mq-tablet {

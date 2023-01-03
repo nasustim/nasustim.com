@@ -1,7 +1,7 @@
 @use "../../../../constants.scss" as c;
 
 .plain {
-  color: c.$color-text-primary;
+  color: c.$color-text-primary__sub;
   font-family: "Work Sans", sans-serif;
   font-size: 14px;
   line-height: 1.5;

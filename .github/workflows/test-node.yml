@@ -3,19 +3,18 @@ name: Test App
 on:
   push:
     paths:
-      - "**.ts"
-      - "**.js"
-      - "**.tsx"
-      - "**.jsx"
-      - "**.json"
-      - "**.css"
-      - "**.scss"
-      - "package.json"
-      - "package-lock.json"
+      - 'src/**'
+      - 'public/**'
+      - '**.tsx?'
+      - '**.jsx?'
+      - '**.json'
+      - '**.s?css'
+      - 'package(-lock)?.json'
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 4
     steps:
       - uses: actions/checkout@v3
 

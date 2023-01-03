@@ -1,7 +1,7 @@
 name: Test App
 
 on:
-  push:
+  pull_request:
     paths:
       - 'src/**'
       - 'public/**'
@@ -9,7 +9,11 @@ on:
       - '**.jsx?'
       - '**.json'
       - '**.s?css'
-      - 'package(-lock)?.json'
+      - 'package.json'
+      - 'package-lock.json'
+  push:
+    branches:
+      - main
 
 jobs:
   test:

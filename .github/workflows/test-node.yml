@@ -35,8 +35,11 @@ jobs:
       - name: Test
         run: npm run test
 
-      - name: Build
+      - name: Next Build
         run: npm run build
+      
+      - name: Export to static HTML
+        run: npm run export
 
       - name: Format check
         run: |

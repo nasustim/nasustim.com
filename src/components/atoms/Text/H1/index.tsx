@@ -3,7 +3,7 @@ import style from './index.module.scss'
 
 interface Props {
   children: ReactNode
-  isCentered: boolean
+  isCentered?: boolean
 }
 
 const Text: React.FC<Props> = (props) => {

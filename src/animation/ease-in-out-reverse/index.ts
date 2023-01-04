@@ -1,4 +1,4 @@
-import { Euler, Mesh, Vector3 } from 'three'
+import { Mesh } from 'three'
 
 type EaseInOut = Generator<number, number, boolean>
 

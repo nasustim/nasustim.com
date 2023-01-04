@@ -4,7 +4,7 @@ type EaseInOut = Generator<number, number, boolean>
 
 function* easeInOut(max: number, duration: number): EaseInOut {
   // ref: https://easings.net/#easeInOutQuart
-  const calc = (x: number) => (x < 0.5 ? 8 * x * x * x * x : 1 - Math.pow(-2 * x + 2, 4) / 2) * max
+  const calc = (x: number) => (x < 0.5 ? 8 * Math.pow(x, 4) : 1 - Math.pow(-2 * x + 2, 4) / 2) * max
 
   for (let i = 0; i <= duration; i++) {
     yield calc(i / duration)
@@ -18,21 +18,26 @@ class EaseInOutReverse {
   _whileAction: boolean
   _actionStep: EaseInOut
 
-  _velocity: number
+  initState() {
+    return {
+      whileAction: false,
+      actionStep: easeInOut(Math.PI * 3, 60 * 3),
+    }
+  }
   constructor(mesh: Mesh) {
     this._mesh = mesh
-    this._whileAction = false
-    this._velocity = 0
-    this._actionStep = easeInOut(Math.PI * 3, 60 * 3)
+
+    const { whileAction, actionStep } = this.initState()
+    this._whileAction = whileAction
+    this._actionStep = actionStep
   }
 
   onMouseEnter() {
     if (!this._whileAction) {
-      this._actionStep = easeInOut(Math.PI * 3, 60 * 3)
+      this._actionStep = this.initState().actionStep
       this._whileAction = true
     }
   }
-  onMouseLeave() {}
 
   run() {
     let diff = 0

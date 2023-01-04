@@ -54,8 +54,8 @@ const Image3D: React.FC<Props> = ({ width, height, src }) => {
       contaierRef.current?.addEventListener('mouseenter', () => {
         anim.onMouseEnter()
       })
-      contaierRef.current?.addEventListener('mouseleave', () => {
-        anim.onMouseLeave()
+      contaierRef.current?.addEventListener('touchstart', () => {
+        anim.onMouseEnter()
       })
     })
 

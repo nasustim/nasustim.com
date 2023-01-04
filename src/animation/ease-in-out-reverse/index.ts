@@ -21,7 +21,10 @@ class EaseInOutReverse {
   initState() {
     return {
       whileAction: false,
-      actionStep: easeInOut(Math.PI * 3, 60 * 3),
+      actionStep: easeInOut(
+        Math.PI * 2, // 2回転 = 2 * PI [rad]
+        60 * 3, // ベストエフォートで3秒
+      ),
     }
   }
   constructor(mesh: Mesh) {

@@ -28,7 +28,10 @@ $mobile-gap: 16px;
   }
 
   &__texts {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
+    justify-content: center;
     padding: 0 8px;
 
     &__link_list {

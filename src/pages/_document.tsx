@@ -1,4 +1,5 @@
 import Document, { DocumentContext, Html, Head, Main, NextScript } from 'next/document'
+import Tracker from '../components/atoms/SEO/Tracker'
 
 export default class CustomDocument extends Document {
   static async getInitialProps(context: DocumentContext) {
@@ -6,6 +7,7 @@ export default class CustomDocument extends Document {
     return { ...initialProps }
   }
   render() {
+    const measurementId = process.env.GA_MEASUREMENT_ID
     return (
       <Html lang='ja'>
         <Head>
@@ -20,6 +22,7 @@ export default class CustomDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          {measurementId ? <Tracker gaTrackingId={measurementId} /> : undefined}
         </body>
       </Html>
     )

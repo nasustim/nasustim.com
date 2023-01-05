@@ -12,7 +12,7 @@ import { Facebook, GitHub, Keybase } from '../../atoms/Icons'
 
 interface Props {}
 
-const imageSize = 150
+const imageSize = 200
 const snsIconSize = 32
 
 const HeaderProfile: React.FC<Props> = () => {

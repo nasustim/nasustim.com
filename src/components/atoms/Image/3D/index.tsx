@@ -39,14 +39,13 @@ const Image3D: React.FC<Props> = ({ width, height, src }) => {
 
     let anim: AnimationManager
     const texture = new TextureLoader().load(src, (tex) => {
-      const w = 70 // [%]
-      const h = 70 // [%]
+      const size = 65 // [%]
 
       const geometry = new BoxGeometry(1, 1, 0.001, 1, 1)
       const material = new MeshStandardMaterial({ map: texture, roughness: 0.5 })
 
       const plane = new Mesh(geometry, material)
-      plane.scale.set(w, h, 1)
+      plane.scale.set(size, size, 1)
       scene.add(plane)
 
       anim = new AnimationManager(plane)

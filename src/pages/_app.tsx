@@ -1,6 +1,4 @@
 import '@acab/reset.css'
-import '../global.scss'
-
 import React from 'react'
 
 import { Provider } from 'react-redux'

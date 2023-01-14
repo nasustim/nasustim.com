@@ -5,6 +5,7 @@ import style from './index.module.scss'
 import type { IconType } from 'react-icons'
 import { AiFillGithub, AiFillFacebook } from 'react-icons/ai'
 import { FaKeybase } from 'react-icons/fa'
+import { MdArticle } from 'react-icons/md'
 
 interface Props {
   size: number
@@ -25,3 +26,4 @@ const IconContainer: React.FC<IconContainerProps> = ({ Icon, size, isButton = fa
 export const GitHub: React.FC<Props> = (props) => <IconContainer {...props} Icon={AiFillGithub} />
 export const Facebook: React.FC<Props> = (props) => <IconContainer {...props} Icon={AiFillFacebook} />
 export const Keybase: React.FC<Props> = (props) => <IconContainer {...props} Icon={FaKeybase} />
+export const Blog: React.FC<Props> = (props) => <IconContainer {...props} Icon={MdArticle} />

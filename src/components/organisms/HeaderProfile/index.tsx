@@ -8,7 +8,7 @@ import P from '../../atoms/Text/Plain'
 import Link from '../../atoms/Text/Link'
 import Button from '../../atoms/Button'
 import ButtonList from '../../molecules/ButtonList'
-import { Facebook, GitHub, Keybase } from '../../atoms/Icons'
+import { Facebook, GitHub, Keybase, Blog } from '../../atoms/Icons'
 
 interface Props {}
 
@@ -54,6 +54,13 @@ const HeaderProfile: React.FC<Props> = () => {
             }}
           >
             <Keybase size={snsIconSize} isButton={true} />
+          </Button>
+          <Button
+            action={() => {
+              transition('https://blog.nasustim.com/')
+            }}
+          >
+            <Blog size={snsIconSize} isButton={true} />
           </Button>
         </ButtonList>
       </div>

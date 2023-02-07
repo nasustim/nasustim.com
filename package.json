@@ -24,7 +24,7 @@
   "devDependencies": {
     "@types/three": "0.149.0",
     "husky": "8.0.3",
-    "lint-staged": "13.1.0",
+    "lint-staged": "13.1.1",
     "prettier": "2.8.3",
     "sass": "1.58.0",
     "stylelint": "14.16.1",

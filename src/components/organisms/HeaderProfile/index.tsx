@@ -37,29 +37,25 @@ const HeaderProfile: React.FC<Props> = () => {
           <Button
             action={() => {
               transition('https://www.facebook.com/mitsuhibino')
-            }}
-          >
+            }}>
             <Facebook size={snsIconSize} isButton={true} />
           </Button>
           <Button
             action={() => {
               transition('https://github.com/nasustim')
-            }}
-          >
+            }}>
             <GitHub size={snsIconSize} isButton={true} />
           </Button>
           <Button
             action={() => {
               transition('https://keybase.io/nasustim')
-            }}
-          >
+            }}>
             <Keybase size={snsIconSize} isButton={true} />
           </Button>
           <Button
             action={() => {
               transition('https://blog.nasustim.com/')
-            }}
-          >
+            }}>
             <Blog size={snsIconSize} isButton={true} />
           </Button>
         </ButtonList>

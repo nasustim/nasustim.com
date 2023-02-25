@@ -6,7 +6,7 @@ module.exports = {
   semi: false,
   jsxSingleQuote: true,
   bracketSpacing: true,
-  jsxBracketSameLine: true,
+  bracketSameLine: true,
   arrowParens: 'always',
   parser: 'typescript',
 }

@@ -11,7 +11,7 @@
     "@reduxjs/toolkit": "1.9.3",
     "@types/node": "18.15.0",
     "@types/react": "18.0.28",
-    "next": "13.2.3",
+    "next": "13.2.4",
     "next-sitemap": "3.1.52",
     "postcss-scss": "4.0.6",
     "react": "18.2.0",

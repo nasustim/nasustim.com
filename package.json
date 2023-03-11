@@ -32,7 +32,7 @@
     "stylelint-config-standard-scss": "7.0.1",
     "stylelint-scss": "4.4.0",
     "stylelint-selector-bem-pattern": "2.1.1",
-    "typescript-plugin-css-modules": "4.2.2"
+    "typescript-plugin-css-modules": "4.2.3"
   },
   "homepage": "https://github.com/nasustim/nasustim.com#readme",
   "main": "src/pages/index.tsx",

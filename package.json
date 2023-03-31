@@ -19,7 +19,7 @@
     "react-icons": "4.8.0",
     "react-redux": "8.0.5",
     "three": "0.151.2",
-    "typescript": "5.0.2"
+    "typescript": "5.0.3"
   },
   "devDependencies": {
     "@types/three": "0.150.0",

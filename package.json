@@ -10,7 +10,7 @@
     "@acab/reset.css": "0.5.3",
     "@reduxjs/toolkit": "1.9.3",
     "@types/node": "18.15.11",
-    "@types/react": "18.0.28",
+    "@types/react": "18.2.0",
     "next": "13.3.0",
     "next-sitemap": "4.0.7",
     "postcss-scss": "4.0.6",

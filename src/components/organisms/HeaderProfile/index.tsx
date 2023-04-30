@@ -30,7 +30,15 @@ const HeaderProfile: React.FC<Props> = () => {
         <P>
           岐阜県岐阜市出身、都内在住のソフトウェアエンジニア。
           <br />
-          現在は<Link to='https://mixi.co.jp/'>株式会社MIXI</Link>
+          現在は
+          <Link
+            href={{
+              protocol: 'https',
+              host: 'mixi.co.jp',
+              pathname: '/',
+            }}>
+            株式会社MIXI
+          </Link>
           で美容サロン予約サービスのサーバサイド, インフラ開発を担当している。
         </P>
         <ButtonList>

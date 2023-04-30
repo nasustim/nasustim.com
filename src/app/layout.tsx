@@ -1,7 +1,7 @@
 import '@acab/reset.css'
 import type { FC, ReactNode } from 'react'
 
-import Tracker from '../components/atoms/SEO/Tracker'
+import Tracker from '../components/molecules/SEO/Tracker'
 
 type Props = {
   children: ReactNode
@@ -18,7 +18,7 @@ const RootLayout: FC<Props> = ({ children }) => (
           href='https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;700&family=Work+Sans:wght@400;600&display=swap'
           rel='stylesheet'
         />
-        <Tracker gaTrackingId={process.env.GA_MEASUREMENT_ID || ''} />
+        <Tracker gaTrackingId={process.env.GA_MEASUREMENT_ID} />
       </head>
       <body>{children}</body>
     </html>

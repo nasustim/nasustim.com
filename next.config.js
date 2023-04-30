@@ -8,7 +8,9 @@ module.exports = (phase, { defaultConfig }) => {
     experimental: {
       optimizeFonts: true,
       forceSwcTransforms: true,
+      appDir: true,
     },
+    output: 'export',
     reactStrictMode: true,
   }
 }

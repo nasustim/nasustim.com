@@ -1,9 +1,8 @@
-import React, { ReactNode } from 'react'
-import style from './ul.module.scss'
+import type { FC, ReactNode } from 'react'
 
 interface Props {
   children: ReactNode
 }
 
-const Ul: React.FC<Props> = ({ children }) => <ul className={style.ul}>{children}</ul>
+const Ul: FC<Props> = ({ children }) => <ul>{children}</ul>
 export default Ul

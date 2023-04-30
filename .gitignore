@@ -68,3 +68,6 @@ out/
 
 .env*
 !.env.sample
+
+# editor
+.vscode/

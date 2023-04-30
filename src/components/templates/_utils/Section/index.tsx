@@ -1,11 +1,11 @@
-import React, { type ReactNode } from 'react'
+import type { FC, ReactNode } from 'react'
 import style from './index.module.scss'
 
 interface Props {
   children: ReactNode
 }
 
-const Section: React.FC<Props> = ({ children }) => (
+const Section: FC<Props> = ({ children }) => (
   <section className={style.section}>
     <div className={style.section__inner}>{children}</div>
   </section>

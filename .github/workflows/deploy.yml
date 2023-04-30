@@ -61,8 +61,6 @@ jobs:
         env:
           CI: true
           GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
-      - name: Static HTML export with Next.js
-        run: npm run export
       - name: Generate sitemap
         run: npm run sitemap
       - name: Upload artifact

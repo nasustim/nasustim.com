@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react'
-import Link from 'next/link'
+import type { FC, ReactNode } from 'react'
+import NextLink from 'next/link'
 
 import style from './index.module.scss'
 
@@ -9,9 +9,9 @@ interface Props {
   isInternal?: boolean
 }
 
-const _Link: React.FC<Props> = (props) => (
-  <Link href={props.to} className={style.link} target={props.isInternal ? '' : '_blank'}>
+const Link: FC<Props> = (props) => (
+  <NextLink href={props.to} className={style.link} target={props.isInternal ? '' : '_blank'}>
     {props.children}
-  </Link>
+  </NextLink>
 )
-export default _Link
+export default Link

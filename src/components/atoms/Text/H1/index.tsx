@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import type { FC, ReactNode } from 'react'
 import style from './index.module.scss'
 
 interface Props {
@@ -6,7 +6,7 @@ interface Props {
   isCentered?: boolean
 }
 
-const Text: React.FC<Props> = (props) => {
+const Text: FC<Props> = (props) => {
   const isCentered = props.isCentered ? 1 : 0
   return (
     <h1 className={style.h1} data-is-centered={isCentered}>

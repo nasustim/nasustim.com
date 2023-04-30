@@ -1,11 +1,13 @@
-import React from 'react'
+'use client'
+
+import type { FC } from 'react'
 
 interface Props {
   gaTrackingId: string
 }
-const Tracker: React.FC<Props> = ({ gaTrackingId }) => {
+const Tracker: FC<Props> = ({ gaTrackingId }) => {
   return (
-    <React.Fragment>
+    <>
       <script defer src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`} />
       <script
         id='ga'
@@ -21,7 +23,7 @@ const Tracker: React.FC<Props> = ({ gaTrackingId }) => {
         `,
         }}
       />
-    </React.Fragment>
+    </>
   )
 }
 

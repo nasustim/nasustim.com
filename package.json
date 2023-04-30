@@ -8,16 +8,13 @@
   },
   "dependencies": {
     "@acab/reset.css": "0.5.3",
-    "@reduxjs/toolkit": "1.9.3",
     "@types/node": "18.15.11",
     "@types/react": "18.2.0",
     "next": "13.3.2",
     "next-sitemap": "4.0.7",
     "postcss-scss": "4.0.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
     "react-icons": "4.8.0",
-    "react-redux": "8.0.5",
     "three": "0.152.2",
     "typescript": "5.0.4"
   },

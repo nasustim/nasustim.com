@@ -5,15 +5,16 @@ import style from './index.module.scss'
 interface Props {
   children: ReactNode
   action: () => void
+  buttonName: string
 }
 
-const Button: React.FC<Props> = ({ children, action }) => {
+const Button: React.FC<Props> = ({ children, action, buttonName }) => {
   const onClickHalnder = () => {
     action()
   }
 
   return (
-    <button onClick={onClickHalnder} className={style.button}>
+    <button onClick={onClickHalnder} className={style.button} aria-label={`Button-${buttonName}`}>
       {children}
     </button>
   )

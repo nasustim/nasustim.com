@@ -1,3 +1,7 @@
+import { Metadata } from 'next'
+
+import { SITE_DOMAIN, SITE_TITLE } from '../../../constants'
+
 import Layout from '../../../components/templates/works'
 
 type Props = {
@@ -32,3 +36,18 @@ export const generateStaticParams = () => {
 }
 
 export default Page
+
+export async function generateMetadata({ params }: { params: Props }): Promise<Metadata> {
+  const slug = params.slug
+
+  return {
+    title: `works - ${SITE_TITLE}`,
+    alternates: {
+      canonical: `${SITE_DOMAIN}/works/${slug}`,
+    },
+    robots: {
+      index: false,
+      follow: false,
+    },
+  }
+}

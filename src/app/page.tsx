@@ -1,11 +1,9 @@
 'use client'
 
-import type { FC } from 'react'
-
 import Index from '../components/templates/index/index'
 import Head from 'next/head'
 
-const Page: FC = () => {
+const Page = () => {
   return (
     <>
       <Head>

@@ -35,24 +35,28 @@ const HeaderProfile: React.FC<Props> = () => {
         </P>
         <ButtonList>
           <Button
+            buttonName={'Facebook'}
             action={() => {
               transition('https://www.facebook.com/mitsuhibino')
             }}>
             <Facebook size={snsIconSize} isButton={true} />
           </Button>
           <Button
+            buttonName={'GitHub'}
             action={() => {
               transition('https://github.com/nasustim')
             }}>
             <GitHub size={snsIconSize} isButton={true} />
           </Button>
           <Button
+            buttonName={'Keybase'}
             action={() => {
               transition('https://keybase.io/nasustim')
             }}>
             <Keybase size={snsIconSize} isButton={true} />
           </Button>
           <Button
+            buttonName={'Blog'}
             action={() => {
               transition('https://blog.nasustim.com/')
             }}>

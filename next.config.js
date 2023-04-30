@@ -10,6 +10,7 @@ module.exports = (phase, { defaultConfig }) => {
       forceSwcTransforms: true,
       appDir: true,
     },
+    output: 'export',
     reactStrictMode: true,
   }
 }

@@ -10,7 +10,7 @@
     "@acab/reset.css": "0.5.3",
     "@types/node": "18.16.7",
     "@types/react": "18.2.6",
-    "next": "13.4.1",
+    "next": "13.4.2",
     "next-sitemap": "4.0.9",
     "postcss-scss": "4.0.6",
     "react": "18.2.0",

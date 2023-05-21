@@ -10,12 +10,10 @@ import Button from '../../atoms/Button'
 import ButtonList from '../../molecules/ButtonList'
 import { Facebook, GitHub, Keybase, Blog } from '../../atoms/Icons'
 
-interface Props {}
-
 const imageSize = 200
 const snsIconSize = 32
 
-const HeaderProfile: React.FC<Props> = () => {
+const HeaderProfile: React.FC = () => {
   const transition = (to: string) => {
     window.open(to, '_blank')
   }

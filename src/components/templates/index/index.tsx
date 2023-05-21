@@ -5,9 +5,7 @@ import Section from '../_utils/Section'
 
 import HeaderProfile from '../../organisms/HeaderProfile'
 
-interface Props {}
-
-const Template: FC<Props> = () => (
+const Template: FC = () => (
   <div className={style.template}>
     <Section>
       <HeaderProfile />

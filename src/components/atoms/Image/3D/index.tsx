@@ -40,7 +40,7 @@ const Image3D: React.FC<Props> = ({ width, height, src }) => {
     scene.add(light)
 
     let anim: AnimationManager
-    const texture = new TextureLoader().load(src, (tex) => {
+    new TextureLoader().load(src, (texture) => {
       const size = 65 // [%]
 
       const geometry = new BoxGeometry(1, 1, 0.001, 1, 1)
@@ -67,7 +67,7 @@ const Image3D: React.FC<Props> = ({ width, height, src }) => {
       requestAnimationFrame(render)
     }
     render()
-  }, [])
+  })
 
   const style = {
     width: `${width}px`,

@@ -33,3 +33,4 @@ jobs:
       - run: npm run lint
       - run: npm run ts:check
       - run: npm run stylelint:check
+      - run: npm run build-storybook

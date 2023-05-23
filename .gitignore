@@ -71,3 +71,6 @@ out/
 
 # editor
 .vscode/
+
+# storybook
+storybook-static/

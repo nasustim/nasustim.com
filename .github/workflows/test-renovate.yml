@@ -1,20 +1,21 @@
 name: Test Renovate
 
 on:
-  push:
+  pull_request:
     paths:
       - renovate.json
       - .github/workflows/test-renovate.yml
+  push:
+    branches:
+      - main
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
+    timeout-minutes: 3
     steps:
       - uses: actions/checkout@v3.5.2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3.6.0
+      - uses: actions/setup-node@v3.6.0
         with:
           node-version-file: ./.node-version
           cache: 'npm'

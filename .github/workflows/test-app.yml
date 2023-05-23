@@ -7,10 +7,11 @@ on:
       - 'public/**'
       - '**.tsx?'
       - '**.jsx?'
+      - '**.cjs'
+      - '**.mjs'
       - '**.json'
       - '**.s?css'
-      - 'package.json'
-      - 'package-lock.json'
+      - .github/workflows/test-app.yml
   push:
     branches:
       - main
@@ -18,28 +19,18 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 4
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v3.5.2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3.6.0
+      - uses: actions/setup-node@v3.6.0
         with:
           node-version-file: ./.node-version
           cache: npm
           cache-dependency-path: ./package-lock.json
-
       - run: npm ci
-
       - run: npm run test
-
       - run: npm run build
-
       - run: npm run lint
-
-      - name: Format check
-        run: |
-          npm run ts:check
-          npm run stylelint:check
-
+      - run: npm run ts:check
+      - run: npm run stylelint:check
       - run: npm run build-storybook

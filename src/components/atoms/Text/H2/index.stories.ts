@@ -6,7 +6,7 @@ const defaultProps = {
 }
 
 const meta: Meta<typeof H2> = {
-  title: 'Atoms/Text/H1',
+  title: 'Atoms/Text/H2',
   component: H2,
   tags: ['autodocs'],
   parameters: {

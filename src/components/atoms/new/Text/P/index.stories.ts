@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { H3 } from '.'
+import { P } from '.'
 
 const defaultProps = {
-  children: 'Heading HogeHoge Hoge',
+  children: 'Text HogeHoge Hoge',
 }
 
-const meta: Meta<typeof H3> = {
-  title: 'Atoms/Texts/H3',
-  component: H3,
+const meta: Meta<typeof P> = {
+  title: 'Atoms/Text/P',
+  component: P,
   tags: ['text'],
   parameters: {
     layout: 'fullscreen',
@@ -15,7 +15,7 @@ const meta: Meta<typeof H3> = {
 }
 
 export default meta
-type Story = StoryObj<typeof H3>
+type Story = StoryObj<typeof P>
 
 export const Default: Story = {}
 Default.args = defaultProps

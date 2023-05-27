@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 import style from '../index.module.scss'
 
-import Section from '../_utils/Section'
+import Section from '../_layout/Section'
 import H1 from '../../atoms/Text/H1'
 
 interface Props {

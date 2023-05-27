@@ -1,7 +1,7 @@
 import type { ReactNode, FC } from 'react'
 import style from '../index.module.scss'
 
-import Section from '../_utils/Section'
+import Section from '../_layout/Section'
 
 type Props = {
   children: ReactNode

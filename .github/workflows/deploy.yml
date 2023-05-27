@@ -62,7 +62,7 @@ jobs:
           CI: true
           GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
       - name: Generate sitemap
-        run: npm run sitemap
+        run: npm run build:sitemap
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1.0.8
         with:

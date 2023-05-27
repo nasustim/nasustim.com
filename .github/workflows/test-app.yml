@@ -30,7 +30,7 @@ jobs:
       - run: npm ci
       - run: npm run test
       - run: npm run build
-      - run: npm run lint
-      - run: npm run ts:check
-      - run: npm run stylelint:check
-      - run: npm run build-storybook
+      - run: npm run lint:app:check
+      - run: npm run lint:app:format:check
+      - run: npm run lint:style:check
+      - run: npm run storybook:build

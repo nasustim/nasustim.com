@@ -1,0 +1,7 @@
+@use "../../../../../themes/color.scss" as color;
+
+.top {
+  color: color.$black;
+  font-size: 32px;
+  font-weight: 700;
+}

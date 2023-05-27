@@ -54,27 +54,26 @@
     "url": "git+https://github.com/nasustim/nasustim.com.git"
   },
   "scripts": {
-    "ts:format": "prettier --write --ignore-path .gitignore \"**/*.{ts,tsx,js}\"",
-    "ts:check": "prettier -c \"src/**/*.{ts,tsx}\"",
-    "test": "echo \"please write test and execute\" | exit 0",
-    "lint": "next lint --no-cache",
-    "start": "next dev",
+    "dev": "next dev",
     "build": "next build",
-    "sitemap": "next-sitemap --config ./sitemap.config.js",
+    "build:sitemap": "next-sitemap --config ./sitemap.config.js",
     "serve": "next start",
-    "pre-commit": "npm run format",
-    "stylelint:fix": "stylelint --fix \"src/**/*.{scss,css}\" \"!**/node_modules/**\"",
-    "stylelint:check": "stylelint \"src/**/*.{scss,css}\" \"!**/node_modules/**\"",
-    "prepare": "husky install",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "test": "echo \"please write test and execute\" | exit 0",
+    "storybook:dev": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
+    "lint:app:check": "next lint --no-cache",
+    "lint:app:format": "prettier --write --ignore-path .gitignore \"**/*.{ts,tsx,js}\"",
+    "lint:app:format:check": "prettier -c \"src/**/*.{ts,tsx}\"",
+    "lint:style:check": "stylelint \"src/**/*.{scss,css}\" \"!**/node_modules/**\"",
+    "lint:style:format": "stylelint --fix \"src/**/*.{scss,css}\" \"!**/node_modules/**\"",
+    "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "npm run ts:format"
+    "*.{ts,tsx,js,jsx}": [
+      "npm run lint:app:format"
     ],
     "*.{css,scss}": [
-      "npm run stylelint:fix"
+      "npm run lint:style:format"
     ]
   }
 }

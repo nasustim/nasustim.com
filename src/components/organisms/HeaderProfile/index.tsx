@@ -10,7 +10,7 @@ import Button from '../../atoms/Button'
 import ButtonList from '../../molecules/ButtonList'
 import { Facebook, GitHub, Keybase, Blog } from '../../atoms/Icons'
 
-const imageSize = 160
+const imageSize = 144
 const snsIconSize = 32
 
 const HeaderProfile: React.FC = () => {

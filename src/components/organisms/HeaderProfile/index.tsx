@@ -2,7 +2,7 @@ import React from 'react'
 
 import style from './index.module.scss'
 
-import Image from '../../atoms/Image/3D'
+import Image from '../../atoms/Image/Normal'
 import H1 from '../../atoms/Text/H1'
 import P from '../../atoms/Text/Plain'
 import Link from '../../atoms/Text/Link'
@@ -10,7 +10,7 @@ import Button from '../../atoms/Button'
 import ButtonList from '../../molecules/ButtonList'
 import { Facebook, GitHub, Keybase, Blog } from '../../atoms/Icons'
 
-const imageSize = 200
+const imageSize = 144
 const snsIconSize = 32
 
 const HeaderProfile: React.FC = () => {

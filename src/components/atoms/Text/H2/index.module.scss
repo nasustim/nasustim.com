@@ -2,7 +2,7 @@
 
 .h2 {
   color: c.$color-text-primary;
-  font-family: "Signika Negative", sans-serif;
+  font-family: var(--font-signika-negative), sans-serif;
   font-size: 26px;
   line-height: 1.2;
 

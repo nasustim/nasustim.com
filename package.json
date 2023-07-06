@@ -70,10 +70,10 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
-      "npm run lint:app:format"
+      "pnpm run lint:app:format"
     ],
     "*.{css,scss}": [
-      "npm run lint:style:format"
+      "pnpm run lint:style:format"
     ]
   }
 }

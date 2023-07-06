@@ -65,7 +65,7 @@
     "lint:app:check": "next lint --no-cache",
     "lint:app:format": "prettier --write --ignore-path .gitignore \"**/*.{ts,tsx,js}\"",
     "lint:app:format:check": "prettier -c \"src/**/*.{ts,tsx}\"",
-    "lint:style:check": "stylelint \"src/**/*.{scss,css}\" \"!**/node_modules/**\"",
+    "lint:style:check": "stylelint --no-cache \"src/**/*.{scss,css}\" \"!**/node_modules/**\"",
     "lint:style:format": "stylelint --fix \"src/**/*.{scss,css}\" \"!**/node_modules/**\"",
     "prepare": "husky install"
   },

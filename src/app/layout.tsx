@@ -4,6 +4,22 @@ import type { FC, ReactNode } from 'react'
 import Tracker from '../components/molecules/SEO/Tracker'
 import { SITE_DOMAIN, SITE_TITLE } from '../constants'
 
+import { Signika_Negative, Work_Sans } from 'next/font/google'
+
+export const signika_negative = Signika_Negative({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-signika-negative',
+})
+
+export const work_sans = Work_Sans({
+  weight: ['400', '600'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-work-sans',
+})
+
 type Props = {
   children: ReactNode
 }
@@ -12,16 +28,9 @@ const RootLayout: FC<Props> = ({ children }) => (
   <>
     <html lang='ja'>
       <head>
-        {/* load external font */}
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='' />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;700&family=Work+Sans:wght@400;600&display=swap'
-          rel='stylesheet'
-        />
         <Tracker gaTrackingId={process.env.GA_MEASUREMENT_ID} />
       </head>
-      <body>{children}</body>
+      <body className={`${signika_negative.variable} ${work_sans.variable}`}>{children}</body>
     </html>
   </>
 )

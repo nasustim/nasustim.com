@@ -16,7 +16,7 @@
     "postcss-scss": "4.0.6",
     "react": "18.2.0",
     "react-icons": "4.10.1",
-    "three": "0.153.0",
+    "three": "0.154.0",
     "typescript": "5.1.6"
   },
   "devDependencies": {
@@ -28,7 +28,7 @@
     "@storybook/nextjs": "7.0.26",
     "@storybook/react": "7.0.26",
     "@storybook/testing-library": "0.2.0",
-    "@types/three": "0.152.1",
+    "@types/three": "0.153.0",
     "@typescript-eslint/eslint-plugin": "5.61.0",
     "@typescript-eslint/parser": "5.61.0",
     "eslint": "8.44.0",

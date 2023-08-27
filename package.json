@@ -39,7 +39,7 @@
     "lint-staged": "13.2.3",
     "prettier": "3.0.0",
     "react-dom": "18.2.0",
-    "sass": "1.66.0",
+    "sass": "1.66.1",
     "storybook": "7.1.0",
     "stylelint": "15.10.2",
     "stylelint-config-property-sort-order-smacss": "9.1.0",

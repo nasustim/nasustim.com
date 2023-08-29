@@ -107,8 +107,8 @@ devDependencies:
     specifier: 5.1.0
     version: 5.1.0(stylelint@15.10.3)
   stylelint-selector-bem-pattern:
-    specifier: 3.0.0
-    version: 3.0.0(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.48.0)(typescript@5.1.6)
+    specifier: 3.0.1
+    version: 3.0.1(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.48.0)(typescript@5.1.6)
   typescript-plugin-css-modules:
     specifier: 5.0.1
     version: 5.0.1(typescript@5.1.6)
@@ -9891,8 +9891,8 @@ packages:
       stylelint: 15.10.3
     dev: true
 
-  /stylelint-selector-bem-pattern@3.0.0(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.48.0)(typescript@5.1.6):
-    resolution: {integrity: sha512-78VZfelcR9aDj0XjAdRTuV5+AeStoaiW89Q9lUu2hakzqs2itP5OENPs8GPY5MPmnckS21+Mz0TiB/tEfLWP3A==}
+  /stylelint-selector-bem-pattern@3.0.1(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.48.0)(typescript@5.1.6):
+    resolution: {integrity: sha512-eh0tyyVyS62IOVzyi5oN0BKLJTHnolMWIqzpe0n3Wk26HxZegp/PiVKSUpK7vzVIAdAROemhypfMaH/xZorZrg==}
     dependencies:
       eslint-plugin-jest: 27.2.3(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.48.0)(typescript@5.1.6)
       lodash: 4.17.21

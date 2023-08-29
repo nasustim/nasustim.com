@@ -104,8 +104,8 @@ devDependencies:
     specifier: 10.0.0
     version: 10.0.0(postcss@8.4.28)(stylelint@15.10.3)
   stylelint-scss:
-    specifier: 5.0.1
-    version: 5.0.1(stylelint@15.10.3)
+    specifier: 5.1.0
+    version: 5.1.0(stylelint@15.10.3)
   stylelint-selector-bem-pattern:
     specifier: 3.0.0
     version: 3.0.0(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.48.0)(typescript@5.1.6)
@@ -9849,7 +9849,7 @@ packages:
       postcss-scss: 4.0.6(postcss@8.4.28)
       stylelint: 15.10.3
       stylelint-config-recommended: 12.0.0(stylelint@15.10.3)
-      stylelint-scss: 5.0.1(stylelint@15.10.3)
+      stylelint-scss: 5.1.0(stylelint@15.10.3)
     dev: true
 
   /stylelint-config-recommended@12.0.0(stylelint@15.10.3):
@@ -9894,8 +9894,8 @@ packages:
       stylelint: 15.10.3
     dev: true
 
-  /stylelint-scss@5.0.1(stylelint@15.10.3):
-    resolution: {integrity: sha512-n87iCRZrr2J7//I/QFsDXxFLnHKw633U4qvWZ+mOW6KDAp/HLj06H+6+f9zOuTYy+MdGdTuCSDROCpQIhw5fvQ==}
+  /stylelint-scss@5.1.0(stylelint@15.10.3):
+    resolution: {integrity: sha512-E+KlQFXv1Euha43qw3q+wKBSli557wxbbo6/39DWhRNXlUa9Cz+FYrcgz+PT6ag0l6UisCYjAGCNhoSl4FcwlA==}
     peerDependencies:
       stylelint: ^14.5.1 || ^15.0.0
     dependencies:

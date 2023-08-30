@@ -33,9 +33,7 @@ const HeaderProfile: FC = () => (
             protocol: 'https',
             host: 'mixi.co.jp',
             pathname: '/',
-          }}
-          rel='noreferrer noopener'
-          target='_blank'>
+          }}>
           株式会社MIXI
         </Link>
         で美容サロン予約サービスのサーバサイド, インフラ開発を担当している。

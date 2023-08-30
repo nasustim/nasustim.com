@@ -1,4 +1,4 @@
-import React from 'react'
+import { type FC } from 'react'
 
 import style from './index.module.scss'
 
@@ -15,7 +15,7 @@ interface Props {
 interface IconContainerProps extends Props {
   Icon: IconType
 }
-const IconContainer: React.FC<IconContainerProps> = ({ Icon, size, isButton = false }) => {
+const IconContainer: FC<IconContainerProps> = ({ Icon, size, isButton = false }) => {
   return (
     <div className={style.icon} style={{ fontSize: `${size}px` }} data-is-button={isButton ? 1 : 0}>
       <Icon />
@@ -23,7 +23,7 @@ const IconContainer: React.FC<IconContainerProps> = ({ Icon, size, isButton = fa
   )
 }
 
-export const GitHub: React.FC<Props> = (props) => <IconContainer {...props} Icon={AiFillGithub} />
-export const Facebook: React.FC<Props> = (props) => <IconContainer {...props} Icon={AiFillFacebook} />
-export const Keybase: React.FC<Props> = (props) => <IconContainer {...props} Icon={FaKeybase} />
-export const Blog: React.FC<Props> = (props) => <IconContainer {...props} Icon={MdArticle} />
+export const GitHub: FC<Props> = (props) => <IconContainer {...props} Icon={AiFillGithub} />
+export const Facebook: FC<Props> = (props) => <IconContainer {...props} Icon={AiFillFacebook} />
+export const Keybase: FC<Props> = (props) => <IconContainer {...props} Icon={FaKeybase} />
+export const Blog: FC<Props> = (props) => <IconContainer {...props} Icon={MdArticle} />

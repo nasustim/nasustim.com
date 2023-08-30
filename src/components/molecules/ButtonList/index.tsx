@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import { type FC, type ReactNode } from 'react'
 import style from './index.module.scss'
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
   children: ReactNode
 }
 
-const ButtonList: React.FC<Props> = ({ children }) => {
+const ButtonList: FC<Props> = ({ children }) => {
   return <div className={style['button-list']}>{children}</div>
 }
 

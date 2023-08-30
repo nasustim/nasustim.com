@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import { type FC, type ReactNode } from 'react'
 
 import style from './index.module.scss'
 
@@ -8,7 +8,7 @@ interface Props {
   buttonName: string
 }
 
-const Button: React.FC<Props> = ({ children, action, buttonName }) => {
+const Button: FC<Props> = ({ children, action, buttonName }) => {
   const onClickHalnder = () => {
     action()
   }

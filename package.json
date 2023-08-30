@@ -16,7 +16,7 @@
     "postcss-scss": "4.0.7",
     "react": "18.2.0",
     "react-icons": "4.10.1",
-    "typescript": "5.1.6"
+    "typescript": "5.2.2"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "13.4.19",

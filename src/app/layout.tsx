@@ -25,14 +25,12 @@ type Props = {
 }
 
 const RootLayout: FC<Props> = ({ children }) => (
-  <>
-    <html lang='ja'>
-      <head>
-        <Tracker gaTrackingId={process.env.GA_MEASUREMENT_ID} />
-      </head>
-      <body className={`${signika_negative.variable} ${work_sans.variable}`}>{children}</body>
-    </html>
-  </>
+  <html lang='ja'>
+    <head>
+      <Tracker gaTrackingId={process.env.GA_MEASUREMENT_ID} />
+    </head>
+    <body className={`${signika_negative.variable} ${work_sans.variable}`}>{children}</body>
+  </html>
 )
 
 export default RootLayout

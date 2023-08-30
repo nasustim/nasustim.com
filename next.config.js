@@ -1,9 +1,16 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
-  experimental: {
-    forceSwcTransforms: true,
-    typedRoutes: true,
-  },
-  output: 'export',
-  reactStrictMode: true,
-}
+const config =
+  process.env.ANALYZE === 'true'
+    ? require('@next/bundle-analyzer')({
+        enabled: true,
+      })({})
+    : {
+        experimental: {
+          forceSwcTransforms: true,
+          typedRoutes: true,
+        },
+        output: 'export',
+        reactStrictMode: true,
+      }
+
+module.exports = config

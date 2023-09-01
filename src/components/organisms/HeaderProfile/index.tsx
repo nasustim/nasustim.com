@@ -36,7 +36,7 @@ const HeaderProfile: FC = () => (
           }}>
           株式会社MIXI
         </Link>
-        で美容サロン予約サービスのサーバサイド, インフラ開発を担当している。
+        でベッティングサービスのクライアント開発を担当している。
       </P>
       <ButtonList>
         <Button

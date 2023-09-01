@@ -19,7 +19,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^13.4.19",
+    "@next/bundle-analyzer": "13.4.19",
     "@next/eslint-plugin-next": "13.4.19",
     "@storybook/addon-essentials": "7.4.0",
     "@storybook/addon-interactions": "7.4.0",

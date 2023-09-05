@@ -35,7 +35,7 @@ dependencies:
 
 devDependencies:
   '@next/bundle-analyzer':
-    specifier: ^13.4.19
+    specifier: 13.4.19
     version: 13.4.19
   '@next/eslint-plugin-next':
     specifier: 13.4.19

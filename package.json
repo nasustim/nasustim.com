@@ -57,7 +57,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:sitemap": "next-sitemap --config ./sitemap.config.js",
-    "serve": "next start",
+    "serve": "npx serve@latest out",
     "test": "echo \"please write test and execute\" | exit 0",
     "storybook:dev": "storybook dev -p 6006",
     "storybook:build": "storybook build",

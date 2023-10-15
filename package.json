@@ -42,7 +42,7 @@
     "storybook": "7.4.6",
     "stylelint": "15.10.3",
     "stylelint-config-property-sort-order-smacss": "9.1.0",
-    "stylelint-config-standard-scss": "10.0.0",
+    "stylelint-config-standard-scss": "11.0.0",
     "stylelint-scss": "5.2.1",
     "stylelint-selector-bem-pattern": "3.0.1",
     "typescript-plugin-css-modules": "5.0.1"
@@ -57,7 +57,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:sitemap": "next-sitemap --config ./sitemap.config.js",
-    "serve": "next start",
+    "serve": "npx serve@latest out",
     "test": "echo \"please write test and execute\" | exit 0",
     "storybook:dev": "storybook dev -p 6006",
     "storybook:build": "storybook build",

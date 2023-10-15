@@ -8,6 +8,7 @@ type Props = {
   slug: string
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Page = ({ params }: { params: Props }) => {
   return (
     <Layout>

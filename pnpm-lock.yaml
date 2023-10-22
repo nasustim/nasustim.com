@@ -113,8 +113,8 @@ devDependencies:
     specifier: 3.0.1
     version: 3.0.1(@typescript-eslint/eslint-plugin@6.7.5)(eslint@8.51.0)(typescript@5.2.2)
   typescript-plugin-css-modules:
-    specifier: 5.0.1
-    version: 5.0.1(typescript@5.2.2)
+    specifier: 5.0.2
+    version: 5.0.2(typescript@5.2.2)
 
 packages:
 
@@ -11242,8 +11242,8 @@ packages:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
     dev: true
 
-  /typescript-plugin-css-modules@5.0.1(typescript@5.2.2):
-    resolution: {integrity: sha512-hKXObfwfjx2/myRq4JeQ8D3xIWYTFqusi0hS/Aka7RFX1xQEoEkdOGDWyXNb8LmObawsUzbI30gQnZvqYXCrkA==}
+  /typescript-plugin-css-modules@5.0.2(typescript@5.2.2):
+    resolution: {integrity: sha512-ej/Og4Y8mF+43P14P9Ik1MGqNXcXBVgO1TltkESegdnZsaaRXnaJ5CoJmTPRkg25ysQlOV6P94wNhI4VxIzlkw==}
     peerDependencies:
       typescript: '>=4.0.0'
     dependencies:

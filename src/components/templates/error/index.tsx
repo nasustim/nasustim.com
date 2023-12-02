@@ -2,7 +2,7 @@ import type { FC } from 'react'
 import style from '../index.module.scss'
 
 import Section from '../_utils/Section'
-import H1 from '../../atoms/Text/H1'
+import H1 from '@nasustim.com/components/atoms/Text/H1'
 
 interface Props {
   error?: Error

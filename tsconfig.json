@@ -40,7 +40,7 @@
     "baseUrl": "./", /* Base directory to resolve non-absolute module names. */
     "paths": {
       "@nasustim.com/statics/*": ["./public/static/*"],
-      //"components/*": ["./components"],
+      "@nasustim.com/components/*": ["./src/components/*"],
       //"containers/*": ["./containers"],
       //"pages/*":      ["./pages"],
       //"repositories/*": ["./repositories"],

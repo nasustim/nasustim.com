@@ -1,9 +1,9 @@
-import { type FC } from 'react'
+import { type ComponentProps, type FC } from 'react'
+import Image from 'next/image'
 import styles from './index.module.scss'
 
-type Props = JSX.IntrinsicElements['img']
+type Props = Omit<ComponentProps<typeof Image>, 'alt'>
 
-// eslint-disable-next-line jsx-a11y/alt-text, @next/next/no-img-element
-const ProfileImage: FC<Props> = (props) => <img {...props} className={styles.container} />
+const ProfileImage: FC<Props> = (props) => <Image {...props} alt='my portrait' className={styles.container} />
 
 export default ProfileImage

@@ -1,6 +1,6 @@
 'use client'
 
-import Index from '../components/templates/index/index'
+import Index from '@nasustim.com/components/templates/index/index'
 
 const Page = () => {
   return <Index />

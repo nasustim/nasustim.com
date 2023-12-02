@@ -1,16 +1,19 @@
 /** @type {import('next').NextConfig} */
-const config =
-  process.env.ANALYZE === 'true'
-    ? require('@next/bundle-analyzer')({
-        enabled: true,
-      })({})
-    : {
-        experimental: {
-          forceSwcTransforms: true,
-          typedRoutes: true,
-        },
-        output: 'export',
-        reactStrictMode: true,
-      }
 
-module.exports = config
+const defaultConfig = {
+  experimental: {
+    forceSwcTransforms: true,
+    typedRoutes: true,
+  },
+  images: {
+    unoptimized: true,
+  },
+  output: 'export',
+  reactStrictMode: true,
+}
+
+const analyerConfig = require('@next/bundle-analyzer')({
+  enabled: true,
+})({})
+
+module.exports = config = process.env.ANALYZE === 'true' ? analyerConfig : defaultConfig

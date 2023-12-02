@@ -38,18 +38,18 @@ const HeaderProfile: FC = () => (
       </P>
       <ButtonList>
         <Button
-          buttonName={'Facebook'}
-          action={() => {
-            _transition('https://www.facebook.com/mitsuhibino')
-          }}>
-          <Facebook size={snsIconSize} isButton={true} />
-        </Button>
-        <Button
           buttonName={'GitHub'}
           action={() => {
             _transition('https://github.com/nasustim')
           }}>
           <GitHub size={snsIconSize} isButton={true} />
+        </Button>
+        <Button
+          buttonName={'Facebook'}
+          action={() => {
+            _transition('https://www.facebook.com/mitsuhibino')
+          }}>
+          <Facebook size={snsIconSize} isButton={true} />
         </Button>
         <Button
           buttonName={'Keybase'}

@@ -20,7 +20,7 @@ const _transition = (to: string) => {
 const HeaderProfile: FC = () => (
   <div className={style['header-profile']}>
     <div className={style['header-profile__image_container']}>
-      <ProfileImage src={'/static/profile_400x400.jpg'} width={imageSize} height={imageSize} />
+      <ProfileImage width={imageSize} height={imageSize} />
     </div>
     <div className={style['header-profile__texts']}>
       <H1>HIBINO Mitsuhiro</H1>

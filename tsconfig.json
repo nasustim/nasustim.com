@@ -41,6 +41,7 @@
     "paths": {
       "@nasustim.com/statics/*": ["./public/static/*"],
       "@nasustim.com/components/*": ["./src/components/*"],
+      "@nasustim.com/configs/*": ["./src/configs/*"],
       //"containers/*": ["./containers"],
       //"pages/*":      ["./pages"],
       //"repositories/*": ["./repositories"],

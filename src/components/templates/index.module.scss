@@ -1,4 +1,4 @@
-@use "../../constants" as c;
+@use "../../configs/constants.scss" as c;
 
 .template {
   background-color: c.$color-bg-white;

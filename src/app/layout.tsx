@@ -2,7 +2,7 @@ import '@acab/reset.css'
 import type { FC, ReactNode } from 'react'
 
 import Tracker from '@nasustim.com/components/molecules/SEO/Tracker'
-import { SITE_DOMAIN, SITE_TITLE } from '../constants'
+import { SITE_DOMAIN, SITE_TITLE } from '@nasustim.com/configs/constants'
 import { signikaNegative, workSans } from 'src/font'
 
 type Props = {

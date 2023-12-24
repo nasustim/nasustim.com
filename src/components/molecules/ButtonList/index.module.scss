@@ -1,9 +1,19 @@
+@use "../../../constants.scss" as c;
+
 .button-list {
   width: 100%;
-  margin: 8px 0;
+  margin: 16px 0;
+
+  @include c.mq-pc {
+    margin: 8px 0;
+  }
 
   // Button
   & > * {
-    margin-right: 12px;
+    margin-right: 24px;
+
+    @include c.mq-pc {
+      margin-right: 24px;
+    }
   }
 }

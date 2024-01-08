@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { SITE_DOMAIN, SITE_TITLE } from '../../../constants'
+import { SITE_DOMAIN, SITE_TITLE } from '@/constants/values'
 import Layout from '@/components/templates/works'
 
 type Props = {

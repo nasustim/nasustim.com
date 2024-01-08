@@ -1,7 +1,5 @@
 import { type FC } from 'react'
-
 import style from './index.module.scss'
-
 import type { IconType } from 'react-icons'
 import { AiFillGithub, AiFillFacebook } from 'react-icons/ai'
 import { FaKeybase } from 'react-icons/fa'

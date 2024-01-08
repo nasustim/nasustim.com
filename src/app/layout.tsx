@@ -1,7 +1,7 @@
 import '@acab/reset.css'
 import type { FC, ReactNode } from 'react'
 import Tracker from '@/components/molecules/SEO/Tracker'
-import { SITE_DOMAIN, SITE_TITLE } from '../constants'
+import { SITE_DOMAIN, SITE_TITLE } from '@/constants/values'
 import { signikaNegative, workSans } from 'src/font'
 
 type Props = {

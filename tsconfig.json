@@ -41,6 +41,7 @@
     "paths": {
       "@/statics/*": ["./public/static/*"],
       "@/components/*": ["./src/components/*"],
+      "@/constants/*": ["./src/constants/*"],
       //"containers/*": ["./containers"],
       //"pages/*":      ["./pages"],
       //"repositories/*": ["./repositories"],

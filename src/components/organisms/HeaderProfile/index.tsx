@@ -1,12 +1,12 @@
 import { type FC } from 'react'
 import style from './index.module.scss'
-import ProfileImage from '@nasustim.com/components/atoms/ProfileImage'
-import { Facebook, GitHub, Keybase, Blog } from '@nasustim.com/components/atoms/Icons'
-import Button from '@nasustim.com/components/atoms/Button'
-import ButtonList from '@nasustim.com/components/molecules/ButtonList'
-import H1 from '@nasustim.com/components/atoms/Text/H1'
-import Link from '@nasustim.com/components/atoms/Text/Link'
-import P from '@nasustim.com/components/atoms/Text/Plain'
+import ProfileImage from '@/components/atoms/ProfileImage'
+import { Facebook, GitHub, Keybase, Blog } from '@/components/atoms/Icons'
+import Button from '@/components/atoms/Button'
+import ButtonList from '@/components/molecules/ButtonList'
+import H1 from '@/components/atoms/Text/H1'
+import Link from '@/components/atoms/Text/Link'
+import P from '@/components/atoms/Text/Plain'
 
 const imageSize = 144
 const snsIconSize = 32

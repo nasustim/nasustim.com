@@ -1,7 +1,6 @@
 import '@acab/reset.css'
 import type { FC, ReactNode } from 'react'
-
-import Tracker from '@nasustim.com/components/molecules/SEO/Tracker'
+import Tracker from '@/components/molecules/SEO/Tracker'
 import { SITE_DOMAIN, SITE_TITLE } from '../constants'
 import { signikaNegative, workSans } from 'src/font'
 

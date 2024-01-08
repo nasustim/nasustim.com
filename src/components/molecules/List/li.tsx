@@ -1,4 +1,4 @@
-import Text from '@nasustim.com/components/atoms/Text/Plain'
+import Text from '@/components/atoms/Text/Plain'
 import type { FC, ReactNode } from 'react'
 
 interface Props {

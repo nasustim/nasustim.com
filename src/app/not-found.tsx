@@ -1,6 +1,5 @@
 'use client'
-
-import Template from '@nasustim.com/components/templates/error'
+import Template from '@/components/templates/error'
 
 const Page = () => {
   const error = new Error('404 Not Found')

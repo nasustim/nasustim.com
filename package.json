@@ -16,7 +16,7 @@
     "postcss-scss": "4.0.9",
     "react": "18.2.0",
     "react-icons": "5.0.1",
-    "sharp": "0.33.1",
+    "sharp": "0.33.2",
     "typescript": "5.3.3"
   },
   "devDependencies": {

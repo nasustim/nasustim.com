@@ -37,7 +37,7 @@
     "eslint-plugin-storybook": "0.6.15",
     "husky": "8.0.3",
     "lint-staged": "15.2.2",
-    "prettier": "3.2.4",
+    "prettier": "3.2.5",
     "react-dom": "18.2.0",
     "sass": "1.70.0",
     "storybook": "7.6.10",

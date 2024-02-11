@@ -1,7 +1,5 @@
 import { type FC, type ReactNode } from 'react'
 
-import style from './index.module.scss'
-
 interface Props {
   children: ReactNode
   action: () => void
@@ -14,7 +12,10 @@ const Button: FC<Props> = ({ children, action, buttonName }) => {
   }
 
   return (
-    <button onClick={onClickHalnder} className={style.button} aria-label={`Button-${buttonName}`}>
+    <button
+      onClick={onClickHalnder}
+      className='p-0 outline-none bg-transparent cursor-pointer appearance-none'
+      aria-label={`Button-${buttonName}`}>
       {children}
     </button>
   )

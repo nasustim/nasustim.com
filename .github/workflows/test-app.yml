@@ -32,5 +32,4 @@ jobs:
       - run: pnpm run build
       - run: pnpm run lint:app:check
       - run: pnpm run lint:app:format:check
-      - run: pnpm run lint:style:check
       - run: pnpm run storybook:build

@@ -1,5 +1,5 @@
+import { joinStr } from '@/util/string'
 import { type FC } from 'react'
-import style from './index.module.scss'
 import type { IconType } from 'react-icons'
 import { AiFillGithub, AiFillFacebook } from 'react-icons/ai'
 import { FaKeybase } from 'react-icons/fa'
@@ -15,7 +15,14 @@ interface IconContainerProps extends Props {
 }
 const IconContainer: FC<IconContainerProps> = ({ Icon, size, isButton = false }) => {
   return (
-    <div className={style.icon} style={{ fontSize: `${size}px` }} data-is-button={isButton ? 1 : 0}>
+    <div
+      className={joinStr(
+        'w-full h-full transition-colors duration-[350ms]',
+        `text-[${size}px]`,
+        isButton ? 'hover:text-indigo' : null,
+      )}
+      style={{ fontSize: `${size}px` }}
+      data-is-button={isButton ? 1 : 0}>
       <Icon />
     </div>
   )

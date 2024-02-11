@@ -1,10 +1,9 @@
 import type { FC } from 'react'
-import style from '../index.module.scss'
 import Section from '../_utils/Section'
 import HeaderProfile from '@/components/organisms/HeaderProfile'
 
 const Template: FC = () => (
-  <div className={style.template}>
+  <div className='bg-white'>
     <Section>
       <HeaderProfile />
     </Section>

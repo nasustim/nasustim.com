@@ -1,8 +1,0 @@
-@use "../../../../constants/style.scss" as c;
-
-.plain {
-  color: c.$color-text-primary__sub;
-  font-family: var(--font-work-sans), sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-}

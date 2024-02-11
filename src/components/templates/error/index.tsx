@@ -1,5 +1,4 @@
 import type { FC } from 'react'
-import style from '../index.module.scss'
 
 import Section from '../_utils/Section'
 import H1 from '@/components/atoms/Text/H1'
@@ -11,7 +10,7 @@ interface Props {
 const defaultError = new Error('Internal Error')
 
 const Template: FC<Props> = ({ error = defaultError }) => (
-  <div className={style.template}>
+  <div className='bg-white'>
     <Section>
       <H1 isCentered={true}>{error.message}</H1>
     </Section>

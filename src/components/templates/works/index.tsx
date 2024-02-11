@@ -1,6 +1,4 @@
 import type { ReactNode, FC } from 'react'
-import style from '../index.module.scss'
-
 import Section from '../_utils/Section'
 
 type Props = {
@@ -8,7 +6,7 @@ type Props = {
 }
 
 const Template: FC<Props> = ({ children }) => (
-  <div className={style.template}>
+  <div className='bg-white'>
     <Section>{children}</Section>
   </div>
 )

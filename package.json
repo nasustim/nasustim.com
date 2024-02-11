@@ -31,21 +31,19 @@
     "@storybook/testing-library": "0.2.2",
     "@typescript-eslint/eslint-plugin": "6.19.1",
     "@typescript-eslint/parser": "6.19.1",
+    "autoprefixer": "^10.4.17",
     "eslint": "8.56.0",
     "eslint-config-next": "14.1.0",
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-storybook": "0.6.15",
     "husky": "9.0.10",
     "lint-staged": "15.2.2",
+    "postcss": "^8.4.35",
     "prettier": "3.2.5",
     "react-dom": "18.2.0",
     "sass": "1.70.0",
     "storybook": "7.6.10",
-    "stylelint": "16.2.0",
-    "stylelint-config-property-sort-order-smacss": "10.0.0",
-    "stylelint-config-standard-scss": "13.0.0",
-    "stylelint-scss": "6.1.0",
-    "stylelint-selector-bem-pattern": "3.0.1",
+    "tailwindcss": "^3.4.1",
     "typescript-plugin-css-modules": "5.0.2"
   },
   "homepage": "https://github.com/nasustim/nasustim.com#readme",
@@ -65,17 +63,12 @@
     "lint:app:check": "next lint --no-cache",
     "lint:app:format": "prettier --write --ignore-path .gitignore \"**/*.{ts,tsx,js}\"",
     "lint:app:format:check": "prettier -c \"src/**/*.{ts,tsx}\"",
-    "lint:style:check": "stylelint --no-cache \"src/**/*.{scss,css}\" \"!**/node_modules/**\"",
-    "lint:style:format": "stylelint --fix \"src/**/*.{scss,css}\" \"!**/node_modules/**\"",
     "analyze": "ANALYZE=true pnpm run build",
     "prepare": "husky install"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
       "pnpm run lint:app:format"
-    ],
-    "*.{css,scss}": [
-      "pnpm run lint:style:format"
     ]
   }
 }

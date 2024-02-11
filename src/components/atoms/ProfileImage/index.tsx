@@ -1,7 +1,7 @@
 import { type FC } from 'react'
 import Image from 'next/image'
 import styles from './index.module.scss'
-import ProfileImageSrc from '@/statics/profile_400x400.jpg'
+import ProfileImageSrc from '@public/static/profile_400x400.jpg'
 
 type Props = { width: number; height: number }
 

@@ -1,4 +1,5 @@
 'use client'
+
 import Template from '@/components/templates/error'
 
 function Page() {

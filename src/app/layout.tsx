@@ -2,7 +2,7 @@ import '@acab/reset.css'
 import { type ReactNode } from 'react'
 import Tracker from '@/components/molecules/SEO/Tracker'
 import { SITE_DOMAIN, SITE_TITLE } from '@/constants/values'
-import { signikaNegative, workSans } from 'src/font'
+import { signikaNegative, workSans } from '@/fonts'
 
 type Props = {
   children: ReactNode

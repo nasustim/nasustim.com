@@ -24,14 +24,7 @@ const HeaderProfile: FC = () => (
         岐阜県岐阜市出身、都内在住のソフトウェアエンジニア。
         <br />
         現在は
-        <Link
-          href={{
-            protocol: 'https',
-            host: 'mixi.co.jp',
-            pathname: '/',
-          }}>
-          株式会社MIXI
-        </Link>
+        <Link href={'https://mixi.co.jp'}>株式会社MIXI</Link>
         でベッティングサービスのクライアント開発を担当している。
       </P>
       <div className='flex flex-row w-full mt-4 desktop:mt-2 mb-0'>

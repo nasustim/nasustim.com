@@ -9,7 +9,7 @@ dependencies:
     specifier: 0.8.0
     version: 0.8.0
   '@next/third-parties':
-    specifier: ^14.1.0
+    specifier: 14.1.0
     version: 14.1.0(next@14.1.0)(react@18.2.0)
   '@types/node':
     specifier: 20.11.17
@@ -2223,7 +2223,7 @@ packages:
       next: ^13.0.0 || ^14.0.0
       react: ^18.2.0
     dependencies:
-      next: 14.1.0(@babel/core@7.23.7)(react-dom@18.2.0)(react@18.2.0)(sass@1.70.0)
+      next: 14.1.0(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)(sass@1.70.0)
       react: 18.2.0
       third-party-capital: 1.0.20
     dev: false

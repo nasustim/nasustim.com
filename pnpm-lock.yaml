@@ -15,7 +15,7 @@ dependencies:
     specifier: 18.2.48
     version: 18.2.48
   cssnano:
-    specifier: ^6.0.3
+    specifier: 6.0.3
     version: 6.0.3(postcss@8.4.35)
   next:
     specifier: 14.1.0
@@ -74,7 +74,7 @@ devDependencies:
     specifier: 6.19.1
     version: 6.19.1(eslint@8.56.0)(typescript@5.3.3)
   autoprefixer:
-    specifier: ^10.4.17
+    specifier: 10.4.17
     version: 10.4.17(postcss@8.4.35)
   eslint:
     specifier: 8.56.0
@@ -95,7 +95,7 @@ devDependencies:
     specifier: 15.2.2
     version: 15.2.2
   postcss:
-    specifier: ^8.4.35
+    specifier: 8.4.35
     version: 8.4.35
   prettier:
     specifier: 3.2.5
@@ -110,7 +110,7 @@ devDependencies:
     specifier: 7.6.10
     version: 7.6.10
   tailwindcss:
-    specifier: ^3.4.1
+    specifier: 3.4.1
     version: 3.4.1
   typescript-plugin-css-modules:
     specifier: 5.0.2

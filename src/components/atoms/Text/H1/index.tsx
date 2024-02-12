@@ -11,7 +11,8 @@ const Text: FC<Props> = (props) => {
   return (
     <h1
       className={joinStr(
-        'text-primary font-heading text-4xl desktop:text-5xl leading-tight desktop:leading-normal',
+        'text-primary font-heading text-4xl leading-tight',
+        'desktop:text-4xl desktop:leading-normal',
         isCentered ? 'text-center' : null,
       )}>
       {props.children}

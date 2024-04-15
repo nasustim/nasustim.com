@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 import ProfileImage from '@/components/atoms/ProfileImage'
-import { Facebook, GitHub, Keybase, Blog } from '@/components/atoms/Icons'
+import { Facebook, GitHub, Keybase, Blog } from '@/components/atoms/Icons/Products'
 import Button from '@/components/atoms/Button'
 import H1 from '@/components/atoms/Text/H1'
 import Link from '@/components/atoms/Text/Link'

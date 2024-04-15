@@ -4,7 +4,7 @@ import { Facebook, GitHub, Keybase, Blog } from '@/components/atoms/Icons/Produc
 import Button from '@/components/atoms/Button'
 import H1 from '@/components/atoms/Text/H1'
 import Link from '@/components/atoms/Text/Link'
-import P from '@/components/atoms/Text/Plain'
+import { TextEn as P } from '@/components/atoms/Text/Plain'
 
 const imageSize = 144
 const snsIconSize = 32
@@ -21,11 +21,10 @@ const HeaderProfile: FC = () => (
     <div className={'flex flex-col grow justify-center'}>
       <H1>HIBINO Mitsuhiro</H1>
       <P>
-        岐阜県岐阜市出身、都内在住のソフトウェアエンジニア。
+        I am a software engineer based in Tokyo, Japan.
         <br />
-        現在は
-        <Link href={'https://mixi.co.jp'}>株式会社MIXI</Link>
-        でベッティングサービスのクライアント開発を担当している。
+        Currently, I work in the betting division at <Link href={'https://mixi.co.jp'}>MIXI inc</Link>, as a client
+        developer.
       </P>
       <div className='flex flex-row w-full mt-4 desktop:mt-2 mb-0'>
         <div className='mr-6'>

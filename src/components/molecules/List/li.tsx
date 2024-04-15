@@ -1,4 +1,4 @@
-import Text from '@/components/atoms/Text/Plain'
+import { TextEn } from '@/components/atoms/Text/Plain'
 import type { FC, ReactNode } from 'react'
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
 
 const Li: FC<Props> = ({ children }) => (
   <li>
-    <Text>{children}</Text>
+    <TextEn>{children}</TextEn>
   </li>
 )
 export default Li

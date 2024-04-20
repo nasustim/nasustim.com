@@ -1,4 +1,4 @@
-const tabletWidth = '600px'
+const tabletWidth = '500px'
 const desktopWidth = '1024px'
 
 /** @type {import('tailwindcss').Config} */
@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        default: ['var(--font-work-sans)'],
-        heading: ['var(--font-signika-negative)'],
+        default: ['var(--font-inter)'],
+        heading: ['var(--font-inter)'],
       },
       width: {
         tablet: tabletWidth,

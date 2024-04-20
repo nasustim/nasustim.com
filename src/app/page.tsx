@@ -1,9 +1,7 @@
 'use client'
 
-import Index from '@/components/templates/index/index'
+import { ProfileUnit } from '@/organisms/ProfileUnit'
 
-const Page = () => {
-  return <Index />
-}
+const Page = () => <ProfileUnit />
 
 export default Page

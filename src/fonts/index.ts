@@ -1,4 +1,4 @@
-import { Inter, Work_Sans } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
 const inter = Inter({
   weight: ['400', '700'],

@@ -1,4 +1,4 @@
-import { useMemo, type FC, type ReactNode } from 'react'
+import { type FC, type ReactNode } from 'react'
 import NextLink from 'next/link'
 
 const Variant = ['none', 'primary']

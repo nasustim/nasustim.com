@@ -1,10 +1,11 @@
 'use client'
 
-import Template from '@/templates/error'
+import H1 from '@/components/texts/H1'
+
+const ERROR = new Error('404 Not Found')
 
 function Page() {
-  const error = new Error('404 Not Found')
-  return <Template error={error} />
+  return <H1 isCentered={true}>{ERROR.message}</H1>
 }
 
 export default Page

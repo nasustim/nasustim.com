@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import { SITE_DOMAIN, SITE_TITLE } from '@/constants/values'
-import Layout from '@/templates/works'
 
 type Props = {
   slug: string
@@ -8,11 +7,7 @@ type Props = {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function Page({ params }: { params: Props }) {
-  return (
-    <Layout>
-      <div>🚧 Under Construction 🚧</div>
-    </Layout>
-  )
+  return <div>🚧 Under Construction 🚧</div>
 }
 
 /**

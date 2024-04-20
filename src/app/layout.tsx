@@ -5,6 +5,7 @@ import { fontClassNames } from '@/fonts'
 import { joinStr } from '@/util/string'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { type Metadata } from 'next'
+import { DefaultLayout } from '@/layout'
 
 type Props = {
   children: ReactNode
@@ -17,7 +18,9 @@ function RootLayout({ children }: Props) {
         <link rel='icon' href='/favicon.svg' sizes='any' type='image/svg+xml' />
         <link rel='apple-touch-icon' href='/favicon.png' />
       </head>
-      <body>{children}</body>
+      <body>
+        <DefaultLayout>{children}</DefaultLayout>
+      </body>
       <GoogleAnalytics gaId={process.env.GA_MEASUREMENT_ID} />
     </html>
   )

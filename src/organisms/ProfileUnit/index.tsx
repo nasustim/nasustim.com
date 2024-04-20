@@ -1,18 +1,13 @@
 import { type FC } from 'react'
 import { Facebook, GitHub, Keybase, Blog } from '@/components/icons/Products'
-import Button from '@/components/buttons'
 import { H1En } from '@/components/texts/H1/En'
-import Link from '@/components/texts/Link'
+import { Link } from '@/components/texts/Link'
 import { PEn } from '@/components/texts/Plain/En'
 import { joinStr } from '@/util/string'
 import IMAGE_profile from '@public/static/profile_400x400.jpg'
 import Image from 'next/image'
 
 const snsIconSize = 32
-
-const _transition = (to: string) => {
-  window.open(to, '_blank')
-}
 
 export const ProfileUnit: FC = () => (
   <div
@@ -33,34 +28,18 @@ export const ProfileUnit: FC = () => (
         developer.
       </PEn>
       <div className='flex flex-row w-full gap-5'>
-        <Button
-          buttonName={'GitHub'}
-          action={() => {
-            _transition('https://github.com/nasustim')
-          }}>
+        <Link href='https://github.com/nasustim' variant='none'>
           <GitHub size={snsIconSize} isButton={true} />
-        </Button>
-        <Button
-          buttonName={'Facebook'}
-          action={() => {
-            _transition('https://www.facebook.com/mitsuhibino')
-          }}>
+        </Link>
+        <Link href='https://www.facebook.com/mitsuhibino' variant='none'>
           <Facebook size={snsIconSize} isButton={true} />
-        </Button>
-        <Button
-          buttonName={'Keybase'}
-          action={() => {
-            _transition('https://keybase.io/nasustim')
-          }}>
+        </Link>
+        <Link href='https://keybase.io/nasustim' variant='none'>
           <Keybase size={snsIconSize} isButton={true} />
-        </Button>
-        <Button
-          buttonName={'Blog'}
-          action={() => {
-            _transition('https://blog.nasustim.com/')
-          }}>
+        </Link>
+        <Link href='https://blog.nasustim.com/' variant='none'>
           <Blog size={snsIconSize} isButton={true} />
-        </Button>
+        </Link>
       </div>
     </div>
   </div>

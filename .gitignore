@@ -69,8 +69,5 @@ out/
 .env*
 !.env.sample
 
-# editor
-.vscode/
-
 # storybook
 storybook-static/

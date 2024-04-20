@@ -1,10 +1,10 @@
 import { type FC } from 'react'
-import ProfileImage from '@/components/atoms/ProfileImage'
-import { Facebook, GitHub, Keybase, Blog } from '@/components/atoms/Icons/Products'
-import Button from '@/components/atoms/Button'
-import H1 from '@/components/atoms/Text/H1'
-import Link from '@/components/atoms/Text/Link'
-import { TextEn as P } from '@/components/atoms/Text/Plain'
+import ProfileImage from '@/components/images'
+import { Facebook, GitHub, Keybase, Blog } from '@/components/icons/Products'
+import Button from '@/components/buttons'
+import H1 from '@/components/texts/H1'
+import Link from '@/components/texts/Link'
+import { TextEn as P } from '@/components/texts/Plain'
 
 const imageSize = 144
 const snsIconSize = 32

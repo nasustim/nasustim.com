@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { SITE_DOMAIN, SITE_TITLE } from '@/constants/values'
-import Layout from '@/components/templates/works'
+import Layout from '@/templates/works'
 
 type Props = {
   slug: string

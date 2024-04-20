@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 
 import Section from '../_utils/Section'
-import H1 from '@/components/atoms/Text/H1'
+import H1 from '@/components/texts/H1'
 
 interface Props {
   error?: Error

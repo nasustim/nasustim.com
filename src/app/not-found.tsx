@@ -1,6 +1,6 @@
 'use client'
 
-import Template from '@/components/templates/error'
+import Template from '@/templates/error'
 
 function Page() {
   const error = new Error('404 Not Found')

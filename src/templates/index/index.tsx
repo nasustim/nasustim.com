@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 import Section from '../_utils/Section'
-import HeaderProfile from '@/components/organisms/HeaderProfile'
+import HeaderProfile from '@/organisms/ProfileUnit'
 
 const Template: FC = () => (
   <div className='bg-white'>

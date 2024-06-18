@@ -9,10 +9,10 @@
   "packageManager": "pnpm@9.4.0",
   "dependencies": {
     "@acab/reset.css": "0.9.0",
-    "@next/third-parties": "14.2.3",
+    "@next/third-parties": "14.2.4",
     "@types/node": "20.14.5",
     "@types/react": "18.3.1",
-    "next": "14.2.3",
+    "next": "14.2.4",
     "next-sitemap": "4.2.3",
     "postcss-scss": "4.0.9",
     "react": "18.3.1",
@@ -21,8 +21,8 @@
     "typescript": "5.4.5"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "14.2.3",
-    "@next/eslint-plugin-next": "14.2.3",
+    "@next/bundle-analyzer": "14.2.4",
+    "@next/eslint-plugin-next": "14.2.4",
     "@storybook/addon-essentials": "8.1.10",
     "@storybook/addon-interactions": "8.1.10",
     "@storybook/addon-links": "8.1.10",
@@ -34,7 +34,7 @@
     "@typescript-eslint/parser": "7.8.0",
     "autoprefixer": "10.4.19",
     "eslint": "8.57.0",
-    "eslint-config-next": "14.2.3",
+    "eslint-config-next": "14.2.4",
     "eslint-plugin-react": "7.34.1",
     "eslint-plugin-storybook": "0.8.0",
     "husky": "9.0.11",

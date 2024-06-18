@@ -33,4 +33,5 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${SITE_DOMAIN}/`,
   },
+  description: 'Mitsuhiro HIBINO is a developer/creator based in Tokyo, Japan.',
 }

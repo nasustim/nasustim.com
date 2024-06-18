@@ -24,20 +24,25 @@ export const ProfileUnit: FC = () => (
       <PEn>
         I am a software engineer based in Tokyo, Japan.
         <br />
-        Currently, I work in the betting division at <Link href={'https://mixi.co.jp'}>MIXI inc</Link>, as a client
-        developer.
+        Currently, I work in the betting division at{' '}
+        <Link
+          href={'https://mixi.co.jp'}
+          ariaLabel='MIXI inc is a tech company based in Japan, especially famous as a pioneer of social media in Japan'>
+          MIXI inc
+        </Link>
+        , as a client developer.
       </PEn>
       <div className='flex flex-row w-full gap-5'>
-        <Link href='https://github.com/nasustim' variant='none'>
+        <Link href='https://github.com/nasustim' variant='none' ariaLabel='My GitHub account (nasustim)'>
           <GitHub size={snsIconSize} isButton={true} />
         </Link>
-        <Link href='https://www.facebook.com/mitsuhibino' variant='none'>
+        <Link href='https://www.facebook.com/mitsuhibino' variant='none' ariaLabel='My Facebook account'>
           <Facebook size={snsIconSize} isButton={true} />
         </Link>
-        <Link href='https://keybase.io/nasustim' variant='none'>
+        <Link href='https://keybase.io/nasustim' variant='none' ariaLabel='My Keybase account (nasustim)'>
           <Keybase size={snsIconSize} isButton={true} />
         </Link>
-        <Link href='https://blog.nasustim.com/' variant='none'>
+        <Link href='https://blog.nasustim.com/' variant='none' ariaLabel='My blog'>
           <Blog size={snsIconSize} isButton={true} />
         </Link>
       </div>

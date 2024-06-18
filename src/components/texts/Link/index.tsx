@@ -12,10 +12,11 @@ interface Props {
   href: string
   isInternal?: boolean
   variant?: (typeof Variant)[number]
+  ariaLabel: string
 }
 
-export const Link: FC<Props> = ({ href, isInternal, children, variant = 'primary' }) => (
-  <NextLink href={href} className={styles[variant]} target={isInternal ? '' : '_blank'}>
+export const Link: FC<Props> = ({ href, isInternal, children, variant = 'primary', ariaLabel }) => (
+  <NextLink href={href} className={styles[variant]} target={isInternal ? '' : '_blank'} aria-label={ariaLabel}>
     {children}
   </NextLink>
 )

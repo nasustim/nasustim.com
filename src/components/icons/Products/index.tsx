@@ -1,7 +1,7 @@
 import { joinStr } from '@/util/string'
 import { type FC } from 'react'
 import type { IconType } from 'react-icons'
-import { AiFillGithub, AiFillFacebook } from 'react-icons/ai'
+import { AiFillFacebook, AiFillGithub } from 'react-icons/ai'
 import { FaKeybase } from 'react-icons/fa'
 import { MdArticle } from 'react-icons/md'
 
@@ -22,7 +22,8 @@ const IconContainer: FC<IconContainerProps> = ({ Icon, size, isButton = false })
         isButton ? 'hover:text-indigo' : null,
       )}
       style={{ fontSize: `${size}px` }}
-      data-is-button={isButton ? 1 : 0}>
+      data-is-button={isButton ? 1 : 0}
+    >
       <Icon />
     </div>
   )

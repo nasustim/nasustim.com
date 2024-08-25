@@ -30,6 +30,5 @@ jobs:
       - run: pnpm i --frozen-lockfile
       - run: pnpm run test
       - run: pnpm run build
-      - run: pnpm run lint:app:check
-      - run: pnpm run lint:app:format:check
+      - run: pnpm run lint:ci
       - run: pnpm run storybook:build

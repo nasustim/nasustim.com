@@ -31,14 +31,8 @@
     "@storybook/nextjs": "8.2.9",
     "@storybook/react": "8.2.9",
     "@storybook/testing-library": "0.2.2",
-    "@typescript-eslint/eslint-plugin": "7.18.0",
-    "@typescript-eslint/parser": "7.18.0",
     "autoprefixer": "10.4.20",
     "cssnano": "7.0.5",
-    "eslint": "8.57.0",
-    "eslint-config-next": "14.2.5",
-    "eslint-plugin-react": "7.35.0",
-    "eslint-plugin-storybook": "0.8.0",
     "husky": "9.1.5",
     "lint-staged": "15.2.9",
     "postcss": "8.4.38",
@@ -63,15 +57,15 @@
     "test": "echo \"please write test and execute\" | exit 0",
     "storybook:dev": "storybook dev -p 6006",
     "storybook:build": "storybook build",
-    "lint:app:check": "next lint --no-cache",
-    "lint:app:format": "prettier --write --ignore-path .gitignore \"**/*.{ts,tsx,js}\"",
-    "lint:app:format:check": "prettier -c \"src/**/*.{ts,tsx}\"",
+    "lint:check": "biome check .",
+    "lint:fix": "biome check --write .",
+    "lint:ci": "biome ci .",
     "analyze": "ANALYZE=true pnpm run build",
     "prepare": "husky install"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
-      "pnpm run lint:app:format"
+      "pnpm run lint:fix"
     ]
   }
 }

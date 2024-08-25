@@ -64,8 +64,6 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
-      "pnpm run lint:fix"
-    ]
+    "*.{ts,tsx,js,jsx}": ["pnpm run lint:fix"]
   }
 }

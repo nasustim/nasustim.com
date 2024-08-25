@@ -12,4 +12,5 @@ const analyerConfig = require('@next/bundle-analyzer')({
   enabled: true,
 })({})
 
-module.exports = config = process.env.ANALYZE === 'true' ? analyerConfig : defaultConfig
+const config = process.env.ANALYZE === 'true' ? analyerConfig : defaultConfig
+module.exports = config

@@ -1,11 +1,11 @@
 import './globals.css'
-import { type ReactNode } from 'react'
-import { SEO, SITE_DOMAIN, SITE_TITLE } from '@/constants/values'
+import { GA_MEASUREMENT_ID, SEO, SITE_DOMAIN, SITE_TITLE } from '@/constants/values'
 import { fontClassNames } from '@/fonts'
+import { DefaultLayout } from '@/layout'
 import { joinStr } from '@/util/string'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { type Metadata } from 'next'
-import { DefaultLayout } from '@/layout'
+import { type ReactNode } from 'react'
 
 type Props = {
   children: ReactNode
@@ -21,7 +21,7 @@ function RootLayout({ children }: Props) {
       <body>
         <DefaultLayout>{children}</DefaultLayout>
       </body>
-      <GoogleAnalytics gaId={process.env.GA_MEASUREMENT_ID} />
+      <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
     </html>
   )
 }

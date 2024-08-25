@@ -1,12 +1,12 @@
-import { Metadata } from 'next'
 import { SITE_DOMAIN, SITE_TITLE } from '@/constants/values'
+import { Metadata } from 'next'
 
 type Props = {
   slug: string
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function Page({ params }: { params: Props }) {
+// biome-ignore lint: no-unused-vars
+function Page({}: { params: Props }) {
   return <div>🚧 Under Construction 🚧</div>
 }
 

@@ -1,5 +1,5 @@
-import { type FC, type ReactNode } from 'react'
 import NextLink from 'next/link'
+import { type FC, type ReactNode } from 'react'
 
 const Variant = ['none', 'primary']
 const styles: Record<(typeof Variant)[number], string> = {

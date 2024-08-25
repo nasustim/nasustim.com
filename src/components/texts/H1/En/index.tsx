@@ -1,5 +1,5 @@
-import type { FC, ReactNode } from 'react'
 import { joinStr } from '@/util/string'
+import type { FC, ReactNode } from 'react'
 
 interface Props {
   children: ReactNode
@@ -8,7 +8,8 @@ interface Props {
 
 export const H1En: FC<Props> = ({ isCentered, children }) => (
   <h1
-    className={joinStr('text-primary font-heading text-3xl leading-none font-bold', isCentered ? 'text-center' : null)}>
+    className={joinStr('text-primary font-heading text-3xl leading-none font-bold', isCentered ? 'text-center' : null)}
+  >
     {children}
   </h1>
 )

@@ -13,7 +13,8 @@ export const DefaultLayout: FC<Props> = ({ children }) => (
           'w-4/5 p-3', // mobile
           'tablet:w-tablet tablet:p-0', // tablet
           'desktop:w-tablet desktop:p-0', // desktop
-        )}>
+        )}
+      >
         {children}
       </div>
     </section>

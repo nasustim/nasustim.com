@@ -40,7 +40,7 @@
     "react-dom": "18.3.1",
     "sass": "1.78.0",
     "storybook": "8.2.9",
-    "tailwindcss": "3.4.10",
+    "tailwindcss": "3.4.11",
     "typescript-plugin-css-modules": "5.1.0"
   },
   "homepage": "https://github.com/nasustim/nasustim.com#readme",

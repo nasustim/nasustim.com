@@ -9,7 +9,8 @@ on:
       - '**.jsx?'
       - '**.cjs'
       - '**.mjs'
-      - '**.json'
+      - '**.jsonc?'
+      - 'pnpm-lock.yaml'
       - '**.s?css'
       - .github/workflows/test-app.yml
   push:

@@ -9,10 +9,10 @@
   "packageManager": "pnpm@9.9.0",
   "dependencies": {
     "@acab/reset.css": "0.10.0",
-    "@next/third-parties": "14.2.8",
+    "@next/third-parties": "14.2.11",
     "@types/node": "20.16.5",
     "@types/react": "18.3.5",
-    "next": "14.2.8",
+    "next": "14.2.11",
     "next-sitemap": "4.2.3",
     "postcss-scss": "4.0.9",
     "react": "18.3.1",
@@ -22,8 +22,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
-    "@next/bundle-analyzer": "14.2.8",
-    "@next/eslint-plugin-next": "14.2.8",
+    "@next/bundle-analyzer": "14.2.11",
+    "@next/eslint-plugin-next": "14.2.11",
     "@storybook/addon-essentials": "8.2.9",
     "@storybook/addon-interactions": "8.2.9",
     "@storybook/addon-links": "8.2.9",

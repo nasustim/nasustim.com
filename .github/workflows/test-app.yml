@@ -2,17 +2,8 @@ name: Test App
 
 on:
   pull_request:
-    paths:
-      - 'src/**'
-      - 'public/**'
-      - '**.tsx?'
-      - '**.jsx?'
-      - '**.cjs'
-      - '**.mjs'
-      - '**.jsonc?'
-      - 'pnpm-lock.yaml'
-      - '**.s?css'
-      - .github/workflows/test-app.yml
+    branches:
+      - main # should pass tests prior to deploying
   push:
     branches:
       - main

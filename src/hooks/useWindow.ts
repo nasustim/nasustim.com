@@ -6,14 +6,20 @@ const subscribeOnResizeWindow = (callback: () => void) => {
 }
 
 export function useWindow() {
-  const innerWidth =
-    useSyncExternalStore(subscribeOnResizeWindow, () => {
+  const innerWidth = useSyncExternalStore(
+    subscribeOnResizeWindow,
+    () => {
       return window.innerWidth
-    }) ?? 0
-  const innerHeight =
-    useSyncExternalStore(subscribeOnResizeWindow, () => {
+    },
+    () => 0,
+  )
+  const innerHeight = useSyncExternalStore(
+    subscribeOnResizeWindow,
+    () => {
       return window.innerHeight
-    }) ?? 0
+    },
+    () => 0,
+  )
 
   return {
     innerWidth,

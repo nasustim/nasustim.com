@@ -38,7 +38,7 @@ jobs:
           node-version-file: .tool-versions
           cache: pnpm
       - name: Restore cache
-        uses: actions/cache@v4.1.1
+        uses: actions/cache@v4.1.2
         with:
           path: |
             .next/cache

@@ -11,7 +11,7 @@
     "@acab/reset.css": "0.10.0",
     "@next/third-parties": "14.2.16",
     "@types/node": "20.16.15",
-    "@types/react": "18.3.11",
+    "@types/react": "18.3.12",
     "@types/three": "0.169.0",
     "next": "14.2.16",
     "next-sitemap": "4.2.3",

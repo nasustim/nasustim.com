@@ -15,9 +15,13 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - uses: pnpm/action-setup@v4.0.0
+      - uses: nasustim/get-asdf-version-action@v1.0.0
+        id: get-asdf-version
+        with:
+          package-name: nodejs
       - uses: actions/setup-node@v4.1.0
         with:
-          node-version-file: .tool-versions
+          node-version: ${{ steps.get-asdf-version.outputs.version }}
           cache: pnpm
       - run: pnpm i --frozen-lockfile
       - run: pnpm run test

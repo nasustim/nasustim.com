@@ -42,8 +42,8 @@ importers:
         specifier: 0.33.5
         version: 0.33.5
       three:
-        specifier: 0.169.0
-        version: 0.169.0
+        specifier: 0.170.0
+        version: 0.170.0
       typescript:
         specifier: 5.6.3
         version: 5.6.3
@@ -4288,8 +4288,8 @@ packages:
   third-party-capital@1.0.20:
     resolution: {integrity: sha512-oB7yIimd8SuGptespDAZnNkzIz+NWaJCu2RMsbs4Wmp9zSDUM8Nhi3s2OOcqYuv3mN4hitXc8DVx+LyUmbUDiA==}
 
-  three@0.169.0:
-    resolution: {integrity: sha512-Ed906MA3dR4TS5riErd4QBsRGPcx+HBDX2O5yYE5GqJeFQTPU+M56Va/f/Oph9X7uZo3W3o4l2ZhBZ6f6qUv0w==}
+  three@0.170.0:
+    resolution: {integrity: sha512-FQK+LEpYc0fBD+J8g6oSEyyNzjp+Q7Ks1C568WWaoMRLW+TkNNWmenWeGgJjV105Gd+p/2ql1ZcjYvNiPZBhuQ==}
 
   timers-browserify@2.0.12:
     resolution: {integrity: sha512-9phl76Cqm6FhSX9Xe1ZUAMLtm1BLkKj2Qd5ApyWkXzsMRaA7dgr81kf4wJmQf/hAvg8EEyJxDo3du/0KlhPiKQ==}
@@ -9227,7 +9227,7 @@ snapshots:
 
   third-party-capital@1.0.20: {}
 
-  three@0.169.0: {}
+  three@0.170.0: {}
 
   timers-browserify@2.0.12:
     dependencies:

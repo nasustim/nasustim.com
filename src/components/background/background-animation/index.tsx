@@ -1,23 +1,24 @@
 'use client'
 
 import { useWindow } from '@/hooks/useWindow'
-import { joinStr } from '@/util/string'
-import { FC, useEffect } from 'react'
-import { useAnimation } from './useAnimation'
-
-type Props = {
-  fullScreen?: boolean
-}
+import { FC, useEffect, useMemo, useState } from 'react'
+import { Animation } from './animation'
 
 const ID = 'background-animation'
 
-export const BackgroundAnimation: FC<Props> = ({ fullScreen }) => {
-  const { startAnimation } = useAnimation()
+export const BackgroundAnimation: FC = () => {
   const { innerWidth, innerHeight } = useWindow()
+  const [animationInstance, setAnimationInstance] = useState<Animation | null>(null)
+
+  const longSide = useMemo<number>(() => Math.max(innerWidth, innerHeight), [innerWidth, innerHeight])
 
   useEffect(() => {
-    startAnimation(innerWidth, innerHeight, ID)
-  }, [])
+    animationInstance?.updateScene(longSide, longSide)
+  }, [longSide])
 
-  return <div id={ID} className={joinStr(fullScreen ? 'w-screen h-screen' : '')}></div>
+  if (!animationInstance && longSide) {
+    setAnimationInstance(new Animation(longSide, longSide, ID))
+  }
+
+  return <div id={ID} className={`w-[${longSide}px] h-[${longSide}px]`} />
 }

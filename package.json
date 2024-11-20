@@ -6,7 +6,7 @@
   "bugs": {
     "url": "https://github.com/nasustim/nasustim.com/issues"
   },
-  "packageManager": "pnpm@9.13.2",
+  "packageManager": "pnpm@9.14.1",
   "dependencies": {
     "@acab/reset.css": "0.10.0",
     "@next/third-parties": "14.2.18",

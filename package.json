@@ -63,11 +63,6 @@
     "analyze": "ANALYZE=true pnpm run build",
     "prepare": "husky install"
   },
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
-      "pnpm run lint:fix"
-    ]
-  },
   "browserslist": [
     "last 1 Chrome version",
     "last 1 Safari version",

@@ -60,8 +60,7 @@
     "lint:check": "biome check .",
     "lint:fix": "biome check --write .",
     "lint:ci": "biome ci .",
-    "analyze": "ANALYZE=true pnpm run build",
-    "prepare": "husky install"
+    "analyze": "ANALYZE=true pnpm run build"
   },
   "browserslist": [
     "last 1 Chrome version",

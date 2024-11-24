@@ -1,10 +1,9 @@
 import { SITE_DOMAIN, SITE_TITLE } from '@/constants/values'
 import { Metadata } from 'next'
-import { type FC, type ReactNode } from 'react'
+import { type FC } from 'react'
 
 type Props = {
   params: Promise<{ slug: string }>
-  children: ReactNode
 }
 
 const Page: FC<Props> = () => <div>🚧 Under Construction 🚧</div>

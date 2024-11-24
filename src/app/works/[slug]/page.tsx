@@ -1,14 +1,14 @@
 import { SITE_DOMAIN, SITE_TITLE } from '@/constants/values'
 import { Metadata } from 'next'
+import { type FC, type ReactNode } from 'react'
 
 type Props = {
-  slug: string
+  params: Promise<{ slug: string }>
+  children: ReactNode
 }
 
-// biome-ignore lint: no-unused-vars
-function Page({}: { params: Props }) {
-  return <div>🚧 Under Construction 🚧</div>
-}
+const Page: FC<Props> = () => <div>🚧 Under Construction 🚧</div>
+export default Page
 
 /**
  * Following contents were exists on past portfolio page
@@ -29,10 +29,8 @@ export function generateStaticParams() {
   ].map((slug) => ({ slug }))
 }
 
-export default Page
-
-export async function generateMetadata({ params }: { params: Props }): Promise<Metadata> {
-  const slug = params.slug
+export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
+  const slug = (await params).slug
 
   return {
     title: `${slug} - ${SITE_TITLE}`,

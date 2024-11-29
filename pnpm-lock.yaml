@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@acab/reset.css':
-        specifier: 0.10.0
-        version: 0.10.0
+        specifier: 0.11.0
+        version: 0.11.0
       '@next/third-parties':
         specifier: 15.0.3
         version: 15.0.3(next@15.0.3(@babel/core@7.26.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.81.0))(react@18.3.1)
@@ -108,8 +108,8 @@ importers:
 
 packages:
 
-  '@acab/reset.css@0.10.0':
-    resolution: {integrity: sha512-99vTN5JMd3X+DQhR7XNC5Vc92YxzQvPbT+jnNy5uuFTcBlo0RpMBaR6/U5ZXt/cEjkZ0LDHUu8XGCQOlAvuNIQ==}
+  '@acab/reset.css@0.11.0':
+    resolution: {integrity: sha512-m9p/vUDxzXd8u0EYwHNKZOmjEY4DQHPq7H4/7EbZuxzTQ/KtVtc1sfhwoOBBpG3QtTNIL9FBX5wQ8xhrjfimog==}
 
   '@adobe/css-tools@4.3.3':
     resolution: {integrity: sha512-rE0Pygv0sEZ4vBWHlAgJLGDU7Pm8xoO6p3wsEceb7GYAjScrOHpEo8KK/eVkAcnSM+slAEtXjA2JpdjLp4fJQQ==}
@@ -4143,7 +4143,7 @@ packages:
 
 snapshots:
 
-  '@acab/reset.css@0.10.0': {}
+  '@acab/reset.css@0.11.0': {}
 
   '@adobe/css-tools@4.3.3': {}
 

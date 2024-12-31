@@ -18,7 +18,7 @@ export const ProfileUnit: FC = () => (
     )}
   >
     <div className={joinStr('flex items-center justify-center')}>
-      <Image src={IMAGE_profile} width={142} height={142} alt='Portrait' className='rounded-lg' />
+      <Image src={IMAGE_profile} width={142} height={142} alt='Portrait' className='rounded-[58px]' />
     </div>
     <div className={'flex flex-col gap-3 justify-center w-64'}>
       <H1En>Mitsuhiro HIBINO</H1En>

@@ -34,7 +34,7 @@
     "@storybook/react": "8.5.1",
     "autoprefixer": "10.4.20",
     "cssnano": "7.0.6",
-    "lint-staged": "15.4.1",
+    "lint-staged": "15.4.2",
     "postcss": "8.5.1",
     "prettier": "3.4.2",
     "react-dom": "19.0.0",

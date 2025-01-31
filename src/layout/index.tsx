@@ -1,4 +1,3 @@
-import { BackgroundAnimation } from '@/components/background/background-animation'
 import { joinStr } from '@/util/string'
 import { type FC, type ReactNode } from 'react'
 
@@ -20,7 +19,7 @@ export const DefaultLayout: FC<Props> = ({ children }) => (
       </div>
     </section>
     <section className='fixed top-0 left-0 w-screen h-screen z-10 overflow-hidden'>
-      <BackgroundAnimation />
+      {/* append here if want to set background component */}
     </section>
   </div>
 )

@@ -17,7 +17,10 @@ export const ProfileUnit: FC = () => (
       'desktop:gap-20 desktop:flex-row', // desktop
     )}
   >
-    <div className={joinStr('flex items-center justify-center')}>
+    <div className={joinStr(
+      'flex items-center justify-center w-full', // mobile
+      'tablet:w-auto desktop:w-auto', // others
+      )}>
       <Image src={IMAGE_profile} width={142} height={142} alt='Portrait' className='rounded-[58px]' />
     </div>
     <div className={'flex flex-col gap-3 justify-center w-64'}>

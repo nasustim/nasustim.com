@@ -1,11 +1,11 @@
 'use client'
 
-import { H1En } from '@/components/texts/H1/En'
+import { H1 } from '@/components/texts/H1'
 
 const ERROR = new Error('404 Not Found')
 
 function Page() {
-  return <H1En isCentered={true}>{ERROR.message}</H1En>
+  return <H1 content={{ value: ERROR.message, type: 'string' }} isCentered={true} />
 }
 
 export default Page

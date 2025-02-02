@@ -2,7 +2,7 @@ import './globals.css'
 import { GA_MEASUREMENT_ID, SEO, SITE_DOMAIN, SITE_TITLE } from '@/constants/values'
 import { fontClassNames } from '@/fonts'
 import { DefaultLayout } from '@/layout'
-import { joinStr } from '@/util/string'
+import { clsx } from 'clsx'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { type Metadata } from 'next'
 import { type ReactNode } from 'react'
@@ -13,7 +13,7 @@ type Props = {
 
 function RootLayout({ children }: Props) {
   return (
-    <html lang='en' className={joinStr(...fontClassNames)}>
+    <html lang='en' className={clsx(...fontClassNames)}>
       <head>
         <link rel='icon' href='/favicon.svg' sizes='any' type='image/svg+xml' />
         <link rel='apple-touch-icon' href='/favicon.png' />

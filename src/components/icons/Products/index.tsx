@@ -1,4 +1,4 @@
-import { joinStr } from '@/util/string'
+import { clsx } from 'clsx'
 import { type FC } from 'react'
 import type { IconType } from 'react-icons'
 import { AiFillFacebook, AiFillGithub } from 'react-icons/ai'
@@ -16,7 +16,7 @@ interface IconContainerProps extends Props {
 const IconContainer: FC<IconContainerProps> = ({ Icon, size, isButton = false }) => {
   return (
     <div
-      className={joinStr(
+      className={clsx(
         'w-full h-full transition-colors duration-[350ms]',
         `text-[${size}px]`,
         isButton ? 'hover:text-indigo' : null,

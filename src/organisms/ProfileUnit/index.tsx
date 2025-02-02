@@ -2,7 +2,7 @@ import { Blog, Facebook, GitHub, Keybase } from '@/components/icons/Products'
 import { H1En } from '@/components/texts/H1/En'
 import { Link } from '@/components/texts/Link'
 import { PEn } from '@/components/texts/Plain/En'
-import { joinStr } from '@/util/string'
+import { clsx } from 'clsx'
 import IMAGE_profile from '@public/static/profile_400x400.jpg'
 import Image from 'next/image'
 import { type FC } from 'react'
@@ -11,13 +11,13 @@ const snsIconSize = 32
 
 export const ProfileUnit: FC = () => (
   <div
-    className={joinStr(
+    className={clsx(
       'flex flex-col w-full items-start gap-9', // mobile
       'tablet:gap-20 tablet:flex-row', // tablet
       'desktop:gap-20 desktop:flex-row', // desktop
     )}
   >
-    <div className={joinStr('flex items-center justify-center')}>
+    <div className={clsx('flex items-center justify-center')}>
       <Image src={IMAGE_profile} width={142} height={142} alt='Portrait' className='rounded-[58px]' />
     </div>
     <div className={'flex flex-col gap-3 justify-center w-64'}>

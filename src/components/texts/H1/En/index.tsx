@@ -1,4 +1,4 @@
-import { joinStr } from '@/util/string'
+import { clsx } from 'clsx'
 import type { FC, ReactNode } from 'react'
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 
 export const H1En: FC<Props> = ({ isCentered, children }) => (
   <h1
-    className={joinStr('text-primary font-heading text-3xl leading-none font-bold', isCentered ? 'text-center' : null)}
+    className={clsx('text-primary font-heading text-3xl leading-none font-bold', isCentered ? 'text-center' : null)}
   >
     {children}
   </h1>

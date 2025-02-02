@@ -1,4 +1,4 @@
-import { joinStr } from '@/util/string'
+import { clsx } from 'clsx'
 import type { FC, ReactNode } from 'react'
 
 interface Props {
@@ -7,4 +7,4 @@ interface Props {
 
 const baseStyle = 'text-primary-sub leading-normal font-default'
 
-export const PEn: FC<Props> = ({ children }) => <p className={joinStr(baseStyle, 'font-light text-sm')}>{children}</p>
+export const PEn: FC<Props> = ({ children }) => <p className={clsx(baseStyle, 'font-light text-sm')}>{children}</p>

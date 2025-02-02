@@ -1,10 +1,12 @@
-import { clsx } from 'clsx'
-import type { FC, ReactNode } from 'react'
+import { clsx } from "clsx";
+import type { FC, ReactNode } from "react";
 
 interface Props {
-  children: ReactNode
+  children: ReactNode;
 }
 
-const baseStyle = 'text-primary-sub leading-normal font-default'
+const baseStyle = "text-primary-sub leading-normal font-default";
 
-export const PEn: FC<Props> = ({ children }) => <p className={clsx(baseStyle, 'font-light text-sm')}>{children}</p>
+export const PEn: FC<Props> = ({ children }) => (
+  <p className={clsx(baseStyle, "font-light text-sm")}>{children}</p>
+);

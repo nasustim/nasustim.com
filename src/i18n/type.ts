@@ -1,18 +1,18 @@
-export type I18nInlineValue = Array<I18nInlineContent | string>
+export type I18nInlineValue = Array<I18nInlineContent | string>;
 
 export type I18nInlineContent =
   | {
-      type: 'p'
-      value: I18nInlineValue
+      type: "p";
+      value: I18nInlineValue;
     }
   | {
-      type: 'a'
-      value: I18nInlineValue
-      href: URL
-      areaLabel: string
-    }
+      type: "a";
+      value: I18nInlineValue;
+      href: URL;
+      areaLabel: string;
+    };
 
 export type I18ncontent = {
-  name: I18nInlineContent
-  shortDescription: I18nInlineContent
-}
+  name: I18nInlineContent;
+  shortDescription: I18nInlineContent;
+};

@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
-import { ProfileSection } from '@/feature/profile'
+import { ProfileSection } from "@/feature/profile";
 
 const Page = () => (
   <>
     <ProfileSection />
   </>
-)
+);
 
-export default Page
+export default Page;

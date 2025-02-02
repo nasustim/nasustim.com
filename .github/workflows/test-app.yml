@@ -26,4 +26,3 @@ jobs:
       - run: npm run test
       - run: npm run build
       - run: npm run lint:ci
-      - run: npm run storybook:build

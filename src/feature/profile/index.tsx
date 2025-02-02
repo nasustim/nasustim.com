@@ -17,7 +17,7 @@ export const ProfileSection: FC = () => {
   return (
     <div
       className={clsx(
-        "flex flex-col w-full h-svh items-center justify-center gap-9", // mobile
+        "flex flex-col w-full h-full items-center justify-center gap-9", // mobile
         "tablet:gap-20 tablet:flex-row", // tablet
         "desktop:gap-20 desktop:flex-row", // desktop
       )}

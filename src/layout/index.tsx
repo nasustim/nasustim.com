@@ -19,7 +19,10 @@ export const DefaultLayout: FC<Props> = ({ children }) => (
       </div>
     </section>
     <section className='fixed top-0 left-0 w-screen h-screen z-10 overflow-hidden'>
-      {/* note: append here if set a background component */}
+      {/** 
+       * append here if set a background component
+       * @see https://github.com/nasustim/nasustim.com/pull/1001
+       * */}
     </section>
   </div>
 )

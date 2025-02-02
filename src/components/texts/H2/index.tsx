@@ -1,11 +1,13 @@
-import type { FC, ReactNode } from 'react'
+import type { FC, ReactNode } from "react";
 
 interface Props {
-  children: ReactNode
+  children: ReactNode;
 }
 
 const Text: FC<Props> = ({ children }) => (
-  <h2 className='text-primary font-heading text-2xl leading-tight desktop:leading-normal'>{children}</h2>
-)
+  <h2 className="text-primary font-heading text-2xl leading-tight desktop:leading-normal">
+    {children}
+  </h2>
+);
 
-export default Text
+export default Text;

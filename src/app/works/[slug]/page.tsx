@@ -1,13 +1,13 @@
-import { SITE_DOMAIN, SITE_TITLE } from '@/constants/values'
-import { Metadata } from 'next'
-import { type FC } from 'react'
+import { SITE_DOMAIN, SITE_TITLE } from "@/config";
+import type { Metadata } from "next";
+import type { FC } from "react";
 
 type Props = {
-  params: Promise<{ slug: string }>
-}
+  params: Promise<{ slug: string }>;
+};
 
-const Page: FC<Props> = () => <div>🚧 Under Construction 🚧</div>
-export default Page
+const Page: FC<Props> = () => <div>🚧 Under Construction 🚧</div>;
+export default Page;
 
 /**
  * Following contents were exists on past portfolio page
@@ -15,21 +15,23 @@ export default Page
  */
 export function generateStaticParams() {
   return [
-    'slash-module-slash-whom',
-    'shokei-no-kagami',
-    'aster-as-code',
-    'dj',
-    'from-gifu-to-word',
-    'morning-square',
-    'nxpc-32',
-    'nxps-43',
-    'oton-glass',
-    'iamasonic-2019',
-  ].map((slug) => ({ slug }))
+    "slash-module-slash-whom",
+    "shokei-no-kagami",
+    "aster-as-code",
+    "dj",
+    "from-gifu-to-word",
+    "morning-square",
+    "nxpc-32",
+    "nxps-43",
+    "oton-glass",
+    "iamasonic-2019",
+  ].map((slug) => ({ slug }));
 }
 
-export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
-  const slug = (await params).slug
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
+  const slug = (await params).slug;
 
   return {
     title: `${slug} - ${SITE_TITLE}`,
@@ -40,5 +42,5 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
       index: false,
       follow: false,
     },
-  }
-}
+  };
+};

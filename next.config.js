@@ -4,13 +4,13 @@ const defaultConfig = {
   images: {
     unoptimized: true,
   },
-  output: 'export',
+  output: "export",
   reactStrictMode: true,
-}
+};
 
-const analyerConfig = require('@next/bundle-analyzer')({
+const analyerConfig = require("@next/bundle-analyzer")({
   enabled: true,
-})({})
+})({});
 
-const config = process.env.ANALYZE === 'true' ? analyerConfig : defaultConfig
-module.exports = config
+const config = process.env.ANALYZE === "true" ? analyerConfig : defaultConfig;
+module.exports = config;

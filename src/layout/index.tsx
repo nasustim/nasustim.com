@@ -7,7 +7,7 @@ type Props = {
 
 export const DefaultLayout: FC<Props> = ({ children }) => (
   <div className='bg-white relative w-screen h-svh'>
-    <section className='absolute top-0 left-0 flex flex-col items-center justify-center w-screen h-svh z-50'>
+    <section className='absolute top-0 left-0 flex flex-col items-center justify-center w-screen min-h-svh z-50'>
       <div
         className={clsx(
           'w-4/5 p-3', // mobile

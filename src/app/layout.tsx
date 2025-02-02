@@ -1,5 +1,5 @@
 import './globals.css'
-import { GA_MEASUREMENT_ID, SEO, SITE_DOMAIN, SITE_TITLE } from '@/constants/values'
+import { GA_MEASUREMENT_ID, SEO, SITE_DOMAIN, SITE_TITLE } from '@/config'
 import { fontClassNames } from '@/fonts'
 import { DefaultLayout } from '@/layout'
 import { GoogleAnalytics } from '@next/third-parties/google'

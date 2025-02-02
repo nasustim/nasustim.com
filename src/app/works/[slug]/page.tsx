@@ -1,4 +1,4 @@
-import { SITE_DOMAIN, SITE_TITLE } from '@/constants/values'
+import { SITE_DOMAIN, SITE_TITLE } from '@/config'
 import { Metadata } from 'next'
 import { type FC } from 'react'
 

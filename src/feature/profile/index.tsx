@@ -9,10 +9,10 @@ import { type FC } from 'react'
 
 const snsIconSize = 32
 
-export const ProfileUnit: FC = () => (
+export const ProfileSection: FC = () => (
   <div
     className={clsx(
-      'flex flex-col w-full items-start gap-9', // mobile
+      'flex flex-col w-full h-svh items-center justify-center gap-9', // mobile
       'tablet:gap-20 tablet:flex-row', // tablet
       'desktop:gap-20 desktop:flex-row', // desktop
     )}

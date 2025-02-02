@@ -1,7 +1,11 @@
 'use client'
 
-import { ProfileUnit } from '@/organisms/ProfileUnit'
+import { ProfileSection } from '@/feature/profile'
 
-const Page = () => <ProfileUnit />
+const Page = () => (
+  <>
+    <ProfileSection />
+  </>
+)
 
 export default Page

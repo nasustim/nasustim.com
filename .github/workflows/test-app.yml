@@ -14,7 +14,6 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - uses: pnpm/action-setup@v4.0.0
       - uses: nasustim/get-asdf-version-action@v1.1.0
         id: get-asdf-version
         with:
@@ -22,9 +21,9 @@ jobs:
       - uses: actions/setup-node@v4.2.0
         with:
           node-version: ${{ steps.get-asdf-version.outputs.version }}
-          cache: pnpm
-      - run: pnpm i --frozen-lockfile
-      - run: pnpm run test
-      - run: pnpm run build
-      - run: pnpm run lint:ci
-      - run: pnpm run storybook:build
+          cache: npm
+      - run: npm ci
+      - run: npm run test
+      - run: npm run build
+      - run: npm run lint:ci
+      - run: npm run storybook:build

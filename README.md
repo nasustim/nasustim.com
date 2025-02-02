@@ -7,23 +7,23 @@ website: https://nasustim.com
 
 ### Set up
 
-Install deps with `asdf` and enable corepack (to use `pnpm`)
+Install deps with `asdf`
 
 ```sh
 $ asdf install
 $ corepack enable
-$ pnpm install
+$ npm install
 ```
 
 ### Start development server
 
 
 ```sh
-$ pnpm run dev
+$ npm run dev
 ```
 
 ### Build
 
 ```sh
-$ pnpm run build
+$ npm run build
 ```

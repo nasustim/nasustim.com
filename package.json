@@ -24,7 +24,7 @@
     "@next/eslint-plugin-next": "15.2.4",
     "@tailwindcss/postcss": "4.1.1",
     "@types/node": "22.13.17",
-    "@types/react": "19.0.12",
+    "@types/react": "19.1.0",
     "postcss": "8.5.3",
     "prettier": "3.5.3",
     "typescript": "5.8.2",

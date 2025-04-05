@@ -27,7 +27,7 @@
     "@types/react": "19.1.0",
     "postcss": "8.5.3",
     "prettier": "3.5.3",
-    "typescript": "5.8.2",
+    "typescript": "5.8.3",
     "typescript-plugin-css-modules": "5.1.0"
   },
   "homepage": "https://github.com/nasustim/nasustim.com#readme",

@@ -23,7 +23,7 @@
     "@next/bundle-analyzer": "15.3.1",
     "@next/eslint-plugin-next": "15.3.1",
     "@tailwindcss/postcss": "4.1.4",
-    "@types/node": "22.15.1",
+    "@types/node": "22.15.2",
     "@types/react": "19.1.2",
     "postcss": "8.5.3",
     "prettier": "3.5.3",

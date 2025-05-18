@@ -15,8 +15,10 @@ function RootLayout({ children }: Props) {
   return (
     <html lang="en" className={clsx(...fontClassNames)}>
       <head>
-        <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/favicon.png" />
+        <link rel="icon" type="image/png" sizes="48x48" href={`${SITE_DOMAIN}/static/favicon-48x48.png`} />
+        <link rel="icon" type="image/png" sizes="192x192" href={`${SITE_DOMAIN}/static/favicon-192x192.png`} />
+        <link rel="icon" type="image/png" sizes="152x152" href={`${SITE_DOMAIN}/static/favicon-512x512.png`} />
+        <link rel="apple-touch-icon" sizes="180x180" href={`${SITE_DOMAIN}/static/apple-touch-icon.png`} />
       </head>
       <body>
         <DefaultLayout>{children}</DefaultLayout>

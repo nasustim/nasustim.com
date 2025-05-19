@@ -8,15 +8,15 @@ export const en: I18ncontent = {
   shortDescription: {
     type: "p",
     value: [
-      "A software developer living in Tokyo, Japan.\nI'm currently working on a project supporting a subsidiary's product growth and organizing the engineering process at ",
+      "A software developer in Tokyo.\nI'm currently working as Engineering Manager at ",
       {
         type: "a",
-        value: ["MIXI inc"],
+        value: ["MIXI inc."],
         href: new URL("https://mixi.co.jp"),
         areaLabel:
           "Japanese internet company, especially famous as a pioneer of social media in the country",
       },
-      ", as an EM.",
+      ", and supporting growth and improving a subsidiary's product.",
     ],
   },
 };

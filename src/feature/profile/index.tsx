@@ -4,11 +4,11 @@ import { Link } from "@/components/texts/Link";
 import { PEn } from "@/components/texts/Plain/En";
 import { getI18nContent } from "@/i18n";
 import { Inline } from "@/i18n/renderer";
+import { useIconAnimation } from "@/style/utilities/icon-animation/useIconAnimation";
 import IMAGE_profile from "@public/static/profile_400x400.jpg";
 import { clsx } from "clsx";
 import Image from "next/image";
 import type { FC } from "react";
-import { useIconAnimation } from "@/style/utilities/icon-animation/useIconAnimation";
 
 const snsIconSize = 32;
 
@@ -74,4 +74,3 @@ export const ProfileSection: FC = () => {
     </div>
   );
 };
-

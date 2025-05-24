@@ -4,6 +4,7 @@ import { Link } from "@/components/texts/Link";
 import { PEn } from "@/components/texts/Plain/En";
 import { getI18nContent } from "@/i18n";
 import { Inline } from "@/i18n/renderer";
+import { useIconAnimation } from "@/style/utilities/icon-animation/useIconAnimation";
 import IMAGE_profile from "@public/static/profile_400x400.jpg";
 import { clsx } from "clsx";
 import Image from "next/image";
@@ -13,6 +14,7 @@ const snsIconSize = 32;
 
 export const ProfileSection: FC = () => {
   const { name, shortDescription } = getI18nContent();
+  const { animationClassName, isReady, defaultRadius } = useIconAnimation();
 
   return (
     <div
@@ -28,7 +30,9 @@ export const ProfileSection: FC = () => {
           width={142}
           height={142}
           alt="Portrait"
-          className="rounded-[58px]"
+          className={clsx(
+            isReady ? animationClassName : `rounded-[${defaultRadius}px]`,
+          )}
         />
       </div>
       <div className={"flex flex-col gap-3 justify-center w-64"}>

@@ -1,0 +1,9 @@
+.animate {
+    border-radius: var(--radius-0) var(--radius-1) var(--radius-2) var(--radius-3);
+    transition: border-radius var(--animation-duration) ease-in-out;
+
+    &:hover {
+        border-radius: 0;
+        transition-duration: 0.5s;
+    }
+}

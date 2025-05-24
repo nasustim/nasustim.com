@@ -10,14 +10,14 @@ const generateRandomRadius = (): number => {
 
 function* setRandomRadiusVariables(root: HTMLElement): Generator<void> {
   root.style.setProperty("--animation-duration", `${animationDurationSec}s`);
-  let nextRadius = [...new Array(4)].map(() => defaultRadius);
+  let nextRadius = Array(4).fill(defaultRadius);
 
   while (true) {
     for (const [i, radius] of nextRadius.entries()) {
       root.style.setProperty(`--radius-${i}`, `${radius}px`);
     }
     yield;
-    nextRadius = [...new Array(4)].map(() => generateRandomRadius());
+    nextRadius = Array.from({ length: 4 }, () => generateRandomRadius());
   }
 }
 

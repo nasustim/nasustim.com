@@ -8,11 +8,13 @@ import IMAGE_profile from "@public/static/profile_400x400.jpg";
 import { clsx } from "clsx";
 import Image from "next/image";
 import type { FC } from "react";
+import { useIconAnimation } from "@/style/utilities/icon-animation/useIconAnimation";
 
 const snsIconSize = 32;
 
 export const ProfileSection: FC = () => {
   const { name, shortDescription } = getI18nContent();
+  const { animationClassName } = useIconAnimation();
 
   return (
     <div
@@ -28,7 +30,7 @@ export const ProfileSection: FC = () => {
           width={142}
           height={142}
           alt="Portrait"
-          className="rounded-[58px]"
+          className={animationClassName}
         />
       </div>
       <div className={"flex flex-col gap-3 justify-center w-64"}>
@@ -72,3 +74,4 @@ export const ProfileSection: FC = () => {
     </div>
   );
 };
+

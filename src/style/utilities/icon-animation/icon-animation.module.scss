@@ -1,0 +1,5 @@
+@use "./icon-animation.scss";
+
+.animate {
+    animation: icon-shape 120s ease-in-out infinite;
+}

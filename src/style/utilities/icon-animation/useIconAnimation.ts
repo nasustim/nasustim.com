@@ -1,32 +1,46 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./icon-animation.module.scss";
 
+const animationDurationSec = 5;
+const defaultRadius = 58;
+
 const generateRandomRadius = (): number => {
-  return Math.floor(Math.random() * (72 - 45 + 1)) + 45;
+  return Math.floor(Math.random() * 14) + defaultRadius;
 };
 
-const setRandomRadiusVariables = () => {
-  const root = document.documentElement;
-  for (let i = 0; i < 29; i++) {
-    root.style.setProperty(`--radius-${i}`, `${generateRandomRadius()}px`);
+function* setRandomRadiusVariables(root: HTMLElement): Generator<void> {
+  root.style.setProperty("--animation-duration", `${animationDurationSec}s`);
+  let nextRadius = [...new Array(4)].map(() => defaultRadius);
+
+  while (true) {
+    for (const [i, radius] of nextRadius.entries()) {
+      root.style.setProperty(`--radius-${i}`, `${radius}px`);
+    }
+    yield;
+    nextRadius = [...new Array(4)].map(() => generateRandomRadius());
   }
-};
+}
 
 export const useIconAnimation = () => {
-  useEffect(() => {
-    setRandomRadiusVariables();
+  const [isReady, setIsReady] = useState(false);
 
-    const interval = setInterval(
-      () => {
-        setRandomRadiusVariables();
-      },
-      2 * 60 * 1000,
+  useEffect(() => {
+    const animationStepper = setRandomRadiusVariables(
+      window.document.documentElement,
     );
+    animationStepper.next();
+    setIsReady(true);
+
+    const interval = setInterval(() => {
+      animationStepper.next();
+    }, 5 * 1000);
 
     return () => clearInterval(interval);
   }, []);
 
   return {
     animationClassName: styles.animate,
+    isReady,
+    defaultRadius,
   };
 };

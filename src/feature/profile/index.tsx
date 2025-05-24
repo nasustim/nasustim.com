@@ -14,7 +14,7 @@ const snsIconSize = 32;
 
 export const ProfileSection: FC = () => {
   const { name, shortDescription } = getI18nContent();
-  const { animationClassName } = useIconAnimation();
+  const { animationClassName, isReady, defaultRadius } = useIconAnimation();
 
   return (
     <div
@@ -30,7 +30,9 @@ export const ProfileSection: FC = () => {
           width={142}
           height={142}
           alt="Portrait"
-          className={animationClassName}
+          className={clsx(
+            isReady ? animationClassName : `rounded-[${defaultRadius}px]`,
+          )}
         />
       </div>
       <div className={"flex flex-col gap-3 justify-center w-64"}>

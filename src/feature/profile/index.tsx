@@ -1,4 +1,4 @@
-import { Blog, Facebook, GitHub, Keybase } from "@/components/icons/Products";
+import { Blog, GitHub, Keybase, LinkedIn } from "@/components/icons/Products";
 import { H1En } from "@/components/texts/H1/En";
 import { Link } from "@/components/texts/Link";
 import { PEn } from "@/components/texts/Plain/En";
@@ -51,11 +51,11 @@ export const ProfileSection: FC = () => {
             <GitHub size={snsIconSize} isButton={true} />
           </Link>
           <Link
-            href="https://www.facebook.com/mitsuhibino"
+            href="https://www.linkedin.com/in/mitsuhibino/"
             variant="none"
-            ariaLabel="My Facebook account"
+            ariaLabel="My Linked In account"
           >
-            <Facebook size={snsIconSize} isButton={true} />
+            <LinkedIn size={snsIconSize} isButton={true} />
           </Link>
           <Link
             href="https://keybase.io/nasustim"

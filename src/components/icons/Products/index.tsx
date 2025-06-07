@@ -1,8 +1,8 @@
 import { clsx } from "clsx";
 import type { FC } from "react";
 import type { IconType } from "react-icons";
-import { AiFillFacebook, AiFillGithub } from "react-icons/ai";
-import { FaKeybase } from "react-icons/fa";
+import { AiFillGithub } from "react-icons/ai";
+import { FaKeybase, FaLinkedin } from "react-icons/fa";
 import { MdArticle } from "react-icons/md";
 
 interface Props {
@@ -36,8 +36,8 @@ const IconContainer: FC<IconContainerProps> = ({
 export const GitHub: FC<Props> = (props) => (
   <IconContainer {...props} Icon={AiFillGithub} />
 );
-export const Facebook: FC<Props> = (props) => (
-  <IconContainer {...props} Icon={AiFillFacebook} />
+export const LinkedIn: FC<Props> = (props) => (
+  <IconContainer {...props} Icon={FaLinkedin} />
 );
 export const Keybase: FC<Props> = (props) => (
   <IconContainer {...props} Icon={FaKeybase} />

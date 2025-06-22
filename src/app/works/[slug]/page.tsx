@@ -1,6 +1,6 @@
-import { SITE_DOMAIN, SITE_TITLE } from "@/config";
 import type { Metadata } from "next";
 import type { FC } from "react";
+import { SITE_DOMAIN, SITE_TITLE } from "@/config";
 
 type Props = {
   params: Promise<{ slug: string }>;

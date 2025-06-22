@@ -1,11 +1,11 @@
 import "./globals.css";
-import { GA_MEASUREMENT_ID, SEO, SITE_DOMAIN, SITE_TITLE } from "@/config";
-import { fontClassNames } from "@/fonts";
-import { DefaultLayout } from "@/layout";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { clsx } from "clsx";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { GA_MEASUREMENT_ID, SEO, SITE_DOMAIN, SITE_TITLE } from "@/config";
+import { fontClassNames } from "@/fonts";
+import { DefaultLayout } from "@/layout";
 
 type Props = {
   children: ReactNode;

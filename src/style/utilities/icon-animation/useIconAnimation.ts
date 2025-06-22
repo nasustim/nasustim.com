@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./icon-animation.module.scss";
 
 const animationDurationSec = 5;

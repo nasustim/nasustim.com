@@ -21,12 +21,10 @@
   "devDependencies": {
     "@biomejs/biome": "2.0.6",
     "@next/bundle-analyzer": "15.3.4",
-    "@next/eslint-plugin-next": "15.3.4",
     "@tailwindcss/postcss": "4.1.11",
     "@types/node": "22.15.33",
     "@types/react": "19.1.8",
     "postcss": "8.5.6",
-    "prettier": "3.6.2",
     "typescript": "5.8.3",
     "typescript-plugin-css-modules": "5.1.0"
   },

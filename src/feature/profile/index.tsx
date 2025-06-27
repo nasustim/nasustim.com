@@ -1,18 +1,20 @@
-import { Blog, Facebook, GitHub, Keybase } from "@/components/icons/Products";
+import IMAGE_profile from "@public/static/profile_400x400.jpg";
+import { clsx } from "clsx";
+import Image from "next/image";
+import type { FC } from "react";
+import { Blog, GitHub, Keybase, LinkedIn } from "@/components/icons/Products";
 import { H1En } from "@/components/texts/H1/En";
 import { Link } from "@/components/texts/Link";
 import { PEn } from "@/components/texts/Plain/En";
 import { getI18nContent } from "@/i18n";
 import { Inline } from "@/i18n/renderer";
-import IMAGE_profile from "@public/static/profile_400x400.jpg";
-import { clsx } from "clsx";
-import Image from "next/image";
-import type { FC } from "react";
+import { useIconAnimation } from "@/style/utilities/icon-animation/useIconAnimation";
 
 const snsIconSize = 32;
 
 export const ProfileSection: FC = () => {
   const { name, shortDescription } = getI18nContent();
+  const { animationClassName, isReady, defaultRadius } = useIconAnimation();
 
   return (
     <div
@@ -28,7 +30,9 @@ export const ProfileSection: FC = () => {
           width={142}
           height={142}
           alt="Portrait"
-          className="rounded-[58px]"
+          className={clsx(
+            isReady ? animationClassName : `rounded-[${defaultRadius}px]`,
+          )}
         />
       </div>
       <div className={"flex flex-col gap-3 justify-center w-64"}>
@@ -47,11 +51,11 @@ export const ProfileSection: FC = () => {
             <GitHub size={snsIconSize} isButton={true} />
           </Link>
           <Link
-            href="https://www.facebook.com/mitsuhibino"
+            href="https://www.linkedin.com/in/mitsuhibino/"
             variant="none"
-            ariaLabel="My Facebook account"
+            ariaLabel="My Linked In account"
           >
-            <Facebook size={snsIconSize} isButton={true} />
+            <LinkedIn size={snsIconSize} isButton={true} />
           </Link>
           <Link
             href="https://keybase.io/nasustim"

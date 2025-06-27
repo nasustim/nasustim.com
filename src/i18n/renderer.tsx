@@ -1,14 +1,13 @@
-import { Link } from "@/components/texts/Link";
-import type { FC } from "react";
+import type { FC, ReactNode } from "react";
 import { useCallback } from "react";
-import type { ReactNode } from "react";
+import { Link } from "@/components/texts/Link";
 import type { I18nInlineContent, I18nInlineValue } from "./type";
 
 export const Inline: FC<{ content: I18nInlineContent }> = ({ content }) => {
   const inlineContent = useCallback(
     (value: I18nInlineValue[number], index: number) => {
       if (typeof value === "string") {
-        const result = Array<ReactNode>();
+        const result: ReactNode[] = [];
         const lines = value.split("\n");
         for (let j = 0; j < lines.length; j++) {
           result.push(lines[j]);

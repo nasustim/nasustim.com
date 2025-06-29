@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./icon-animation.module.scss";
 
-const animationDurationSec = 5;
+// TODO: Make these definitions to be common
 const defaultRadius = 58;
 
 const generateRandomRadius = (): number => {
@@ -9,7 +9,6 @@ const generateRandomRadius = (): number => {
 };
 
 function* setRandomRadiusVariables(root: HTMLElement): Generator<void> {
-  root.style.setProperty("--animation-duration", `${animationDurationSec}s`);
   let nextRadius = Array(4).fill(defaultRadius);
 
   while (true) {
@@ -22,14 +21,11 @@ function* setRandomRadiusVariables(root: HTMLElement): Generator<void> {
 }
 
 export const useIconAnimation = () => {
-  const [isReady, setIsReady] = useState(false);
-
   useEffect(() => {
     const animationStepper = setRandomRadiusVariables(
       window.document.documentElement,
     );
     animationStepper.next();
-    setIsReady(true);
 
     const interval = setInterval(() => {
       animationStepper.next();
@@ -40,7 +36,5 @@ export const useIconAnimation = () => {
 
   return {
     animationClassName: styles.animate,
-    isReady,
-    defaultRadius,
   };
 };

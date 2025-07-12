@@ -14,13 +14,13 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - uses: nasustim/get-asdf-version-action@v1.1.1
-        id: get-asdf-version
+      - uses: nasustim/get-mise-version-action
+        id: get-mise-version
         with:
           package-name: nodejs
       - uses: actions/setup-node@v4.4.0
         with:
-          node-version: ${{ steps.get-asdf-version.outputs.version }}
+          node-version: ${{ steps.get-mise-version.outputs.version }}
           cache: npm
       - run: npm ci
       - run: npm run test

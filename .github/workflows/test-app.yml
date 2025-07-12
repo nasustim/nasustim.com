@@ -17,7 +17,7 @@ jobs:
       - uses: nasustim/get-mise-version-action@v1.0.0
         id: get-mise-version
         with:
-          package-name: nodejs
+          tool-name: nodejs
       - uses: actions/setup-node@v4.4.0
         with:
           node-version: ${{ steps.get-mise-version.outputs.version }}

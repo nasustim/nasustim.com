@@ -23,7 +23,7 @@
     "@next/bundle-analyzer": "15.5.0",
     "@tailwindcss/postcss": "4.1.12",
     "@types/node": "22.17.2",
-    "@types/react": "19.1.10",
+    "@types/react": "19.1.11",
     "postcss": "8.5.6",
     "typescript": "5.9.2",
     "typescript-plugin-css-modules": "5.2.0"

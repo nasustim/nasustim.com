@@ -18,7 +18,7 @@ jobs:
         id: get-mise-version
         with:
           tool-name: nodejs
-      - uses: actions/setup-node@v5.0.0
+      - uses: actions/setup-node@v6.1.0
         with:
           node-version: ${{ steps.get-mise-version.outputs.version }}
           cache: npm

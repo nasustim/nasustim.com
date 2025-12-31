@@ -8,7 +8,7 @@ export const en: I18ncontent = {
   shortDescription: {
     type: "p",
     value: [
-      "A software developer in Tokyo.\nI'm currently working as an engineering manager at ",
+      "A software developer based in Tokyo.\nI am currently working as a software engineer at ",
       {
         type: "a",
         value: ["MIXI inc."],
@@ -16,7 +16,7 @@ export const en: I18ncontent = {
         areaLabel:
           "Japanese internet company, especially famous as a pioneer of social media in the country",
       },
-      ", and supporting growth and improvement for subsidiary's product.",
+      ", and supporting the growth and improvement of a startup company.",
     ],
   },
 };

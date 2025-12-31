@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import styles from "./icon-animation.module.scss";
 
 // TODO: Make these definitions to be common

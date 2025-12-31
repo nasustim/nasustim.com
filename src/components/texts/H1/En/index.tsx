@@ -9,7 +9,8 @@ interface Props {
 export const H1En: FC<Props> = ({ isCentered, children }) => (
   <h1
     className={clsx(
-      "text-primary font-heading text-3xl leading-none font-bold",
+      "text-primary text-3xl leading-none",
+      "font-heading",
       isCentered ? "text-center" : null,
     )}
   >

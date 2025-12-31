@@ -3,7 +3,7 @@ import type { I18ncontent } from "@/i18n/type";
 export const en: I18ncontent = {
   name: {
     type: "p",
-    value: ["Mitsuhiro HIBINO"],
+    value: ["Mitsuhiro Hibino"],
   },
   shortDescription: {
     type: "p",

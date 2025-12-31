@@ -33,7 +33,12 @@ export const ProfileSection: FC = () => {
           className={clsx(animationClassName)}
         />
       </div>
-      <div className={"flex flex-col gap-3 justify-center w-64"}>
+      <div
+        className={clsx(
+          "flex flex-col gap-3 justify-center w-64", // mobile
+          "sm:gap-5",
+        )}
+      >
         <H1En>
           <Inline content={name} />
         </H1En>

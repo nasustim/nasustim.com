@@ -23,7 +23,6 @@ npm run build:sitemap
 npm run serve
 
 # Linting and formatting (using Biome)
-npm run lint:check    # Check for issues
 npm run lint:fix      # Fix issues automatically
 npm run lint:ci       # CI-specific linting
 

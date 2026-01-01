@@ -40,7 +40,6 @@
     "build:sitemap": "next-sitemap --config ./sitemap.config.js",
     "serve": "npx serve@latest out",
     "test": "echo \"please write test and execute\" | exit 0",
-    "lint:check": "biome check .",
     "lint:fix": "biome check --write .",
     "lint:ci": "biome ci .",
     "analyze": "next experimental-analyze"

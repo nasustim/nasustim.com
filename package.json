@@ -24,7 +24,7 @@
     "@tailwindcss/postcss": "4.2.2",
     "@types/node": "24.12.2",
     "@types/react": "19.2.14",
-    "postcss": "8.5.9",
+    "postcss": "8.5.10",
     "typescript": "5.9.3",
     "typescript-plugin-css-modules": "5.2.0"
   },

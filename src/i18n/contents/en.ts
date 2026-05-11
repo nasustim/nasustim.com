@@ -8,7 +8,7 @@ export const en: I18ncontent = {
   shortDescription: {
     type: "p",
     value: [
-      "Software developer based in Tokyo. / Weekend home decorator / Tea lover",
+      "Software developer based in Tokyo / Weekend home decorator / Tea lover",
     ],
   },
 };

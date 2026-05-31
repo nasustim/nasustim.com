@@ -2,12 +2,12 @@ import IMAGE_profile from "@public/static/profile_400x400.jpg";
 import { clsx } from "clsx";
 import Image from "next/image";
 import type { FC } from "react";
-import { Blog, GitHub, Keybase, LinkedIn } from "@/components/icons/Products";
-import { H1En } from "@/components/texts/H1/En";
-import { Link } from "@/components/texts/Link";
-import { PEn } from "@/components/texts/Plain/En";
-import { getI18nContent } from "@/i18n";
-import { Inline } from "@/i18n/renderer";
+import { getI18nContent } from "@/feature/ui/i18n";
+import { Inline } from "@/feature/ui/i18n/renderer";
+import { Blog, GitHub, Keybase, LinkedIn } from "@/feature/ui/icons/Products";
+import { H1En } from "@/feature/ui/texts/H1/En";
+import { Link } from "@/feature/ui/texts/Link";
+import { PEn } from "@/feature/ui/texts/Plain/En";
 import { useIconAnimation } from "@/style/utilities/icon-animation/useIconAnimation";
 
 const snsIconSize = 32;

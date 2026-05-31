@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from "react";
 import { useCallback } from "react";
-import { Link } from "@/components/texts/Link";
+import { Link } from "@/feature/ui/texts/Link";
 import type { I18nInlineContent, I18nInlineValue } from "./type";
 
 export const Inline: FC<{ content: I18nInlineContent }> = ({ content }) => {

@@ -1,6 +1,6 @@
 "use client";
 
-import { H1En } from "@/components/texts/H1/En";
+import { H1En } from "@/feature/ui/texts/H1/En";
 
 const ERROR = new Error("404 Not Found");
 

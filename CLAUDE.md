@@ -52,17 +52,15 @@ src/
 │   ├── layout.tsx         # Root layout with SEO metadata
 │   ├── page.tsx           # Homepage (ProfileSection)
 │   └── works/[slug]/      # Individual work pages (under construction)
-├── components/            # Reusable UI components
-│   ├── icons/             # Icon components
-│   └── texts/             # Typography components (H1, H2, Link, Plain)
-├── feature/               # Feature-specific components
-│   └── profile/           # Profile section functionality
+├── feature/               # Feature-based modules
+│   ├── profile/           # Profile section functionality
+│   └── ui/                # Shared UI primitives
+│       ├── icons/         # Icon components
+│       ├── texts/         # Typography components (H1, Link, Plain)
+│       ├── fonts/         # Font configuration
+│       └── i18n/          # Internationalization
 ├── layout/                # Layout components (DefaultLayout)
-├── i18n/                  # Internationalization
-│   ├── contents/en.ts     # English content
-│   ├── index.ts           # i18n utilities
-│   └── renderer.tsx       # i18n rendering logic
-├── fonts/                 # Font configuration
+├── style/                 # Shared styles and animation hooks
 ├── config.ts              # Site-wide configuration constants
 └── meta-info/             # SEO and metadata utilities
 ```

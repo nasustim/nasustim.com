@@ -1,4 +1,4 @@
-import { en } from "@/i18n/contents/en";
+import { en } from "@/feature/ui/i18n/contents/en";
 
 const supportedLangs = ["en"] as const;
 type SupportedLangs = (typeof supportedLangs)[number];

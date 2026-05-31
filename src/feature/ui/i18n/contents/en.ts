@@ -1,4 +1,4 @@
-import type { I18ncontent } from "@/i18n/type";
+import type { I18ncontent } from "@/feature/ui/i18n/type";
 
 export const en: I18ncontent = {
   name: {

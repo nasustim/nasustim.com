@@ -5,32 +5,31 @@ Personal portfolio website built with Next.js 15 and static export, deployed to 
 ## Development Commands
 
 ```bash
-# Setup dependencies (requires asdf and corepack)
-asdf install
-corepack enable
-npm install
+# Setup dependencies (requires mise)
+mise install
+bun install
 
 # Development server
-npm run dev
+bun run dev
 
 # Build for production
-npm run build
+bun run build
 
 # Generate sitemap after build
-npm run build:sitemap
+bun run build:sitemap
 
 # Serve built site locally
-npm run serve
+bun run serve
 
 # Linting and formatting (using Biome)
-npm run lint:fix      # Fix issues automatically
-npm run lint:ci       # CI-specific linting
+bun run lint:fix      # Fix issues automatically
+bun run lint:ci       # CI-specific linting
 
 # Bundle analysis
-npm run analyze
+bun run analyze
 
 # Tests
-npm test  # Note: Currently placeholder - tests need to be written
+bun run test  # Note: Currently placeholder - tests need to be written
 ```
 
 ## Architecture Overview

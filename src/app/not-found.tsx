@@ -1,7 +1,7 @@
 "use client";
 
-import { H1 } from "@/ui/basic/texts/H1";
-import { Link } from "@/ui/basic/texts/Link";
+import { H1 } from "@/ui/basic/h1-text";
+import { Link } from "@/ui/basic/link-text";
 
 function Page() {
   return (

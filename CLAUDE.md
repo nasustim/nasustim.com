@@ -55,13 +55,18 @@ src/
 │   └── profile/           # Profile section functionality
 ├── ui/                    # Shared UI components (see docs/ui-layers.md)
 │   ├── basic/             # Thin wrappers around plain HTML elements
-│   │   ├── icons/         # Icon components (Products.tsx)
-│   │   └── texts/         # Typography (H1.tsx, Link.tsx, Plain.tsx)
+│   │   ├── h1-text.tsx, link-text.tsx, plain-text.tsx
+│   │   └── product-icon.tsx
 │   └── composite/         # Composed from basic components (empty for now)
 ├── layout/                # Layout components (DefaultLayout)
 ├── style/                 # Fonts (fonts.ts) and animation hooks
 └── config.ts              # Site-wide configuration constants
 ```
+
+### Naming Conventions
+
+- **File names**: kebab-case (e.g., `product-icon.tsx`, `h1-text.tsx`)
+- **No subdirectories** inside `ui/basic/` or `ui/composite/` — all component files live flat in the layer directory
 
 ### Development Notes
 

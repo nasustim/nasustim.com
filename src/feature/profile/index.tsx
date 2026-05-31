@@ -3,10 +3,10 @@ import { clsx } from "clsx";
 import Image from "next/image";
 import type { FC } from "react";
 import { useIconAnimation } from "@/style/utilities/icon-animation/useIconAnimation";
-import { Blog, GitHub, Keybase, LinkedIn } from "@/ui/basic/icons/Products";
-import { H1 } from "@/ui/basic/texts/H1";
-import { Link } from "@/ui/basic/texts/Link";
-import { P } from "@/ui/basic/texts/Plain";
+import { H1 } from "@/ui/basic/h1-text";
+import { Link } from "@/ui/basic/link-text";
+import { P } from "@/ui/basic/plain-text";
+import { Blog, GitHub, Keybase, LinkedIn } from "@/ui/basic/product-icon";
 
 const snsIconSize = 32;
 

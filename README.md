@@ -6,4 +6,20 @@ website: https://nasustim.com
 
 ## Development
 
-See [CLAUDE.md](CLAUDE.md#development-commands) for development commands.
+```bash
+# Setup dependencies (requires mise)
+mise install
+bun install
+
+# Development server
+bun run dev
+
+# Build for production
+bun run build
+
+# Generate sitemap after build
+bun run build:sitemap
+
+# Serve built site locally
+bun run serve
+```

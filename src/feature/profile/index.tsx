@@ -38,9 +38,8 @@ export const ProfileSection: FC = () => {
       >
         <H1>Mitsuhiro Hibino</H1>
         <P>
-          Software developer based in Tokyo, Japan.
-          Having passion for building web apps while focusing on
-          users' desires and needs. <br />
+          Software developer based in Tokyo, Japan. Having passion for building
+          web apps while focusing on users' desires and needs. <br />
           Loving wife and visiting oversea countries.
         </P>
         <div className="flex flex-row w-full gap-5">

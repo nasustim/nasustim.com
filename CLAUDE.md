@@ -67,14 +67,7 @@ src/
 └── meta-info/             # SEO and metadata utilities
 ```
 
-### Key Configuration Details
-
-- **Next.js Config**: Static export with unoptimized images for GitHub Pages
-- **TypeScript**: ES2020 target with strict mode, CSS modules plugin
-- **Biome**: 2-space indentation, LF line endings, recommended rules
-- **Tailwind**: PostCSS integration with responsive breakpoints
-- **SEO**: OpenGraph, Twitter cards, and canonical URLs configured
-
 ### Development Notes
 
+- Check whether this document needs to be updated, and update it with each request.
 - Responsive design with mobile-first approach

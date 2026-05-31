@@ -1,6 +1,7 @@
 # nasustim.com
 
-Personal portfolio website built with Next.js 15 and static export, deployed to GitHub Pages.
+[nasustim](https://github.com/nasustim/)'s portfolio website built with Next.js 15 and static export, deployed to GitHub Pages.
+The artifacts are deployed to https://nasustim.com/ .
 
 ## Development Commands
 

@@ -70,3 +70,4 @@ src/
 
 - Check whether this document needs to be updated, and update it with each request.
 - Responsive design with mobile-first approach
+- See [docs/](docs/) for detailed documentation on architecture, rules, and conventions

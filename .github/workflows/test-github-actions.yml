@@ -2,8 +2,8 @@ name: Test GitHub Actions
 
 on:
   pull_request:
-    paths:
-      - '.github/**'
+    branches:
+      - main
   push:
     branches:
       - main

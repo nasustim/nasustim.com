@@ -2,9 +2,8 @@ name: Test Renovate
 
 on:
   pull_request:
-    paths:
-      - renovate.json
-      - .github/workflows/test-renovate.yml
+    branches:
+      - main
   push:
     branches:
       - main

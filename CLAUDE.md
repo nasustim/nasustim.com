@@ -50,16 +50,16 @@ This is a **Next.js 15** personal portfolio website with **static export** confi
 src/
 ├── app/                    # Next.js App Router pages
 │   ├── layout.tsx         # Root layout with SEO metadata
-│   ├── page.tsx           # Homepage (ProfileSection)
-│   └── works/[slug]/      # Individual work pages (under construction)
+│   └── page.tsx           # Homepage (ProfileSection)
 ├── feature/               # Feature-based modules
-│   ├── profile/           # Profile section functionality
-│   └── ui/                # Shared UI primitives
-│       ├── icons/         # Icon components
-│       ├── texts/         # Typography components (H1, Link, Plain)
-│       └── fonts/         # Font configuration
+│   └── profile/           # Profile section functionality
+├── ui/                    # Shared UI components (see docs/ui-layers.md)
+│   ├── basic/             # Thin wrappers around plain HTML elements
+│   │   ├── icons/         # Icon components (Products.tsx)
+│   │   └── texts/         # Typography (H1.tsx, Link.tsx, Plain.tsx)
+│   └── composite/         # Composed from basic components (empty for now)
 ├── layout/                # Layout components (DefaultLayout)
-├── style/                 # Animation hooks (icon morphing)
+├── style/                 # Fonts (fonts.ts) and animation hooks
 └── config.ts              # Site-wide configuration constants
 ```
 

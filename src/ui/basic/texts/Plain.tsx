@@ -7,6 +7,6 @@ interface Props {
 
 const baseStyle = "text-primary-sub leading-normal font-default";
 
-export const PEn: FC<Props> = ({ children }) => (
+export const P: FC<Props> = ({ children }) => (
   <p className={clsx(baseStyle, "font-light text-sm")}>{children}</p>
 );

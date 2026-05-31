@@ -2,11 +2,11 @@ import IMAGE_profile from "@public/static/profile_400x400.jpg";
 import { clsx } from "clsx";
 import Image from "next/image";
 import type { FC } from "react";
-import { Blog, GitHub, Keybase, LinkedIn } from "@/feature/ui/icons/Products";
-import { H1En } from "@/feature/ui/texts/H1/En";
-import { Link } from "@/feature/ui/texts/Link";
-import { PEn } from "@/feature/ui/texts/Plain/En";
 import { useIconAnimation } from "@/style/utilities/icon-animation/useIconAnimation";
+import { Blog, GitHub, Keybase, LinkedIn } from "@/ui/basic/icons/Products";
+import { H1 } from "@/ui/basic/texts/H1";
+import { Link } from "@/ui/basic/texts/Link";
+import { P } from "@/ui/basic/texts/Plain";
 
 const snsIconSize = 32;
 
@@ -36,10 +36,10 @@ export const ProfileSection: FC = () => {
           "sm:gap-5",
         )}
       >
-        <H1En>Mitsuhiro Hibino</H1En>
-        <PEn>
+        <H1>Mitsuhiro Hibino</H1>
+        <P>
           Software developer based in Tokyo / Weekend home decorator / Tea lover
-        </PEn>
+        </P>
         <div className="flex flex-row w-full gap-5">
           <Link
             href="https://github.com/nasustim"

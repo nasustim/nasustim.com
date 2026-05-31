@@ -57,12 +57,10 @@ src/
 │   └── ui/                # Shared UI primitives
 │       ├── icons/         # Icon components
 │       ├── texts/         # Typography components (H1, Link, Plain)
-│       ├── fonts/         # Font configuration
-│       └── i18n/          # Internationalization
+│       └── fonts/         # Font configuration
 ├── layout/                # Layout components (DefaultLayout)
-├── style/                 # Shared styles and animation hooks
-├── config.ts              # Site-wide configuration constants
-└── meta-info/             # SEO and metadata utilities
+├── style/                 # Animation hooks (icon morphing)
+└── config.ts              # Site-wide configuration constants
 ```
 
 ### Development Notes

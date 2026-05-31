@@ -1,7 +1,5 @@
 import { useEffect } from "react";
-import styles from "./icon-animation.module.scss";
 
-// TODO: Make these definitions to be common
 const defaultRadius = 58;
 
 const generateRandomRadius = (): number => {
@@ -35,6 +33,6 @@ export const useIconAnimation = () => {
   }, []);
 
   return {
-    animationClassName: styles.animate,
+    animationClassName: "icon-animate",
   };
 };

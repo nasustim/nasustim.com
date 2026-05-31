@@ -2,8 +2,6 @@ import IMAGE_profile from "@public/static/profile_400x400.jpg";
 import { clsx } from "clsx";
 import Image from "next/image";
 import type { FC } from "react";
-import { getI18nContent } from "@/feature/ui/i18n";
-import { Inline } from "@/feature/ui/i18n/renderer";
 import { Blog, GitHub, Keybase, LinkedIn } from "@/feature/ui/icons/Products";
 import { H1En } from "@/feature/ui/texts/H1/En";
 import { Link } from "@/feature/ui/texts/Link";
@@ -13,7 +11,6 @@ import { useIconAnimation } from "@/style/utilities/icon-animation/useIconAnimat
 const snsIconSize = 32;
 
 export const ProfileSection: FC = () => {
-  const { name, shortDescription } = getI18nContent();
   const { animationClassName } = useIconAnimation();
 
   return (
@@ -39,11 +36,9 @@ export const ProfileSection: FC = () => {
           "sm:gap-5",
         )}
       >
-        <H1En>
-          <Inline content={name} />
-        </H1En>
+        <H1En>Mitsuhiro Hibino</H1En>
         <PEn>
-          <Inline content={shortDescription} />
+          Software developer based in Tokyo / Weekend home decorator / Tea lover
         </PEn>
         <div className="flex flex-row w-full gap-5">
           <Link

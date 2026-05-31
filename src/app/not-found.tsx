@@ -1,11 +1,19 @@
 "use client";
 
-import { H1En } from "@/components/texts/H1/En";
-
-const ERROR = new Error("404 Not Found");
+import { H1 } from "@/ui/basic/h1-text";
+import { Link } from "@/ui/basic/link-text";
 
 function Page() {
-  return <H1En isCentered={true}>{ERROR.message}</H1En>;
+  return (
+    <div>
+      <H1 isCentered={true}>404 Not Found</H1>
+      <p style={{ textAlign: "center" }}>
+        <Link href="/" isInternal={true} ariaLabel="Back to top page">
+          Back to top page
+        </Link>
+      </p>
+    </div>
+  );
 }
 
 export default Page;

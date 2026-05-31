@@ -6,7 +6,7 @@ interface Props {
   isCentered?: boolean;
 }
 
-export const H1En: FC<Props> = ({ isCentered, children }) => (
+export const H1: FC<Props> = ({ isCentered, children }) => (
   <h1
     className={clsx(
       "text-primary text-3xl leading-none",

@@ -30,7 +30,7 @@ bun run lint:ci       # CI-specific linting
 bun run analyze
 
 # Tests
-bun run test  # Note: Currently placeholder - tests need to be written
+bun run test
 ```
 
 ## Architecture Overview
@@ -50,25 +50,27 @@ This is a **Next.js 15** personal portfolio website with **static export** confi
 src/
 ├── app/                    # Next.js App Router pages
 │   ├── layout.tsx         # Root layout with SEO metadata
-│   ├── page.tsx           # Homepage (ProfileSection)
-│   └── works/[slug]/      # Individual work pages (under construction)
-├── components/            # Reusable UI components
-│   ├── icons/             # Icon components
-│   └── texts/             # Typography components (H1, H2, Link, Plain)
-├── feature/               # Feature-specific components
+│   └── page.tsx           # Homepage (ProfileSection)
+├── feature/               # Feature-based modules
 │   └── profile/           # Profile section functionality
+├── ui/                    # Shared UI components (see docs/ui-layers.md)
+│   ├── basic/             # Thin wrappers around plain HTML elements
+│   │   ├── h1-text.tsx, link-text.tsx, plain-text.tsx
+│   │   └── product-icon.tsx
+│   └── composite/         # Composed from basic components (empty for now)
 ├── layout/                # Layout components (DefaultLayout)
-├── i18n/                  # Internationalization
-│   ├── contents/en.ts     # English content
-│   ├── index.ts           # i18n utilities
-│   └── renderer.tsx       # i18n rendering logic
-├── fonts/                 # Font configuration
-├── config.ts              # Site-wide configuration constants
-└── meta-info/             # SEO and metadata utilities
+├── style/                 # Fonts (fonts.ts) and animation hooks
+└── config.ts              # Site-wide configuration constants
 ```
+
+### Naming Conventions
+
+- **File names**: kebab-case (e.g., `product-icon.tsx`, `h1-text.tsx`)
+- **No subdirectories** inside `ui/basic/` or `ui/composite/` — all component files live flat in the layer directory
 
 ### Development Notes
 
 - Check whether this document needs to be updated, and update it with each request.
 - Responsive design with mobile-first approach
+- When updating source code, run `bun run build` and `bun run serve`, then perform a browser test to verify the changes visually before committing.
 - See [docs/](docs/) for detailed documentation on architecture, rules, and conventions

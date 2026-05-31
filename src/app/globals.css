@@ -18,6 +18,15 @@
   .w-desktop {
     width: var(--desktop-width);
   }
+  .icon-animate {
+    --radius-0: 58px;
+    --radius-1: 58px;
+    --radius-2: 58px;
+    --radius-3: 58px;
+    border-radius: var(--radius-0) var(--radius-1) var(--radius-2)
+      var(--radius-3);
+    transition: border-radius 5s ease-in-out;
+  }
 }
 
 @theme {

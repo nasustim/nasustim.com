@@ -1,29 +1,25 @@
 # nasustim.com ![Test](https://github.com/nasustim/nasustim.com/actions/workflows/test-app.yml/badge.svg?branch=main) ![CodeQL Analysis](https://github.com/nasustim/nasustim.com/actions/workflows/codeql-analysis.yml/badge.svg?branch=main) ![Deploy](https://github.com/nasustim/nasustim.com/actions/workflows/deploy.yml/badge.svg?branch=main)
 
+[nasustim](https://github.com/nasustim/)'s portfolio website built with Next.js 15 and static export, deployed to GitHub Pages.
 
 website: https://nasustim.com
 
 ## Development
 
-### Set up
+```bash
+# Setup dependencies (requires mise)
+mise install
+bun install
 
-Install deps with `asdf`
+# Development server
+bun run dev
 
-```sh
-$ asdf install
-$ corepack enable
-$ npm install
-```
+# Build for production
+bun run build
 
-### Start development server
+# Generate sitemap after build
+bun run build:sitemap
 
-
-```sh
-$ npm run dev
-```
-
-### Build
-
-```sh
-$ npm run build
+# Serve built site locally
+bun run serve
 ```

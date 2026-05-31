@@ -30,7 +30,7 @@ bun run lint:ci       # CI-specific linting
 bun run analyze
 
 # Tests
-bun run test  # Note: Currently placeholder - tests need to be written
+bun run test
 ```
 
 ## Architecture Overview

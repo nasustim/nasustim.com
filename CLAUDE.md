@@ -1,6 +1,6 @@
-# CLAUDE.md
+# nasustim.com
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Personal portfolio website built with Next.js 15 and static export, deployed to GitHub Pages.
 
 ## Development Commands
 
@@ -67,14 +67,6 @@ src/
 └── meta-info/             # SEO and metadata utilities
 ```
 
-### Architecture Patterns
-
-- **Static Site Generation**: All pages are pre-rendered at build time
-- **Component-based architecture**: Organized by feature and reusability
-- **TypeScript-first**: Strict type checking enabled
-- **Centralized configuration**: Site constants in `src/config.ts`
-- **Path aliases**: `@/*` maps to `src/*`, `@public/*` maps to `public/*`
-
 ### Key Configuration Details
 
 - **Next.js Config**: Static export with unoptimized images for GitHub Pages
@@ -83,14 +75,6 @@ src/
 - **Tailwind**: PostCSS integration with responsive breakpoints
 - **SEO**: OpenGraph, Twitter cards, and canonical URLs configured
 
-### Works Section
-
-The `/works/[slug]` pages are currently under construction but have predefined slugs for portfolio items. The static params include projects like "aster-as-code", "dj", "morning-square", etc.
-
 ### Development Notes
 
-- Uses `"use client"` directive for client-side components
-- Google Analytics integration via `@next/third-parties`
-- Custom font loading system in `src/fonts/`
 - Responsive design with mobile-first approach
-- Static assets served from `/public/static/`

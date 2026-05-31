@@ -1,36 +1,35 @@
-# CLAUDE.md
+# nasustim.com
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Personal portfolio website built with Next.js 15 and static export, deployed to GitHub Pages.
 
 ## Development Commands
 
 ```bash
-# Setup dependencies (requires asdf and corepack)
-asdf install
-corepack enable
-npm install
+# Setup dependencies (requires mise)
+mise install
+bun install
 
 # Development server
-npm run dev
+bun run dev
 
 # Build for production
-npm run build
+bun run build
 
 # Generate sitemap after build
-npm run build:sitemap
+bun run build:sitemap
 
 # Serve built site locally
-npm run serve
+bun run serve
 
 # Linting and formatting (using Biome)
-npm run lint:fix      # Fix issues automatically
-npm run lint:ci       # CI-specific linting
+bun run lint:fix      # Fix issues automatically
+bun run lint:ci       # CI-specific linting
 
 # Bundle analysis
-npm run analyze
+bun run analyze
 
 # Tests
-npm test  # Note: Currently placeholder - tests need to be written
+bun run test  # Note: Currently placeholder - tests need to be written
 ```
 
 ## Architecture Overview
@@ -67,30 +66,7 @@ src/
 └── meta-info/             # SEO and metadata utilities
 ```
 
-### Architecture Patterns
-
-- **Static Site Generation**: All pages are pre-rendered at build time
-- **Component-based architecture**: Organized by feature and reusability
-- **TypeScript-first**: Strict type checking enabled
-- **Centralized configuration**: Site constants in `src/config.ts`
-- **Path aliases**: `@/*` maps to `src/*`, `@public/*` maps to `public/*`
-
-### Key Configuration Details
-
-- **Next.js Config**: Static export with unoptimized images for GitHub Pages
-- **TypeScript**: ES2020 target with strict mode, CSS modules plugin
-- **Biome**: 2-space indentation, LF line endings, recommended rules
-- **Tailwind**: PostCSS integration with responsive breakpoints
-- **SEO**: OpenGraph, Twitter cards, and canonical URLs configured
-
-### Works Section
-
-The `/works/[slug]` pages are currently under construction but have predefined slugs for portfolio items. The static params include projects like "aster-as-code", "dj", "morning-square", etc.
-
 ### Development Notes
 
-- Uses `"use client"` directive for client-side components
-- Google Analytics integration via `@next/third-parties`
-- Custom font loading system in `src/fonts/`
+- Check whether this document needs to be updated, and update it with each request.
 - Responsive design with mobile-first approach
-- Static assets served from `/public/static/`

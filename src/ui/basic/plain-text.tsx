@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import type { FC, ReactNode } from "react";
+import type { FC, JSX, ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
@@ -7,6 +7,12 @@ interface Props {
 
 const baseStyle = "text-primary-sub leading-normal font-default";
 
-export const P: FC<Props> = ({ children }) => (
-  <p className={clsx(baseStyle, "font-light text-sm")}>{children}</p>
+export const P: FC<Props & JSX.IntrinsicElements["p"]> = ({
+  children,
+  className,
+  ...props
+}) => (
+  <p className={clsx(baseStyle, "font-light text-sm", className)} {...props}>
+    {children}
+  </p>
 );

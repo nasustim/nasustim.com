@@ -22,7 +22,7 @@ export const ProfileSection: FC = () => {
         "lg:gap-20 lg:flex-row", // desktop
       )}
     >
-      <div className={clsx("flex items-center justify-center")}>
+      <div className="flex items-center justify-center">
         <Image
           src={IMAGE_profile}
           width={profileImageSize}
@@ -45,12 +45,24 @@ export const ProfileSection: FC = () => {
         >
           Mitsuhiro Hibino
         </H1>
-        <P className={clsx("text-justify")}>
-          Software developer based in Tokyo, Japan.
+        <P className={clsx("text-left", "sm:text-justify")}>
+          A software developer based in Tokyo, Japan.
           <br />
+          Studied information engineering at a technical college. Then graduated
+          from{" "}
+          <Link
+            href="https://www.iamas.ac.jp/en/"
+            ariaLabel="Institute of Advanced Media Arts and Sciences (Master of Arts)"
+          >
+            IAMAS
+          </Link>{" "}
+          (MA in Media Creation).
+        </P>
+
+        <P className={clsx("text-left", "sm:text-justify")}>
           Having passion for building web apps while focusing on users' desires
           and needs. <br />
-          Loving wife and visiting oversea countries.
+          Loving my wife and visiting oversea countries.
         </P>
         <div
           className={clsx(

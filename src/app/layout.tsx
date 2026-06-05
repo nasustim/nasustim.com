@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { SEO, SITE_DOMAIN, SITE_TITLE } from "@/config";
-import { GoogleAnalyticsContainer } from "@/feature/google-analytics";
+import { GoogleAnalyticsComponent } from "@/feature/data-collection";
 import { DefaultLayout } from "@/layout";
 import { fontReferenses } from "@/style/fonts";
 
@@ -41,7 +41,7 @@ function RootLayout({ children }: Props) {
       <body>
         <DefaultLayout>{children}</DefaultLayout>
       </body>
-      <GoogleAnalyticsContainer />
+      <GoogleAnalyticsComponent />
     </html>
   );
 }

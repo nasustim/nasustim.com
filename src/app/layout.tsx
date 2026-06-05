@@ -1,8 +1,8 @@
 import "./globals.css";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { GA_MEASUREMENT_ID, SEO, SITE_DOMAIN, SITE_TITLE } from "@/config";
+import { SEO, SITE_DOMAIN, SITE_TITLE } from "@/config";
+import { GoogleAnalyticsContainer } from "@/feature/google-analytics";
 import { DefaultLayout } from "@/layout";
 import { fontReferenses } from "@/style/fonts";
 
@@ -41,7 +41,7 @@ function RootLayout({ children }: Props) {
       <body>
         <DefaultLayout>{children}</DefaultLayout>
       </body>
-      <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
+      <GoogleAnalyticsContainer />
     </html>
   );
 }

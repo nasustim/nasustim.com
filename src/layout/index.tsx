@@ -1,6 +1,6 @@
 import { clsx } from "clsx";
 import type { FC, ReactNode } from "react";
-import { DataCollectionConfirmationDialog } from "@/feature/data-collection/";
+import { DataCollectionConfirmationDialog } from "@/feature/data-collection/dialog";
 
 type Props = {
   children: ReactNode;

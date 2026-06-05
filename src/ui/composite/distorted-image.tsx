@@ -2,7 +2,9 @@ import { clsx } from "clsx";
 import Image, { type StaticImageData } from "next/image";
 import { type FC, useEffect, useState } from "react";
 
-const defaultRadius = 58;
+const defaultRadius = 56;
+const range = 22;
+const frequencySec = 8;
 
 type Props = {
   src: StaticImageData;
@@ -15,26 +17,25 @@ function* setRandomRadiusVariables(): Generator<Array<number>, void, unknown> {
   while (true) {
     yield Array.from(
       { length: 4 },
-      () => Math.floor(Math.random() * 14) + defaultRadius, // generate a random number around defaultRadius
+      () => Math.floor(Math.random() * range) + defaultRadius, // generate a random number around defaultRadius
     );
   }
 }
 
-export const useIconAnimation = () => {
+export const useFluctuatingRadius = () => {
   const [radius, setRadius] = useState<Array<number>>(
     Array(4).fill(defaultRadius),
   );
 
   useEffect(() => {
     const animationStepper = setRandomRadiusVariables();
-    animationStepper.next();
 
     const interval = setInterval(() => {
       const next = animationStepper.next();
       if (!next.done) {
         setRadius(next.value);
       }
-    }, 5 * 1000);
+    }, frequencySec * 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -43,7 +44,7 @@ export const useIconAnimation = () => {
 };
 
 export const DistortedImage: FC<Props> = ({ src, alt, className, size }) => {
-  const radius = useIconAnimation();
+  const radius = useFluctuatingRadius();
 
   return (
     <Image
@@ -54,7 +55,7 @@ export const DistortedImage: FC<Props> = ({ src, alt, className, size }) => {
       className={clsx(className)}
       style={{
         borderRadius: radius.map((r) => `${r}px`).join(" "),
-        transition: "border-radius 5s ease-in-out",
+        transition: `border-radius ${frequencySec}s ease-in-out`,
       }}
     />
   );

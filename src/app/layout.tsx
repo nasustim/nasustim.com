@@ -40,8 +40,8 @@ function RootLayout({ children }: Props) {
       </head>
       <body>
         <DefaultLayout>{children}</DefaultLayout>
+        <GoogleAnalyticsComponent />
       </body>
-      <GoogleAnalyticsComponent />
     </html>
   );
 }

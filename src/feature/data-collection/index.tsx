@@ -18,6 +18,7 @@ export const useDataCollectionConsent = () => {
   }
 
   return {
+    isLoading: consentStatus.isLoading,
     value: consentStatus.value,
     agree: () => consentStatus.set("granted"),
     deny: () => consentStatus.set("denied"),

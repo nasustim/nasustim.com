@@ -11,7 +11,7 @@ export const DataCollectionConfirmationDialog = () => {
   const status = useDataCollectionConsent();
 
   useEffect(() => {
-    if (shouldShowDialog || !status) return;
+    if (shouldShowDialog || !status || status.isLoading) return;
     setShouldShowDialog(status.value === null);
   }, [status, shouldShowDialog]);
 

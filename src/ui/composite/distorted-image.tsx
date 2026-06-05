@@ -1,10 +1,11 @@
 import { clsx } from "clsx";
-import Image, { type StaticImageData } from "next/image";
+import type { StaticImageData } from "next/image";
 import { type FC, useEffect, useState } from "react";
+import { Image } from "@/ui/basic/image";
 
 const defaultRadius = 56;
 const range = 22;
-const frequencySec = 8;
+const frequencySec = 3;
 
 type Props = {
   src: StaticImageData;

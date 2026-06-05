@@ -4,6 +4,16 @@
   :root {
     --tablet-width: 500px;
     --desktop-width: 1024px;
+
+    /* colors */
+    --color-white: #ffffff;
+    --color-primary: rgb(5 5 33);
+    --color-primary-sub: rgb(28 28 48);
+    --color-indigo: rgb(63 0 255);
+    --color-sky: rgb(95 158 160);
+
+    /* fonts */
+    --font-heading: var(--font-carter-one), cursive;
   }
 
   body {

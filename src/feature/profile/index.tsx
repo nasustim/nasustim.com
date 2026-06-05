@@ -1,19 +1,16 @@
 import IMAGE_profile from "@public/static/profile_400x400.jpg";
 import { clsx } from "clsx";
-import Image from "next/image";
 import type { FC } from "react";
-import { useIconAnimation } from "@/style/utilities/icon-animation/useIconAnimation";
 import { H1 } from "@/ui/basic/h1-text";
 import { Link } from "@/ui/basic/link-text";
 import { P } from "@/ui/basic/plain-text";
 import { Blog, GitHub, Keybase, LinkedIn } from "@/ui/basic/product-icon";
+import { DistortedImage } from "@/ui/composite/distorted-image";
 
 const snsIconSize = 32;
 const profileImageSize = 142;
 
 export const ProfileSection: FC = () => {
-  const { animationClassName } = useIconAnimation();
-
   return (
     <div
       className={clsx(
@@ -23,12 +20,10 @@ export const ProfileSection: FC = () => {
       )}
     >
       <div className="flex items-center justify-center">
-        <Image
+        <DistortedImage
           src={IMAGE_profile}
-          width={profileImageSize}
-          height={profileImageSize}
-          alt="Portrait"
-          className={clsx(animationClassName)}
+          alt={"Portrait"}
+          size={profileImageSize}
         />
       </div>
       <div

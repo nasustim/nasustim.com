@@ -11,13 +11,6 @@
     --color-primary-sub: rgb(28 28 48);
     --color-indigo: rgb(63 0 255);
     --color-sky: rgb(95 158 160);
-
-    /* fonts */
-    --font-heading: var(--font-carter-one), cursive;
-  }
-
-  body {
-    font-family: var(--font-inter), sans-serif;
   }
 }
 
@@ -37,7 +30,4 @@
   --color-primary-sub: rgb(28 28 48);
   --color-indigo: rgb(63 0 255);
   --color-sky: rgb(95 158 160);
-
-  /* fonts */
-  --font-heading: var(--font-carter-one), cursive;
 }

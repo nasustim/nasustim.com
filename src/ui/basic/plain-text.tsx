@@ -5,14 +5,18 @@ interface Props {
   children: ReactNode;
 }
 
-const baseStyle = "text-primary-sub leading-normal font-default";
-
 export const P: FC<Props & JSX.IntrinsicElements["p"]> = ({
   children,
   className,
   ...props
 }) => (
-  <p className={clsx(baseStyle, "font-light text-sm", className)} {...props}>
+  <p
+    className={clsx(
+      "text-primary-sub leading-normal font-light text-sm",
+      className,
+    )}
+    {...props}
+  >
     {children}
   </p>
 );

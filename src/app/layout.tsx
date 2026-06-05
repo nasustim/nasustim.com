@@ -1,11 +1,10 @@
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { clsx } from "clsx";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { GA_MEASUREMENT_ID, SEO, SITE_DOMAIN, SITE_TITLE } from "@/config";
 import { DefaultLayout } from "@/layout";
-import { fontClassNames } from "@/style/fonts";
+import { fontReferenses } from "@/style/fonts";
 
 type Props = {
   children: ReactNode;
@@ -13,7 +12,7 @@ type Props = {
 
 function RootLayout({ children }: Props) {
   return (
-    <html lang="en" className={clsx(...fontClassNames)}>
+    <html lang="en" className={fontReferenses.default}>
       <head>
         <link
           rel="icon"

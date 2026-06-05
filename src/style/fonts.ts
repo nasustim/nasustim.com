@@ -1,20 +1,18 @@
-import { Carter_One, Inter } from "next/font/google";
+import { DynaPuff, Inter } from "next/font/google";
 
-/**
- * Heading font
- */
-const carterOne = Carter_One({
+const fontHeading = DynaPuff({
+  weight: ["500"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const fontDefault = Inter({
   weight: ["400"],
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-carter-one",
 });
 
-const inter = Inter({
-  weight: ["400"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
-
-export const fontClassNames = [inter.variable, carterOne.variable];
+export const fontReferenses = {
+  heading: fontHeading.className,
+  default: fontDefault.className,
+};

@@ -1,5 +1,6 @@
 import { clsx } from "clsx";
 import type { FC, JSX, ReactNode } from "react";
+import { fontReferenses } from "@/style/fonts";
 
 interface Props {
   children: ReactNode;
@@ -14,8 +15,8 @@ export const H1: FC<Props & JSX.IntrinsicElements["h1"]> = ({
 }) => (
   <h1
     className={clsx(
-      "text-primary text-3xl leading-none",
-      "font-heading",
+      "text-primary text-3xl leading-none font-bold",
+      fontReferenses.heading,
       isCentered ? "text-center" : null,
       className,
     )}

@@ -65,6 +65,7 @@ yarn-error.log
 .next/
 .cache/
 out/
+next-env.d.ts
 
 .env*
 !.env.sample

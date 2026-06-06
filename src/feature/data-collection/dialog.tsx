@@ -20,7 +20,7 @@ export const DataCollectionConfirmationDialog = () => {
 };
 
 const _DialogInner = () => {
-  const status = useDataCollectionConsent();
+  const dataCollectionConsent = useDataCollectionConsent();
   return (
     <div
       className={clsx(
@@ -29,7 +29,7 @@ const _DialogInner = () => {
         "w-full p-8",
 
         "transition-opacity duration-400",
-        status?.value && "opacity-0 pointer-events-none",
+        dataCollectionConsent?.value && "opacity-0 pointer-events-none",
       )}
     >
       <div
@@ -67,7 +67,7 @@ const _DialogInner = () => {
               "bg-white/50 text-black rounded-sm cursor-pointer",
             )}
             onClick={() => {
-              status?.deny();
+              dataCollectionConsent?.deny();
             }}
             type="button"
           >
@@ -80,7 +80,10 @@ const _DialogInner = () => {
               "bg-black/90 text-white rounded-sm cursor-pointer",
             )}
             onClick={() => {
-              status?.agree();
+              dataCollectionConsent?.agree();
+              dataCollectionConsent?.sendEvent("button_click", {
+                button: "agree_data_collection",
+              });
             }}
             type="button"
           >

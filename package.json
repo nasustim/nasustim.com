@@ -39,7 +39,7 @@
     "build:sitemap": "next-sitemap --config ./sitemap.config.js",
     "serve": "bunx serve@latest out",
     "test": "echo \"please write test and execute\" | exit 0",
-    "lint:fix": "biome check --write .",
+    "lint:fix": "biome check --write --unsafe .",
     "lint:ci": "biome ci .",
     "analyze": "next experimental-analyze"
   },

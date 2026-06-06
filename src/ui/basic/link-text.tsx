@@ -1,18 +1,17 @@
-import clsx from "clsx";
 import NextLink from "next/link";
 import type { FC, ReactNode } from "react";
 
-const Variant = ["none", "primary"];
-const styles: Record<(typeof Variant)[number], string> = {
+const variants = {
   none: "p-0 outline-none bg-transparent cursor-pointer appearance-none",
-  primary: clsx("text-indigo font-semibold underline hover:text-sky"),
+  primary: "text-indigo font-semibold underline hover:text-sky",
+  secondary: "text-primary-sub font-medium underline hover:text-primary",
 };
 
 interface Props {
   children: ReactNode;
   href: string;
   isInternal?: boolean;
-  variant?: (typeof Variant)[number];
+  variant?: keyof typeof variants;
   ariaLabel: string;
 }
 
@@ -25,7 +24,7 @@ export const Link: FC<Props> = ({
 }) => (
   <NextLink
     href={href}
-    className={styles[variant]}
+    className={variants[variant]}
     target={isInternal ? "" : "_blank"}
     aria-label={ariaLabel}
   >

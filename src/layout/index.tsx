@@ -26,9 +26,7 @@ export const DefaultLayout: FC<Props> = ({ children }) => {
          * @see https://github.com/nasustim/nasustim.com/pull/1001
          * */}
       </section>
-      <section
-        className={"fixed bottom-0 w-screen h-[100px] z-100 overflow-hidden"}
-      >
+      <section className={"fixed bottom-0 w-screen z-100 overflow-hidden"}>
         <DataCollectionConfirmationDialog />
       </section>
     </div>

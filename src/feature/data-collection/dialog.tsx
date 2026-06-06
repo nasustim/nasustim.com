@@ -24,9 +24,9 @@ const _DialogInner = () => {
   return (
     <div
       className={clsx(
-        "bg-black/75 backdrop-blur-sm p-4",
+        "bg-black/75 backdrop-blur-sm",
         "text-primary-sub text-sm text-white/80",
-        "w-full h-full",
+        "w-full p-8",
 
         "transition-opacity duration-400",
         status?.value && "opacity-0 pointer-events-none",
@@ -45,19 +45,25 @@ const _DialogInner = () => {
           <Link
             href="https://analytics.google.com/"
             ariaLabel="Google Analytics"
+            variant="secondary"
           >
             Google Analytics
           </Link>{" "}
-          to analyze customer info and improve this website.
+          to analyze customer info and improve its content.
           <br />
           Do you agree to use Google Analytics for this website?
         </div>
         <div
-          className={clsx("flex flex-row items-center justify-center gap-4")}
+          className={clsx(
+            "flex flex-col items-center justify-center gap-4",
+            "sm:flex-row", // tablet or larger
+          )}
         >
           <button
             className={clsx(
-              "w-[60px] h-[30px]",
+              "w-[90px] h-[30px]",
+              "sm:w-[70px] sm:h-[38px]", // tablet or larger
+
               "bg-white/50 text-black rounded-sm cursor-pointer",
             )}
             onClick={() => {
@@ -69,7 +75,8 @@ const _DialogInner = () => {
           </button>
           <button
             className={clsx(
-              "w-[60px] h-[30px]",
+              "w-[90px] h-[44px]",
+              "sm:w-[120px] sm:h-[40px]", // tablet or larger
               "bg-black/90 text-white rounded-sm cursor-pointer",
             )}
             onClick={() => {

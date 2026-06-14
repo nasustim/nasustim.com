@@ -10,24 +10,17 @@ const variants = {
 interface Props {
   children: ReactNode;
   href: string;
-  isInternal?: boolean;
   variant?: keyof typeof variants;
   ariaLabel: string;
 }
 
 export const Link: FC<Props> = ({
   href,
-  isInternal,
   children,
   variant = "primary",
   ariaLabel,
 }) => (
-  <NextLink
-    href={href}
-    className={variants[variant]}
-    target={isInternal ? "" : "_blank"}
-    aria-label={ariaLabel}
-  >
+  <NextLink href={href} className={variants[variant]} aria-label={ariaLabel}>
     {children}
   </NextLink>
 );

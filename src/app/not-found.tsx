@@ -8,7 +8,7 @@ function Page() {
     <div>
       <H1 isCentered={true}>404 Not Found</H1>
       <p style={{ textAlign: "center" }}>
-        <Link href="/" isInternal={true} ariaLabel="Back to top page">
+        <Link href="/" ariaLabel="Back to top page">
           Back to top page
         </Link>
       </p>

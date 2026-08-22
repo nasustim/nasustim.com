@@ -21,7 +21,7 @@
     "@biomejs/biome": "2.5.10",
     "@next/bundle-analyzer": "16.2.12",
     "@tailwindcss/postcss": "4.3.3",
-    "@types/node": "24.13.3",
+    "@types/node": "26.2.0",
     "@types/react": "19.2.18",
     "postcss": "8.5.26",
     "typescript": "6.0.3",

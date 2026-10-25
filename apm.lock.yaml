@@ -4,7 +4,8 @@ dependencies:
 - repo_url: nasustim/skills
   name: lighthouse
   host: github.com
-  resolved_commit: e9c26bd9c16fb00c1415b35ae12d2479a37d1da0
+  resolved_commit: 4b6a449f94a61d46ecc93ef9b3d13990d25145e7
+  resolved_ref: v20261025
   version: unknown
   virtual_path: .apm/skills/lighthouse
   is_virtual: true

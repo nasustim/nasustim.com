@@ -1,4 +1,4 @@
-import IMAGE_profile from "@public/static/profile_400x400.jpg";
+import IMAGE_profile from "@public/static/profile_180x180.webp";
 import { clsx } from "clsx";
 import type { FC } from "react";
 import Markdown from "react-markdown";
@@ -60,7 +60,7 @@ export const ProfileSection: FC = () => {
               <P className={clsx("text-left", "sm:text-justify")}>{children}</P>
             ),
             a: ({ href = "", title, children }) => (
-              <Link href={href} ariaLabel={title ?? String(children)}>
+              <Link href={href} title={title}>
                 {children}
               </Link>
             ),

@@ -66,6 +66,7 @@ yarn-error.log
 .cache/
 out/
 next-env.d.ts
+public/static/*.webp
 
 .env*
 !.env.sample

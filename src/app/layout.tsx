@@ -29,7 +29,7 @@ function RootLayout({ children }: Props) {
         <link
           rel="icon"
           type="image/png"
-          sizes="152x152"
+          sizes="512x512"
           href={`${SITE_DOMAIN}/static/favicon-512x512.png`}
         />
         <link

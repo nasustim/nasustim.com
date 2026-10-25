@@ -4,14 +4,15 @@ import type { FC, ReactNode } from "react";
 const variants = {
   none: "p-0 outline-none bg-transparent cursor-pointer appearance-none",
   primary: "text-indigo font-semibold underline hover:text-sky",
-  secondary: "text-primary-sub font-medium underline hover:text-primary",
+  secondary: "text-white font-medium underline hover:text-white/80",
 };
 
 interface Props {
   children: ReactNode;
   href: string;
   variant?: keyof typeof variants;
-  ariaLabel: string;
+  ariaLabel?: string;
+  title?: string;
 }
 
 export const Link: FC<Props> = ({
@@ -19,8 +20,30 @@ export const Link: FC<Props> = ({
   children,
   variant = "primary",
   ariaLabel,
-}) => (
-  <NextLink href={href} className={variants[variant]} aria-label={ariaLabel}>
-    {children}
-  </NextLink>
-);
+  title,
+}) => {
+  const isExternal = href.startsWith("http://") || href.startsWith("https://");
+  if (isExternal) {
+    return (
+      <a
+        href={href}
+        className={variants[variant]}
+        aria-label={ariaLabel}
+        title={title}
+      >
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <NextLink
+      href={href}
+      className={variants[variant]}
+      aria-label={ariaLabel}
+      title={title}
+    >
+      {children}
+    </NextLink>
+  );
+};

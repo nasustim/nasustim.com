@@ -25,7 +25,7 @@ const _DialogInner = () => {
     <div
       className={clsx(
         "bg-black/75 backdrop-blur-sm",
-        "text-primary-sub text-sm text-white/80",
+        "text-sm text-white/90",
         "w-full p-8",
 
         "transition-opacity duration-400",

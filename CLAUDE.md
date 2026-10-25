@@ -49,15 +49,16 @@ This is a **Next.js 15** personal portfolio website with **static export** confi
 ```
 src/
 ├── app/                    # Next.js App Router pages
+│   ├── llms.txt/          # LLM-friendly Markdown route handler (route.ts)
 │   ├── layout.tsx         # Root layout with SEO metadata
 │   └── page.tsx           # Homepage (ProfileSection)
 ├── feature/               # Feature-based modules
-│   └── profile/           # Profile section functionality
+│   └── profile/           # Profile section functionality (index.tsx, data.ts)
 ├── ui/                    # Shared UI components (see docs/ui-layers.md)
 │   ├── basic/             # Thin wrappers around plain HTML elements
 │   │   ├── h1-text.tsx, link-text.tsx, plain-text.tsx
 │   │   └── product-icon.tsx
-│   └── composite/         # Composed from basic components (empty for now)
+│   └── composite/         # Composed from basic components (distorted-image.tsx)
 ├── layout/                # Layout components (DefaultLayout)
 ├── style/                 # Fonts (fonts.ts) and animation hooks
 └── config.ts              # Site-wide configuration constants

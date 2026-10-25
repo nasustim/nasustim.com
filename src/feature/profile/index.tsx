@@ -1,6 +1,7 @@
 import IMAGE_profile from "@public/static/profile_400x400.jpg";
 import { clsx } from "clsx";
 import type { FC } from "react";
+import { PROFILE_DATA } from "@/feature/profile/data";
 import { H1 } from "@/ui/basic/h1-text";
 import { Link } from "@/ui/basic/link-text";
 import { P } from "@/ui/basic/plain-text";
@@ -11,6 +12,9 @@ const snsIconSize = 32;
 const profileImageSize = 142;
 
 export const ProfileSection: FC = () => {
+  const { education, about, links } = PROFILE_DATA;
+  const { graduateSchool } = education;
+
   return (
     <div
       className={clsx(
@@ -38,26 +42,21 @@ export const ProfileSection: FC = () => {
             "sm:text-left", // tablet or larger
           )}
         >
-          Mitsuhiro Hibino
+          {PROFILE_DATA.name}
         </H1>
         <P className={clsx("text-left", "sm:text-justify")}>
-          A software developer based in Tokyo, Japan.
+          {PROFILE_DATA.summary}
           <br />
-          Studied information engineering at a technical college. Then graduated
-          from{" "}
-          <Link
-            href="https://www.iamas.ac.jp/en/"
-            ariaLabel="Institute of Advanced Media Arts and Sciences (Master of Arts)"
-          >
-            IAMAS
+          {education.college} Then graduated from{" "}
+          <Link href={graduateSchool.url} ariaLabel={graduateSchool.ariaLabel}>
+            {graduateSchool.name}
           </Link>{" "}
-          (MA in Media Creation).
+          ({graduateSchool.degreeShort}).
         </P>
 
         <P className={clsx("text-left", "sm:text-justify")}>
-          Having passion for building web apps while focusing on users' desires
-          and needs. <br />
-          Loving my wife and visiting oversea countries.
+          {about.passion} <br />
+          {about.personal}
         </P>
         <div
           className={clsx(
@@ -66,30 +65,30 @@ export const ProfileSection: FC = () => {
           )}
         >
           <Link
-            href="https://github.com/nasustim"
+            href={links.github.url}
             variant="none"
-            ariaLabel="My GitHub account (nasustim)"
+            ariaLabel={links.github.ariaLabel}
           >
             <GitHub size={snsIconSize} isButton={true} />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/mitsuhibino/"
+            href={links.linkedin.url}
             variant="none"
-            ariaLabel="My Linked In account"
+            ariaLabel={links.linkedin.ariaLabel}
           >
             <LinkedIn size={snsIconSize} isButton={true} />
           </Link>
           <Link
-            href="https://keybase.io/nasustim"
+            href={links.keybase.url}
             variant="none"
-            ariaLabel="My Keybase account (nasustim)"
+            ariaLabel={links.keybase.ariaLabel}
           >
             <Keybase size={snsIconSize} isButton={true} />
           </Link>
           <Link
-            href="https://blog.nasustim.com/"
+            href={links.blog.url}
             variant="none"
-            ariaLabel="My blog"
+            ariaLabel={links.blog.ariaLabel}
           >
             <Blog size={snsIconSize} isButton={true} />
           </Link>

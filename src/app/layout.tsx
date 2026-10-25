@@ -37,6 +37,13 @@ function RootLayout({ children }: Props) {
           sizes="180x180"
           href={`${SITE_DOMAIN}/static/apple-touch-icon.png`}
         />
+        <link
+          rel="alternate"
+          type="text/markdown"
+          href={`${SITE_DOMAIN}/llms.txt`}
+          title="LLM-friendly Markdown representation"
+        />
+        <link rel="llms-txt" href={`${SITE_DOMAIN}/llms.txt`} />
       </head>
       <body>
         <DefaultLayout>{children}</DefaultLayout>

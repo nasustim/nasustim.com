@@ -1,4 +1,5 @@
 ---
+
 name: nasustim-com-lighthouse
 description: "Repo-specific wrapper for the shared `lighthouse` skill: audit https://nasustim.com or the local static build (out/) of this repo. Use whenever the user asks to run Lighthouse on this website."
 ---

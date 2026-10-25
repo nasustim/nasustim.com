@@ -1,11 +1,11 @@
 import { SEO, SITE_DOMAIN, SITE_TITLE } from "@/config";
-import { PROFILE_DATA } from "@/feature/profile/data";
+import { getProfileContent } from "@/feature/profile/content";
 
 export const dynamic = "force-static";
 
 export async function GET() {
-  const { education, about, links } = PROFILE_DATA;
-  const { graduateSchool } = education;
+  const { frontmatter, body } = getProfileContent();
+  const cleanBody = body.replace(/\\\n/g, "\n");
 
   const markdown = [
     `# ${SITE_TITLE}`,
@@ -14,23 +14,14 @@ export async function GET() {
     "",
     "## Profile",
     "",
-    `- **Name**: ${PROFILE_DATA.name} (${PROFILE_DATA.handle})`,
-    `- **Location**: ${PROFILE_DATA.location}`,
-    `- **Role**: ${PROFILE_DATA.role}`,
-    "- **Education**:",
-    `  - ${education.college}`,
-    `  - ${graduateSchool.degree}, [${graduateSchool.name} (${graduateSchool.fullName})](${graduateSchool.url})`,
-    "- **About**:",
-    `  - ${about.passion}`,
-    `  - ${about.personal}`,
+    cleanBody,
     "",
     "## Links",
     "",
     `- [Website](${SITE_DOMAIN}/)`,
-    `- [${links.github.label}](${links.github.url})`,
-    `- [${links.linkedin.label}](${links.linkedin.url})`,
-    `- [${links.keybase.label}](${links.keybase.url})`,
-    `- [${links.blog.label}](${links.blog.url})`,
+    ...frontmatter.socials.map(
+      (social) => `- [${social.label}](${social.url})`,
+    ),
     "",
   ].join("\n");
 

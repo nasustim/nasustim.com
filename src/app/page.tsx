@@ -1,5 +1,3 @@
-"use client";
-
 import { ProfileSection } from "@/feature/profile";
 
 const Page = () => (

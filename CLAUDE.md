@@ -54,7 +54,7 @@ src/
 │   ├── layout.tsx         # Root layout with SEO metadata
 │   └── page.tsx           # Homepage (ProfileSection)
 ├── feature/               # Feature-based modules
-│   └── profile/           # Profile section functionality (index.tsx, data.ts)
+│   └── profile/           # Profile section functionality (index.tsx, content.md, content.ts)
 ├── ui/                    # Shared UI components (see docs/ui-layers.md)
 │   ├── basic/             # Thin wrappers around plain HTML elements
 │   │   ├── h1-text.tsx, link-text.tsx, plain-text.tsx

@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 
 const defaultConfig = {
+  experimental: {
+    inlineCss: true,
+  },
   images: {
     unoptimized: true,
   },

@@ -36,7 +36,9 @@
     "url": "git+https://github.com/nasustim/nasustim.com.git"
   },
   "scripts": {
+    "predev": "bun ./scripts/optimize-images.mjs",
     "dev": "next dev",
+    "prebuild": "bun ./scripts/optimize-images.mjs",
     "build": "next build",
     "build:sitemap": "next-sitemap --config ./sitemap.config.js",
     "serve": "bunx serve@latest out",

@@ -1,8 +1,6 @@
 ---
-
 name: lighthouse
-description: "Run Google Lighthouse audits (Mobile and Desktop) against https://nasustim.com or a local preview server, parse Core Web Vitals and category scores, and surface non-passing audits with actionable details. Use this skill whenever the user asks to check, audit, or benchmark the website with Lighthouse."
-
+description: "Run Google Lighthouse audits (Mobile and Desktop) against a target URL or local preview server, parse Core Web Vitals and category scores, and surface non-passing audits with actionable details. Use this skill whenever the user asks to check, audit, or benchmark a website with Lighthouse."
 ---
 
 # Lighthouse Audit Skill
@@ -11,32 +9,30 @@ Run headless Chrome Lighthouse audits for both **Mobile** and **Desktop** preset
 
 ## Usage
 
-### 1. Audit Production (`https://nasustim.com`)
+Run the bundled helper script [`scripts/run-lighthouse.sh`](scripts/run-lighthouse.sh) (located inside this skill directory, e.g. `.agents/skills/lighthouse/scripts/run-lighthouse.sh` or `.claude/skills/lighthouse/scripts/run-lighthouse.sh`) with the target URL:
 
-Run the bundled helper script with no arguments (defaults to `https://nasustim.com`):
+### 1. Audit a Live or Running URL
 
 ```bash
-bash .claude/skills/lighthouse/scripts/run-lighthouse.sh https://nasustim.com
+bash <skill-dir>/scripts/run-lighthouse.sh https://example.com
 ```
 
-### 2. Audit Local Build (`out/`)
+### 2. Audit a Local Build / Preview Server
 
 When verifying local changes before deployment:
 
-1. Build the static export:
+1. Build and start the project's production preview or static server in the background (inspect `package.json` or project docs for the appropriate build/serve commands and port, e.g., `http://localhost:3000`).
+2. Wait until the server is listening, then run the audit against the local URL:
 
    ```bash
-   bun run build
+   bash <skill-dir>/scripts/run-lighthouse.sh http://localhost:3000
    ```
-2. Start the static server in the background (e.g., on port `3000`) and run the audit against it:
 
-   ```bash
-   bunx serve@latest out -l 3000 &
-   SERVER_PID=$!
-   sleep 2
-   bash .claude/skills/lighthouse/scripts/run-lighthouse.sh http://localhost:3000
-   kill $SERVER_PID
-   ```
+3. Stop the background server process once the audit finishes.
+
+## Environment Variables
+
+- `LH_OUT_DIR`: Directory where raw JSON reports (`lh-mobile.json` and `lh-desktop.json`) are saved. Defaults to `/tmp`.
 
 ## What the Script Outputs
 
@@ -45,7 +41,6 @@ When verifying local changes before deployment:
   - Accessibility
   - Best Practices
   - SEO
-  - Agentic Browsing
 - **Core Web Vitals & Key Metrics**:
   - First Contentful Paint (FCP)
   - Largest Contentful Paint (LCP)
@@ -55,4 +50,5 @@ When verifying local changes before deployment:
   - Time to Interactive (TTI)
 - **Non-Passing Audits (`score < 1`)**:
   - Audit ID, score, weight, display value, and top offending DOM nodes or network resources.
-- Raw JSON reports are saved to `/tmp/lh-mobile.json` and `/tmp/lh-desktop.json` (or `LH_OUT_DIR` if set) for deeper follow-up inspection.
+- Raw JSON reports are saved to `${LH_OUT_DIR:-/tmp}/lh-mobile.json` and `${LH_OUT_DIR:-/tmp}/lh-desktop.json` for deeper follow-up inspection.
+

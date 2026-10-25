@@ -1,0 +1,70 @@
+lockfile_version: '1'
+apm_version: 0.35.0
+dependencies:
+- repo_url: nasustim/skills
+  name: lighthouse
+  host: github.com
+  resolved_commit: e9c26bd9c16fb00c1415b35ae12d2479a37d1da0
+  version: unknown
+  virtual_path: .apm/skills/lighthouse
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .claude/skills/lighthouse
+  - .claude/skills/lighthouse/SKILL.md
+  - .claude/skills/lighthouse/scripts/run-lighthouse.sh
+  deployed_file_hashes:
+    .claude/skills/lighthouse/SKILL.md: sha256:2bb8b97f67a4d2755637ca735542defe0d3ffce5cb606ba87d2458ca4e5cb7f1
+    .claude/skills/lighthouse/scripts/run-lighthouse.sh: sha256:a0c1beb1ce3fc202f123261afefd0145bf1fc90791d9f66097e052d0adf8942a
+  content_hash: sha256:005c7221a7f952ee73c2f521f439ffcbc2ae43be85a97122e5ad7221bc33f890
+deployments:
+- kind: project-relative
+  target: claude
+  value: .claude/skills/lighthouse
+  runtime: null
+  scope: project
+  owners:
+  - nasustim/skills/.apm/skills/lighthouse
+  active_owner: nasustim/skills/.apm/skills/lighthouse
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/lighthouse/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - nasustim/skills/.apm/skills/lighthouse
+  active_owner: nasustim/skills/.apm/skills/lighthouse
+  content_hash: sha256:2bb8b97f67a4d2755637ca735542defe0d3ffce5cb606ba87d2458ca4e5cb7f1
+- kind: project-relative
+  target: claude
+  value: .claude/skills/lighthouse/scripts/run-lighthouse.sh
+  runtime: null
+  scope: project
+  owners:
+  - nasustim/skills/.apm/skills/lighthouse
+  active_owner: nasustim/skills/.apm/skills/lighthouse
+  content_hash: sha256:a0c1beb1ce3fc202f123261afefd0145bf1fc90791d9f66097e052d0adf8942a
+- kind: project-relative
+  target: claude
+  value: .claude/skills/nasustim-com-lighthouse
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/nasustim-com-lighthouse/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:3b62c31b7eebc901edff6af2a5d0500878acd7995e03389f6d88e5ca04297c38
+local_deployed_files:
+- .claude/skills/nasustim-com-lighthouse
+- .claude/skills/nasustim-com-lighthouse/SKILL.md
+local_deployed_file_hashes:
+  .claude/skills/nasustim-com-lighthouse/SKILL.md: sha256:3b62c31b7eebc901edff6af2a5d0500878acd7995e03389f6d88e5ca04297c38

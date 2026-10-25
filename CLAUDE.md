@@ -73,6 +73,7 @@ src/
 ### Development Notes
 
 - Check whether this document needs to be updated, and update it with each request.
+- Agent skills are managed with [APM](https://github.com/microsoft/apm): shared skills come from `nasustim/skills` (declared in `apm.yml`), repo-specific skills live in `.apm/skills/`. `apm` is installed via `mise install`. Run `apm install` to deploy both into `.claude/skills/` (`.agents/skills` symlinks there).
 - Responsive design with mobile-first approach
 - When updating source code, run `bun run build` and `bun run serve`, then perform a browser test to verify the changes visually before committing.
 - See [docs/](docs/) for detailed documentation on architecture, rules, and conventions

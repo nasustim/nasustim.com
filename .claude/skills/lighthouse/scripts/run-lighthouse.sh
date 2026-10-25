@@ -1,10 +1,18 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-TARGET_URL="${1:-https://nasustim.com}"
+if [ $# -lt 1 ] || [ -z "${1:-}" ]; then
+  echo "Usage: $0 <url>" >&2
+  echo "Example: $0 https://example.com" >&2
+  exit 1
+fi
+
+TARGET_URL="$1"
 OUT_DIR="${LH_OUT_DIR:-/tmp}"
 MOBILE_JSON="${OUT_DIR}/lh-mobile.json"
 DESKTOP_JSON="${OUT_DIR}/lh-desktop.json"
+
+mkdir -p "${OUT_DIR}"
 
 echo "Running Lighthouse (Mobile) on ${TARGET_URL}..."
 npx --yes lighthouse "${TARGET_URL}" \
@@ -23,10 +31,11 @@ npx --yes lighthouse "${TARGET_URL}" \
   --no-enable-error-reporting \
   --quiet
 
-bun -e '
+node -e '
+const fs = require("node:fs");
 const [mobilePath, desktopPath] = process.argv.slice(1);
-const mobile = await Bun.file(mobilePath).json();
-const desktop = await Bun.file(desktopPath).json();
+const mobile = JSON.parse(fs.readFileSync(mobilePath, "utf8"));
+const desktop = JSON.parse(fs.readFileSync(desktopPath, "utf8"));
 
 const printReport = (label, report) => {
   console.log(`\n========================================`);

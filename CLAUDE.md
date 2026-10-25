@@ -38,6 +38,7 @@ bun run test
 This is a **Next.js 15** personal portfolio website with **static export** configuration, deployed to GitHub Pages.
 
 ### Key Technologies
+
 - **Next.js 15** with App Router
 - **React 19** with TypeScript
 - **Tailwind CSS 4** for styling

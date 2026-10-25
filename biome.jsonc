@@ -6,6 +6,9 @@
     "useIgnoreFile": true,
     "defaultBranch": "main"
   },
+  "files": {
+    "includes": ["**", "!.claude/skills", "!apm.lock.yaml"]
+  },
   "formatter": {
     "enabled": true,
     "formatWithErrors": false,

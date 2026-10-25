@@ -10,3 +10,6 @@ dependencies:
   mcp: []
 
 includes: auto
+
+targets:
+  - claude

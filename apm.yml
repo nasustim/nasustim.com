@@ -6,7 +6,7 @@ author: nasustim
 dependencies:
   apm:
     # Shared skills (https://github.com/nasustim/skills)
-    - nasustim/skills/.apm/skills/lighthouse
+    - nasustim/skills/.apm/skills/lighthouse#e9c26bd9c16fb00c1415b35ae12d2479a37d1da0
   mcp: []
 
 includes: auto

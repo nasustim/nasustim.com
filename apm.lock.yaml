@@ -5,6 +5,7 @@ dependencies:
   name: lighthouse
   host: github.com
   resolved_commit: e9c26bd9c16fb00c1415b35ae12d2479a37d1da0
+  resolved_ref: e9c26bd9c16fb00c1415b35ae12d2479a37d1da0
   version: unknown
   virtual_path: .apm/skills/lighthouse
   is_virtual: true

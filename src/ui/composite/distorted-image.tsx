@@ -1,3 +1,5 @@
+"use client";
+
 import { clsx } from "clsx";
 import type { StaticImageData } from "next/image";
 import { type FC, useEffect, useState } from "react";

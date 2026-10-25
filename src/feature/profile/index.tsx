@@ -1,7 +1,8 @@
 import IMAGE_profile from "@public/static/profile_400x400.jpg";
 import { clsx } from "clsx";
 import type { FC } from "react";
-import { PROFILE_DATA } from "@/feature/profile/data";
+import Markdown from "react-markdown";
+import { getProfileContent, type SocialId } from "@/feature/profile/content";
 import { H1 } from "@/ui/basic/h1-text";
 import { Link } from "@/ui/basic/link-text";
 import { P } from "@/ui/basic/plain-text";
@@ -11,9 +12,18 @@ import { DistortedImage } from "@/ui/composite/distorted-image";
 const snsIconSize = 32;
 const profileImageSize = 142;
 
+const socialIcons: Record<
+  SocialId,
+  FC<{ size: number; isButton?: boolean }>
+> = {
+  github: GitHub,
+  linkedin: LinkedIn,
+  keybase: Keybase,
+  blog: Blog,
+};
+
 export const ProfileSection: FC = () => {
-  const { education, about, links } = PROFILE_DATA;
-  const { graduateSchool } = education;
+  const { frontmatter, body } = getProfileContent();
 
   return (
     <div
@@ -42,56 +52,41 @@ export const ProfileSection: FC = () => {
             "sm:text-left", // tablet or larger
           )}
         >
-          {PROFILE_DATA.name}
+          {frontmatter.name}
         </H1>
-        <P className={clsx("text-left", "sm:text-justify")}>
-          {PROFILE_DATA.summary}
-          <br />
-          {education.college} Then graduated from{" "}
-          <Link href={graduateSchool.url} ariaLabel={graduateSchool.ariaLabel}>
-            {graduateSchool.name}
-          </Link>{" "}
-          ({graduateSchool.degreeShort}).
-        </P>
-
-        <P className={clsx("text-left", "sm:text-justify")}>
-          {about.passion} <br />
-          {about.personal}
-        </P>
+        <Markdown
+          components={{
+            p: ({ children }) => (
+              <P className={clsx("text-left", "sm:text-justify")}>{children}</P>
+            ),
+            a: ({ href = "", title, children }) => (
+              <Link href={href} ariaLabel={title ?? String(children)}>
+                {children}
+              </Link>
+            ),
+          }}
+        >
+          {body}
+        </Markdown>
         <div
           className={clsx(
             "flex flex-row w-full gap-5 justify-center", // mobile
             "sm:justify-start", // tablet or larger
           )}
         >
-          <Link
-            href={links.github.url}
-            variant="none"
-            ariaLabel={links.github.ariaLabel}
-          >
-            <GitHub size={snsIconSize} isButton={true} />
-          </Link>
-          <Link
-            href={links.linkedin.url}
-            variant="none"
-            ariaLabel={links.linkedin.ariaLabel}
-          >
-            <LinkedIn size={snsIconSize} isButton={true} />
-          </Link>
-          <Link
-            href={links.keybase.url}
-            variant="none"
-            ariaLabel={links.keybase.ariaLabel}
-          >
-            <Keybase size={snsIconSize} isButton={true} />
-          </Link>
-          <Link
-            href={links.blog.url}
-            variant="none"
-            ariaLabel={links.blog.ariaLabel}
-          >
-            <Blog size={snsIconSize} isButton={true} />
-          </Link>
+          {frontmatter.socials.map((social) => {
+            const Icon = socialIcons[social.id];
+            return (
+              <Link
+                key={social.id}
+                href={social.url}
+                variant="none"
+                ariaLabel={social.ariaLabel}
+              >
+                <Icon size={snsIconSize} isButton={true} />
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>

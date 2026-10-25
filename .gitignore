@@ -70,3 +70,6 @@ public/static/*.webp
 
 .env*
 !.env.sample
+
+# APM
+apm_modules/

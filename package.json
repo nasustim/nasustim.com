@@ -23,7 +23,7 @@
     "@biomejs/biome": "2.6.4",
     "@next/bundle-analyzer": "16.4.3",
     "@tailwindcss/postcss": "4.3.3",
-    "@types/node": "26.6.5",
+    "@types/node": "26.6.6",
     "@types/react": "19.3.0",
     "postcss": "8.5.31",
     "typescript": "7.0.2",

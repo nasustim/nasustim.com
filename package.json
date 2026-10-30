@@ -20,7 +20,7 @@
     "tailwindcss": "4.3.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.6.3",
+    "@biomejs/biome": "2.6.4",
     "@next/bundle-analyzer": "16.4.3",
     "@tailwindcss/postcss": "4.3.3",
     "@types/node": "26.6.5",

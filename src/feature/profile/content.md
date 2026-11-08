@@ -3,6 +3,7 @@
 name: Mitsuhiro Hibino
 handle: nasustim
 socials:
+
 - id: github
   label: GitHub
   url: https://github.com/nasustim
